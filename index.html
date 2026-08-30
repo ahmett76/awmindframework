@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Intelligence Framework — AWI · AGI · ASI</title>
+  <meta name="description" content="The Intelligence Framework — exploring the evolution of intelligence from wisdom to superintelligence. AWI, AGI, ASI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #05070D;
+      --panel: rgba(10, 14, 25, 0.75);
+      --line: rgba(255,255,255,0.06);
+      --text: #F1F5F9;
+      --muted: #94A3B8;
+      --accent-cyan: #22D3EE;
+      --accent-purple: #A855F7;
+      --accent-emerald: #10B981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 0 40px;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.08), rgba(34, 211, 238, 0.04), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: pulse 18s infinite alternate ease-in-out;
+    }
+    @keyframes pulse {
+      0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+      100% { transform: translateX(-50%) scale(1.3); opacity: 1; }
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .gradient-text {
+      background: linear-gradient(120deg, #22D3EE, #A855F7, #10B981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 auto 32px;
+    }
+    .quote-block {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 32px 28px;
+      max-width: 600px;
+      margin: 0 auto 48px;
+      backdrop-filter: blur(12px);
+    }
+    .quote-block span { color: var(--accent-cyan); }
+
+    /* LAYERS */
+    .layers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin: 60px 0 80px;
+    }
+    .layer-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 32px 28px;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .layer-card:hover {
+      border-color: rgba(168, 85, 247, 0.3);
+      transform: translateY(-4px);
+    }
+    .layer-card .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+    }
+    .layer-card h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .layer-card .sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    .layer-card .desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .layer-card .arrow {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent-purple);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+      padding-bottom: 2px;
+    }
+    .layer-card.asi .label { color: var(--accent-purple); }
+    .layer-card.agi .label { color: var(--accent-cyan); }
+    .layer-card.awu .label { color: var(--accent-emerald); }
+
+    /* FOOTER QUESTION */
+    .final-section {
+      text-align: center;
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--line);
+    }
+    .final-section h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .final-section p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    @media (min-width: 640px) {
+      .layers { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .layer-card { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tagline">The Intelligence Framework</div>
+      <h1>
+        The Evolution of Intelligence<br>
+        <span class="gradient-text">Three Layers, One Future</span>
+      </h1>
+      <p>
+        Is humanity ready to become the second most intelligent entity on Earth?<br>
+        This question stands before all of us in an age where intelligence is being redefined.
+      </p>
+      <div class="quote-block">
+        “Intelligence processes data.<br>
+        <span>Wisdom creates meaning.</span><br>
+        But what about superintelligence?”
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYERS -->
+  <section class="layers">
+
+    <!-- AWI -->
+    <a href="https://www.awimind.com/" target="_blank" class="layer-card awu">
+      <div class="label">Layer I · Wisdom</div>
+      <h2>AWI</h2>
+      <div class="sub">Artificial Wisdom Intelligence</div>
+      <div class="desc">Where wisdom meets intelligence. Meaning, ethics, and responsibility.</div>
+      <span class="arrow">Explore →</span>
+    </a>
+
+    <!-- AGI -->
+    <a href="https://www.theagimind.com/" target="_blank" class="layer-card agi">
+      <div class="label">Layer II · General</div>
+      <h2>AGI</h2>
+      <div class="sub">Artificial General Intelligence</div>
+      <div class="desc">The architecture of general intelligence. Systems that reason across all domains.</div>
+      <span class="arrow">Explore →</span>
+    </a>
+
+    <!-- ASI -->
+    <a href="https://www.theasimind.com/" target="_blank" class="layer-card asi">
+      <div class="label">Layer III · Super</div>
+      <h2>ASI</h2>
+      <div class="sub">Artificial Superintelligence</div>
+      <div class="desc">Where intelligence surpasses human limits — exploring the unknown and the existential.</div>
+      <span class="arrow">Explore →</span>
+    </a>
+
+  </section>
+
+  <!-- FINAL QUESTION -->
+  <section class="final-section">
+    <h3>Are We Ready?</h3>
+    <p>
+      These three layers are not just technologies — they are a new phase in humanity's relationship with its own intelligence.
+      Perhaps the real question is not about being "second," but whether we can learn to share intelligence.
+    </p>
+    <p style="font-size:0.85rem; color:var(--accent-cyan); font-family:'JetBrains Mono', monospace;">
+      awimind.com · theagimind.com · theasimind.com
+    </p>
+  </section>
+
+</div>
+
+</body>
+</html>
