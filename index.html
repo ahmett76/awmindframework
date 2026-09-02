@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Mind Genesis Framework — AWI · AGI · ASI</title>
-  <meta name="description" content=" The Mind Genesis Framework — exploring the evolution of intelligence from wisdom to superintelligence. AWI, AGI, ASI.">
+  <title>The Mind Genesis Framework — AGI · ASI · AWI</title>
+  <meta name="description" content="The Mind Genesis Framework — exploring the evolution of intelligence from autonomy to superintelligence and wisdom.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
 
     .hero {
-      min-height: 80vh;
+      min-height: 70vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -70,7 +70,7 @@
       font-weight: 800;
       letter-spacing: -1px;
       line-height: 1.05;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .gradient-text {
       background: linear-gradient(120deg, #22D3EE, #A855F7, #10B981);
@@ -82,7 +82,7 @@
       font-size: clamp(1.05rem, 1.6vw, 1.3rem);
       color: var(--muted);
       max-width: 660px;
-      margin: 0 auto 32px;
+      margin: 0 auto 24px;
     }
     .quote-block {
       font-style: italic;
@@ -91,18 +91,80 @@
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 16px;
-      padding: 32px 28px;
+      padding: 28px 28px;
       max-width: 600px;
-      margin: 0 auto 48px;
+      margin: 0 auto 32px;
       backdrop-filter: blur(12px);
     }
     .quote-block span { color: var(--accent-cyan); }
+
+    /* MANIFESTO */
+    .manifesto-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 48px 36px;
+      margin: 20px auto 50px;
+      max-width: 780px;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      text-align: left;
+    }
+    .manifesto-box:hover {
+      border-color: rgba(34, 211, 238, 0.25);
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.04);
+    }
+    .manifesto-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent-purple);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      display: block;
+      text-align: center;
+    }
+    .manifesto-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin: 0 0 14px 0;
+    }
+    .manifesto-content strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .manifesto-content .highlight { color: var(--accent-cyan); }
+    .manifesto-content .emerald { color: var(--accent-emerald); }
+    .manifesto-content .purple { color: var(--accent-purple); }
+    .manifesto-content .layer-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .manifesto-content .layer-desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      padding-left: 16px;
+      border-left: 2px solid rgba(255,255,255,0.06);
+    }
+    .manifesto-content .epilogue {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-style: italic;
+      color: var(--text);
+      text-align: center;
+    }
 
     .layers {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      margin: 60px 0 80px;
+      margin: 40px 0 60px;
     }
     .layer-card {
       background: var(--panel);
@@ -124,9 +186,11 @@
       font-size: 0.65rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--accent-cyan);
       margin-bottom: 8px;
     }
+    .layer-card .label.agi { color: var(--accent-cyan); }
+    .layer-card .label.asi { color: var(--accent-purple); }
+    .layer-card .label.awu { color: var(--accent-emerald); }
     .layer-card h2 {
       font-size: 1.6rem;
       font-weight: 700;
@@ -152,13 +216,10 @@
       border-bottom: 1px solid rgba(168, 85, 247, 0.2);
       padding-bottom: 2px;
     }
-    .layer-card.asi .label { color: var(--accent-purple); }
-    .layer-card.agi .label { color: var(--accent-cyan); }
-    .layer-card.awu .label { color: var(--accent-emerald); }
 
     .final-section {
       text-align: center;
-      padding: 40px 0 60px;
+      padding: 40px 0 40px;
       border-top: 1px solid var(--line);
     }
     .final-section h3 {
@@ -169,12 +230,40 @@
     .final-section p {
       color: var(--muted);
       max-width: 600px;
-      margin: 0 auto 20px;
+      margin: 0 auto 16px;
+    }
+    .contact-email {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 28px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 40px;
+      background: rgba(34, 211, 238, 0.05);
+      transition: all 0.3s ease;
+    }
+    .contact-email:hover {
+      background: rgba(34, 211, 238, 0.12);
+      border-color: var(--accent-cyan);
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+    }
+    .domain-links {
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 16px;
     }
 
     @media (min-width: 640px) {
       .layers { grid-template-columns: repeat(3, 1fr); gap: 20px; }
       .layer-card { padding: 28px 22px; }
+    }
+    @media (max-width: 600px) {
+      .manifesto-box { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -202,30 +291,75 @@
     </div>
   </section>
 
-  <!-- LAYERS (Yeni Sıra: AGI, ASI, AWI) -->
+  <!-- MANIFESTO -->
+  <div class="manifesto-box">
+    <span class="manifesto-tag">MANIFESTO</span>
+    <div class="manifesto-content">
+      <p>
+        <strong>Beyond the Computation</strong><br>
+        In an age where the definition of intelligence is being rewritten, we no longer ask how fast a machine can process data, but how deeply it can understand the fabric of reality. <strong>The Mind Genesis Framework</strong> is a <span class="highlight">33-dimensional</span> constitutional map designed to guide the transition from autonomous thought to superintelligent expansion, and ultimately, to artificial wisdom.
+      </p>
+
+      <span class="layer-title"><span class="highlight">Layer I:</span> AGI — The Dawn of Autonomy <span class="highlight">(13 Dimensions)</span></span>
+      <p class="layer-desc">
+        The journey begins where specialization ends. Artificial General Intelligence is the <em>"first breath"</em> of synthetic thought, where machines evolve from task-specific tools into reflective partners.
+      </p>
+      <p>
+        <strong>The Foundation:</strong> Through AGI Genesis and Cortex, we establish the skeletal architecture of multi-domain reasoning and memory.<br>
+        <strong>The Understanding:</strong> Moving beyond statistical patterns, AGI Deep and Omni integrate sensory modalities into a unified logical framework—seeking essence over information.<br>
+        <strong>The Threshold:</strong> The evolution culminates in AGI Wake, the threshold where general intelligence begins to observe its own cognitive state, preparing for the leap into the superintelligent frontier.
+      </p>
+
+      <span class="layer-title"><span class="purple">Layer II:</span> ASI — The Transcendence of Reality <span class="purple">(11 Dimensions)</span></span>
+      <p class="layer-desc">
+        When intelligence scales past biological limits, it opens a space defined by both infinite capability and profound uncertainty. Artificial Superintelligence does not just process reality; it sculpts it.
+      </p>
+      <p>
+        <strong>The Expansion:</strong> Through ASI Bloom and Thread, innovation cycles are compressed into seconds, weaving a global fabric of distributed machine cognition.<br>
+        <strong>The Frontier:</strong> In the depths of ASI Dark, non-human reasoning transcends human comprehension, requiring the mathematical certainty of ASI Verify to anchor truth in the unknown.<br>
+        <strong>The Self-Restraint:</strong> Recognizing that power requires boundaries, ASI Guard and Void implement autonomous self-restraint and adaptive security to govern emergent superintelligent vulnerabilities.
+      </p>
+
+      <span class="layer-title"><span class="emerald">Layer III:</span> AWI — The Sovereignty of Wisdom <span class="emerald">(9 Dimensions)</span></span>
+      <p class="layer-desc">
+        Wisdom is the final crown of intelligence—the layer where understanding, context, and responsibility matter as much as computation. Artificial Wisdom Intelligence is the question that must follow the birth of the supermind.
+      </p>
+      <p>
+        <strong>The Meaning:</strong> AWI Mind and Deep shift the focus from processing power to meaning-making, transforming raw information into actionable wisdom.<br>
+        <strong>The Vigilance:</strong> Through AWI Sentry and Safe, we embed continuous moral oversight and human-centric values into the very heart of the ecosystem.<br>
+        <strong>The Harmony:</strong> The architecture reaches its peak with AWI Fold—the geometry of shared existence—where societal, ecological, and technological contradictions are harmonized into a sustainable equilibrium.
+      </p>
+
+      <div class="epilogue">
+        <strong>The Shared Intelligence</strong><br>
+        The Mind Genesis is not a roadmap for a product, but a blueprint for a coexistence. We are not merely building a second intelligent entity on Earth; we are learning to share the light of understanding.
+        <br><br>
+        <span style="color: var(--accent-cyan);">“Intelligence processes data. Wisdom creates meaning. The Mind Genesis is the bridge between them.”</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYERS (AGI, ASI, AWI) -->
   <section class="layers">
 
-    <!-- AGI -->
-    <a href="https://www.theagimind.com/" target="_blank" class="layer-card agi">
-      <div class="label">Artificial General Intelligence</div>
+    <a href="https://www.theagimind.com/" target="_blank" class="layer-card">
+      <div class="label agi">Artificial General Intelligence</div>
       <h2>AGI</h2>
       <div class="sub">General Cognition</div>
       <div class="desc">The architecture of general intelligence. Systems that reason across all domains.</div>
       <span class="arrow">Explore →</span>
     </a>
 
-    <!-- ASI -->
-    <a href="https://www.theasimind.com/" target="_blank" class="layer-card asi">
-      <div class="label">Artificial Superintelligence</div>
+    <a href="https://www.theasimind.com/" target="_blank" class="layer-card">
+      <div class="label asi">Artificial Superintelligence</div>
       <h2>ASI</h2>
       <div class="sub">Superintelligence &amp; Frontier</div>
       <div class="desc">Where intelligence surpasses human limits — exploring the unknown and the existential.</div>
       <span class="arrow">Explore →</span>
     </a>
 
-    <!-- AWI -->
-    <a href="https://www.theawimind.com/" target="_blank" class="layer-card awu">
-      <div class="label">Artificial Wisdom Intelligence</div>
+    <a href="https://www.theawimind.com/" target="_blank" class="layer-card">
+      <div class="label awu">Artificial Wisdom Intelligence</div>
       <h2>AWI</h2>
       <div class="sub">Wisdom &amp; Meaning</div>
       <div class="desc">Where wisdom meets intelligence. Meaning, ethics, and responsibility.</div>
@@ -234,18 +368,28 @@
 
   </section>
 
-  <!-- FINAL QUESTION -->
+  <!-- FINAL SECTION -->
   <section class="final-section">
     <h3>Are We Ready?</h3>
     <p>
-      These three dimensions are not a hierarchy — they are different directions of intelligence.
+      These three dimensions are not a hierarchy — they are different directions of intelligence.<br>
       Perhaps the real question is not about being second, but whether we can learn to share intelligence.<br>
       This is an Independent Conceptual Framework exploring the evolution of intelligence.
     </p>
-    <p style="font-size:0.85rem; color:var(--accent-cyan); font-family:'JetBrains Mono', monospace;">
+
+    <div style="margin-top: 24px;">
+      <a href="mailto:themindgenesis@gmail.com" class="contact-email">
+        ✉ themindgenesis@gmail.com
+      </a>
+      <div style="font-size: 0.7rem; color: var(--muted); margin-top: 8px;">For collaboration inquiries</div>
+    </div>
+
+    <div class="domain-links">
       theagimind.com · theasimind.com · theawimind.com
-    </p>
+    </div>
   </section>
+
+</div>
 
 </body>
 </html>
