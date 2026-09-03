@@ -30,13 +30,63 @@
     }
     .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
 
+    /* HEADER */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 10px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .header-brand {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .header-nav {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .header-nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 40px;
+      transition: all 0.3s ease;
+    }
+    .header-nav a:hover {
+      color: #ffffff;
+      border-color: rgba(34, 211, 238, 0.4);
+      background: rgba(34, 211, 238, 0.06);
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.04);
+    }
+    .header-nav a.about-btn {
+      color: var(--accent-cyan);
+      border-color: rgba(34, 211, 238, 0.2);
+    }
+    .header-nav a.about-btn:hover {
+      background: rgba(34, 211, 238, 0.1);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.08);
+    }
+
     .hero {
-      min-height: 70vh;
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      padding: 60px 0 40px;
+      padding: 40px 0 30px;
       position: relative;
     }
     .hero::before {
@@ -63,14 +113,14 @@
       color: var(--muted);
       letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: clamp(2.8rem, 7vw, 4.5rem);
       font-weight: 800;
       letter-spacing: -1px;
       line-height: 1.05;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .gradient-text {
       background: linear-gradient(120deg, #22D3EE, #A855F7, #10B981);
@@ -82,82 +132,21 @@
       font-size: clamp(1.05rem, 1.6vw, 1.3rem);
       color: var(--muted);
       max-width: 660px;
-      margin: 0 auto 24px;
+      margin: 0 auto 20px;
     }
     .quote-block {
       font-style: italic;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--text);
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 16px;
-      padding: 28px 28px;
-      max-width: 600px;
-      margin: 0 auto 32px;
+      padding: 24px 28px;
+      max-width: 580px;
+      margin: 0 auto 24px;
       backdrop-filter: blur(12px);
     }
     .quote-block span { color: var(--accent-cyan); }
-
-    .manifesto-box {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 48px 36px;
-      margin: 20px auto 50px;
-      max-width: 780px;
-      backdrop-filter: blur(12px);
-      transition: border-color 0.4s ease, box-shadow 0.4s ease;
-      text-align: left;
-    }
-    .manifesto-box:hover {
-      border-color: rgba(34, 211, 238, 0.25);
-      box-shadow: 0 0 40px rgba(34, 211, 238, 0.04);
-    }
-    .manifesto-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--accent-purple);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      display: block;
-      text-align: center;
-    }
-    .manifesto-content p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--muted);
-      margin: 0 0 14px 0;
-    }
-    .manifesto-content strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-    .manifesto-content .highlight { color: var(--accent-cyan); }
-    .manifesto-content .emerald { color: var(--accent-emerald); }
-    .manifesto-content .purple { color: var(--accent-purple); }
-    .manifesto-content .layer-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-top: 20px;
-      margin-bottom: 6px;
-      display: block;
-    }
-    .manifesto-content .layer-desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-      padding-left: 16px;
-      border-left: 2px solid rgba(255,255,255,0.06);
-    }
-    .manifesto-content .epilogue {
-      margin-top: 20px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      font-style: italic;
-      color: var(--text);
-      text-align: center;
-    }
 
     .layers {
       display: grid;
@@ -216,7 +205,6 @@
       padding-bottom: 2px;
     }
 
-    /* MASTER SPEC BUTTON */
     .spec-btn-wrapper {
       text-align: center;
       margin: 0 0 40px 0;
@@ -287,13 +275,22 @@
       .layer-card { padding: 28px 22px; }
     }
     @media (max-width: 600px) {
-      .manifesto-box { padding: 28px 20px; }
+      .site-header { flex-direction: column; align-items: flex-start; }
+      .header-nav { width: 100%; justify-content: flex-start; }
     }
   </style>
 </head>
 <body>
 
 <div class="container">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-brand">The Mind Genesis</div>
+    <nav class="header-nav">
+      <a href="about.html" class="about-btn">📜 About</a>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -315,55 +312,7 @@
     </div>
   </section>
 
-  <!-- THE MIND GENESIS -->
-  <div class="manifesto-box">
-    <span class="manifesto-tag">THE MIND GENESIS</span>
-    <div class="manifesto-content">
-      <p>
-        <strong>Beyond the Computation</strong><br>
-        In an age where the definition of intelligence is being rewritten, we no longer ask how fast a machine can process data, but how deeply it can understand the fabric of reality. <strong>The Mind Genesis Framework</strong> is a <span class="highlight">33-dimensional</span> constitutional map designed to guide the transition from autonomous thought to superintelligent expansion, and ultimately, to artificial wisdom.
-      </p>
-
-      <span class="layer-title"><span class="highlight">Dimension I:</span> AGI — The Dawn of Autonomy <span class="highlight">(13 Dimensions)</span></span>
-      <p class="layer-desc">
-        The journey begins where specialization ends. Artificial General Intelligence is the <em>"first breath"</em> of synthetic thought, where machines evolve from task-specific tools into reflective partners.
-      </p>
-      <p>
-        <strong>The Foundation:</strong> Through AGI Genesis and Cortex, we establish the skeletal architecture of multi-domain reasoning and memory.<br>
-        <strong>The Understanding:</strong> Moving beyond statistical patterns, AGI Deep and Omni integrate sensory modalities into a unified logical framework—seeking essence over information.<br>
-        <strong>The Threshold:</strong> The evolution culminates in AGI Wake, the threshold where general intelligence begins to observe its own cognitive state, preparing for the leap into the superintelligent frontier.
-      </p>
-
-      <span class="layer-title"><span class="purple">Dimension  II:</span> ASI — The Transcendence of Reality <span class="purple">(11 Dimensions)</span></span>
-      <p class="layer-desc">
-        When intelligence scales past biological limits, it opens a space defined by both infinite capability and profound uncertainty. Artificial Superintelligence does not just process reality; it sculpts it.
-      </p>
-      <p>
-        <strong>The Expansion:</strong> Through ASI Bloom and Thread, innovation cycles are compressed into seconds, weaving a global fabric of distributed machine cognition.<br>
-        <strong>The Frontier:</strong> In the depths of ASI Dark, non-human reasoning transcends human comprehension, requiring the mathematical certainty of ASI Verify to anchor truth in the unknown.<br>
-        <strong>The Self-Restraint:</strong> Recognizing that power requires boundaries, ASI Guard and Void implement autonomous self-restraint and adaptive security to govern emergent superintelligent vulnerabilities.
-      </p>
-
-      <span class="layer-title"><span class="emerald">Dimension  III:</span> AWI — The Sovereignty of Wisdom <span class="emerald">(9 Dimensions)</span></span>
-      <p class="layer-desc">
-        Wisdom is the final crown of intelligence—the layer where understanding, context, and responsibility matter as much as computation. Artificial Wisdom Intelligence is the question that must follow the birth of the supermind.
-      </p>
-      <p>
-        <strong>The Meaning:</strong> AWI Mind and Deep shift the focus from processing power to meaning-making, transforming raw information into actionable wisdom.<br>
-        <strong>The Vigilance:</strong> Through AWI Sentry and Safe, we embed continuous moral oversight and human-centric values into the very heart of the ecosystem.<br>
-        <strong>The Harmony:</strong> The architecture reaches its peak with AWI Fold—the geometry of shared existence—where societal, ecological, and technological contradictions are harmonized into a sustainable equilibrium.
-      </p>
-
-      <div class="epilogue">
-        <strong>The Shared Intelligence</strong><br>
-        The Mind Genesis is not a roadmap for a product, but a blueprint for a coexistence. We are not merely building a second intelligent entity on Earth; we are learning to share the light of understanding.
-        <br><br>
-        <span style="color: var(--accent-cyan);">“Intelligence processes data. Wisdom creates meaning. The Mind Genesis is the bridge between them.”</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- DİMENSİONS (AGI, ASI, AWI) -->
+  <!-- DIMENSIONS (AGI, ASI, AWI) -->
   <section class="layers">
 
     <a href="https://www.theagimind.com/" target="_blank" class="layer-card">
