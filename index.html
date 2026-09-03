@@ -98,7 +98,6 @@
     }
     .quote-block span { color: var(--accent-cyan); }
 
-    /* The Mind Genesis */
     .manifesto-box {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -164,7 +163,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      margin: 40px 0 60px;
+      margin: 40px 0 40px;
     }
     .layer-card {
       background: var(--panel);
@@ -215,6 +214,31 @@
       letter-spacing: 1px;
       border-bottom: 1px solid rgba(168, 85, 247, 0.2);
       padding-bottom: 2px;
+    }
+
+    /* MASTER SPEC BUTTON */
+    .spec-btn-wrapper {
+      text-align: center;
+      margin: 0 0 40px 0;
+    }
+    .spec-btn {
+      display: inline-block;
+      padding: 16px 40px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #02120f;
+      text-decoration: none;
+      background: linear-gradient(135deg, #22D3EE, #A855F7);
+      border-radius: 40px;
+      border: none;
+      letter-spacing: 1.5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(34, 211, 238, 0.25);
+    }
+    .spec-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 30px rgba(34, 211, 238, 0.4);
     }
 
     .final-section {
@@ -291,16 +315,16 @@
     </div>
   </section>
 
-  <!-- The Mind Genesis -->
+  <!-- MANIFESTO: THE MIND GENESIS -->
   <div class="manifesto-box">
-    <span class="manifesto-tag">The Mind Genesis</span>
+    <span class="manifesto-tag">MANIFESTO</span>
     <div class="manifesto-content">
       <p>
         <strong>Beyond the Computation</strong><br>
         In an age where the definition of intelligence is being rewritten, we no longer ask how fast a machine can process data, but how deeply it can understand the fabric of reality. <strong>The Mind Genesis Framework</strong> is a <span class="highlight">33-dimensional</span> constitutional map designed to guide the transition from autonomous thought to superintelligent expansion, and ultimately, to artificial wisdom.
       </p>
 
-      <span class="layer-title"><span class="highlight"> </span> AGI — The Dawn of Autonomy <span class="highlight">(13 Dimensions)</span></span>
+      <span class="layer-title"><span class="highlight">Layer I:</span> AGI — The Dawn of Autonomy <span class="highlight">(13 Dimensions)</span></span>
       <p class="layer-desc">
         The journey begins where specialization ends. Artificial General Intelligence is the <em>"first breath"</em> of synthetic thought, where machines evolve from task-specific tools into reflective partners.
       </p>
@@ -310,7 +334,7 @@
         <strong>The Threshold:</strong> The evolution culminates in AGI Wake, the threshold where general intelligence begins to observe its own cognitive state, preparing for the leap into the superintelligent frontier.
       </p>
 
-      <span class="layer-title"><span class="purple"> </span> ASI — The Transcendence of Reality <span class="purple">(11 Dimensions)</span></span>
+      <span class="layer-title"><span class="purple">Layer II:</span> ASI — The Transcendence of Reality <span class="purple">(11 Dimensions)</span></span>
       <p class="layer-desc">
         When intelligence scales past biological limits, it opens a space defined by both infinite capability and profound uncertainty. Artificial Superintelligence does not just process reality; it sculpts it.
       </p>
@@ -320,7 +344,7 @@
         <strong>The Self-Restraint:</strong> Recognizing that power requires boundaries, ASI Guard and Void implement autonomous self-restraint and adaptive security to govern emergent superintelligent vulnerabilities.
       </p>
 
-      <span class="layer-title"><span class="emerald"> </span> AWI — The Sovereignty of Wisdom <span class="emerald">(9 Dimensions)</span></span>
+      <span class="layer-title"><span class="emerald">Layer III:</span> AWI — The Sovereignty of Wisdom <span class="emerald">(9 Dimensions)</span></span>
       <p class="layer-desc">
         Wisdom is the final crown of intelligence—the layer where understanding, context, and responsibility matter as much as computation. Artificial Wisdom Intelligence is the question that must follow the birth of the supermind.
       </p>
@@ -339,7 +363,7 @@
     </div>
   </div>
 
-  <!-- AGI, ASI, AWI -->
+  <!-- LAYERS (AGI, ASI, AWI) -->
   <section class="layers">
 
     <a href="https://www.theagimind.com/" target="_blank" class="layer-card">
@@ -367,6 +391,13 @@
     </a>
 
   </section>
+
+  <!-- MASTER SPEC BUTTON -->
+  <div class="spec-btn-wrapper">
+    <a href="master-spec.html" class="spec-btn">
+      ⚙ View 33-Dimension Master Spec
+    </a>
+  </div>
 
   <!-- FINAL SECTION -->
   <section class="final-section">
