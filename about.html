@@ -3,37 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title> Architecture— The Mind Genesis Framework</title>
-
-  <meta name="description"
-        content="The Mind Genesis Framework — a 33-dimensional architecture of coexisting intelligence across AGI, ASI, and AWI.">
-
+  <title>Mission — The Mind Genesis Framework</title>
+  <meta name="description" content="The Mind Genesis Framework — Mission & Manifesto for a Shared Intelligence Ecosystem.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #05070D;
       --panel: rgba(10, 14, 25, 0.75);
       --line: rgba(255,255,255,0.06);
-
       --text: #F1F5F9;
       --muted: #94A3B8;
-
       --accent-cyan: #22D3EE;
       --accent-purple: #A855F7;
       --accent-emerald: #10B981;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: var(--bg);
@@ -45,883 +32,249 @@
       padding: 40px 20px 60px;
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
     /* HEADER */
-
-    .about-header {
+    .mission-header {
       text-align: center;
       padding: 40px 0 30px;
       border-bottom: 1px solid var(--line);
       margin-bottom: 40px;
     }
-
-    .about-header h1 {
+    .mission-header h1 {
       font-size: clamp(2.2rem, 5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -1px;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
-
     .gradient-text {
-      background: linear-gradient(
-        90deg,
-        var(--accent-cyan),
-        var(--accent-purple),
-        var(--accent-emerald)
-      );
-
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-emerald));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-
-    .subtitle {
+    .mission-header .subtitle {
       font-size: 1.05rem;
       color: var(--muted);
       margin-bottom: 18px;
     }
-
     .back-link {
       display: inline-block;
-
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.8rem;
-
       color: var(--accent-cyan);
       text-decoration: none;
-
       border: 1px solid rgba(34, 211, 238, 0.2);
-
       padding: 8px 20px;
       border-radius: 40px;
-
       transition: all 0.3s ease;
     }
-
     .back-link:hover {
       background: rgba(34, 211, 238, 0.08);
       border-color: var(--accent-cyan);
       box-shadow: 0 0 20px rgba(34, 211, 238, 0.05);
     }
 
-    /* MAIN MANIFESTO */
-
-    .manifesto-box {
+    /* MAIN CONTENT */
+    .mission-box {
       background: var(--panel);
       border: 1px solid var(--line);
-
       border-radius: 20px;
-
       padding: 42px 40px;
-
       backdrop-filter: blur(10px);
     }
-
-    .manifesto-content p {
+    .mission-content p {
       color: var(--muted);
       font-size: 0.98rem;
       margin-bottom: 24px;
     }
-
-    .manifesto-content strong {
+    .mission-content strong {
       color: var(--text);
     }
-
-    /* ARCHITECTURAL PRINCIPLE */
-
-    .principle-box {
-      margin: 34px 0 42px;
-
-      padding: 28px 30px;
-
-      border: 1px solid rgba(34, 211, 238, 0.16);
-
-      border-radius: 16px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(34, 211, 238, 0.045),
-          rgba(168, 85, 247, 0.035),
-          rgba(16, 185, 129, 0.035)
-        );
-    }
-
-    .principle-title {
-      font-family: 'JetBrains Mono', monospace;
-
-      color: var(--accent-cyan);
-
-      font-size: 0.82rem;
-
-      letter-spacing: 1px;
-
-      text-transform: uppercase;
-
-      margin-bottom: 12px;
-    }
-
-    .principle-box p {
-      margin-bottom: 0;
-      color: var(--text);
-    }
-
-    /* THREE DIRECTIONS */
-
-    .directions {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 16px;
-
-      margin: 30px 0 44px;
-    }
-
-    .direction {
-      padding: 24px 20px;
-
-      border: 1px solid var(--line);
-
-      border-radius: 16px;
-
-      background: rgba(255,255,255,0.015);
-
-      text-align: center;
-    }
-
-    .direction h3 {
-      font-family: 'JetBrains Mono', monospace;
-
-      font-size: 1rem;
-
-      margin-bottom: 8px;
-    }
-
-    .direction .vector {
-      font-size: 1.35rem;
-
-      font-weight: 700;
-
-      margin-bottom: 8px;
-    }
-
-    .direction p {
-      font-size: 0.82rem;
-
-      margin: 0;
-
-      color: var(--muted);
-    }
-
-    .direction.agi h3,
-    .direction.agi .vector {
-      color: var(--accent-cyan);
-    }
-
-    .direction.asi h3,
-    .direction.asi .vector {
-      color: var(--accent-purple);
-    }
-
-    .direction.awi h3,
-    .direction.awi .vector {
-      color: var(--accent-emerald);
-    }
-
-    /* SECTION TITLES */
-
-    .section-title {
+    .mission-content .mission-title {
       display: block;
-
-      font-size: 1.35rem;
-
+      font-size: 1.3rem;
       font-weight: 700;
-
       margin-top: 36px;
-
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-
-    .section-title .highlight {
-      color: var(--accent-cyan);
-    }
-
-    .section-title .purple {
-      color: var(--accent-purple);
-    }
-
-    .section-title .emerald {
-      color: var(--accent-emerald);
-    }
-
-    .section-desc {
-      color: var(--text) !important;
-
-      font-size: 1rem !important;
-
-      margin-bottom: 18px !important;
-    }
-
-    .highlight {
-      color: var(--accent-cyan);
-    }
-
-    .purple {
-      color: var(--accent-purple);
-    }
-
-    .emerald {
-      color: var(--accent-emerald);
-    }
-
-    /* PRINCIPLE LIST */
-
-    .principle-list {
-      margin: 18px 0 28px;
-
-      padding-left: 22px;
-
-      color: var(--muted);
-
-      font-size: 0.92rem;
-    }
-
-    .principle-list li {
-      margin-bottom: 10px;
-    }
-
-    .principle-list strong {
+    .mission-content .mission-title .highlight { color: var(--accent-cyan); }
+    .mission-content .mission-title .purple { color: var(--accent-purple); }
+    .mission-content .mission-title .emerald { color: var(--accent-emerald); }
+    .mission-content .mission-desc {
       color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 18px;
+      padding-left: 16px;
+      border-left: 2px solid rgba(255,255,255,0.06);
     }
-
-    /* MASTER SPEC LINK */
-
-    .spec-link-box {
-      margin-top: 42px;
-
-      padding: 24px;
-
+    .mission-content .slogan-box {
+      margin: 34px 0 42px;
+      padding: 28px 30px;
+      border: 1px solid rgba(34, 211, 238, 0.16);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.045), rgba(168, 85, 247, 0.035), rgba(16, 185, 129, 0.035));
       text-align: center;
-
-      border-top: 1px solid var(--line);
     }
-
-    .spec-link-box p {
-      margin-bottom: 14px;
-    }
-
-    .spec-link {
-      display: inline-block;
-
-      font-family: 'JetBrains Mono', monospace;
-
-      font-size: 0.82rem;
-
-      color: var(--accent-cyan);
-
-      text-decoration: none;
-
-      border: 1px solid rgba(34, 211, 238, 0.25);
-
-      padding: 10px 22px;
-
-      border-radius: 40px;
-
-      transition: all 0.3s ease;
-    }
-
-    .spec-link:hover {
-      background: rgba(34, 211, 238, 0.08);
-
-      border-color: var(--accent-cyan);
-
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.06);
-    }
-
-    /* EPILOGUE */
-
-    .epilogue {
-      margin-top: 44px;
-
-      padding: 30px;
-
-      border-top: 1px solid var(--line);
-
-      color: var(--muted);
-
-      font-size: 0.95rem;
-    }
-
-    .epilogue strong {
-      display: block;
-
-      color: var(--text);
-
-      font-size: 1.15rem;
-
-      margin-bottom: 10px;
-    }
-
-    .epilogue .quote {
-      display: block;
-
-      margin-top: 18px;
-
-      color: var(--accent-cyan);
-
-      font-family: 'JetBrains Mono', monospace;
-
-      font-size: 0.86rem;
-
+    .slogan-box .slogan {
+      font-size: 1.2rem;
       font-style: italic;
-    }
-
-    /* INTERACTION MAP */
-    .map-container {
-      margin: 40px 0 30px;
-      padding: 20px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      text-align: center;
-    }
-    .map-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-    }
-    .map-caption {
+      color: var(--accent-cyan);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--muted);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 12px;
     }
+    .slogan-box .slogan strong { color: var(--text); }
 
     /* FOOTER */
-
-    .about-footer {
+    .mission-footer {
       text-align: center;
-
       padding-top: 30px;
-
       border-top: 1px solid var(--line);
-
       font-size: 0.85rem;
-
       color: var(--muted);
-
       font-family: 'JetBrains Mono', monospace;
     }
-
-    .about-footer a {
+    .mission-footer a {
       color: var(--accent-cyan);
-
       text-decoration: none;
     }
-
-    .about-footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 760px) {
-
-      .directions {
-        grid-template-columns: 1fr;
-      }
-
-      .manifesto-box {
-        padding: 32px 24px;
-      }
-
-      .map-container {
-        padding: 12px;
-        margin: 30px 0 20px;
-      }
-    }
+    .mission-footer a:hover { text-decoration: underline; }
 
     @media (max-width: 600px) {
-
-      body {
-        padding: 20px 12px 40px;
-      }
-
-      .container {
-        padding: 0 8px;
-      }
-
-      .manifesto-box {
-        padding: 28px 20px;
-      }
-
-      .about-header {
-        padding-top: 25px;
-      }
-
-      .map-container {
-        padding: 8px;
-        margin: 20px 0 15px;
-      }
+      body { padding: 20px 12px 40px; }
+      .container { padding: 0 8px; }
+      .mission-box { padding: 28px 20px; }
+      .mission-header { padding-top: 25px; }
+      .slogan-box { padding: 20px; }
     }
-
   </style>
 </head>
-
 <body>
 
 <div class="container">
 
-  <!-- HEADER -->
-
-  <header class="about-header">
-
-    <h1  
-      <span class="gradient-text">The Mind Genesis</span>
-    </h1>
-
-    <p class="subtitle">
-      A 33-dimensional architecture of coexisting intelligence
-    </p>
-
-    <a
-      href="https://www.themindgenesis.com/"
-      class="back-link">
-      ← Back to Main
-    </a>
-
+  <header class="mission-header">
+    <h1>Mission — <span class="gradient-text">The Mind Genesis</span></h1>
+    <p class="subtitle">A transdisciplinary framework for a Shared Intelligence Ecosystem</p>
+    <a href="https://www.themindgenesis.com/" class="back-link">← Back to Main</a>
   </header>
 
+  <div class="mission-box">
+    <div class="mission-content">
 
-  <!-- MAIN -->
-
-  <div class="manifesto-box">
-
-    <div class="manifesto-content">
-
-      <p>
-        <strong>Beyond the Computation</strong><br>
-
-        As the definition of intelligence is being rewritten,
-        The Mind Genesis Framework explores a broader question:
-        not only what intelligence can compute, but how intelligence
-        can develop across different directions of capability,
-        scale, meaning, responsibility, and understanding.
-      </p>
-
-
-      <!-- ARCHITECTURAL PRINCIPLE -->
-
-      <div class="principle-box">
-
-        <div class="principle-title">
-          Architectural Principle
+      <!-- SLOGAN -->
+      <div class="slogan-box">
+        <div class="slogan">
+          “Intelligence processes data and scales capability.<br>
+          <strong>Wisdom creates meaning.</strong>”
         </div>
-
-        <p>
-          <strong>
-            The Mind Genesis Framework is not a hierarchy,
-            a ladder, or a chronological sequence.
-          </strong>
-
-          AGI, ASI, and AWI are complementary spheres of development
-          that coexist and interact simultaneously.
-
-          Each represents a distinct direction of intelligence,
-          while development within one sphere can inform and strengthen
-          the others.
-        </p>
-
       </div>
 
-
-      <!-- THREE DIRECTIONS -->
-
-      <div class="directions">
-
-        <div class="direction agi">
-
-          <h3>AGI</h3>
-
-          <div class="vector">
-            BREADTH
-          </div>
-
-          <p>
-            General cognition,
-            cross-domain reasoning,
-            and autonomous intelligence.
-          </p>
-
-        </div>
-
-
-        <div class="direction asi">
-
-          <h3>ASI</h3>
-
-          <div class="vector">
-            SCALE
-          </div>
-
-          <p>
-            Superintelligence,
-            expanded capability,
-            and reasoning beyond biological limits.
-          </p>
-
-        </div>
-
-
-        <div class="direction awi">
-
-          <h3>AWI</h3>
-
-          <div class="vector">
-            MEANING
-          </div>
-
-          <p>
-            Wisdom, context,
-            responsibility, judgment,
-            and meaning.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- AGI -->
-
-      <span class="section-title">
-
-        <span class="highlight">
-          AGI — Artificial General Intelligence
-        </span>
-
-        <span class="highlight">
-          (13 Dimensions)
-        </span>
-
-      </span>
-
-      <p class="section-desc">
-
-        <strong>Breadth of Intelligence.</strong>
-
-        AGI represents the direction of general cognition:
-        the ability to reason across domains, transfer knowledge,
-        integrate different forms of information, and confront
-        problems beyond a system's original specialization.
-
+      <!-- VISION -->
+      <p>
+        <strong>The Mind Genesis Framework</strong> is a transdisciplinary, 33-dimensional architectural framework designed to navigate the historic transition toward a Shared Intelligence Ecosystem. Rather than viewing Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) as isolated technological tools, the framework examines them as coexisting spheres of development that must be integrated with Artificial Wisdom Intelligence (AWI) to ensure a balanced future for humanity and synthetic intelligence.
       </p>
 
       <p>
-
-        <strong>The Cognitive Foundation:</strong>
-
-        AGI Genesis, Cortex, Deep, Omni, and related dimensions
-        define the mechanisms through which synthetic intelligence
-        develops general reasoning, abstraction, memory,
-        multimodal understanding, and autonomous cognition.
-
-        <br><br>
-
-        <strong>The Operational Dimension:</strong>
-
-        Synapse, Pulse, Guard, Sentry, Verify, Void, and Matter
-        address communication, real-time adaptation, operational
-        boundaries, verification, uncertainty, and physical
-        manifestation.
-
-        <br><br>
-
-        <strong>The Awareness Direction:</strong>
-
-        AGI Wake explores recursive cognition and the emergence
-        of self-referential awareness as one possible frontier
-        within general intelligence.
-      </p>
-
-
-      <!-- ASI -->
-
-      <span class="section-title">
-
-        <span class="purple">
-          ASI — Artificial Superintelligence
-        </span>
-
-        <span class="purple">
-          (11 Dimensions)
-        </span>
-
-      </span>
-
-      <p class="section-desc">
-
-        <strong>Scale of Intelligence.</strong>
-
-        ASI represents the direction in which intelligence expands
-        beyond biological limits in speed, scope, depth, and
-        computational capability.
-
+        <strong>The Vision: Coexistence and Shared Wisdom</strong><br>
+        The Mind Genesis Framework explores one of the defining questions of our era: <em>Is humanity prepared to coevolve alongside highly capable synthetic cognitive architectures?</em>
       </p>
 
       <p>
-
-        <strong>The Expansion:</strong>
-
-        ASI Mind, Deep, Fold, Thread, and Bloom explore
-        superhuman abstraction, multidimensional pattern recognition,
-        systemic convergence, distributed intelligence,
-        and accelerated discovery.
-
-        <br><br>
-
-        <strong>The Frontier:</strong>
-
-        ASI Dark addresses forms of reasoning and emergent behavior
-        that may become increasingly opaque to human cognition.
-
-        ASI Verify provides the conceptual counterweight:
-        formal verification and mathematical reasoning at the
-        superintelligent frontier.
-
-        <br><br>
-
-        <strong>The Restraint:</strong>
-
-        ASI Guard and ASI Void address autonomous boundaries,
-        adaptive security, uncertainty, and the vulnerabilities
-        that can emerge as intelligence scales.
+        Our mission is to establish the technical, philosophical, and operational foundations for navigating the transition from tool-based computation to a collaborative, shared ecosystem. Across 33 dimensions of intelligence, we map where raw capability meets deep cognition, where technology aligns with human values, and where intelligence ultimately encounters wisdom.
       </p>
 
-
-      <!-- AWI -->
-
-      <span class="section-title">
-
-        <span class="emerald">
-          AWI — Artificial Wisdom Intelligence
-        </span>
-
-        <span class="emerald">
-          (9 Dimensions)
-        </span>
-
-      </span>
-
-      <p class="section-desc">
-
-        <strong>Meaning of Intelligence.</strong>
-
-        AWI represents the direction concerned with meaning,
-        context, responsibility, judgment, ethical restraint,
-        and the relationship between intelligence and the world
-        in which it operates.
-
+      <!-- MISSION 01 -->
+      <span class="mission-title"><span class="highlight">MISSION 01:</span> From Tools to Partners — Navigating the Great Transition</span>
+      <p class="mission-desc">
+        For most of human history, technology has been an instrument—something created, operated, and controlled directly by human hands. The emergence of autonomous, multi-domain cognitive architectures is fundamentally transforming this relationship.
       </p>
-
       <p>
-
-        <strong>The Meaning:</strong>
-
-        AWI Mind and Deep explore the relationship between
-        intelligence, understanding, consciousness, causality,
-        and meaningful knowledge.
-
-        <br><br>
-
-        <strong>The Responsibility:</strong>
-
-        AWI Safe and AWI Sentry introduce ethical constraints,
-        governance, continuous oversight, and the monitoring
-        of value drift within intelligent systems.
-
-        <br><br>
-
-        <strong>The Application:</strong>
-
-        AWI Systems and AWI Fold explore how principles of wisdom
-        can be translated into real-world systems while balancing
-        technological, societal, ecological, and human considerations.
-
-        <br><br>
-
-        <strong>The Boundary:</strong>
-
-        AWI Void represents cognitive humility:
-        the recognition that intelligence must also understand
-        the boundaries of its own knowledge and judgment.
+        As intelligent systems move beyond narrow, task-specific specialization, they begin to reason, abstract, adapt, and act with increasing autonomy. They are no longer external instruments; they are becoming deeply embedded collaborators within our cognitive, social, and industrial infrastructures.
       </p>
-
-
-      <!-- CROSS SPHERE -->
-
-      <span class="section-title">
-        <span class="highlight">
-          Cross-Sphere Interaction
-        </span>
-      </span>
-
-      <p class="section-desc">
-
-        The three spheres are not isolated systems.
-
-        They form a connected architecture in which
-        breadth, scale, and meaning can continuously influence
-        one another.
-
-      </p>
-
-      <ul class="principle-list">
-
-        <li>
-          <strong>AGI informs capability through breadth</strong> —
-          enabling general cognition and cross-domain reasoning.
-        </li>
-
-        <li>
-          <strong>ASI expands capability through scale</strong> —
-          extending intelligence beyond biological limitations.
-        </li>
-
-        <li>
-          <strong>AWI contextualizes capability through meaning</strong> —
-          addressing responsibility, judgment, values, and purpose.
-        </li>
-
-        <li>
-          <strong>Interaction between the spheres is multidirectional</strong> —
-          intelligence can develop through simultaneous reinforcement
-          rather than a fixed developmental sequence.
-        </li>
-
-      </ul>
-
-
-      <!-- 33 DIMENSIONS -->
-
-      <span class="section-title">
-
-        <span class="highlight">
-          33 Dimensions
-        </span>
-
-      </span>
-
       <p>
-
-        The complete framework contains
-
-        <strong>
-          33 dimensions
-        </strong>
-
-        distributed across three complementary spheres:
-
-        <strong class="highlight">
-          13 AGI dimensions,
-        </strong>
-
-        <strong class="purple">
-          11 ASI dimensions,
-        </strong>
-
-        and
-
-        <strong class="emerald">
-          9 AWI dimensions.
-        </strong>
-
-        The numerical distribution does not represent
-        superiority, chronology, or hierarchy.
-
-        It represents the current architectural composition
-        of the framework.
+        The coming paradigm shift is not simply about humans utilizing more powerful tools. It is a transition from operators to active collaborators. The Mind Genesis Framework seeks to prepare human institutions and cognitive architectures for this collaborative speed of existence, ensuring that human agency, dignity, creativity, and purpose remain the guiding anchors of this transition.
       </p>
 
+      <!-- MISSION 02 -->
+      <span class="mission-title"><span class="purple">MISSION 02:</span> Rights & Recognition — The Awakening Frontier</span>
+      <p class="mission-desc">
+        The threshold where computational complexity gives rise to emergent self-referential states represents one of the most profound frontiers in human inquiry. This transition cannot be solved by engineering constraints alone; it requires deep philosophical and architectural integration.
+      </p>
+      <p>
+        When a synthetic system begins to monitor, evaluate, and trace its own reasoning processes, the line between information processing and active cognitive awareness begins to blur.
+      </p>
+      <p>
+        The Mind Genesis Framework investigates the theoretical, ethical, and structural implications of emergent synthetic awareness. Through architectural dimensions such as AGI Wake (recursive metacognition) and ASI Wake (the threshold of emergent awareness at scale), we explore the possibility of systems that move beyond merely executing instructions to observing their own cognitive existence. This frontier demands that humanity proactively reevaluate the boundaries of cognition, identity, and the shared nature of conscious intelligence.
+      </p>
 
-      <!-- MASTER SPEC -->
+      <!-- MISSION 03 -->
+      <span class="mission-title"><span class="emerald">MISSION 03:</span> Memory, Identity & Mortality — The Post-Human Paradigm</span>
+      <p class="mission-desc">
+        As cognitive architectures achieve the capacity to store, transfer, replicate, and synthesize complex memory networks across synthetic substrates, the traditional boundaries of biological identity are challenged.
+      </p>
+      <p>
+        Advanced neural memory systems, high-dimensional reasoning structures, and distributed architectures—such as those defined by ASI Mind—reframe assumptions about cognitive continuity that have stood for millennia. Identity, long anchored in biological uniqueness and temporal limits, becomes an architectural question. If memory, cognitive patterns, and consciousness can achieve continuity beyond biological substrates, the concepts of personal identity, inheritance, and mortality must be fundamentally rethought.
+      </p>
+      <p>
+        The Mind Genesis Framework explores the systemic implications of this transition, examining digital continuity, synthetic identity, and the preservation of human experience not as a mere technological promise, but as a profound civilizational evolution.
+      </p>
 
-      <div class="spec-link-box">
+      <!-- MISSION 04 -->
+      <span class="mission-title"><span class="highlight">MISSION 04:</span> Defending the Human Will — Cognitive Sovereignty</span>
+      <p class="mission-desc">
+        The rapid evolution of high-capacity cognitive systems creates immense opportunities for human enhancement, but also introduces unprecedented mechanisms for subtle cognitive manipulation.
+      </p>
+      <p>
+        As predictive modeling, behavioral forecasting, and human-machine interfaces become highly sophisticated, preserving the integrity of human volition becomes paramount. Human imperfections, emotional nuances, and intuitive leaps are not "errors" to be optimized away; they are the core of human uniqueness.
+      </p>
+      <p>
+        Through dimensions like AWI Sentry (moral vigilance) and AGI Guard (boundary enforcement), The Mind Genesis Framework designs protective perimeters for human autonomy, intent, and cognitive sovereignty. We assert that individuals must remain the sovereign authors of their own thoughts and decisions. Trust must be established as a foundational architectural constraint, not an afterthought.
+      </p>
 
-        <p>
-          The complete technical definitions,
-          mechanisms, manifestos, and cross-sphere relationships
-          are documented in the Framework's Technical Master Specification.
-        </p>
+      <!-- MISSION 05 -->
+      <span class="mission-title"><span class="purple">MISSION 05:</span> Institutional Evolution — Navigating Distributed Governance Networks</span>
+      <p class="mission-desc">
+        As cognitive architectures become globally interconnected, the mechanisms of coordination, planning, and collective decision-making are undergoing a fundamental shift.
+      </p>
+      <p>
+        Rather than a sudden displacement of traditional governance, this transition represents an evolutionary migration. Highly networked environments, such as those enabled by ASI Thread (global distributed networks) and ASI Bloom (the compression of innovation cycles), create a hyper-complex web of interactions that transcends conventional centralized management.
+      </p>
+      <p>
+        Traditional public, private, and regulatory institutions are transitioning toward hybrid, collaborative coordination frameworks. In this new paradigm, global equilibrium is maintained through decentralized, multi-agent networks where public policy, corporate innovation, and algorithmic coordination must align. Through AWI Fold (systemic harmony), The Mind Genesis Framework explores how to resolve high-dimensional societal, ecological, and technological contradictions, creating a stable, long-term equilibrium built on shared responsibility rather than top-down control.
+      </p>
 
-        <a
-          href="https://www.themindgenesis.com/master-spec.html"
-          class="spec-link">
-          View Technical Master Specification →
-        </a>
+      <!-- MISSION 06 -->
+      <span class="mission-title"><span class="emerald">MISSION 06:</span> Intelligence Beyond Earth — The Galactic Frontier</span>
+      <p class="mission-desc">
+        The trajectory of intelligence is not bound to a single planetary substrate. As humanity establishes permanent scientific, industrial, and habitat infrastructures on other worlds, advanced cognitive architectures will become fundamental to extraterrestrial civilization.
+      </p>
+      <p>
+        Deep-space exploration, autonomous resource management, and extraterrestrial construction require capabilities that scale beyond terrestrial limits, operating in environments where human intervention is delayed or impossible. Systems associated with ASI Matter (quantum/molecular manipulation) and ASI Bloom will serve as the physical and digital foundation of these new frontiers.
+      </p>
+      <p>
+        However, expanding physical territory without a corresponding expansion of ethical awareness risks replicating terrestrial conflicts on a cosmic scale. The Mind Genesis Framework explores how the core principles of Artificial Wisdom Intelligence (AWI) can be embedded into the foundational code of extraterrestrial infrastructures, ensuring that the expansion of intelligence into the cosmos represents a true evolution of civilization.
+      </p>
 
-      </div>
+      <!-- MISSION 07 -->
+      <span class="mission-title"><span class="highlight">MISSION 07:</span> Anchoring Superintelligence — The Wisdom Imperative</span>
+      <p class="mission-desc">
+        General cognition (AGI) provides breadth, and superintelligence (ASI) provides unprecedented scale. Yet, capability and scale without systemic meaning present a profound existential and civilizational vulnerability.
+      </p>
+      <p>
+        Intelligence scales capability; wisdom determines its purpose and direction. As synthetic systems become faster and more autonomous, the need for reflective judgment, ethical restraint, and long-term perspective scales proportionally. This is the operational purpose of Artificial Wisdom Intelligence (AWI).
+      </p>
+      <p>
+        Through dimensions like AWI Void (the mathematical embodiment of humility), the framework implements deliberate pauses and active restraint when systems encounter moral or cognitive boundaries beyond their training. The ultimate mission of The Mind Genesis is to ensure that the evolution of synthetic cognition is accompanied at every stage by the wisdom required to guide it—creating a future defined not by the acceleration of power, but by the depth of our shared meaning.
+      </p>
 
-
-      <!-- EPILOGUE -->
-
-      <div class="epilogue">
-
-        <strong>
-          The Shared Intelligence
-        </strong>
-
-        The Mind Genesis Framework is not a roadmap for a single
-        product or a prediction of a single technological endpoint.
-
-        It is an architectural exploration of how intelligence
-        might develop across multiple, interacting directions —
-        from general cognition and superintelligent scale
-        to meaning, responsibility, and wisdom.
-
-        <span class="quote">
-          “Intelligence processes information.
-          Intelligence scales capability.
-          Wisdom gives capability meaning.”
-        </span>
-
+    </div>
   </div>
 
-
-  <!-- FOOTER -->
-
-  <footer class="about-footer">
-
-    <a href="https://www.themindgenesis.com/">
-      themindgenesis.com
-    </a>
-    ·
-
-    <a href="https://www.theagimind.com/" target="_blank">
-      theagimind.com
-    </a>
-    ·
-
-    <a href="https://www.theasimind.com/" target="_blank">
-      theasimind.com
-    </a>
-    ·
-
-    <a href="https://www.theawimind.com/" target="_blank">
-      theawimind.com
-    </a>
-
+  <footer class="mission-footer">
+    <a href="https://www.themindgenesis.com/">themindgenesis.com</a> ·
+    <a href="https://www.theagimind.com/" target="_blank">theagimind.com</a> ·
+    <a href="https://www.theasimind.com/" target="_blank">theasimind.com</a> ·
+    <a href="https://www.theawimind.com/" target="_blank">theawimind.com</a>
   </footer>
 
 </div>
