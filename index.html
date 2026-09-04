@@ -87,14 +87,21 @@
     }
 
     .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
-
       color: var(--muted);
-
       letter-spacing: 1.8px;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+
+    .header-brand img {
+      height: 32px;
+      width: auto;
+      max-height: 32px;
     }
 
     .header-nav {
@@ -956,12 +963,24 @@
     @media (max-width: 760px) {
 
       .site-header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .header-brand {
+        font-size: 0.65rem;
+        gap: 8px;
+      }
+
+      .header-brand img {
+        height: 24px;
+        max-height: 24px;
       }
 
       .header-nav {
         width: 100%;
+        justify-content: flex-start;
       }
 
       .hero {
@@ -996,6 +1015,16 @@
 
       .container {
         padding: 0 18px;
+      }
+
+      .header-brand {
+        font-size: 0.6rem;
+        gap: 6px;
+      }
+
+      .header-brand img {
+        height: 20px;
+        max-height: 20px;
       }
 
       .header-nav a {
@@ -1040,6 +1069,7 @@
   <header class="site-header">
 
     <div class="header-brand">
+      <img src="tmg-logo.png" alt="The Mind Genesis Logo">
       The Mind Genesis
     </div>
 
