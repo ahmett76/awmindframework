@@ -3,363 +3,1577 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>The Mind Genesis Framework — AGI · ASI · AWI</title>
-  <meta name="description" content="The Mind Genesis Framework — exploring the evolution of intelligence from autonomy to superintelligence and wisdom.">
+
+  <meta name="description"
+        content="The Mind Genesis is a transdisciplinary framework exploring intelligence across three complementary directions: AGI, ASI, and AWI — breadth, scale, and meaning.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
   <style>
+
     :root {
       --bg: #05070D;
       --panel: rgba(10, 14, 25, 0.75);
-      --line: rgba(255,255,255,0.06);
+      --panel-solid: #0A0E19;
+
+      --line: rgba(255,255,255,0.07);
+      --line-strong: rgba(255,255,255,0.12);
+
       --text: #F1F5F9;
       --muted: #94A3B8;
+      --soft: #CBD5E1;
+
       --accent-cyan: #22D3EE;
       --accent-purple: #A855F7;
       --accent-emerald: #10B981;
+
+      --max-width: 980px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(34,211,238,0.035), transparent 35%),
+        var(--bg);
+
       color: var(--text);
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       min-height: 100vh;
       overflow-x: hidden;
     }
-    .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
 
-    /* HEADER */
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
     .site-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0 10px;
+
+      padding: 20px 0 14px;
+
       border-bottom: 1px solid var(--line);
-      margin-bottom: 10px;
+
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 12px;
     }
+
     .header-brand {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
+
       color: var(--muted);
-      letter-spacing: 1.5px;
+
+      letter-spacing: 1.8px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
+
     .header-nav {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
       align-items: center;
     }
+
     .header-nav a {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
+
       color: var(--muted);
       text-decoration: none;
-      letter-spacing: 0.5px;
-      padding: 6px 14px;
-      border: 1px solid rgba(255,255,255,0.06);
+
+      letter-spacing: 0.4px;
+
+      padding: 6px 13px;
+
+      border: 1px solid rgba(255,255,255,0.07);
       border-radius: 40px;
-      transition: all 0.3s ease;
-    }
-    .header-nav a:hover {
-      color: #ffffff;
-      border-color: rgba(34, 211, 238, 0.4);
-      background: rgba(34, 211, 238, 0.06);
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.04);
-    }
-    .header-nav a.architecture-btn {
-      color: var(--accent-cyan);
-      border-color: rgba(34, 211, 238, 0.15);
-    }
-    .header-nav a.architecture-btn:hover {
-      background: rgba(34, 211, 238, 0.1);
-      border-color: var(--accent-cyan);
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.08);
-    }
-    .header-nav a.mission-btn {
-      color: var(--accent-emerald);
-      border-color: rgba(16, 185, 129, 0.15);
-    }
-    .header-nav a.mission-btn:hover {
-      background: rgba(16, 185, 129, 0.1);
-      border-color: var(--accent-emerald);
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.08);
-    }
-    .header-nav a.spec-btn {
-      color: var(--accent-purple);
-      border-color: rgba(168, 85, 247, 0.15);
-      background: rgba(168, 85, 247, 0.03);
-    }
-    .header-nav a.spec-btn:hover {
-      background: rgba(168, 85, 247, 0.1);
-      border-color: var(--accent-purple);
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.08);
+
+      transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
     }
 
+    .header-nav a:hover {
+      color: #fff;
+      border-color: rgba(34,211,238,0.35);
+      background: rgba(34,211,238,0.05);
+    }
+
+    .header-nav a.architecture-btn {
+      color: var(--accent-cyan);
+      border-color: rgba(34,211,238,0.15);
+    }
+
+    .header-nav a.mission-btn {
+      color: var(--accent-emerald);
+      border-color: rgba(16,185,129,0.15);
+    }
+
+    .header-nav a.spec-btn {
+      color: var(--accent-purple);
+      border-color: rgba(168,85,247,0.15);
+      background: rgba(168,85,247,0.025);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
     .hero {
-      min-height: 60vh;
+      min-height: 66vh;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       text-align: center;
-      padding: 40px 0 30px;
+
+      padding: 70px 0 55px;
+
       position: relative;
     }
+
     .hero::before {
       content: "";
+
       position: absolute;
+
       top: -20%;
       left: 50%;
+
       transform: translateX(-50%);
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.08), rgba(34, 211, 238, 0.04), transparent 70%);
+
+      width: 760px;
+      height: 760px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(168,85,247,0.09),
+          rgba(34,211,238,0.045),
+          transparent 68%
+        );
+
       border-radius: 50%;
+
       pointer-events: none;
+
       animation: pulse 18s infinite alternate ease-in-out;
     }
+
     @keyframes pulse {
-      0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
-      100% { transform: translateX(-50%) scale(1.3); opacity: 1; }
+      0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translateX(-50%) scale(1.25);
+        opacity: 1;
+      }
     }
-    .hero-content { position: relative; z-index: 1; }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
     .tagline {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+
+      font-size: 0.68rem;
+
       color: var(--muted);
+
       letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+
+      margin-bottom: 22px;
     }
+
     h1 {
-      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-size: clamp(2.8rem, 7vw, 5rem);
+
       font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1.05;
-      margin-bottom: 16px;
+
+      letter-spacing: -2px;
+
+      line-height: 1.02;
+
+      margin-bottom: 22px;
     }
+
     .gradient-text {
-      background: linear-gradient(120deg, #22D3EE, #A855F7, #10B981);
+      background:
+        linear-gradient(
+          120deg,
+          var(--accent-cyan),
+          var(--accent-purple),
+          var(--accent-emerald)
+        );
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .hero p {
-      font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+
+    .hero-intro {
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+
       color: var(--muted);
-      max-width: 660px;
-      margin: 0 auto 20px;
+
+      max-width: 720px;
+
+      margin: 0 auto 14px;
     }
+
+    .hero-definition {
+      font-size: 0.95rem;
+
+      color: var(--soft);
+
+      max-width: 690px;
+
+      margin: 0 auto 30px;
+    }
+
+    .hero-definition strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     .quote-block {
       font-style: italic;
-      font-size: 1.1rem;
+
+      font-size: 1.05rem;
+
       color: var(--text);
+
       background: var(--panel);
+
       border: 1px solid var(--line);
+
       border-radius: 16px;
-      padding: 24px 28px;
+
+      padding: 22px 28px;
+
       max-width: 580px;
-      margin: 0 auto 24px;
+
+      margin: 0 auto;
+
       backdrop-filter: blur(12px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.18);
     }
-    .quote-block span { color: var(--accent-cyan); }
+
+    .quote-block span {
+      color: var(--accent-cyan);
+    }
+
+
+    /* =========================================================
+       SECTION BASICS
+    ========================================================= */
+
+    .section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.65rem;
+
+      color: var(--muted);
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+      font-weight: 700;
+
+      letter-spacing: -0.8px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+
+      max-width: 680px;
+
+      margin: 0 auto;
+
+      font-size: 0.95rem;
+    }
+
+
+    /* =========================================================
+       WHAT IS THE MIND GENESIS
+    ========================================================= */
+
+    .definition-box {
+      max-width: 820px;
+
+      margin: 0 auto;
+
+      background: linear-gradient(
+        135deg,
+        rgba(34,211,238,0.035),
+        rgba(168,85,247,0.035)
+      );
+
+      border: 1px solid var(--line);
+
+      border-radius: 22px;
+
+      padding: 34px 34px;
+
+      text-align: center;
+    }
+
+    .definition-box p {
+      color: var(--soft);
+
+      font-size: 1.02rem;
+
+      line-height: 1.85;
+    }
+
+    .definition-box strong {
+      color: var(--text);
+    }
+
+
+    /* =========================================================
+       THREE DIRECTIONS
+    ========================================================= */
 
     .layers {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin: 40px 0 40px;
-    }
-    .layer-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 32px 28px;
-      backdrop-filter: blur(12px);
-      transition: border-color 0.3s ease, transform 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .layer-card:hover {
-      border-color: rgba(168, 85, 247, 0.3);
-      transform: translateY(-4px);
-    }
-    .layer-card .label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .layer-card .label.agi { color: var(--accent-cyan); }
-    .layer-card .label.asi { color: var(--accent-purple); }
-    .layer-card .label.awu { color: var(--accent-emerald); }
-    .layer-card h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .layer-card .sub {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
-    .layer-card .desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-    .layer-card .arrow {
-      display: inline-block;
-      margin-top: 14px;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--accent-purple);
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-      padding-bottom: 2px;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
     }
 
-    /* MASTER SPEC BUTTON (ESKİ KONUM) - KALDIRILDI, HEADER'A TAŞINDI */
+    .layer-card {
+      position: relative;
+
+      background: var(--panel);
+
+      border: 1px solid var(--line);
+
+      border-radius: 20px;
+
+      padding: 30px 24px;
+
+      text-decoration: none;
+
+      color: inherit;
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-height: 285px;
+
+      backdrop-filter: blur(12px);
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .layer-card:hover {
+      transform: translateY(-5px);
+
+      background: rgba(12,17,30,0.85);
+    }
+
+    .layer-card.agi:hover {
+      border-color: rgba(34,211,238,0.35);
+    }
+
+    .layer-card.asi:hover {
+      border-color: rgba(168,85,247,0.35);
+    }
+
+    .layer-card.awi:hover {
+      border-color: rgba(16,185,129,0.35);
+    }
+
+    .layer-number {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.62rem;
+
+      color: var(--muted);
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 12px;
+    }
+
+    .layer-card .label {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.62rem;
+
+      letter-spacing: 1.7px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    .layer-card .label.agi {
+      color: var(--accent-cyan);
+    }
+
+    .layer-card .label.asi {
+      color: var(--accent-purple);
+    }
+
+    .layer-card .label.awi {
+      color: var(--accent-emerald);
+    }
+
+    .layer-card h2 {
+      font-size: 2rem;
+
+      font-weight: 800;
+
+      letter-spacing: -0.5px;
+
+      margin-bottom: 2px;
+    }
+
+    .direction {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.72rem;
+
+      letter-spacing: 1.4px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 14px;
+    }
+
+    .agi .direction {
+      color: var(--accent-cyan);
+    }
+
+    .asi .direction {
+      color: var(--accent-purple);
+    }
+
+    .awi .direction {
+      color: var(--accent-emerald);
+    }
+
+    .layer-card .sub {
+      color: var(--soft);
+
+      font-size: 0.92rem;
+
+      margin-bottom: 10px;
+    }
+
+    .layer-card .desc {
+      color: var(--muted);
+
+      font-size: 0.83rem;
+
+      line-height: 1.65;
+    }
+
+    .layer-card .arrow {
+      margin-top: auto;
+      padding-top: 18px;
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.72rem;
+
+      letter-spacing: 0.8px;
+
+      color: var(--muted);
+    }
+
+
+    /* =========================================================
+       COMPARISON
+    ========================================================= */
+
+    .comparison-wrap {
+      overflow-x: auto;
+
+      border: 1px solid var(--line);
+
+      border-radius: 18px;
+
+      background: rgba(10,14,25,0.55);
+    }
+
+    .comparison {
+      width: 100%;
+
+      min-width: 680px;
+
+      border-collapse: collapse;
+    }
+
+    .comparison th,
+    .comparison td {
+      padding: 18px 20px;
+
+      text-align: left;
+
+      border-bottom: 1px solid var(--line);
+
+      font-size: 0.85rem;
+    }
+
+    .comparison th {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.67rem;
+
+      letter-spacing: 1.4px;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+
+      background: rgba(255,255,255,0.018);
+    }
+
+    .comparison td:first-child {
+      color: var(--muted);
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.7rem;
+
+      width: 18%;
+    }
+
+    .comparison td {
+      color: var(--soft);
+    }
+
+    .comparison tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison .agi-head {
+      color: var(--accent-cyan);
+    }
+
+    .comparison .asi-head {
+      color: var(--accent-purple);
+    }
+
+    .comparison .awi-head {
+      color: var(--accent-emerald);
+    }
+
+
+    /* =========================================================
+       ARCHITECTURE PREVIEW
+    ========================================================= */
+
+    .architecture-preview {
+      position: relative;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(168,85,247,0.06),
+          transparent 55%
+        ),
+        var(--panel);
+
+      border: 1px solid var(--line);
+
+      border-radius: 24px;
+
+      padding: 42px 28px;
+
+      text-align: center;
+
+      overflow: hidden;
+    }
+
+    .architecture-preview::before {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 330px;
+      height: 330px;
+
+      transform: translate(-50%, -50%);
+
+      border: 1px solid rgba(34,211,238,0.08);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .architecture-core {
+      position: relative;
+      z-index: 1;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 155px;
+      height: 155px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255,255,255,0.12);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(168,85,247,0.13),
+          rgba(10,14,25,0.95) 68%
+        );
+
+      box-shadow:
+        0 0 60px rgba(168,85,247,0.08);
+
+      margin-bottom: 32px;
+    }
+
+    .architecture-core-inner {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.68rem;
+
+      line-height: 1.6;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      color: var(--text);
+    }
+
+    .architecture-core-inner span {
+      color: var(--accent-cyan);
+    }
+
+    .architecture-spheres {
+      position: relative;
+      z-index: 1;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+
+      max-width: 760px;
+
+      margin: 0 auto;
+    }
+
+    .sphere {
+      padding: 18px 14px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 15px;
+
+      background: rgba(255,255,255,0.015);
+    }
+
+    .sphere-name {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.82rem;
+
+      font-weight: 600;
+
+      margin-bottom: 5px;
+    }
+
+    .sphere-count {
+      font-size: 0.72rem;
+
+      color: var(--muted);
+
+      margin-bottom: 6px;
+    }
+
+    .sphere-direction {
+      font-size: 0.68rem;
+
+      letter-spacing: 1.2px;
+
+      text-transform: uppercase;
+    }
+
+    .sphere.agi .sphere-name,
+    .sphere.agi .sphere-direction {
+      color: var(--accent-cyan);
+    }
+
+    .sphere.asi .sphere-name,
+    .sphere.asi .sphere-direction {
+      color: var(--accent-purple);
+    }
+
+    .sphere.awi .sphere-name,
+    .sphere.awi .sphere-direction {
+      color: var(--accent-emerald);
+    }
+
+    .architecture-note {
+      position: relative;
+      z-index: 1;
+
+      max-width: 650px;
+
+      margin: 30px auto 0;
+
+      color: var(--muted);
+
+      font-size: 0.85rem;
+
+      line-height: 1.7;
+    }
+
+    .architecture-button {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 10px 22px;
+
+      border-radius: 40px;
+
+      border: 1px solid rgba(168,85,247,0.22);
+
+      color: var(--accent-purple);
+
+      text-decoration: none;
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.7rem;
+
+      letter-spacing: 0.7px;
+
+      transition: all 0.3s ease;
+    }
+
+    .architecture-button:hover {
+      border-color: var(--accent-purple);
+
+      background: rgba(168,85,247,0.07);
+    }
+
+
+    /* =========================================================
+       FINAL
+    ========================================================= */
 
     .final-section {
       text-align: center;
-      padding: 40px 0 40px;
+
+      padding: 80px 0 60px;
+
       border-top: 1px solid var(--line);
     }
+
     .final-section h3 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-    .final-section p {
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 16px;
-    }
-    .contact-email {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 12px 28px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
-      color: var(--accent-cyan);
-      text-decoration: none;
-      border: 1px solid rgba(34, 211, 238, 0.2);
-      border-radius: 40px;
-      background: rgba(34, 211, 238, 0.05);
-      transition: all 0.3s ease;
-    }
-    .contact-email:hover {
-      background: rgba(34, 211, 238, 0.12);
-      border-color: var(--accent-cyan);
-      color: #ffffff;
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
-    }
-    .domain-links {
-      font-size: 0.85rem;
-      color: var(--accent-cyan);
-      font-family: 'JetBrains Mono', monospace;
-      margin-top: 16px;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+
+      font-weight: 700;
+
+      letter-spacing: -0.8px;
+
+      margin-bottom: 18px;
     }
 
-    @media (min-width: 640px) {
-      .layers { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-      .layer-card { padding: 28px 22px; }
+    .final-section p {
+      color: var(--muted);
+
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      font-size: 0.95rem;
+
+      line-height: 1.8;
     }
-    @media (max-width: 600px) {
-      .site-header { flex-direction: column; align-items: flex-start; }
-      .header-nav { width: 100%; justify-content: flex-start; }
+
+    .final-principle {
+      margin-top: 28px;
+
+      color: var(--soft);
+
+      font-style: italic;
+
+      font-size: 1rem;
     }
+
+    .contact-email {
+      display: inline-block;
+
+      margin-top: 28px;
+
+      padding: 12px 28px;
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.82rem;
+
+      color: var(--accent-cyan);
+
+      text-decoration: none;
+
+      border: 1px solid rgba(34,211,238,0.2);
+
+      border-radius: 40px;
+
+      background: rgba(34,211,238,0.04);
+
+      transition: all 0.3s ease;
+    }
+
+    .contact-email:hover {
+      background: rgba(34,211,238,0.1);
+
+      border-color: var(--accent-cyan);
+
+      color: #fff;
+
+      box-shadow: 0 0 22px rgba(34,211,238,0.12);
+    }
+
+    .domain-links {
+      font-size: 0.72rem;
+
+      color: var(--muted);
+
+      font-family: 'JetBrains Mono', monospace;
+
+      margin-top: 18px;
+
+      opacity: 0.8;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 760px) {
+
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-nav {
+        width: 100%;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 65px 0 55px;
+      }
+
+      .hero::before {
+        width: 500px;
+        height: 500px;
+      }
+
+      .layers {
+        grid-template-columns: 1fr;
+      }
+
+      .layer-card {
+        min-height: auto;
+      }
+
+      .architecture-spheres {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .container {
+        padding: 0 18px;
+      }
+
+      .header-nav a {
+        font-size: 0.62rem;
+        padding: 6px 10px;
+      }
+
+      h1 {
+        letter-spacing: -1.3px;
+      }
+
+      .quote-block {
+        padding: 20px 18px;
+        font-size: 0.95rem;
+      }
+
+      .definition-box {
+        padding: 26px 20px;
+      }
+
+      .architecture-preview {
+        padding: 34px 18px;
+      }
+
+      .architecture-core {
+        width: 135px;
+        height: 135px;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
 <div class="container">
 
-  <!-- HEADER -->
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
   <header class="site-header">
-    <div class="header-brand">The Mind Genesis</div>
+
+    <div class="header-brand">
+      The Mind Genesis
+    </div>
+
     <nav class="header-nav">
-      <a href="about.html" class="architecture-btn">📐 Architecture</a>
-      <a href="mission.html" class="mission-btn">🎯 Mission</a>
-      <a href="master-spec.html" class="spec-btn">⚙ Master Spec</a>
+
+      <a href="about.html" class="architecture-btn">
+        📐 Architecture
+      </a>
+
+      <a href="mission.html" class="mission-btn">
+        🎯 Mission
+      </a>
+
+      <a href="master-spec.html" class="spec-btn">
+        ⚙ Master Spec
+      </a>
+
     </nav>
+
   </header>
 
-  <!-- HERO -->
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
   <section class="hero">
+
     <div class="hero-content">
-      <div class="tagline">The Mind Genesis Framework</div>
-      <h1>
-        The Evolution of Intelligence<br>
-        <span class="gradient-text">AGI · ASI · AWI</span>
-      </h1>
-      <p>
-        Is humanity ready to become the second most intelligent entity on Earth?<br>
-        This question stands before all of us in an age where intelligence is being redefined.
-      </p>
-      <div class="quote-block">
-        “Intelligence processes data.<br>
-        <span>Wisdom creates meaning.</span><br>
-        But what about superintelligence?”
+
+      <div class="tagline">
+        The Mind Genesis Framework
       </div>
+
+      <h1>
+        The Evolution of Intelligence
+        <br>
+        <span class="gradient-text">
+          AGI · ASI · AWI
+        </span>
+      </h1>
+
+      <p class="hero-intro">
+        Intelligence is no longer evolving in a single direction.
+        It is expanding across cognition, capability, scale, meaning, and responsibility.
+      </p>
+
+      <p class="hero-definition">
+        <strong>
+          The Mind Genesis
+        </strong>
+        is an independent, transdisciplinary framework exploring how intelligence
+        may evolve across three complementary directions:
+        breadth, scale, and meaning.
+      </p>
+
+      <div class="quote-block">
+
+        “Intelligence processes data and scales capability.
+        <br>
+
+        <span>
+          Wisdom creates meaning.
+        </span>”
+
+      </div>
+
     </div>
-  </section>
-
-  <!-- DIMENSIONS (AGI, ASI, AWI) -->
-  <section class="layers">
-
-    <a href="https://www.theagimind.com/" target="_blank" class="layer-card">
-      <div class="label agi">Artificial General Intelligence</div>
-      <h2>AGI</h2>
-      <div class="sub">General Cognition</div>
-      <div class="desc">The architecture of general intelligence. Systems that reason across all domains.</div>
-      <span class="arrow">Explore →</span>
-    </a>
-
-    <a href="https://www.theasimind.com/" target="_blank" class="layer-card">
-      <div class="label asi">Artificial Superintelligence</div>
-      <h2>ASI</h2>
-      <div class="sub">Superintelligence &amp; Frontier</div>
-      <div class="desc">Where intelligence surpasses human limits — exploring the unknown and the existential.</div>
-      <span class="arrow">Explore →</span>
-    </a>
-
-    <a href="https://www.theawimind.com/" target="_blank" class="layer-card">
-      <div class="label awu">Artificial Wisdom Intelligence</div>
-      <h2>AWI</h2>
-      <div class="sub">Wisdom &amp; Meaning</div>
-      <div class="desc">Where wisdom meets intelligence. Meaning, ethics, and responsibility.</div>
-      <span class="arrow">Explore →</span>
-    </a>
 
   </section>
 
-  <!-- FINAL SECTION -->
+
+  <!-- =======================================================
+       WHAT IS THE MIND GENESIS
+  ======================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        The Framework
+      </div>
+
+      <h2>
+        What Is The Mind Genesis?
+      </h2>
+
+      <p>
+        A conceptual architecture for navigating the emergence of shared intelligence.
+      </p>
+
+    </div>
+
+    <div class="definition-box">
+
+      <p>
+        The Mind Genesis Framework explores the transition from
+        <strong>tool-based computation</strong>
+        toward a
+        <strong>Shared Intelligence Ecosystem</strong> —
+        where general cognition, superintelligent capability, and wisdom
+        coexist as interconnected directions of development.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       THREE DIRECTIONS
+  ======================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Three Complementary Spheres
+      </div>
+
+      <h2>
+        Three Directions of Intelligence
+      </h2>
+
+      <p>
+        AGI, ASI, and AWI are not stages in a hierarchy.
+        They are different directions that coexist and reinforce one another.
+      </p>
+
+    </div>
+
+
+    <div class="layers">
+
+
+      <!-- AGI -->
+
+      <a href="https://www.theagimind.com/"
+         target="_blank"
+         rel="noopener"
+         class="layer-card agi">
+
+        <div class="layer-number">
+          SPHERE I · 13 DIMENSIONS
+        </div>
+
+        <div class="label agi">
+          Artificial General Intelligence
+        </div>
+
+        <h2>
+          AGI
+        </h2>
+
+        <div class="direction">
+          Breadth
+        </div>
+
+        <div class="sub">
+          General Cognition
+        </div>
+
+        <div class="desc">
+          The expansion of intelligence across domains,
+          contexts, problems, and forms of general cognition.
+        </div>
+
+        <span class="arrow">
+          Explore AGI →
+        </span>
+
+      </a>
+
+
+      <!-- ASI -->
+
+      <a href="https://www.theasimind.com/"
+         target="_blank"
+         rel="noopener"
+         class="layer-card asi">
+
+        <div class="layer-number">
+          SPHERE II · 11 DIMENSIONS
+        </div>
+
+        <div class="label asi">
+          Artificial Superintelligence
+        </div>
+
+        <h2>
+          ASI
+        </h2>
+
+        <div class="direction">
+          Scale
+        </div>
+
+        <div class="sub">
+          Superintelligence &amp; Frontier
+        </div>
+
+        <div class="desc">
+          The expansion of intelligence beyond biological limits
+          of speed, depth, scope, and complexity.
+        </div>
+
+        <span class="arrow">
+          Explore ASI →
+        </span>
+
+      </a>
+
+
+      <!-- AWI -->
+
+      <a href="https://www.theawimind.com/"
+         target="_blank"
+         rel="noopener"
+         class="layer-card awi">
+
+        <div class="layer-number">
+          SPHERE III · 9 DIMENSIONS
+        </div>
+
+        <div class="label awi">
+          Artificial Wisdom Intelligence
+        </div>
+
+        <h2>
+          AWI
+        </h2>
+
+        <div class="direction">
+          Meaning
+        </div>
+
+        <div class="sub">
+          Wisdom &amp; Meaning
+        </div>
+
+        <div class="desc">
+          The development of context, responsibility, judgment,
+          meaning, and ethical restraint.
+        </div>
+
+        <span class="arrow">
+          Explore AWI →
+        </span>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       COMPARISON
+  ======================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        At A Glance
+      </div>
+
+      <h2>
+        AGI · ASI · AWI
+      </h2>
+
+      <p>
+        Three directions. One shared intelligence ecosystem.
+      </p>
+
+    </div>
+
+
+    <div class="comparison-wrap">
+
+      <table class="comparison">
+
+        <thead>
+
+          <tr>
+
+            <th></th>
+
+            <th class="agi-head">
+              AGI
+            </th>
+
+            <th class="asi-head">
+              ASI
+            </th>
+
+            <th class="awi-head">
+              AWI
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>
+              Direction
+            </td>
+
+            <td>
+              Breadth
+            </td>
+
+            <td>
+              Scale
+            </td>
+
+            <td>
+              Meaning
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              Core
+            </td>
+
+            <td>
+              General cognition
+            </td>
+
+            <td>
+              Superintelligent capability
+            </td>
+
+            <td>
+              Wisdom &amp; responsibility
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              Focus
+            </td>
+
+            <td>
+              Cross-domain reasoning
+            </td>
+
+            <td>
+              Beyond biological limits
+            </td>
+
+            <td>
+              Context, values &amp; judgment
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              Guiding Question
+            </td>
+
+            <td>
+              What can intelligence understand?
+            </td>
+
+            <td>
+              What can intelligence become?
+            </td>
+
+            <td>
+              What should intelligence do?
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       ARCHITECTURE
+  ======================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Framework Architecture
+      </div>
+
+      <h2>
+        33 Dimensions of Intelligence
+      </h2>
+
+      <p>
+        A multi-dimensional architecture connecting cognition,
+        scale, meaning, verification, safety, and systemic awareness.
+      </p>
+
+    </div>
+
+
+    <div class="architecture-preview">
+
+
+      <div class="architecture-core">
+
+        <div class="architecture-core-inner">
+
+          THE MIND GENESIS
+
+          <br>
+
+          <span>
+            SHARED INTELLIGENCE
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="architecture-spheres">
+
+
+        <div class="sphere agi">
+
+          <div class="sphere-name">
+            AGI
+          </div>
+
+          <div class="sphere-count">
+            13 Dimensions
+          </div>
+
+          <div class="sphere-direction">
+            Breadth
+          </div>
+
+        </div>
+
+
+        <div class="sphere asi">
+
+          <div class="sphere-name">
+            ASI
+          </div>
+
+          <div class="sphere-count">
+            11 Dimensions
+          </div>
+
+          <div class="sphere-direction">
+            Scale
+          </div>
+
+        </div>
+
+
+        <div class="sphere awi">
+
+          <div class="sphere-name">
+            AWI
+          </div>
+
+          <div class="sphere-count">
+            9 Dimensions
+          </div>
+
+          <div class="sphere-direction">
+            Meaning
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <p class="architecture-note">
+
+        13 AGI dimensions + 11 ASI dimensions + 9 AWI dimensions
+        form a total of 33 dimensions within one interconnected,
+        non-hierarchical architecture.
+
+      </p>
+
+
+      <a href="master-spec.html"
+         class="architecture-button">
+
+        Explore the Full Architecture →
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FINAL
+  ======================================================== -->
+
   <section class="final-section">
-    <h3>Are We Ready?</h3>
+
+    <h3>
+      Are We Ready?
+    </h3>
+
     <p>
-      These three dimensions are not a hierarchy — they are different directions of intelligence.<br>
-      Perhaps the real question is not about being second, but whether we can learn to share intelligence.<br>
-      This is an Independent Conceptual Framework exploring the evolution of intelligence.
+      The question is no longer simply how intelligent machines can become.
+      It is whether intelligence can evolve without losing the wisdom required
+      to understand the consequences of its own power.
     </p>
 
-    <div style="margin-top: 24px;">
-      <a href="mailto:themindgenesis@gmail.com" class="contact-email">
-        ✉ themindgenesis@gmail.com
-      </a>
-      <div style="font-size: 0.7rem; color: var(--muted); margin-top: 8px;">For collaboration inquiries</div>
+    <p class="final-principle">
+      These three dimensions are not a hierarchy —
+      they are different directions of intelligence.
+    </p>
+
+
+    <a href="mailto:themindgenesis@gmail.com"
+       class="contact-email">
+
+      ✉ themindgenesis@gmail.com
+
+    </a>
+
+    <div style="font-size:0.68rem; color:var(--muted); margin-top:8px;">
+      For collaboration inquiries
     </div>
 
+
     <div class="domain-links">
+
       theagimind.com · theasimind.com · theawimind.com
+
     </div>
+
   </section>
 
 </div>
