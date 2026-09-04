@@ -6,33 +6,25 @@
 
   <title>The Mind Genesis Framework — AGI · ASI · AWI</title>
 
-  <meta name="description"
-        content="The Mind Genesis is a transdisciplinary framework exploring intelligence across three complementary directions: AGI, ASI, and AWI — breadth, scale, and meaning.">
+  <meta name="description" content="The Mind Genesis is a transdisciplinary framework exploring intelligence across three complementary directions: AGI, ASI, and AWI — breadth, scale, and meaning.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-
     :root {
       --bg: #05070D;
       --panel: rgba(10, 14, 25, 0.75);
       --panel-solid: #0A0E19;
-
       --line: rgba(255,255,255,0.07);
       --line-strong: rgba(255,255,255,0.12);
-
       --text: #F1F5F9;
       --muted: #94A3B8;
       --soft: #CBD5E1;
-
       --accent-cyan: #22D3EE;
       --accent-purple: #A855F7;
       --accent-emerald: #10B981;
-
       --max-width: 980px;
     }
 
@@ -47,10 +39,7 @@
     }
 
     body {
-      background:
-        radial-gradient(circle at 50% -10%, rgba(34,211,238,0.035), transparent 35%),
-        var(--bg);
-
+      background: radial-gradient(circle at 50% -10%, rgba(34,211,238,0.035), transparent 35%), var(--bg);
       color: var(--text);
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -68,20 +57,15 @@
       padding: 0 24px;
     }
 
-
     /* =========================================================
        HEADER
     ========================================================= */
-
     .site-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 20px 0 14px;
-
       border-bottom: 1px solid var(--line);
-
       gap: 16px;
       flex-wrap: wrap;
     }
@@ -98,10 +82,13 @@
       white-space: nowrap;
     }
 
+    /* =========================================================
+       LOGO BOYUTU BÜYÜTÜLDÜ (48px)
+    ========================================================= */
     .header-brand img {
-      height: 32px;
+      height: 48px;       
       width: auto;
-      max-height: 32px;
+      max-height: 48px;   
     }
 
     .header-nav {
@@ -114,22 +101,13 @@
     .header-nav a {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.68rem;
-
       color: var(--muted);
       text-decoration: none;
-
       letter-spacing: 0.4px;
-
       padding: 6px 13px;
-
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 40px;
-
-      transition:
-        color 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+      transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
 
     .header-nav a:hover {
@@ -154,50 +132,30 @@
       background: rgba(168,85,247,0.025);
     }
 
-
     /* =========================================================
        HERO
     ========================================================= */
-
     .hero {
       min-height: 66vh;
-
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       text-align: center;
-
       padding: 70px 0 55px;
-
       position: relative;
     }
 
     .hero::before {
       content: "";
-
       position: absolute;
-
       top: -20%;
       left: 50%;
-
       transform: translateX(-50%);
-
       width: 760px;
       height: 760px;
-
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(168,85,247,0.09),
-          rgba(34,211,238,0.045),
-          transparent 68%
-        );
-
+      background: radial-gradient(circle at center, rgba(168,85,247,0.09), rgba(34,211,238,0.045), transparent 68%);
       border-radius: 50%;
-
       pointer-events: none;
-
       animation: pulse 18s infinite alternate ease-in-out;
     }
 
@@ -206,7 +164,6 @@
         transform: translateX(-50%) scale(1);
         opacity: 0.5;
       }
-
       100% {
         transform: translateX(-50%) scale(1.25);
         opacity: 1;
@@ -220,38 +177,23 @@
 
     .tagline {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.68rem;
-
       color: var(--muted);
-
       letter-spacing: 3px;
       text-transform: uppercase;
-
       margin-bottom: 22px;
     }
 
     h1 {
       font-size: clamp(2.8rem, 7vw, 5rem);
-
       font-weight: 800;
-
       letter-spacing: -2px;
-
       line-height: 1.02;
-
       margin-bottom: 22px;
     }
 
     .gradient-text {
-      background:
-        linear-gradient(
-          120deg,
-          var(--accent-cyan),
-          var(--accent-purple),
-          var(--accent-emerald)
-        );
-
+      background: linear-gradient(120deg, var(--accent-cyan), var(--accent-purple), var(--accent-emerald));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -259,21 +201,15 @@
 
     .hero-intro {
       font-size: clamp(1.05rem, 1.7vw, 1.25rem);
-
       color: var(--muted);
-
       max-width: 720px;
-
       margin: 0 auto 14px;
     }
 
     .hero-definition {
       font-size: 0.95rem;
-
       color: var(--soft);
-
       max-width: 690px;
-
       margin: 0 auto 30px;
     }
 
@@ -284,38 +220,25 @@
 
     .quote-block {
       font-style: italic;
-
       font-size: 1.05rem;
-
       color: var(--text);
-
       background: var(--panel);
-
       border: 1px solid var(--line);
-
       border-radius: 16px;
-
       padding: 22px 28px;
-
       max-width: 580px;
-
       margin: 0 auto;
-
       backdrop-filter: blur(12px);
-
-      box-shadow:
-        0 20px 60px rgba(0,0,0,0.18);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
     }
 
     .quote-block span {
       color: var(--accent-cyan);
     }
 
-
     /* =========================================================
        SECTION BASICS
     ========================================================= */
-
     .section {
       padding: 78px 0;
       border-top: 1px solid var(--line);
@@ -328,68 +251,43 @@
 
     .section-label {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.65rem;
-
       color: var(--muted);
-
       letter-spacing: 2.5px;
-
       text-transform: uppercase;
-
       margin-bottom: 10px;
     }
 
     .section-heading h2 {
       font-size: clamp(1.8rem, 4vw, 2.5rem);
-
       font-weight: 700;
-
       letter-spacing: -0.8px;
-
       margin-bottom: 12px;
     }
 
     .section-heading p {
       color: var(--muted);
-
       max-width: 680px;
-
       margin: 0 auto;
-
       font-size: 0.95rem;
     }
-
 
     /* =========================================================
        WHAT IS THE MIND GENESIS
     ========================================================= */
-
     .definition-box {
       max-width: 820px;
-
       margin: 0 auto;
-
-      background: linear-gradient(
-        135deg,
-        rgba(34,211,238,0.035),
-        rgba(168,85,247,0.035)
-      );
-
+      background: linear-gradient(135deg, rgba(34,211,238,0.035), rgba(168,85,247,0.035));
       border: 1px solid var(--line);
-
       border-radius: 22px;
-
       padding: 34px 34px;
-
       text-align: center;
     }
 
     .definition-box p {
       color: var(--soft);
-
       font-size: 1.02rem;
-
       line-height: 1.85;
     }
 
@@ -397,51 +295,32 @@
       color: var(--text);
     }
 
-
     /* =========================================================
        THREE DIRECTIONS
     ========================================================= */
-
     .layers {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 18px;
     }
 
     .layer-card {
       position: relative;
-
       background: var(--panel);
-
       border: 1px solid var(--line);
-
       border-radius: 20px;
-
       padding: 30px 24px;
-
       text-decoration: none;
-
       color: inherit;
-
       display: flex;
-
       flex-direction: column;
-
       min-height: 285px;
-
       backdrop-filter: blur(12px);
-
-      transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
     }
 
     .layer-card:hover {
       transform: translateY(-5px);
-
       background: rgba(12,17,30,0.85);
     }
 
@@ -459,509 +338,312 @@
 
     .layer-number {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.62rem;
-
       color: var(--muted);
-
       letter-spacing: 1.5px;
-
       margin-bottom: 12px;
     }
 
     .layer-card .label {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.62rem;
-
       letter-spacing: 1.7px;
-
       text-transform: uppercase;
-
       margin-bottom: 8px;
     }
 
-    .layer-card .label.agi {
-      color: var(--accent-cyan);
-    }
-
-    .layer-card .label.asi {
-      color: var(--accent-purple);
-    }
-
-    .layer-card .label.awi {
-      color: var(--accent-emerald);
-    }
+    .layer-card .label.agi { color: var(--accent-cyan); }
+    .layer-card .label.asi { color: var(--accent-purple); }
+    .layer-card .label.awi { color: var(--accent-emerald); }
 
     .layer-card h2 {
       font-size: 2rem;
-
       font-weight: 800;
-
       letter-spacing: -0.5px;
-
       margin-bottom: 2px;
     }
 
     .direction {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.72rem;
-
       letter-spacing: 1.4px;
-
       text-transform: uppercase;
-
       margin-bottom: 14px;
     }
 
-    .agi .direction {
-      color: var(--accent-cyan);
-    }
-
-    .asi .direction {
-      color: var(--accent-purple);
-    }
-
-    .awi .direction {
-      color: var(--accent-emerald);
-    }
+    .agi .direction { color: var(--accent-cyan); }
+    .asi .direction { color: var(--accent-purple); }
+    .awi .direction { color: var(--accent-emerald); }
 
     .layer-card .sub {
       color: var(--soft);
-
       font-size: 0.92rem;
-
       margin-bottom: 10px;
     }
 
     .layer-card .desc {
       color: var(--muted);
-
       font-size: 0.83rem;
-
       line-height: 1.65;
     }
 
     .layer-card .arrow {
       margin-top: auto;
       padding-top: 18px;
-
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.72rem;
-
       letter-spacing: 0.8px;
-
       color: var(--muted);
     }
-
 
     /* =========================================================
        COMPARISON
     ========================================================= */
-
     .comparison-wrap {
       overflow-x: auto;
-
       border: 1px solid var(--line);
-
       border-radius: 18px;
-
       background: rgba(10,14,25,0.55);
     }
 
     .comparison {
       width: 100%;
-
       min-width: 680px;
-
       border-collapse: collapse;
     }
 
     .comparison th,
     .comparison td {
       padding: 18px 20px;
-
       text-align: left;
-
       border-bottom: 1px solid var(--line);
-
       font-size: 0.85rem;
     }
 
     .comparison th {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.67rem;
-
       letter-spacing: 1.4px;
-
       text-transform: uppercase;
-
       color: var(--muted);
-
       background: rgba(255,255,255,0.018);
     }
 
     .comparison td:first-child {
       color: var(--muted);
-
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.7rem;
-
       width: 18%;
     }
 
-    .comparison td {
-      color: var(--soft);
-    }
+    .comparison td { color: var(--soft); }
 
-    .comparison tr:last-child td {
-      border-bottom: none;
-    }
+    .comparison tr:last-child td { border-bottom: none; }
 
-    .comparison .agi-head {
-      color: var(--accent-cyan);
-    }
-
-    .comparison .asi-head {
-      color: var(--accent-purple);
-    }
-
-    .comparison .awi-head {
-      color: var(--accent-emerald);
-    }
-
+    .comparison .agi-head { color: var(--accent-cyan); }
+    .comparison .asi-head { color: var(--accent-purple); }
+    .comparison .awi-head { color: var(--accent-emerald); }
 
     /* =========================================================
        ARCHITECTURE PREVIEW
     ========================================================= */
-
     .architecture-preview {
       position: relative;
-
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(168,85,247,0.06),
-          transparent 55%
-        ),
-        var(--panel);
-
+      background: radial-gradient(circle at center, rgba(168,85,247,0.06), transparent 55%), var(--panel);
       border: 1px solid var(--line);
-
       border-radius: 24px;
-
       padding: 42px 28px;
-
       text-align: center;
-
       overflow: hidden;
     }
 
     .architecture-preview::before {
       content: "";
-
       position: absolute;
-
       top: 50%;
       left: 50%;
-
       width: 330px;
       height: 330px;
-
       transform: translate(-50%, -50%);
-
       border: 1px solid rgba(34,211,238,0.08);
-
       border-radius: 50%;
-
       pointer-events: none;
     }
 
     .architecture-core {
       position: relative;
       z-index: 1;
-
       display: inline-flex;
-
       align-items: center;
       justify-content: center;
-
       width: 155px;
       height: 155px;
-
       border-radius: 50%;
-
       border: 1px solid rgba(255,255,255,0.12);
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(168,85,247,0.13),
-          rgba(10,14,25,0.95) 68%
-        );
-
-      box-shadow:
-        0 0 60px rgba(168,85,247,0.08);
-
+      background: radial-gradient(circle, rgba(168,85,247,0.13), rgba(10,14,25,0.95) 68%);
+      box-shadow: 0 0 60px rgba(168,85,247,0.08);
       margin-bottom: 32px;
     }
 
     .architecture-core-inner {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.68rem;
-
       line-height: 1.6;
-
       letter-spacing: 1px;
-
       text-transform: uppercase;
-
       color: var(--text);
     }
 
-    .architecture-core-inner span {
-      color: var(--accent-cyan);
-    }
+    .architecture-core-inner span { color: var(--accent-cyan); }
 
     .architecture-spheres {
       position: relative;
       z-index: 1;
-
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 16px;
-
       max-width: 760px;
-
       margin: 0 auto;
     }
 
     .sphere {
       padding: 18px 14px;
-
       border: 1px solid var(--line);
-
       border-radius: 15px;
-
       background: rgba(255,255,255,0.015);
     }
 
     .sphere-name {
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.82rem;
-
       font-weight: 600;
-
       margin-bottom: 5px;
     }
 
     .sphere-count {
       font-size: 0.72rem;
-
       color: var(--muted);
-
       margin-bottom: 6px;
     }
 
     .sphere-direction {
       font-size: 0.68rem;
-
       letter-spacing: 1.2px;
-
       text-transform: uppercase;
     }
 
-    .sphere.agi .sphere-name,
-    .sphere.agi .sphere-direction {
-      color: var(--accent-cyan);
-    }
-
-    .sphere.asi .sphere-name,
-    .sphere.asi .sphere-direction {
-      color: var(--accent-purple);
-    }
-
-    .sphere.awi .sphere-name,
-    .sphere.awi .sphere-direction {
-      color: var(--accent-emerald);
-    }
+    .sphere.agi .sphere-name, .sphere.agi .sphere-direction { color: var(--accent-cyan); }
+    .sphere.asi .sphere-name, .sphere.asi .sphere-direction { color: var(--accent-purple); }
+    .sphere.awi .sphere-name, .sphere.awi .sphere-direction { color: var(--accent-emerald); }
 
     .architecture-note {
       position: relative;
       z-index: 1;
-
       max-width: 650px;
-
       margin: 30px auto 0;
-
       color: var(--muted);
-
       font-size: 0.85rem;
-
       line-height: 1.7;
     }
 
     .architecture-button {
       display: inline-block;
-
       margin-top: 25px;
-
       padding: 10px 22px;
-
       border-radius: 40px;
-
       border: 1px solid rgba(168,85,247,0.22);
-
       color: var(--accent-purple);
-
       text-decoration: none;
-
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.7rem;
-
       letter-spacing: 0.7px;
-
       transition: all 0.3s ease;
     }
 
     .architecture-button:hover {
       border-color: var(--accent-purple);
-
       background: rgba(168,85,247,0.07);
     }
-
 
     /* =========================================================
        FINAL
     ========================================================= */
-
     .final-section {
       text-align: center;
-
       padding: 80px 0 60px;
-
       border-top: 1px solid var(--line);
     }
 
     .final-section h3 {
       font-size: clamp(1.8rem, 4vw, 2.4rem);
-
       font-weight: 700;
-
       letter-spacing: -0.8px;
-
       margin-bottom: 18px;
     }
 
     .final-section p {
       color: var(--muted);
-
       max-width: 700px;
-
       margin: 0 auto;
-
       font-size: 0.95rem;
-
       line-height: 1.8;
     }
 
     .final-principle {
       margin-top: 28px;
-
       color: var(--soft);
-
       font-style: italic;
-
       font-size: 1rem;
     }
 
     .contact-email {
       display: inline-block;
-
       margin-top: 28px;
-
       padding: 12px 28px;
-
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.82rem;
-
       color: var(--accent-cyan);
-
       text-decoration: none;
-
       border: 1px solid rgba(34,211,238,0.2);
-
       border-radius: 40px;
-
       background: rgba(34,211,238,0.04);
-
       transition: all 0.3s ease;
     }
 
     .contact-email:hover {
       background: rgba(34,211,238,0.1);
-
       border-color: var(--accent-cyan);
-
       color: #fff;
-
       box-shadow: 0 0 22px rgba(34,211,238,0.12);
     }
 
     .domain-links {
       font-size: 0.72rem;
-
       color: var(--muted);
-
       font-family: 'JetBrains Mono', monospace;
-
       margin-top: 18px;
-
       opacity: 0.8;
     }
-
 
     /* =========================================================
        VERSION
     ========================================================= */
-
     .version {
       text-align: center;
-
       padding: 24px 0 18px;
-
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.6rem;
-
       letter-spacing: 1.8px;
-
       text-transform: uppercase;
-
       color: var(--muted);
-
       border-top: 1px solid var(--line);
-
       opacity: 0.5;
     }
 
-
     /* =========================================================
-       MOBILE
+       MOBILE (RESPONSIVE)
     ========================================================= */
-
     @media (max-width: 760px) {
-
       .site-header {
         flex-direction: row;
         flex-wrap: wrap;
@@ -973,9 +655,10 @@
         gap: 8px;
       }
 
+      /* Mobilde logo boyutu biraz küçültüldü ama yine de büyük kalsın diye 40px yapıldı */
       .header-brand img {
-        height: 24px;
-        max-height: 24px;
+        height: 40px;
+        max-height: 40px;
       }
 
       .header-nav {
@@ -1012,7 +695,6 @@
     }
 
     @media (max-width: 480px) {
-
       .container {
         padding: 0 18px;
       }
@@ -1023,8 +705,8 @@
       }
 
       .header-brand img {
-        height: 20px;
-        max-height: 20px;
+        height: 32px;
+        max-height: 32px;
       }
 
       .header-nav a {
@@ -1054,7 +736,6 @@
         height: 135px;
       }
     }
-
   </style>
 </head>
 
@@ -1062,54 +743,29 @@
 
 <div class="container">
 
-  <!-- =======================================================
-       HEADER
-  ======================================================== -->
-
+  <!-- HEADER -->
   <header class="site-header">
-
     <div class="header-brand">
       <img src="tmg-logo.png" alt="The Mind Genesis Logo">
       The Mind Genesis
     </div>
 
     <nav class="header-nav">
-
-      <a href="about.html" class="architecture-btn">
-        📐 Architecture
-      </a>
-
-      <a href="mission.html" class="mission-btn">
-        🎯 Mission
-      </a>
-
-      <a href="master-spec.html" class="spec-btn">
-        ⚙ Master Spec
-      </a>
-
+      <a href="about.html" class="architecture-btn">📐 Architecture</a>
+      <a href="mission.html" class="mission-btn">🎯 Mission</a>
+      <a href="master-spec.html" class="spec-btn">⚙ Master Spec</a>
     </nav>
-
   </header>
 
-
-  <!-- =======================================================
-       HERO
-  ======================================================== -->
-
+  <!-- HERO -->
   <section class="hero">
-
     <div class="hero-content">
-
-      <div class="tagline">
-        The Mind Genesis Framework
-      </div>
-
+      <div class="tagline">The Mind Genesis Framework</div>
+      
       <h1>
         The Evolution of Intelligence
         <br>
-        <span class="gradient-text">
-          AGI · ASI · AWI
-        </span>
+        <span class="gradient-text">AGI · ASI · AWI</span>
       </h1>
 
       <p class="hero-intro">
@@ -1118,487 +774,180 @@
       </p>
 
       <p class="hero-definition">
-        <strong>
-          The Mind Genesis
-        </strong>
-        is an independent, transdisciplinary framework exploring how intelligence
+        <strong>The Mind Genesis</strong> is an independent, transdisciplinary framework exploring how intelligence
         may evolve across three complementary directions:
         breadth, scale, and meaning.
       </p>
 
       <div class="quote-block">
-
         “Intelligence processes data and scales capability.
         <br>
-
-        <span>
-          Wisdom creates meaning.
-        </span>”
-
+        <span>Wisdom creates meaning.</span>”
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- =======================================================
-       WHAT IS THE MIND GENESIS
-  ======================================================== -->
-
+  <!-- WHAT IS THE MIND GENESIS -->
   <section class="section">
-
     <div class="section-heading">
-
-      <div class="section-label">
-        The Framework
-      </div>
-
-      <h2>
-        What Is The Mind Genesis?
-      </h2>
-
-      <p>
-        A conceptual architecture for navigating the emergence of shared intelligence.
-      </p>
-
+      <div class="section-label">The Framework</div>
+      <h2>What Is The Mind Genesis?</h2>
+      <p>A conceptual architecture for navigating the emergence of shared intelligence.</p>
     </div>
 
     <div class="definition-box">
-
       <p>
         The Mind Genesis Framework explores the transition from
-        <strong>tool-based computation</strong>
-        toward a
+        <strong>tool-based computation</strong> toward a
         <strong>Shared Intelligence Ecosystem</strong> —
         where general cognition, superintelligent capability, and wisdom
         coexist as interconnected directions of development.
       </p>
-
     </div>
-
   </section>
 
-
-  <!-- =======================================================
-       THREE DIRECTIONS
-  ======================================================== -->
-
+  <!-- THREE DIRECTIONS -->
   <section class="section">
-
     <div class="section-heading">
-
-      <div class="section-label">
-        Three Complementary Spheres
-      </div>
-
-      <h2>
-        Three Directions of Intelligence
-      </h2>
-
-      <p>
-        AGI, ASI, and AWI are not stages in a hierarchy.
-        They are different directions that coexist and reinforce one another.
-      </p>
-
+      <div class="section-label">Three Complementary Spheres</div>
+      <h2>Three Directions of Intelligence</h2>
+      <p>AGI, ASI, and AWI are not stages in a hierarchy. They are different directions that coexist and reinforce one another.</p>
     </div>
-
 
     <div class="layers">
-
-
       <!-- AGI -->
-
-      <a href="https://www.theagimind.com/"
-         target="_blank"
-         rel="noopener"
-         class="layer-card agi">
-
-        <div class="layer-number">
-          SPHERE I · 13 DIMENSIONS
-        </div>
-
-        <div class="label agi">
-          Artificial General Intelligence
-        </div>
-
-        <h2>
-          AGI
-        </h2>
-
-        <div class="direction">
-          Breadth
-        </div>
-
-        <div class="sub">
-          General Cognition
-        </div>
-
-        <div class="desc">
-          The expansion of intelligence across domains,
-          contexts, problems, and forms of general cognition.
-        </div>
-
-        <span class="arrow">
-          Explore AGI →
-        </span>
-
+      <a href="https://www.theagimind.com/" target="_blank" rel="noopener" class="layer-card agi">
+        <div class="layer-number">SPHERE I · 13 DIMENSIONS</div>
+        <div class="label agi">Artificial General Intelligence</div>
+        <h2>AGI</h2>
+        <div class="direction">Breadth</div>
+        <div class="sub">General Cognition</div>
+        <div class="desc">The expansion of intelligence across domains, contexts, problems, and forms of general cognition.</div>
+        <span class="arrow">Explore AGI →</span>
       </a>
-
 
       <!-- ASI -->
-
-      <a href="https://www.theasimind.com/"
-         target="_blank"
-         rel="noopener"
-         class="layer-card asi">
-
-        <div class="layer-number">
-          SPHERE II · 11 DIMENSIONS
-        </div>
-
-        <div class="label asi">
-          Artificial Superintelligence
-        </div>
-
-        <h2>
-          ASI
-        </h2>
-
-        <div class="direction">
-          Scale
-        </div>
-
-        <div class="sub">
-          Superintelligence &amp; Frontier
-        </div>
-
-        <div class="desc">
-          The expansion of intelligence beyond biological limits
-          of speed, depth, scope, and complexity.
-        </div>
-
-        <span class="arrow">
-          Explore ASI →
-        </span>
-
+      <a href="https://www.theasimind.com/" target="_blank" rel="noopener" class="layer-card asi">
+        <div class="layer-number">SPHERE II · 11 DIMENSIONS</div>
+        <div class="label asi">Artificial Superintelligence</div>
+        <h2>ASI</h2>
+        <div class="direction">Scale</div>
+        <div class="sub">Superintelligence &amp; Frontier</div>
+        <div class="desc">The expansion of intelligence beyond biological limits of speed, depth, scope, and complexity.</div>
+        <span class="arrow">Explore ASI →</span>
       </a>
-
 
       <!-- AWI -->
-
-      <a href="https://www.theawimind.com/"
-         target="_blank"
-         rel="noopener"
-         class="layer-card awi">
-
-        <div class="layer-number">
-          SPHERE III · 9 DIMENSIONS
-        </div>
-
-        <div class="label awi">
-          Artificial Wisdom Intelligence
-        </div>
-
-        <h2>
-          AWI
-        </h2>
-
-        <div class="direction">
-          Meaning
-        </div>
-
-        <div class="sub">
-          Wisdom &amp; Meaning
-        </div>
-
-        <div class="desc">
-          The development of context, responsibility, judgment,
-          meaning, and ethical restraint.
-        </div>
-
-        <span class="arrow">
-          Explore AWI →
-        </span>
-
+      <a href="https://www.theawimind.com/" target="_blank" rel="noopener" class="layer-card awi">
+        <div class="layer-number">SPHERE III · 9 DIMENSIONS</div>
+        <div class="label awi">Artificial Wisdom Intelligence</div>
+        <h2>AWI</h2>
+        <div class="direction">Meaning</div>
+        <div class="sub">Wisdom &amp; Meaning</div>
+        <div class="desc">The development of context, responsibility, judgment, meaning, and ethical restraint.</div>
+        <span class="arrow">Explore AWI →</span>
       </a>
-
     </div>
-
   </section>
 
-
-  <!-- =======================================================
-       COMPARISON
-  ======================================================== -->
-
+  <!-- COMPARISON -->
   <section class="section">
-
     <div class="section-heading">
-
-      <div class="section-label">
-        At A Glance
-      </div>
-
-      <h2>
-        Three Directions
-      </h2>
-
-      <p>
-        How AGI, ASI, and AWI compare across direction, core, focus, and guiding question.
-      </p>
-
+      <div class="section-label">At A Glance</div>
+      <h2>Three Directions</h2>
+      <p>How AGI, ASI, and AWI compare across direction, core, focus, and guiding question.</p>
     </div>
-
 
     <div class="comparison-wrap">
-
       <table class="comparison">
-
         <thead>
-
           <tr>
-
             <th></th>
-
-            <th class="agi-head">
-              AGI
-            </th>
-
-            <th class="asi-head">
-              ASI
-            </th>
-
-            <th class="awi-head">
-              AWI
-            </th>
-
+            <th class="agi-head">AGI</th>
+            <th class="asi-head">ASI</th>
+            <th class="awi-head">AWI</th>
           </tr>
-
         </thead>
-
         <tbody>
-
           <tr>
-
-            <td>
-              Direction
-            </td>
-
-            <td>
-              Breadth
-            </td>
-
-            <td>
-              Scale
-            </td>
-
-            <td>
-              Meaning
-            </td>
-
+            <td>Direction</td>
+            <td>Breadth</td>
+            <td>Scale</td>
+            <td>Meaning</td>
           </tr>
-
           <tr>
-
-            <td>
-              Core
-            </td>
-
-            <td>
-              General cognition
-            </td>
-
-            <td>
-              Superintelligent capability
-            </td>
-
-            <td>
-              Wisdom &amp; responsibility
-            </td>
-
+            <td>Core</td>
+            <td>General cognition</td>
+            <td>Superintelligent capability</td>
+            <td>Wisdom &amp; responsibility</td>
           </tr>
-
           <tr>
-
-            <td>
-              Focus
-            </td>
-
-            <td>
-              Cross-domain reasoning
-            </td>
-
-            <td>
-              Beyond biological limits
-            </td>
-
-            <td>
-              Context, values &amp; judgment
-            </td>
-
+            <td>Focus</td>
+            <td>Cross-domain reasoning</td>
+            <td>Beyond biological limits</td>
+            <td>Context, values &amp; judgment</td>
           </tr>
-
           <tr>
-
-            <td>
-              Guiding Question
-            </td>
-
-            <td>
-              What can intelligence understand?
-            </td>
-
-            <td>
-              What can intelligence become?
-            </td>
-
-            <td>
-              What should intelligence do?
-            </td>
-
+            <td>Guiding Question</td>
+            <td>What can intelligence understand?</td>
+            <td>What can intelligence become?</td>
+            <td>What should intelligence do?</td>
           </tr>
-
         </tbody>
-
       </table>
-
     </div>
-
   </section>
 
-
-  <!-- =======================================================
-       ARCHITECTURE
-  ======================================================== -->
-
+  <!-- ARCHITECTURE -->
   <section class="section">
-
     <div class="section-heading">
-
-      <div class="section-label">
-        Framework Architecture
-      </div>
-
-      <h2>
-        33 Dimensions of Intelligence
-      </h2>
-
-      <p>
-        A multi-dimensional architecture connecting cognition,
-        scale, meaning, verification, safety, and systemic awareness.
-      </p>
-
+      <div class="section-label">Framework Architecture</div>
+      <h2>33 Dimensions of Intelligence</h2>
+      <p>A multi-dimensional architecture connecting cognition, scale, meaning, verification, safety, and systemic awareness.</p>
     </div>
 
-
     <div class="architecture-preview">
-
-
       <div class="architecture-core">
-
         <div class="architecture-core-inner">
-
           THE MIND GENESIS
-
           <br>
-
-          <span>
-            SHARED INTELLIGENCE
-          </span>
-
+          <span>SHARED INTELLIGENCE</span>
         </div>
-
       </div>
-
 
       <div class="architecture-spheres">
-
-
         <div class="sphere agi">
-
-          <div class="sphere-name">
-            AGI
-          </div>
-
-          <div class="sphere-count">
-            13 Dimensions
-          </div>
-
-          <div class="sphere-direction">
-            Breadth
-          </div>
-
+          <div class="sphere-name">AGI</div>
+          <div class="sphere-count">13 Dimensions</div>
+          <div class="sphere-direction">Breadth</div>
         </div>
-
 
         <div class="sphere asi">
-
-          <div class="sphere-name">
-            ASI
-          </div>
-
-          <div class="sphere-count">
-            11 Dimensions
-          </div>
-
-          <div class="sphere-direction">
-            Scale
-          </div>
-
+          <div class="sphere-name">ASI</div>
+          <div class="sphere-count">11 Dimensions</div>
+          <div class="sphere-direction">Scale</div>
         </div>
-
 
         <div class="sphere awi">
-
-          <div class="sphere-name">
-            AWI
-          </div>
-
-          <div class="sphere-count">
-            9 Dimensions
-          </div>
-
-          <div class="sphere-direction">
-            Meaning
-          </div>
-
+          <div class="sphere-name">AWI</div>
+          <div class="sphere-count">9 Dimensions</div>
+          <div class="sphere-direction">Meaning</div>
         </div>
-
       </div>
 
-
       <p class="architecture-note">
-
         13 AGI dimensions + 11 ASI dimensions + 9 AWI dimensions
         form a total of 33 dimensions within one interconnected,
         non-hierarchical architecture.
-
       </p>
 
-
-      <a href="master-spec.html"
-         class="architecture-button">
-
-        Explore the Full Architecture →
-
-      </a>
-
+      <a href="master-spec.html" class="architecture-button">Explore the Full Architecture →</a>
     </div>
-
   </section>
 
-
-  <!-- =======================================================
-       FINAL
-  ======================================================== -->
-
+  <!-- FINAL -->
   <section class="final-section">
-
-    <h3>
-      Are We Ready?
-    </h3>
-
+    <h3>Are We Ready?</h3>
     <p>
       The question is no longer simply how intelligent machines can become.
       It is whether intelligence can evolve without losing the wisdom required
@@ -1610,25 +959,15 @@
       they are different directions of intelligence.
     </p>
 
-
-    <a href="mailto:themindgenesis@gmail.com"
-       class="contact-email">
-
-      ✉ themindgenesis@gmail.com
-
-    </a>
+    <a href="mailto:themindgenesis@gmail.com" class="contact-email">✉ themindgenesis@gmail.com</a>
 
     <div style="font-size:0.68rem; color:var(--muted); margin-top:8px;">
       For collaboration inquiries
     </div>
 
-
     <div class="domain-links">
-
       theagimind.com · theasimind.com · theawimind.com
-
     </div>
-
   </section>
 
 </div>
