@@ -58,13 +58,13 @@
     }
 
     /* =========================================================
-       HEADER
+       HEADER (DÜZELTİLDİ)
     ========================================================= */
     .site-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 0 18px;
+      padding: 20px 0 14px;
       border-bottom: 1px solid var(--line);
       gap: 16px;
       flex-wrap: wrap;
@@ -73,38 +73,36 @@
     .header-brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--soft);
+      font-size: 0.72rem;
+      color: var(--muted);
       letter-spacing: 1.8px;
       text-transform: uppercase;
       white-space: nowrap;
-      font-weight: 500;
     }
 
-    /* LOGO 156px YAPILDI */
     .header-brand img {
-      height: 156px;       
+      height: 156px;
       width: auto;
-      max-height: 196px;   
+      max-height: 48px;
     }
 
     .header-nav {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
       align-items: center;
     }
 
     .header-nav a {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.4px;
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,0.08);
+      padding: 6px 13px;
+      border: 1px solid rgba(255,255,255,0.07);
       border-radius: 40px;
       transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
@@ -176,7 +174,7 @@
 
     .tagline {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       color: var(--muted);
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -250,7 +248,7 @@
 
     .section-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: var(--muted);
       letter-spacing: 2.5px;
       text-transform: uppercase;
@@ -337,7 +335,7 @@
 
     .layer-number {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       color: var(--muted);
       letter-spacing: 1.5px;
       margin-bottom: 12px;
@@ -345,7 +343,7 @@
 
     .layer-card .label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       letter-spacing: 1.7px;
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -364,7 +362,7 @@
 
     .direction {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       letter-spacing: 1.4px;
       text-transform: uppercase;
       margin-bottom: 14px;
@@ -390,7 +388,7 @@
       margin-top: auto;
       padding-top: 18px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       letter-spacing: 0.8px;
       color: var(--muted);
     }
@@ -421,7 +419,7 @@
 
     .comparison th {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.67rem;
       letter-spacing: 1.4px;
       text-transform: uppercase;
       color: var(--muted);
@@ -431,7 +429,7 @@
     .comparison td:first-child {
       color: var(--muted);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       width: 18%;
     }
 
@@ -486,7 +484,7 @@
 
     .architecture-core-inner {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       line-height: 1.6;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -514,19 +512,19 @@
 
     .sphere-name {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       margin-bottom: 5px;
     }
 
     .sphere-count {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--muted);
       margin-bottom: 6px;
     }
 
     .sphere-direction {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       letter-spacing: 1.2px;
       text-transform: uppercase;
     }
@@ -541,7 +539,7 @@
       max-width: 650px;
       margin: 30px auto 0;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       line-height: 1.7;
     }
 
@@ -554,7 +552,7 @@
       color: var(--accent-purple);
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       letter-spacing: 0.7px;
       transition: all 0.3s ease;
     }
@@ -640,7 +638,7 @@
     }
 
     /* =========================================================
-       MOBILE (RESPONSIVE)
+       MOBILE
     ========================================================= */
     @media (max-width: 760px) {
       .site-header {
@@ -654,10 +652,9 @@
         gap: 8px;
       }
 
-      /* Mobilde logo boyutu küçültüldü */
       .header-brand img {
-        height: 120px;
-        max-height: 120px;
+        height: 32px;
+        max-height: 32px;
       }
 
       .header-nav {
@@ -703,10 +700,9 @@
         gap: 6px;
       }
 
-      /* Çok küçük ekranlarda logo daha da küçültüldü */
       .header-brand img {
-        height: 80px;
-        max-height: 80px;
+        height: 24px;
+        max-height: 24px;
       }
 
       .header-nav a {
@@ -747,7 +743,7 @@
   <header class="site-header">
     <div class="header-brand">
       <img src="tmg-logo.png" alt="The Mind Genesis Logo">
-      The Mind Genesis Framework 
+      The Mind Genesis Framework
     </div>
 
     <nav class="header-nav">
@@ -761,7 +757,7 @@
   <section class="hero">
     <div class="hero-content">
       <div class="tagline">The Mind Genesis Framework</div>
-      
+
       <h1>
         The Evolution of Intelligence
         <br>
@@ -769,7 +765,7 @@
       </h1>
 
       <p class="hero-intro">
-       Is humanity prepared to become the second most intelligent entity on Earth? Intelligence is no longer evolving in a single direction.
+        Intelligence is no longer evolving in a single direction.
         It is expanding across cognition, capability, scale, meaning, and responsibility.
       </p>
 
