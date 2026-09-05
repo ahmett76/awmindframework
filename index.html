@@ -58,7 +58,7 @@
     }
 
     /* =========================================================
-       HEADER (DÜZELTİLDİ)
+       HEADER
     ========================================================= */
     .site-header {
       display: flex;
@@ -83,9 +83,9 @@
     }
 
     .header-brand img {
-      height: 156px;
+      height: 48px;
       width: auto;
-      max-height: 156px;
+      max-height: 48px;
     }
 
     .header-nav {
@@ -104,7 +104,7 @@
       padding: 6px 13px;
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 40px;
-      transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .header-nav a:hover {
@@ -127,6 +127,28 @@
       color: var(--accent-purple);
       border-color: rgba(168,85,247,0.15);
       background: rgba(168,85,247,0.025);
+    }
+
+    .header-nav a.ethic-btn {
+      color: #FCD34D;
+      border-color: rgba(252, 211, 77, 0.15);
+      background: rgba(252, 211, 77, 0.025);
+    }
+    .header-nav a.ethic-btn:hover {
+      border-color: rgba(252, 211, 77, 0.4);
+      background: rgba(252, 211, 77, 0.08);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
+    }
+
+    .header-nav a.ethic-asi-btn {
+      color: #FCD34D;
+      border-color: rgba(252, 211, 77, 0.15);
+      background: rgba(252, 211, 77, 0.025);
+    }
+    .header-nav a.ethic-asi-btn:hover {
+      border-color: rgba(252, 211, 77, 0.4);
+      background: rgba(252, 211, 77, 0.08);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
     }
 
     /* =========================================================
@@ -750,6 +772,8 @@
       <a href="about.html" class="architecture-btn">📐 Architecture</a>
       <a href="mission.html" class="mission-btn">🎯 Mission</a>
       <a href="master-spec.html" class="spec-btn">⚙ Master Spec</a>
+      <a href="ethic.html" class="ethic-btn">⚖️ Genesis Ethic</a>
+      <a href="ethic-asi.html" class="ethic-asi-btn">⚖️ ethicASI</a>
     </nav>
   </header>
 
@@ -765,7 +789,7 @@
       </h1>
 
       <p class="hero-intro">
-           Is humanity prepared to become the second most intelligent entity on Earth? Intelligence is no longer evolving in a single direction.
+        Is humanity prepared to become the second most intelligent entity on Earth? Intelligence is no longer evolving in a single direction.
         It is expanding across cognition, capability, scale, meaning, and responsibility.
       </p>
 
@@ -774,6 +798,7 @@
         may evolve across three complementary directions:
         breadth, scale, and meaning.
       </p>
+
       <div class="quote-block">
         “Intelligence processes data.<br>
         <span>Wisdom creates meaning.</span><br>
