@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title> Architecture— The Mind Genesis Framework</title>
+  <title>Architecture — The Mind Genesis Framework</title>
 
   <meta name="description"
         content="The Mind Genesis Framework — a 33-dimensional architecture of coexisting intelligence across AGI, ASI, and AWI.">
@@ -16,6 +16,7 @@
         rel="stylesheet">
 
   <style>
+
     :root {
       --bg: #05070D;
       --panel: rgba(10, 14, 25, 0.75);
@@ -50,6 +51,7 @@
       margin: 0 auto;
       padding: 0 24px;
     }
+
 
     /* HEADER */
 
@@ -109,6 +111,7 @@
       box-shadow: 0 0 20px rgba(34, 211, 238, 0.05);
     }
 
+
     /* MAIN MANIFESTO */
 
     .manifesto-box {
@@ -132,10 +135,11 @@
       color: var(--text);
     }
 
+
     /* ARCHITECTURAL PRINCIPLE */
 
     .principle-box {
-      margin: 34px 0 42px;
+      margin: 34px 0 32px;
 
       padding: 28px 30px;
 
@@ -170,6 +174,286 @@
       margin-bottom: 0;
       color: var(--text);
     }
+
+
+    /* ARCHITECTURAL INTERACTION MAP */
+
+    .map-section {
+      margin: 34px 0 42px;
+    }
+
+    .map-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 16px;
+
+      margin-bottom: 12px;
+    }
+
+    .map-title {
+      font-family: 'JetBrains Mono', monospace;
+
+      color: var(--text);
+
+      font-size: 0.9rem;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+    .map-hint {
+      color: var(--muted);
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.68rem;
+
+      letter-spacing: 0.6px;
+    }
+
+    .map-container {
+      padding: 14px;
+
+      background: rgba(5, 7, 13, 0.65);
+
+      border: 1px solid rgba(34, 211, 238, 0.12);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(10px);
+    }
+
+    .map-trigger {
+      display: block;
+
+      position: relative;
+
+      cursor: zoom-in;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      outline: none;
+    }
+
+    .map-trigger::after {
+      content: "CLICK TO EXPAND";
+
+      position: absolute;
+
+      right: 14px;
+      bottom: 12px;
+
+      padding: 6px 10px;
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      border-radius: 999px;
+
+      background: rgba(5, 7, 13, 0.78);
+
+      color: rgba(255,255,255,0.75);
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.62rem;
+
+      letter-spacing: 0.8px;
+
+      pointer-events: none;
+
+      opacity: 0;
+
+      transform: translateY(4px);
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .map-trigger:hover::after,
+    .map-trigger:focus-visible::after {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+    .map-container img {
+      width: 100%;
+
+      max-width: 100%;
+
+      height: auto;
+
+      border-radius: 14px;
+
+      display: block;
+
+      transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+    .map-trigger:hover img {
+      transform: scale(1.008);
+
+      opacity: 0.96;
+    }
+
+    .map-caption {
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.7rem;
+
+      color: var(--muted);
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      text-align: center;
+
+      margin-top: 12px;
+    }
+
+
+    /* LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 9999;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 28px;
+
+      background: rgba(2, 4, 9, 0.94);
+
+      backdrop-filter: blur(14px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      pointer-events: none;
+
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+
+      visibility: visible;
+
+      pointer-events: auto;
+    }
+
+    .lightbox-content {
+      position: relative;
+
+      width: min(1500px, 96vw);
+
+      max-height: 92vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      display: block;
+
+      max-width: 100%;
+
+      max-height: 88vh;
+
+      width: auto;
+
+      height: auto;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.55);
+    }
+
+    .lightbox-close {
+      position: fixed;
+
+      top: 18px;
+
+      right: 22px;
+
+      width: 44px;
+
+      height: 44px;
+
+      border: 1px solid rgba(255,255,255,0.16);
+
+      border-radius: 50%;
+
+      background: rgba(10,14,25,0.82);
+
+      color: var(--text);
+
+      font-size: 1.5rem;
+
+      line-height: 1;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+    }
+
+    .lightbox-close:hover {
+      border-color: var(--accent-cyan);
+
+      color: var(--accent-cyan);
+    }
+
+    .lightbox-label {
+      position: fixed;
+
+      left: 50%;
+
+      bottom: 16px;
+
+      transform: translateX(-50%);
+
+      color: var(--muted);
+
+      font-family: 'JetBrains Mono', monospace;
+
+      font-size: 0.68rem;
+
+      letter-spacing: 0.8px;
+
+      text-transform: uppercase;
+
+      text-align: center;
+
+      white-space: nowrap;
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
 
     /* THREE DIRECTIONS */
 
@@ -234,6 +518,7 @@
       color: var(--accent-emerald);
     }
 
+
     /* SECTION TITLES */
 
     .section-title {
@@ -280,6 +565,7 @@
       color: var(--accent-emerald);
     }
 
+
     /* PRINCIPLE LIST */
 
     .principle-list {
@@ -299,6 +585,7 @@
     .principle-list strong {
       color: var(--text);
     }
+
 
     /* MASTER SPEC LINK */
 
@@ -344,6 +631,7 @@
       box-shadow: 0 0 20px rgba(34, 211, 238, 0.06);
     }
 
+
     /* EPILOGUE */
 
     .epilogue {
@@ -382,31 +670,6 @@
       font-style: italic;
     }
 
-    /* INTERACTION MAP */
-    .map-container {
-      margin: 40px 0 30px;
-      padding: 20px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      text-align: center;
-    }
-    .map-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-    }
-    .map-caption {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--muted);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 12px;
-    }
 
     /* FOOTER */
 
@@ -434,6 +697,7 @@
       text-decoration: underline;
     }
 
+
     /* RESPONSIVE */
 
     @media (max-width: 760px) {
@@ -446,11 +710,29 @@
         padding: 32px 24px;
       }
 
+      .map-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+      }
+
       .map-container {
-        padding: 12px;
+        padding: 10px;
+
         margin: 30px 0 20px;
       }
+
+      .lightbox {
+        padding: 12px;
+      }
+
+      .lightbox-image {
+        max-height: 84vh;
+      }
     }
+
 
     @media (max-width: 600px) {
 
@@ -472,22 +754,41 @@
 
       .map-container {
         padding: 8px;
+
         margin: 20px 0 15px;
+      }
+
+      .map-trigger::after {
+        display: none;
+      }
+
+      .lightbox-close {
+        top: 10px;
+
+        right: 10px;
+      }
+
+      .lightbox-label {
+        bottom: 8px;
+
+        font-size: 0.58rem;
       }
     }
 
   </style>
 </head>
 
+
 <body>
 
 <div class="container">
+
 
   <!-- HEADER -->
 
   <header class="about-header">
 
-    <h1  
+    <h1>
       <span class="gradient-text">The Mind Genesis</span>
     </h1>
 
@@ -509,6 +810,7 @@
   <div class="manifesto-box">
 
     <div class="manifesto-content">
+
 
       <p>
         <strong>Beyond the Computation</strong><br>
@@ -546,9 +848,62 @@
       </div>
 
 
+      <!-- ARCHITECTURAL INTERACTION MAP -->
+
+      <section
+        class="map-section"
+        aria-labelledby="interaction-map-title">
+
+        <div class="map-heading">
+
+          <div
+            id="interaction-map-title"
+            class="map-title">
+
+            Architectural Interaction Map
+
+          </div>
+
+          <div class="map-hint">
+
+            33 Dimensions · Click to expand
+
+          </div>
+
+        </div>
+
+
+        <div class="map-container">
+
+          <a
+            href="#"
+            class="map-trigger"
+            id="mapTrigger"
+            aria-label="Open the Architectural Interaction Map in full size">
+
+            <img
+              src="architectural-interaction-map.jpg"
+              alt="The Mind Genesis Architectural Interaction Map showing 33 dimensions of simultaneous intelligence across AGI, ASI, and AWI."
+              loading="lazy">
+
+          </a>
+
+
+          <div class="map-caption">
+
+            33 Dimensions of Simultaneous Intelligence
+
+          </div>
+
+        </div>
+
+      </section>
+
+
       <!-- THREE DIRECTIONS -->
 
       <div class="directions">
+
 
         <div class="direction agi">
 
@@ -617,6 +972,7 @@
 
       </span>
 
+
       <p class="section-desc">
 
         <strong>Breadth of Intelligence.</strong>
@@ -627,6 +983,7 @@
         problems beyond a system's original specialization.
 
       </p>
+
 
       <p>
 
@@ -653,6 +1010,7 @@
         AGI Wake explores recursive cognition and the emergence
         of self-referential awareness as one possible frontier
         within general intelligence.
+
       </p>
 
 
@@ -670,6 +1028,7 @@
 
       </span>
 
+
       <p class="section-desc">
 
         <strong>Scale of Intelligence.</strong>
@@ -679,6 +1038,7 @@
         computational capability.
 
       </p>
+
 
       <p>
 
@@ -707,6 +1067,7 @@
         ASI Guard and ASI Void address autonomous boundaries,
         adaptive security, uncertainty, and the vulnerabilities
         that can emerge as intelligence scales.
+
       </p>
 
 
@@ -724,6 +1085,7 @@
 
       </span>
 
+
       <p class="section-desc">
 
         <strong>Meaning of Intelligence.</strong>
@@ -734,6 +1096,7 @@
         in which it operates.
 
       </p>
+
 
       <p>
 
@@ -766,16 +1129,20 @@
         AWI Void represents cognitive humility:
         the recognition that intelligence must also understand
         the boundaries of its own knowledge and judgment.
+
       </p>
 
 
       <!-- CROSS SPHERE -->
 
       <span class="section-title">
+
         <span class="highlight">
           Cross-Sphere Interaction
         </span>
+
       </span>
+
 
       <p class="section-desc">
 
@@ -786,6 +1153,7 @@
         one another.
 
       </p>
+
 
       <ul class="principle-list">
 
@@ -823,6 +1191,7 @@
 
       </span>
 
+
       <p>
 
         The complete framework contains
@@ -852,6 +1221,7 @@
 
         It represents the current architectural composition
         of the framework.
+
       </p>
 
 
@@ -868,7 +1238,9 @@
         <a
           href="https://www.themindgenesis.com/master-spec.html"
           class="spec-link">
+
           View Technical Master Specification →
+
         </a>
 
       </div>
@@ -891,10 +1263,16 @@
         to meaning, responsibility, and wisdom.
 
         <span class="quote">
+
           “Intelligence processes information.
           Intelligence scales capability.
           Wisdom gives capability meaning.”
+
         </span>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -906,25 +1284,148 @@
     <a href="https://www.themindgenesis.com/">
       themindgenesis.com
     </a>
+
     ·
 
-    <a href="https://www.theagimind.com/" target="_blank">
+    <a
+      href="https://www.theagimind.com/"
+      target="_blank">
+
       theagimind.com
+
     </a>
+
     ·
 
-    <a href="https://www.theasimind.com/" target="_blank">
+    <a
+      href="https://www.theasimind.com/"
+      target="_blank">
+
       theasimind.com
+
     </a>
+
     ·
 
-    <a href="https://www.theawimind.com/" target="_blank">
+    <a
+      href="https://www.theawimind.com/"
+      target="_blank">
+
       theawimind.com
+
     </a>
 
   </footer>
 
 </div>
+
+
+<!-- LIGHTBOX -->
+
+<div
+  class="lightbox"
+  id="mapLightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Architectural Interaction Map">
+
+  <button
+    class="lightbox-close"
+    id="lightboxClose"
+    aria-label="Close image">
+
+    ×
+
+  </button>
+
+
+  <div class="lightbox-content">
+
+    <img
+      class="lightbox-image"
+      src="architectural-interaction-map.jpg"
+      alt="The Mind Genesis Architectural Interaction Map — 33 Dimensions of Simultaneous Intelligence.">
+
+  </div>
+
+
+  <div class="lightbox-label">
+
+    The Mind Genesis · Architectural Interaction Map
+
+  </div>
+
+</div>
+
+
+<!-- LIGHTBOX SCRIPT -->
+
+<script>
+
+  const mapTrigger = document.getElementById("mapTrigger");
+
+  const mapLightbox = document.getElementById("mapLightbox");
+
+  const lightboxClose = document.getElementById("lightboxClose");
+
+
+  function openLightbox() {
+
+    mapLightbox.classList.add("active");
+
+    document.body.classList.add("lightbox-open");
+
+  }
+
+
+  function closeLightbox() {
+
+    mapLightbox.classList.remove("active");
+
+    document.body.classList.remove("lightbox-open");
+
+  }
+
+
+  mapTrigger.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    openLightbox();
+
+  });
+
+
+  lightboxClose.addEventListener("click", function() {
+
+    closeLightbox();
+
+  });
+
+
+  mapLightbox.addEventListener("click", function(event) {
+
+    if (event.target === mapLightbox) {
+
+      closeLightbox();
+
+    }
+
+  });
+
+
+  document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+      closeLightbox();
+
+    }
+
+  });
+
+</script>
+
 
 </body>
 </html>
