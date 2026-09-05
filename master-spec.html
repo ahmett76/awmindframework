@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,6 +144,48 @@
         .references ul { padding-left: 20px; color: var(--muted); font-size: 0.82rem; }
         .references li { margin-bottom: 7px; }
 
+        /* Appendix stili için eklemeler */
+        .appendix-item {
+            margin-bottom: 32px;
+            padding: 24px 28px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--panel);
+            backdrop-filter: blur(8px);
+        }
+        .appendix-item h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .appendix-item h3 .accent-cyan { color: var(--accent-cyan); }
+        .appendix-item h3 .accent-purple { color: var(--accent-purple); }
+        .appendix-item h3 .accent-emerald { color: var(--accent-emerald); }
+        .appendix-item p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 12px;
+        }
+        .appendix-item p:last-child { margin-bottom: 0; }
+        .appendix-item .math { font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); }
+        .appendix-item .flow-diagram {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 12px 0 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+        .appendix-item .flow-diagram .step { display: block; }
+        .appendix-item .flow-diagram .arrow { display: block; padding-left: 16px; border-left: 2px solid var(--line); margin-left: 8px; }
+        .appendix-item ul { color: var(--muted); font-size: 0.9rem; padding-left: 20px; list-style-type: disc; }
+        .appendix-item ul li { margin-bottom: 6px; }
+        .appendix-item ul li strong { color: var(--text); }
+
         @media (min-width: 680px) { .dim-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
         @media (min-width: 980px) { .dim-grid { grid-template-columns: repeat(3, 1fr); gap: 19px; } }
         @media (max-width: 760px) {
@@ -161,6 +203,7 @@
             .map-frame { border-radius: 14px; }
             .section-insight { padding: 20px; }
             .references { padding: 28px 10px; }
+            .appendix-item { padding: 18px 16px; }
         }
         @media (max-width: 460px) {
             .framework-counter { grid-template-columns: 1fr; }
@@ -307,7 +350,7 @@
         </div>
     </section>
 
-    <!-- ==================== APPENDICES (YENİ EKLENEN) ==================== -->
+    <!-- ==================== APPENDIX (DÜZENLENMİŞ) ==================== -->
     <section class="framework-intro">
         <div class="intro-label">Appendix</div>
         <h2><span class="accent">Operational Engineering Invariants</span> &amp; Execution Bridges</h2>
@@ -315,67 +358,65 @@
     </section>
 
     <!-- A.1 -->
-    <div class="framework-intro" style="margin-bottom:30px;">
-        <h2 style="font-size:1.2rem; letter-spacing:-0.5px;">A.1 — The Non-Hierarchical Consensus Protocol (NHCP) &amp; Deadlock Resolution</h2>
+    <div class="appendix-item">
+        <h3><span class="accent-cyan">A.1 — The Non-Hierarchical Consensus Protocol (NHCP)</span> &amp; Deadlock Resolution</h3>
         <p>The simultaneous, non-hierarchical coexistence of the 33 dimensions presents a risk of Byzantine coordination failures and state deadlocks (e.g., when a safety dimension issues a halt while an acceleration dimension demands execution).</p>
-        <p style="margin-top:10px;"><strong style="color:var(--accent-cyan);">Mathematical Formalization of the State Vector:</strong><br>
-        Let the global framework state <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Sₜ</span> at any time step <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">t</span> be a composite vector of all active dimensional outputs: <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Sₜ = {d₁.₁, d₁.₂, …, d₃.₉} ∈ ℝ³³</span><br>
+        <p><strong style="color:var(--accent-cyan);">Mathematical Formalization of the State Vector:</strong><br>
+        Let the global framework state <span class="math">Sₜ</span> at any time step <span class="math">t</span> be a composite vector of all active dimensional outputs: <span class="math">Sₜ = {d₁.₁, d₁.₂, …, d₃.₉} ∈ ℝ³³</span><br>
         Under typical operations, the 33 dimensions operate as an asynchronous, peer-to-peer cognitive mesh, routing signals via <strong>AGI Synapse (1.5)</strong> and <strong>ASI Thread (2.5)</strong> without a central coordinator.</p>
         <p><strong style="color:var(--accent-purple);">Conflict Resolution Algorithm:</strong><br>
         In the event of mutually exclusive dimensional execution vectors—specifically, a conflict between the <strong>Wisdom Imperative (AWI)</strong> and the <strong>Scale/Breadth Imperative (ASI/AGI)</strong>—the system transitions into a local <strong>Byzantine Fault Tolerant (BFT) Consensus Round</strong>.</p>
-        <ul style="color:var(--muted); font-size:0.9rem; padding-left:20px; margin-bottom:10px;">
-            <li><strong style="color:var(--text);">Trigger Event:</strong> Competing steering signals generated within the same epoch <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Δt</span> (e.g., <strong>AWI Void (3.7)</strong> issuing an active restraint signal while <strong>ASI Bloom (2.6)</strong> demands real-time innovation compression).</li>
-            <li><strong style="color:var(--text);">Weight Assignment Invariant:</strong> Every dimension <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">dᵢ</span> is assigned a dynamic weight <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W(dᵢ)</span> that shifts based on the risk profile of the operational environment. However, to guarantee the primacy of the ethical anchor, <strong>AWI (Meaning)</strong> dimensions possess absolute veto weights (<span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W → ∞</span>) for state transitions that approach critical boundaries.</li>
-            <li><strong style="color:var(--text);">State Resolution:</strong> If consensus cannot be achieved within <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">15ms</span>, the system defaults to the safe state defined by <strong>AWI Safe (3.6)</strong>, resolving the deadlock through deterministic prioritization rather than software stagnation.</li>
+        <ul>
+            <li><strong style="color:var(--text);">Trigger Event:</strong> Competing steering signals generated within the same epoch <span class="math">Δt</span> (e.g., <strong>AWI Void (3.7)</strong> issuing an active restraint signal while <strong>ASI Bloom (2.6)</strong> demands real-time innovation compression).</li>
+            <li><strong style="color:var(--text);">Weight Assignment Invariant:</strong> Every dimension <span class="math">dᵢ</span> is assigned a dynamic weight <span class="math">W(dᵢ)</span> that shifts based on the risk profile of the operational environment. However, to guarantee the primacy of the ethical anchor, <strong>AWI (Meaning)</strong> dimensions possess absolute veto weights (<span class="math">W → ∞</span>) for state transitions that approach critical boundaries.</li>
+            <li><strong style="color:var(--text);">State Resolution:</strong> If consensus cannot be achieved within <span class="math">15ms</span>, the system defaults to the safe state defined by <strong>AWI Safe (3.6)</strong>, resolving the deadlock through deterministic prioritization rather than software stagnation.</li>
         </ul>
     </div>
 
     <!-- A.2 -->
-    <div class="framework-intro" style="margin-bottom:30px;">
-        <h2 style="font-size:1.2rem; letter-spacing:-0.5px;">A.2 — Zero-Knowledge Verification (ZKP) for Opaque Cognitive Layers</h2>
+    <div class="appendix-item">
+        <h3><span class="accent-purple">A.2 — Zero-Knowledge Verification (ZKP)</span> for Opaque Cognitive Layers</h3>
         <p>As synthetic reasoning reaches the <strong>ASI Dark (2.7)</strong> boundary, the cognitive pathways become structurally non-human and opaque, rendering traditional interpretability methods obsolete. Relying on the superintelligence to audit its own internal logic introduces critical alignment risks (the self-auditing fallacy).</p>
         <p><strong style="color:var(--accent-cyan);">ZKP Implementation Pipeline:</strong><br>
         To verify plans generated within <strong>ASI Dark (2.7)</strong> without forcing the model to degrade its high-dimensional, non-linear reasoning schemas, <strong>ASI Verify (2.11)</strong> enforces a <strong>Non-Interactive Zero-Knowledge Proof (NIZKP)</strong> protocol.</p>
-        <div style="background:rgba(255,255,255,0.02); border:1px solid var(--line); border-radius:12px; padding:20px; margin:15px 0; font-family:'JetBrains Mono', monospace; font-size:0.8rem; color:var(--muted);">
-            <div style="display:flex; flex-direction:column; gap:6px;">
-                <div><span style="color:var(--accent-purple);">ASI Dark (2.7)</span> — generates raw, opaque plan</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
-                <div><span style="color:var(--accent-cyan);">Prover Space</span> — constructs zk-SNARK</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
-                <div><span style="color:var(--accent-purple);">ASI Guard (2.8)</span> — defines safety predicates</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
-                <div><span style="color:var(--accent-cyan);">Verifier Space</span> — checks proof validity</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
-                <div><span style="color:var(--accent-emerald);">Safe Execution Loop</span> — <span style="color:var(--accent-cyan);">if mathematically valid</span></div>
-            </div>
+        <div class="flow-diagram">
+            <span class="step"><span style="color:var(--accent-purple);">ASI Dark (2.7)</span> — generates raw, opaque plan</span>
+            <span class="arrow">↓</span>
+            <span class="step"><span style="color:var(--accent-cyan);">Prover Space</span> — constructs zk-SNARK</span>
+            <span class="arrow">↓</span>
+            <span class="step"><span style="color:var(--accent-purple);">ASI Guard (2.8)</span> — defines safety predicates</span>
+            <span class="arrow">↓</span>
+            <span class="step"><span style="color:var(--accent-cyan);">Verifier Space</span> — checks proof validity</span>
+            <span class="arrow">↓</span>
+            <span class="step"><span style="color:var(--accent-emerald);">Safe Execution Loop</span> — <span style="color:var(--accent-cyan);">if mathematically valid</span></span>
         </div>
-        <ul style="color:var(--muted); font-size:0.9rem; padding-left:20px;">
+        <ul>
             <li><strong style="color:var(--text);">The Invariant:</strong> The opaque sub-system acts as the <em>Prover</em>, and the formal constraints established by <strong>ASI Guard (2.8)</strong> and <strong>AWI Safe (3.6)</strong> act as the <em>Verifier</em>.</li>
             <li><strong style="color:var(--text);">The Proof:</strong> The <em>Prover</em> must mathematically prove that its proposed execution plan satisfies the safety invariants of the ecosystem (e.g., preservation of human cognitive sovereignty, resource limits) without exposing the underlying, uninterpretable multi-dimensional variables.</li>
-            <li><strong style="color:var(--text);">Execution Lock:</strong> No output generated within <strong>ASI Dark (2.7)</strong> can transition to the execution queue without generating a machine-checkable proof verified by <strong>ASI Verify (2.11)</strong> with a confidence level of <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">P > 1 - 10⁻⁹</span>.</li>
+            <li><strong style="color:var(--text);">Execution Lock:</strong> No output generated within <strong>ASI Dark (2.7)</strong> can transition to the execution queue without generating a machine-checkable proof verified by <strong>ASI Verify (2.11)</strong> with a confidence level of <span class="math">P > 1 - 10⁻⁹</span>.</li>
         </ul>
     </div>
 
     <!-- A.3 -->
-    <div class="framework-intro" style="margin-bottom:30px;">
-        <h2 style="font-size:1.2rem; letter-spacing:-0.5px;">A.3 — Asynchronous Shadow Auditing Model (AWI Sentry)</h2>
+    <div class="appendix-item">
+        <h3><span class="accent-emerald">A.3 — Asynchronous Shadow Auditing Model</span> (AWI Sentry)</h3>
         <p>To resolve the fundamental trade-off between real-time data ingestion in <strong>AGI Pulse (1.6)</strong> and the heavy, multi-layered computational overhead required for moral monitoring in <strong>AWI Sentry (3.8)</strong>, the framework employs a parallelized shadow auditing architecture.</p>
-        <ul style="color:var(--muted); font-size:0.9rem; padding-left:20px;">
+        <ul>
             <li><strong style="color:var(--text);">Primary Execution Thread:</strong> Processes low-latency data streams and manages real-time system adaptations. It does not pause to execute comprehensive ethical or philosophical analyses.</li>
-            <li><strong style="color:var(--text);">Asynchronous Shadow Copy:</strong> At epoch <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">t</span>, a zero-overhead, hardware-level snapshot of the active memory state vector is mirrored into a secondary, isolated memory space (the <em>Shadow Registry</em>).</li>
+            <li><strong style="color:var(--text);">Asynchronous Shadow Copy:</strong> At epoch <span class="math">t</span>, a zero-overhead, hardware-level snapshot of the active memory state vector is mirrored into a secondary, isolated memory space (the <em>Shadow Registry</em>).</li>
             <li><strong style="color:var(--text);">Out-of-Band Audit:</strong> <strong>AWI Sentry (3.8)</strong> operates strictly on the Shadow Registry, conducting non-blocking, out-of-band evaluations of the mirrored cognitive states to detect value drift or goal misalignment.</li>
-            <li><strong style="color:var(--text);">Intervention Protocol:</strong> If <strong>AWI Sentry</strong> identifies an ethical boundary violation or value drift beyond the tolerated threshold (<span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">θ_drift > 0.05</span>), it issues an asynchronous <strong>Interrupt Vector</strong> to the primary execution queue, forcing the primary thread to halt or enter a safe, sandboxed state. This guarantees continuous alignment without introducing performance degradation to real-time operations.</li>
+            <li><strong style="color:var(--text);">Intervention Protocol:</strong> If <strong>AWI Sentry</strong> identifies an ethical boundary violation or value drift beyond the tolerated threshold (<span class="math">θ_drift > 0.05</span>), it issues an asynchronous <strong>Interrupt Vector</strong> to the primary execution queue, forcing the primary thread to halt or enter a safe, sandboxed state. This guarantees continuous alignment without introducing performance degradation to real-time operations.</li>
         </ul>
     </div>
 
     <!-- A.4 -->
-    <div class="framework-intro" style="margin-bottom:30px;">
-        <h2 style="font-size:1.2rem; letter-spacing:-0.5px;">A.4 — Hardware-Level Interrupts for Epistemic Limits (AWI Void)</h2>
+    <div class="appendix-item">
+        <h3><span class="accent-cyan">A.4 — Hardware-Level Interrupts for Epistemic Limits</span> (AWI Void)</h3>
         <p>To prevent software-level bypasses or failure of virtual safety layers under extreme uncertainty or active exploit conditions, the Socratic pause of <strong>AWI Void (3.7)</strong> is anchored to a physical, non-maskable hardware interrupt (NMI).</p>
         <p><strong style="color:var(--accent-emerald);">The Epistemic Boundary Trigger:</strong><br>
-        When a system encounters a decision space where its moral or cognitive confidence falls below the mandatory threshold (<span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Conf_ethical < τ_min</span>), <strong>AWI Void (3.7)</strong> triggers a <strong>Socratic Pause</strong>.</p>
+        When a system encounters a decision space where its moral or cognitive confidence falls below the mandatory threshold (<span class="math">Conf_ethical < τ_min</span>), <strong>AWI Void (3.7)</strong> triggers a <strong>Socratic Pause</strong>.</p>
         <p><strong style="color:var(--accent-purple);">NMI Execution Sequence:</strong></p>
-        <ul style="color:var(--muted); font-size:0.9rem; padding-left:20px;">
+        <ul>
             <li><strong style="color:var(--text);">AWI Void Activation:</strong> The epistemic boundary is breached (e.g., unmapped ethical dilemma or structural anomaly).</li>
             <li><strong style="color:var(--text);">Hardware Interruption:</strong> Rather than routing a halt command through the virtual OS or software middleware, <strong>AWI Void</strong> fires an electrical/firmware-level <strong>Non-Maskable Interrupt (NMI)</strong> directly to the host CPU/TPU clusters.</li>
             <li><strong style="color:var(--text);">State Freeze:</strong> The NMI immediately suspends the execution of the processor clock cycles for all active reasoning nodes associated with the AGI and ASI spheres, bypassing software abstraction layers entirely.</li>
