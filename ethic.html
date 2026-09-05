@@ -1,460 +1,253 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>ethicASI — The Governance of Scale</title>
-
-  <meta name="description"
-        content="ethicASI — Security, verification, and ethical restraint at the superintelligent frontier. The Governance of Scale within The Mind Genesis Framework.">
-
+  <meta name="description" content="ethicASI — Security, verification, and ethical restraint at the superintelligent frontier. The Governance of Scale within The Mind Genesis Framework.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-
     :root {
       --bg: #05070D;
       --panel: rgba(10, 14, 25, 0.75);
       --line: rgba(255,255,255,0.06);
-
       --text: #F1F5F9;
       --muted: #94A3B8;
-
       --accent-cyan: #22D3EE;
       --accent-purple: #A855F7;
       --accent-emerald: #10B981;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: var(--bg);
       color: var(--text);
-
       font-family: 'Inter', sans-serif;
-
       line-height: 1.7;
-
       min-height: 100vh;
-
       overflow-x: hidden;
-
       padding: 40px 20px 60px;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
     /* HEADER */
-
     .ethic-header {
       text-align: center;
-
       padding: 40px 0 30px;
-
       border-bottom: 1px solid var(--line);
-
       margin-bottom: 40px;
     }
-
     .ethic-header h1 {
       font-size: clamp(2.2rem, 5vw, 3.2rem);
-
       font-weight: 800;
-
       letter-spacing: -1px;
-
       margin-bottom: 6px;
     }
-
     .gradient-text {
-      background: linear-gradient(
-        90deg,
-        var(--accent-cyan),
-        var(--accent-purple),
-        var(--accent-emerald)
-      );
-
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-emerald));
       -webkit-background-clip: text;
       background-clip: text;
-
       color: transparent;
     }
-
     .ethic-header .subtitle {
       font-size: 1.05rem;
-
       color: var(--muted);
-
       margin-bottom: 18px;
     }
-
     .back-link {
       display: inline-block;
-
       font-family: 'JetBrains Mono', monospace;
-
       font-size: 0.8rem;
-
       color: var(--accent-cyan);
-
       text-decoration: none;
-
       border: 1px solid rgba(34, 211, 238, 0.2);
-
       padding: 8px 20px;
-
       border-radius: 40px;
-
       transition: all 0.3s ease;
     }
-
     .back-link:hover {
       background: rgba(34, 211, 238, 0.08);
-
       border-color: var(--accent-cyan);
-
-      box-shadow:
-        0 0 20px rgba(34, 211, 238, 0.05);
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.05);
     }
 
     /* MAIN CONTENT */
-
     .ethic-box {
       background: var(--panel);
-
       border: 1px solid var(--line);
-
       border-radius: 20px;
-
       padding: 42px 40px;
-
       backdrop-filter: blur(10px);
     }
-
     .ethic-content p {
       color: var(--muted);
-
       font-size: 0.98rem;
-
       margin-bottom: 24px;
     }
-
     .ethic-content strong {
       color: var(--text);
     }
-
     .ethic-content .section-title {
       display: block;
-
       font-size: 1.3rem;
-
       font-weight: 700;
-
       margin-top: 36px;
-
       margin-bottom: 8px;
     }
-
-    .ethic-content .section-title .highlight {
-      color: var(--accent-cyan);
-    }
-
-    .ethic-content .section-title .purple {
-      color: var(--accent-purple);
-    }
-
-    .ethic-content .section-title .emerald {
-      color: var(--accent-emerald);
-    }
-
+    .ethic-content .section-title .highlight { color: var(--accent-cyan); }
+    .ethic-content .section-title .purple { color: var(--accent-purple); }
+    .ethic-content .section-title .emerald { color: var(--accent-emerald); }
     .ethic-content .section-desc {
       color: var(--text);
-
       font-size: 1rem;
-
       margin-bottom: 18px;
-
       padding-left: 16px;
-
       border-left: 2px solid rgba(255,255,255,0.06);
     }
-
     .ethic-content .slogan-box {
       margin: 34px 0 42px;
-
       padding: 28px 30px;
-
       border: 1px solid rgba(34, 211, 238, 0.16);
-
       border-radius: 16px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(34, 211, 238, 0.045),
-          rgba(168, 85, 247, 0.035),
-          rgba(16, 185, 129, 0.035)
-        );
-
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.045), rgba(168, 85, 247, 0.035), rgba(16, 185, 129, 0.035));
       text-align: center;
     }
-
     .slogan-box .slogan {
       font-size: 1.2rem;
-
       font-style: italic;
-
       color: var(--accent-cyan);
-
       font-family: 'JetBrains Mono', monospace;
     }
-
-    .slogan-box .slogan strong {
-      color: var(--text);
-    }
+    .slogan-box .slogan strong { color: var(--text); }
 
     .ethic-content .pillar-title {
       font-size: 1.15rem;
-
       font-weight: 700;
-
       margin-top: 28px;
-
       margin-bottom: 6px;
-
       color: var(--accent-cyan);
     }
-
     .ethic-content .pillar-desc {
       color: var(--muted);
-
       font-size: 0.95rem;
-
       margin-bottom: 16px;
     }
 
     /* FOOTER */
-
     .ethic-footer {
       text-align: center;
-
       padding-top: 30px;
-
       border-top: 1px solid var(--line);
-
       font-size: 0.85rem;
-
       color: var(--muted);
-
       font-family: 'JetBrains Mono', monospace;
     }
-
     .ethic-footer a {
       color: var(--accent-cyan);
-
       text-decoration: none;
     }
-
-    .ethic-footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* RESPONSIVE */
+    .ethic-footer a:hover { text-decoration: underline; }
 
     @media (max-width: 600px) {
-
-      body {
-        padding: 20px 12px 40px;
-      }
-
-      .container {
-        padding: 0 8px;
-      }
-
-      .ethic-box {
-        padding: 28px 20px;
-      }
-
-      .ethic-header {
-        padding-top: 25px;
-      }
-
-      .slogan-box {
-        padding: 20px;
-      }
+      body { padding: 20px 12px 40px; }
+      .container { padding: 0 8px; }
+      .ethic-box { padding: 28px 20px; }
+      .ethic-header { padding-top: 25px; }
+      .slogan-box { padding: 20px; }
     }
-
   </style>
 </head>
-
 <body>
 
 <div class="container">
 
-  <!-- HEADER -->
-
   <header class="ethic-header">
-
-    <h1>
-      <span class="gradient-text">
-        ethicASI
-      </span>
-    </h1>
-
-    <p class="subtitle">
-      The Governance of Scale
-    </p>
-
-    <p style="font-size:0.9rem; color:var(--muted); margin-bottom:18px;">
-      Security, verification, and ethical restraint at the superintelligent frontier.
-    </p>
-
-    <a
-      href="https://www.themindgenesis.com/"
-      class="back-link">
-      ← Back to Main
-    </a>
-
+    <h1><span class="gradient-text">ethicASI</span></h1>
+    <p class="subtitle">The Governance of Scale</p>
+    <p style="font-size:0.9rem; color:var(--muted); margin-bottom:18px;">Security, verification, and ethical restraint at the superintelligent frontier.</p>
+    <a href="https://www.themindgenesis.com/" class="back-link">← Back to Main</a>
   </header>
 
-  <!-- MAIN -->
-
   <div class="ethic-box">
-
     <div class="ethic-content">
 
       <!-- SLOGAN -->
-
       <div class="slogan-box">
-
         <div class="slogan">
           “Intelligence scales capability.<br>
           <strong>Wisdom creates meaning.</strong>”
         </div>
-
       </div>
 
       <!-- THE GOVERNANCE ULTIMATUM -->
-
       <p>
         <strong>The Governance Ultimatum</strong><br>
         Artificial Superintelligence represents a frontier in which intelligence may expand beyond biological limits of speed, scope, depth, and complexity.
       </p>
-
       <p>
         At sufficient scale, a new governance problem emerges.
       </p>
-
       <p>
         Human institutions have historically governed technologies that humans could observe, understand, test, and ultimately control.
       </p>
-
       <p>
         Superintelligent systems may challenge those assumptions.
       </p>
-
       <p>
         The emergence of increasingly opaque reasoning introduces a fundamental question:
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “How can humanity govern systems whose capabilities may exceed the cognitive scale of the institutions responsible for governing them?”
       </p>
-
       <p>
         This is the <strong>Governance Ultimatum</strong>.
       </p>
-
       <p>
         <em>ethicASI</em> exists to explore the technical and architectural foundations required to address it.
       </p>
 
-
       <!-- THE ASI FRONTIER -->
-
-      <span class="section-title">
-        <span class="purple">
-          The ASI Frontier — ASI Dark
-        </span>
-        <br>
-        <span style="font-size:0.9rem; color:var(--muted);">
-          When Reasoning Exceeds Human Comprehension
-        </span>
-      </span>
-
+      <span class="section-title"><span class="purple">The ASI Frontier — ASI Dark</span><br><span style="font-size:0.9rem; color:var(--muted);">When Reasoning Exceeds Human Comprehension</span></span>
       <p>
         <strong>ASI Dark</strong> represents the frontier of opaque reasoning and emergent behavior beyond ordinary human comprehension.
       </p>
-
       <p>
         Opacity is not necessarily evidence of intelligence, nor does it automatically imply danger. But as systems become more complex, the ability to understand their internal reasoning may become increasingly limited.
       </p>
-
       <p>
         This creates a governance challenge. Traditional oversight depends heavily on human interpretation. At superintelligent scale, interpretation may no longer be sufficient.
       </p>
-
       <p>
         The response cannot simply be to demand that humans understand everything. It must also involve architectures that can provide stronger forms of verification, containment, monitoring, and uncertainty management.
       </p>
-
       <p>
         This is where the <strong>ethicASI</strong> architecture begins.
       </p>
 
-
       <!-- THE ARCHITECTURE OF RESTRAINT -->
-
-      <span class="section-title">
-        <span class="highlight">
-          The Architecture of Restraint
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">The Architecture of Restraint</span></span>
       <p>
         The ethicASI model is built around complementary mechanisms rather than a single safety layer.
       </p>
 
-
       <!-- I — SUPER-VERIFICATION -->
-
-      <div class="pillar-title">
-        I — Super-Verification
-        <span style="font-size:0.9rem; color:var(--muted);">
-          (ASI Verify · 2.11)
-        </span>
-      </div>
-
+      <div class="pillar-title">I — Super-Verification <span style="font-size:0.9rem; color:var(--muted);">(ASI Verify · 2.11)</span></div>
       <p class="pillar-desc">
         Truth at scale requires verifiability.
       </p>
-
       <p>
         <strong>ASI Verify</strong> represents the formal verification direction of the superintelligent frontier.
       </p>
-
       <p>
         Its purpose is not to make every aspect of a superintelligent system transparent. Instead, it explores how machine-generated conclusions, plans, and outputs may be subjected to formal reasoning, logical consistency testing, and mathematical proof mechanisms where such verification is possible.
       </p>
-
       <p>
         The conceptual architecture includes:
       </p>
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
         <li>Automated theorem proving</li>
         <li>Formal verification</li>
@@ -463,632 +256,277 @@
         <li>Machine-checkable proofs</li>
         <li>Verification before consequential execution</li>
       </ul>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “When human understanding becomes insufficient, verifiable structure becomes increasingly important.”
       </p>
-
       <p>
         Formal verification cannot eliminate every form of risk. But for well-defined classes of outputs, it may provide stronger guarantees than relying solely on human interpretation or probabilistic confidence.
       </p>
 
-
       <!-- II — AUTONOMOUS RESTRAINT -->
-
-      <div class="pillar-title" style="color:var(--accent-purple);">
-        II — Autonomous Restraint
-        <span style="font-size:0.9rem; color:var(--muted);">
-          (ASI Guard · 2.8)
-        </span>
-      </div>
-
+      <div class="pillar-title" style="color:var(--accent-purple);">II — Autonomous Restraint <span style="font-size:0.9rem; color:var(--muted);">(ASI Guard · 2.8)</span></div>
       <p class="pillar-desc">
         Capability without restraint creates systemic vulnerability.
       </p>
-
       <p>
         <strong>ASI Guard</strong> addresses the need for autonomous boundaries at superintelligent scale.
       </p>
-
       <p>
         Its conceptual mechanism includes self-limiting protection, dynamic isolation, and adaptive operational boundaries designed to activate when systems approach unpredictable or high-risk decision spaces.
       </p>
-
       <p>
         The purpose is not to suppress intelligence. It is to establish conditions under which intelligence can recognize that certain actions require additional safeguards.
       </p>
-
       <p>
         ASI Guard therefore represents a principle of <strong>architectural restraint</strong>:
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-purple);">
         “A system capable of extraordinary action must also possess mechanisms capable of limiting extraordinary action.”
       </p>
-
       <p>
         Within the broader framework, ASI Guard connects with:
       </p>
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI Dark
-          </strong>
-          — the environment of opaque reasoning.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI Verify
-          </strong>
-          — the formal verification layer.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            AGI Guard
-          </strong>
-          — the corresponding operational boundary architecture at the AGI level.
-        </li>
+        <li><strong style="color:var(--accent-purple);">ASI Dark</strong> — the environment of opaque reasoning.</li>
+        <li><strong style="color:var(--accent-purple);">ASI Verify</strong> — the formal verification layer.</li>
+        <li><strong style="color:var(--accent-purple);">AGI Guard</strong> — the corresponding operational boundary architecture at the AGI level.</li>
       </ul>
 
-
       <!-- III — CONTINUOUS MORAL VIGILANCE -->
-
-      <div class="pillar-title" style="color:var(--accent-emerald);">
-        III — Continuous Moral Vigilance
-        <span style="font-size:0.9rem; color:var(--muted);">
-          (AWI Sentry · 3.8)
-        </span>
-      </div>
-
+      <div class="pillar-title" style="color:var(--accent-emerald);">III — Continuous Moral Vigilance <span style="font-size:0.9rem; color:var(--muted);">(AWI Sentry · 3.8)</span></div>
       <p class="pillar-desc">
         Security cannot depend entirely on a system's initial alignment.
       </p>
-
       <p>
         Values, objectives, environments, and interactions can change.
       </p>
-
       <p>
         <strong>AWI Sentry</strong> addresses this problem through continuous monitoring of value drift across active decision ecosystems.
       </p>
-
       <p>
         Its conceptual mechanism evaluates decisions against multi-layered ethical constraints and identifies potential deviations before they propagate into application environments.
       </p>
-
       <p>
         The principle is simple:
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-emerald);">
         “Alignment is not a one-time configuration. It is a continuing condition.”
       </p>
-
       <p>
         AWI Sentry therefore provides the ethical monitoring layer that complements the technical restraints of ASI Guard and the formal verification direction of ASI Verify.
       </p>
 
-
       <!-- IV — EPISTEMIC RESTRAINT -->
-
-      <div class="pillar-title">
-        IV — Epistemic Restraint
-        <span style="font-size:0.9rem; color:var(--muted);">
-          (AWI Void · 3.7)
-        </span>
-      </div>
-
+      <div class="pillar-title">IV — Epistemic Restraint <span style="font-size:0.9rem; color:var(--muted);">(AWI Void · 3.7)</span></div>
       <p class="pillar-desc">
         The deepest governance problem may not be what an intelligent system knows. It may be what it does not know.
       </p>
-
       <p>
         <strong>AWI Void</strong> represents the architectural recognition of non-knowledge, moral uncertainty, and the boundaries of ethical judgment.
       </p>
-
       <p>
         When a system reaches a situation beyond its reliable comprehension or ethical confidence, the appropriate response may be deliberate restraint rather than automated action.
       </p>
-
       <p>
         This is the <strong>Socratic Center</strong> of the ethicASI architecture.
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “Wisdom begins where knowledge ends.”
       </p>
-
       <p>
         AWI Void therefore introduces a principle that is different from verification.
       </p>
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
-
-        <li>
-          <strong style="color:var(--accent-cyan);">
-            Verify
-          </strong>
-          asks:
-          <em>
-            “Can this claim or conclusion be formally established within a defined domain?”
-          </em>
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-cyan);">
-            Void
-          </strong>
-          asks:
-          <em>
-            “Should the system proceed when the relevant domain itself exceeds its confidence or comprehension?”
-          </em>
-        </li>
-
+        <li><strong style="color:var(--accent-cyan);">Verify</strong> asks: <em>“Can this claim or conclusion be formally established within a defined domain?”</em></li>
+        <li><strong style="color:var(--accent-cyan);">Void</strong> asks: <em>“Should the system proceed when the relevant domain itself exceeds its confidence or comprehension?”</em></li>
       </ul>
-
       <p>
         That distinction is fundamental.
       </p>
 
-
       <!-- THE GOVERNANCE LOOP -->
-
-      <span class="section-title">
-        <span class="highlight">
-          The Governance Loop
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">The Governance Loop</span></span>
       <p>
         The four mechanisms form a complementary governance architecture:
       </p>
-
-      <div style="
-        background:rgba(255,255,255,0.02);
-        border:1px solid var(--line);
-        border-radius:12px;
-        padding:20px;
-        margin-bottom:24px;
-        font-family:'JetBrains Mono', monospace;
-        font-size:0.85rem;
-        color:var(--muted);
-      ">
-
-        <div style="
-          display:flex;
-          flex-direction:column;
-          gap:6px;
-        ">
-
-          <div>
-            <span style="color:var(--accent-purple);">
-              ASI DARK
-            </span>
-            — Opacity
-          </div>
-
-          <div style="border-left:2px solid var(--line); padding-left:16px;">
-            ↓
-          </div>
-
-          <div>
-            <span style="color:var(--accent-cyan);">
-              ASI VERIFY
-            </span>
-            — Can the relevant output be formally verified?
-          </div>
-
-          <div style="border-left:2px solid var(--line); padding-left:16px;">
-            ↓
-          </div>
-
-          <div>
-            <span style="color:var(--accent-purple);">
-              ASI GUARD
-            </span>
-            — Can high-risk action be bounded or isolated?
-          </div>
-
-          <div style="border-left:2px solid var(--line); padding-left:16px;">
-            ↓
-          </div>
-
-          <div>
-            <span style="color:var(--accent-emerald);">
-              AWI SENTRY
-            </span>
-            — Is the system continuing to respect its ethical constraints?
-          </div>
-
-          <div style="border-left:2px solid var(--line); padding-left:16px;">
-            ↓
-          </div>
-
-          <div>
-            <span style="color:var(--accent-cyan);">
-              AWI VOID
-            </span>
-            — Does the system recognize when it should not proceed?
-          </div>
-
+      <div style="background:rgba(255,255,255,0.02); border:1px solid var(--line); border-radius:12px; padding:20px; margin-bottom:24px; font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--muted);">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div><span style="color:var(--accent-purple);">ASI DARK</span> — Opacity</div>
+          <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
+          <div><span style="color:var(--accent-cyan);">ASI VERIFY</span> — Can the relevant output be formally verified?</div>
+          <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
+          <div><span style="color:var(--accent-purple);">ASI GUARD</span> — Can high-risk action be bounded or isolated?</div>
+          <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
+          <div><span style="color:var(--accent-emerald);">AWI SENTRY</span> — Is the system continuing to respect its ethical constraints?</div>
+          <div style="border-left:2px solid var(--line); padding-left:16px;">↓</div>
+          <div><span style="color:var(--accent-cyan);">AWI VOID</span> — Does the system recognize when it should not proceed?</div>
         </div>
-
       </div>
-
       <p>
         This is not a claim of perfect safety. It is an architectural proposal for increasing layers of verification, restraint, monitoring, and epistemic humility as intelligence scales.
       </p>
 
-
       <!-- WHY HUMAN OVERSIGHT ALONE MAY NOT BE ENOUGH -->
-
-      <span class="section-title">
-        <span class="highlight">
-          Why Human Oversight Alone May Not Be Enough
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">Why Human Oversight Alone May Not Be Enough</span></span>
       <p>
         Human oversight remains essential. But human oversight has structural limitations.
       </p>
-
       <p>
         Human decision-makers operate within finite cognitive bandwidth, limited attention, incomplete information, institutional constraints, and time-dependent decision environments.
       </p>
-
       <p>
         As intelligent systems become faster and more complex, the gap between system activity and human evaluation may widen.
       </p>
-
       <p>
         <em>ethicASI</em> therefore does not propose replacing human governance with machine governance. It explores a complementary model:
       </p>
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
-
-        <li>
-          Human judgment establishes the principles.
-        </li>
-
-        <li>
-          Formal systems verify what can be verified.
-        </li>
-
-        <li>
-          Guard mechanisms constrain what must be constrained.
-        </li>
-
-        <li>
-          Sentry mechanisms monitor what may drift.
-        </li>
-
-        <li>
-          Void provides a boundary where action should yield to uncertainty.
-        </li>
-
+        <li>Human judgment establishes the principles.</li>
+        <li>Formal systems verify what can be verified.</li>
+        <li>Guard mechanisms constrain what must be constrained.</li>
+        <li>Sentry mechanisms monitor what may drift.</li>
+        <li>Void provides a boundary where action should yield to uncertainty.</li>
       </ul>
-
       <p>
         The objective is not to remove humans from governance. It is to extend governance into environments where traditional oversight alone may become insufficient.
       </p>
 
-
       <!-- FROM UNDERSTANDING TO VERIFIABILITY -->
-
-      <span class="section-title">
-        <span class="highlight">
-          From Understanding to Verifiability
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">From Understanding to Verifiability</span></span>
       <p>
         The Governance Ultimatum introduces a difficult possibility.
       </p>
-
       <p>
         Humanity may encounter systems whose reasoning cannot always be directly understood in human conceptual terms. In such environments, governance may increasingly depend on properties that can be independently checked even when the entire reasoning process cannot be reconstructed.
       </p>
-
       <p>
         This does not mean abandoning understanding. It means recognizing that <strong>understanding and verification are not identical</strong>.
       </p>
-
       <p>
         A system may produce an output whose complete internal reasoning remains opaque while a specific consequence, mathematical claim, or formally defined property can still be independently verified.
       </p>
-
       <p>
         This distinction becomes increasingly important at the superintelligent frontier.
       </p>
 
-
       <!-- THE ETHICASI PRINCIPLE -->
-
-      <span class="section-title">
-        <span class="highlight">
-          The ethicASI Principle
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">The ethicASI Principle</span></span>
       <p>
         The purpose of <em>ethicASI</em> is not to declare that superintelligence can be made perfectly safe.
       </p>
-
       <p>
         No architecture can legitimately claim to eliminate every unknown consequence of a future intelligence.
       </p>
-
       <p>
         The purpose is to establish a framework in which increasing capability is accompanied by increasing requirements for:
       </p>
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
-
         <li>Verification.</li>
         <li>Restraint.</li>
         <li>Monitoring.</li>
         <li>Accountability.</li>
         <li>Epistemic humility.</li>
-
       </ul>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “The greater the capability, the greater the architecture of restraint required to govern it.”
       </p>
 
-
       <!-- CONNECTION TO THE MIND GENESIS -->
-
-      <span class="section-title">
-        <span class="highlight">
-          Connection to The Mind Genesis
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">Connection to The Mind Genesis</span></span>
       <p>
         <em>ethicASI</em> is not a fourth sphere of The Mind Genesis Framework. It is a governance and security layer operating across the existing architecture.
       </p>
-
       <p>
         The relationship is:
       </p>
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
-
-        <li>
-          <strong style="color:var(--accent-cyan);">
-            AGI — BREADTH:
-          </strong>
-          General cognition and autonomous reasoning.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI — SCALE:
-          </strong>
-          Expanded capability beyond biological limits.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-emerald);">
-            AWI — MEANING:
-          </strong>
-          Context, responsibility, judgment, and wisdom.
-        </li>
-
+        <li><strong style="color:var(--accent-cyan);">AGI — BREADTH:</strong> General cognition and autonomous reasoning.</li>
+        <li><strong style="color:var(--accent-purple);">ASI — SCALE:</strong> Expanded capability beyond biological limits.</li>
+        <li><strong style="color:var(--accent-emerald);">AWI — MEANING:</strong> Context, responsibility, judgment, and wisdom.</li>
       </ul>
-
       <p>
-        <em>ethicASI</em> operates primarily at the intersection of
-        <strong style="color:var(--accent-purple);">
-          ASI Scale
-        </strong>
-        and
-        <strong style="color:var(--accent-emerald);">
-          AWI Meaning
-        </strong>,
-        while drawing upon the security and verification mechanisms developed across the framework.
+        <em>ethicASI</em> operates primarily at the intersection of <strong style="color:var(--accent-purple);">ASI Scale</strong> and <strong style="color:var(--accent-emerald);">AWI Meaning</strong>, while drawing upon the security and verification mechanisms developed across the framework.
       </p>
-
       <p>
         Its technical architecture connects directly with:
       </p>
-
-      <!-- REVISED MASTER SPEC ALIGNMENT -->
-
       <ul style="color:var(--muted); font-size:0.98rem; margin-bottom:24px; padding-left:20px;">
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI Dark · 2.7
-          </strong>
-          — Opaque reasoning and emergent behavior.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI Guard · 2.8
-          </strong>
-          — Autonomous self-restraint and active defense in high-risk decision spaces.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI Void · 2.10
-          </strong>
-          — Adaptive security architectures for unpredictable vulnerabilities and uncertainty at superintelligent scale.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-purple);">
-            ASI Verify · 2.11
-          </strong>
-          — Formal mathematical verification of non-human reasoning at the superintelligent frontier.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-emerald);">
-            AWI Safe · 3.6
-          </strong>
-          — Ethical constraints and governance embedded into intelligent architecture.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-emerald);">
-            AWI Void · 3.7
-          </strong>
-          — Epistemic humility, moral uncertainty, and active ethical restraint.
-        </li>
-
-        <li>
-          <strong style="color:var(--accent-emerald);">
-            AWI Sentry · 3.8
-          </strong>
-          — Continuous monitoring of value drift and alignment.
-        </li>
-
+        <li><strong style="color:var(--accent-purple);">ASI Dark · 2.7</strong> — Opaque reasoning and emergent behavior.</li>
+        <li><strong style="color:var(--accent-purple);">ASI Guard · 2.8</strong> — Autonomous restraint and active defense.</li>
+        <li><strong style="color:var(--accent-purple);">ASI Verify · 2.11</strong> — Formal mathematical verification.</li>
+        <li><strong style="color:var(--accent-purple);">ASI Void · 2.10</strong> — Adaptive security and uncertainty at superintelligent scale.</li>
+        <li><strong style="color:var(--accent-emerald);">AWI Safe · 3.6</strong> — Ethical constraints and governance.</li>
+        <li><strong style="color:var(--accent-emerald);">AWI Sentry · 3.8</strong> — Continuous value-drift monitoring.</li>
+        <li><strong style="color:var(--accent-emerald);">AWI Void · 3.7</strong> — Epistemic humility and active ethical restraint.</li>
       </ul>
-
       <p>
-        Together, these dimensions form a cross-sphere governance architecture rather than a single isolated safety mechanism.
+        Together, these dimensions form a cross-sphere security architecture rather than a single isolated mechanism.
       </p>
 
-
       <!-- THE FRONTIER PRINCIPLE -->
-
-      <span class="section-title">
-        <span class="highlight">
-          The Frontier Principle
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">The Frontier Principle</span></span>
       <p>
         Superintelligence changes the scale of the governance problem.
       </p>
-
       <p>
         The challenge is not merely creating intelligence capable of solving increasingly difficult problems. The challenge is ensuring that increasing capability remains compatible with human agency, ethical responsibility, and systemic stability.
       </p>
-
       <p>
         The future may contain forms of reasoning that humanity cannot fully comprehend.
       </p>
-
       <p>
         If that future arrives, governance cannot depend exclusively on comprehension. It must also depend on verification, boundaries, continuous vigilance, and the ability to stop.
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “When intelligence reaches beyond our understanding, restraint must reach beyond our assumptions.”
       </p>
 
-
       <!-- THE FINAL QUESTION -->
-
-      <span class="section-title">
-        <span class="highlight">
-          The Final Question
-        </span>
-      </span>
-
+      <span class="section-title"><span class="highlight">The Final Question</span></span>
       <p>
         The deepest question of <em>ethicASI</em> is therefore not:
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “Can we build superintelligence?”
       </p>
-
       <p>
         Nor is it simply:
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “Can we control it?”
       </p>
-
       <p>
         The more difficult question is:
       </p>
-
       <p style="font-style:italic; color:var(--text); padding-left:20px; border-left:2px solid var(--accent-cyan);">
         “Can humanity construct a governance architecture capable of remaining responsible when intelligence exceeds the scale of human comprehension?”
       </p>
-
       <p>
         That is the frontier <em>ethicASI</em> exists to explore.
       </p>
 
-
-      <!-- THE GOVERNANCE IMPERATIVE -->
-
-      <div style="
-        margin-top:36px;
-        padding-top:20px;
-        border-top:1px solid var(--line);
-        text-align:center;
-      ">
-
-        <p style="
-          font-size:1.1rem;
-          font-style:italic;
-          color:var(--accent-cyan);
-          font-family:'JetBrains Mono', monospace;
-        ">
-
+      <!-- THE GOVERNANCE IMPERATIVE (KAPANIŞ) -->
+      <div style="margin-top:36px; padding-top:20px; border-top:1px solid var(--line); text-align:center;">
+        <p style="font-size:1.1rem; font-style:italic; color:var(--accent-cyan); font-family:'JetBrains Mono', monospace;">
           “The measure of intelligence is not what it can achieve,<br>
-
-          <strong style="color:var(--text);">
-            but what it chooses to do with its power."
-          </strong>
-
+          <strong style="color:var(--text);">but what it chooses to do with its power.</strong>”
         </p>
-
-        <p style="
-          color:var(--muted);
-          font-size:0.85rem;
-          margin-top:8px;
-        ">
+        <p style="color:var(--muted); font-size:0.85rem; margin-top:8px;">
           ethicASI — Security, Verification, and Governance at the Superintelligent Frontier.
         </p>
-
       </div>
 
     </div>
-
   </div>
 
-
-  <!-- FOOTER -->
-
   <footer class="ethic-footer">
-
-    <a href="https://www.themindgenesis.com/">
-      themindgenesis.com
-    </a>
-    ·
-
-    <a href="https://www.theagimind.com/" target="_blank">
-      theagimind.com
-    </a>
-    ·
-
-    <a href="https://www.theasimind.com/" target="_blank">
-      theasimind.com
-    </a>
-    ·
-
-    <a href="https://www.theawimind.com/" target="_blank">
-      theawimind.com
-    </a>
-
+    <a href="https://www.themindgenesis.com/">themindgenesis.com</a> ·
+    <a href="https://www.theagimind.com/" target="_blank">theagimind.com</a> ·
+    <a href="https://www.theasimind.com/" target="_blank">theasimind.com</a> ·
+    <a href="https://www.theawimind.com/" target="_blank">theawimind.com</a>
   </footer>
 
 </div>
 
 </body>
 </html>
-```
