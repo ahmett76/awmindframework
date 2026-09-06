@@ -25,6 +25,7 @@
       --accent-cyan: #22D3EE;
       --accent-purple: #A855F7;
       --accent-emerald: #10B981;
+      --accent-gold: #FCD34D;
       --max-width: 980px;
     }
 
@@ -83,9 +84,9 @@
     }
 
     .header-brand img {
-      height: 156px;
+      height: 48px;
       width: auto;
-      max-height: 156px;
+      max-height: 48px;
     }
 
     .header-nav {
@@ -130,7 +131,7 @@
     }
 
     .header-nav a.ethic-btn {
-      color: #FCD34D;
+      color: var(--accent-gold);
       border-color: rgba(252, 211, 77, 0.15);
       background: rgba(252, 211, 77, 0.025);
     }
@@ -141,11 +142,22 @@
     }
 
     .header-nav a.ethic-asi-btn {
-      color: #FCD34D;
+      color: var(--accent-gold);
       border-color: rgba(252, 211, 77, 0.15);
       background: rgba(252, 211, 77, 0.025);
     }
     .header-nav a.ethic-asi-btn:hover {
+      border-color: rgba(252, 211, 77, 0.4);
+      background: rgba(252, 211, 77, 0.08);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
+    }
+
+    .header-nav a.protocols-btn {
+      color: var(--accent-gold);
+      border-color: rgba(252, 211, 77, 0.15);
+      background: rgba(252, 211, 77, 0.025);
+    }
+    .header-nav a.protocols-btn:hover {
       border-color: rgba(252, 211, 77, 0.4);
       background: rgba(252, 211, 77, 0.08);
       box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
@@ -682,6 +694,12 @@
       .header-nav {
         width: 100%;
         justify-content: flex-start;
+        gap: 6px;
+      }
+
+      .header-nav a {
+        font-size: 0.6rem;
+        padding: 4px 10px;
       }
 
       .hero {
@@ -728,8 +746,9 @@
       }
 
       .header-nav a {
-        font-size: 0.62rem;
-        padding: 6px 10px;
+        font-size: 0.55rem;
+        padding: 4px 8px;
+        letter-spacing: 0.2px;
       }
 
       h1 {
@@ -774,6 +793,7 @@
       <a href="master-spec.html" class="spec-btn">⚙ Master Spec</a>
       <a href="ethic.html" class="ethic-btn">⚖️ Genesis Ethic</a>
       <a href="ethic-asi.html" class="ethic-asi-btn">⚖️ ethicASI</a>
+      <a href="protocols.html" class="protocols-btn">⚙ Engineering Protocols</a>
     </nav>
   </header>
 
