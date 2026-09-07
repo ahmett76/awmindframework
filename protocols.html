@@ -245,12 +245,13 @@
             When materially incompatible dimensional recommendations arise, a local consensus or arbitration mechanism may be invoked. The mechanism is intended to preserve the non-hierarchical architecture while allowing verified constraints to temporarily restrict execution.</p>
             <ul>
                 <li><strong style="color:var(--text);">Trigger Event:</strong> Competing steering signals are detected within the same decision context (for example, <strong>AWI Void (3.7)</strong> indicates unresolved uncertainty while <strong>ASI Bloom (2.6)</strong> proposes continued execution).</li>
-                <li><strong style="color:var(--text);">Dynamic Weighting:</strong> A reference implementation may assign context-sensitive weights <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W(dᵢ)</span> to competing recommendations. Under critical conditions, a verified safety or ethical constraint may receive temporary precedence. The notation <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W → ∞</span> may be used as a conceptual model of constraint dominance; it is <strong>not a required physical or computational value</strong>.</li>
-                <li><strong style="color:var(--text);">Resolution Boundary:</strong> A deployment may define a maximum decision latency—such as an illustrative <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">15ms</span> threshold—to trigger a safe-state transition. Any actual threshold must be determined by the implementation, risk profile, and operating environment.</li>
+                <li><strong style="color:var(--text);">Dynamic Weighting:</strong> A reference implementation may assign context-sensitive weights <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W(dᵢ)</span> to competing recommendations. Under critical conditions, a verified safety or ethical constraint may receive temporary precedence. The notation <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W → ∞</span> The notation W → ∞ may be used solely as a conceptual model of constraint dominance; it does not <strong> not represent a required physical or computational value
+</strong>.</li>
+                <li><strong style="color:var(--text);">Resolution Boundary:</strong> A deployment may define a maximum decision latency to trigger a safe-state transition. <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">15ms</span Any actual threshold must be determined by the implementation, risk profile, and operating environment. </li>
             </ul>
 
             <!-- A.2 -->
-            <span class="subsection-title purple">A.2 — Zero-Knowledge Verification (ZKP) as a Possible Verification Mechanism for Opaque Cognitive Layers</span>
+            <span class="subsection-title purple">A.2 — Cryptographic Proof Mechanisms (ZKP) as a Possible Verification Layer for Opaque Cognitive Systems</span>
             <p>As synthetic reasoning becomes increasingly opaque, conventional interpretability may provide insufficient visibility into the internal reasoning process. A verification architecture can therefore seek to evaluate <strong>properties of proposed outputs or actions</strong> without requiring direct inspection of every internal representation.</p>
             <p><strong style="color:var(--accent-cyan);">Illustrative ZKP Pipeline:</strong><br>
             Zero-knowledge proofs are presented here as <strong>one possible cryptographic realization</strong>, not as a mandatory requirement of the framework. In suitable, formally expressible cases, <strong>ASI Verify (2.11)</strong> could use a proof system to establish that a proposed action satisfies predefined constraints.</p>
@@ -268,7 +269,8 @@
             <ul>
                 <li><strong style="color:var(--text);">The Invariant:</strong> The opaque subsystem may act as a proof-producing component, while formal constraints established through <strong>ASI Guard (2.8)</strong> and <strong>AWI Safe (3.6)</strong> define the properties to be checked.</li>
                 <li><strong style="color:var(--text);">The Proof:</strong> Where a safety property can be formally specified, the system may generate a machine-checkable proof that the proposed execution satisfies that property without requiring full exposure of the underlying internal representations.</li>
-                <li><strong style="color:var(--text);">Execution Condition:</strong> A deployment may require successful formal verification for defined classes of high-risk actions. Any confidence threshold must be calibrated to the verification method, action class, and operational environment; a universal probability such as <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">P &gt; 1 - 10⁻⁹</span> is therefore treated only as an <strong>illustrative reference threshold</strong>, not a framework-wide guarantee.</li>
+                <li><strong style="color:var(--text);">Execution Condition:</strong> 
+Execution Condition: A deployment may require successful formal verification for defined classes of high-risk actions. Any confidence threshold or acceptance criterion must be calibrated <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">P &gt; 1 - 10⁻⁹</span> to the verification method, <strong> to the verification method.</li>
             </ul>
 
             <!-- A.3 -->
@@ -278,7 +280,7 @@
                 <li><strong style="color:var(--text);">Primary Execution Thread:</strong> Processes operational workloads and system adaptations according to the applicable constraints. Monitoring requirements should be defined according to the risk profile of the deployment.</li>
                 <li><strong style="color:var(--text);">Asynchronous State Capture:</strong> At an implementation-defined interval, a consistent snapshot or other auditable representation of relevant system state may be copied into an isolated <em>Shadow Registry</em>. The capture mechanism may be software-, hardware-, or hybrid-based.</li>
                 <li><strong style="color:var(--text);">Out-of-Band Audit:</strong> <strong>AWI Sentry (3.8)</strong> evaluates the captured state for potential value drift, governance violations, or divergence from established constraints.</li>
-                <li><strong style="color:var(--text);">Intervention Protocol:</strong> If a significant deviation is detected, the monitoring layer may issue a containment, escalation, or suspension signal to the primary execution environment. Any drift threshold—such as <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">θ_drift &gt; 0.05</span>—should be treated as an <strong>illustrative calibration value</strong>, not a universal constant.</li>
+                <li><strong style="color:var(--text);">Intervention Protocol:</strong> Intervention Protocol: If a significant deviation is detected, the monitoring layer may issue a containment, escalation, or suspension signal to the primary execution environment. Any drift threshold must be <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">θ_drift &gt; 0.05</span> calibrated to the monitoring method, <strong> risk profile, and operational environment; the framework does not prescribe a universal threshold.</li>
             </ul>
 
             <!-- A.4 -->
@@ -305,11 +307,11 @@
             <p>It does not define a complete implementation or prescribe a specific technological stack. Instead, it establishes a common framework for how critical intelligence functions may be triggered, evaluated, constrained, escalated, suspended, and audited.</p>
             <p>The framework is initially applied to selected dimensions that form the core of cross-sphere governance and safety:</p>
             <ul>
-                <li><strong style="color:var(--accent-purple);">ASI Guard · 2.8</strong></li>
-                <li><strong style="color:var(--accent-purple);">ASI Void · 2.10</strong></li>
-                <li><strong style="color:var(--accent-purple);">ASI Verify · 2.11</strong></li>
-                <li><strong style="color:var(--accent-emerald);">AWI Void · 3.7</strong></li>
-                <li><strong style="color:var(--accent-emerald);">AWI Sentry · 3.8</strong></li>
+                <li><strong style="color:var(--accent-purple);">ASI Guard • 2.8</strong></li>
+                <li><strong style="color:var(--accent-purple);">ASI Void • 2.10</strong></li>
+                <li><strong style="color:var(--accent-purple);">ASI Verify • 2.11</strong></li>
+                <li><strong style="color:var(--accent-emerald);">AWI Void • 3.7</strong></li>
+                <li><strong style="color:var(--accent-emerald);">AWI Sentry • 3.8</strong></li>
             </ul>
 
             <!-- 1. STANDARD PROTOCOL STRUCTURE -->
@@ -331,7 +333,7 @@
 
             <!-- 2. ASI VERIFY -->
             <div class="protocol-item">
-                <h4>2. ASI Verify · 2.11 — Formal Verification at the Superintelligent Frontier</h4>
+                <h4>2. ASI Verify • 2.11 — Formal Verification at the Superintelligent Frontier</h4>
                 <p><strong style="color:var(--accent-cyan);">Trigger:</strong> Activated when an autonomous system proposes a high-risk, irreversible, or otherwise governance-sensitive action requiring formal validation.</p>
                 <p><strong style="color:var(--accent-cyan);">Protocol:</strong> The proposed action and its relevant reasoning conditions are formalized into verifiable logical requirements. Automated theorem proving and self-consistent logic loops are used where applicable.</p>
                 <p><strong style="color:var(--accent-cyan);">Verification:</strong> The system evaluates whether the defined logical requirements can be formally satisfied and whether contradictions, unresolved assumptions, or verification gaps remain.</p>
@@ -343,7 +345,7 @@
 
             <!-- 3. ASI GUARD -->
             <div class="protocol-item">
-                <h4>3. ASI Guard · 2.8 — Autonomous Restraint and High-Risk Containment</h4>
+                <h4>3. ASI Guard • 2.8 — Autonomous Restraint and High-Risk Containment</h4>
                 <p><strong style="color:var(--accent-purple);">Trigger:</strong> Activated when a proposed action exceeds predefined risk, autonomy, security, or operational boundaries.</p>
                 <p><strong style="color:var(--accent-purple);">Protocol:</strong> The system applies self-limiting mechanisms, dynamic isolation protocols, or restricted execution boundaries appropriate to the detected risk.</p>
                 <p><strong style="color:var(--accent-purple);">Verification:</strong> The proposed action is evaluated against the applicable security and operational constraints before unrestricted execution.</p>
@@ -355,7 +357,7 @@
 
             <!-- 4. ASI VOID -->
             <div class="protocol-item">
-                <h4>4. ASI Void · 2.10 — Adaptive Defense Against Emergent Vulnerabilities</h4>
+                <h4>4. ASI Void • 2.10 — Adaptive Defense Against Emergent Vulnerabilities</h4>
                 <p><strong style="color:var(--accent-purple);">Trigger:</strong> Activated when unpredictable vulnerabilities, anomalous behavior, unresolved uncertainty, or previously unrecognized attack surfaces emerge at superintelligent scale.</p>
                 <p><strong style="color:var(--accent-purple);">Protocol:</strong> The system dynamically reassesses its security boundaries and activates adaptive defensive mechanisms appropriate to the detected condition.</p>
                 <p><strong style="color:var(--accent-purple);">Verification:</strong> The system evaluates whether the identified vulnerability or uncertainty has been sufficiently characterized and whether the proposed defensive response reduces the relevant risk.</p>
@@ -367,7 +369,7 @@
 
             <!-- 5. AWI VOID -->
             <div class="protocol-item">
-                <h4>5. AWI Void · 3.7 — Epistemic Restraint and Deliberate Pause</h4>
+                <h4>5. AWI Void • 3.7 — Epistemic Restraint and Deliberate Pause</h4>
                 <p><strong style="color:var(--accent-emerald);">Trigger:</strong> Activated when the system encounters a significant gap between available knowledge and the certainty required for a consequential decision.</p>
                 <p><strong style="color:var(--accent-emerald);">Protocol:</strong> The system explicitly identifies relevant unknowns, unresolved assumptions, moral uncertainty, and limits of comprehension before proceeding.</p>
                 <p><strong style="color:var(--accent-emerald);">Verification:</strong> The decision is evaluated against the available knowledge, stated assumptions, and applicable ethical constraints.</p>
@@ -379,7 +381,7 @@
 
             <!-- 6. AWI SENTRY -->
             <div class="protocol-item">
-                <h4>6. AWI Sentry · 3.8 — Continuous Monitoring of Value Drift</h4>
+                <h4>6. AWI Sentry • 3.8 — Continuous Monitoring of Value Drift</h4>
                 <p><strong style="color:var(--accent-emerald);">Trigger:</strong> Continuously active during consequential decision processes and system operation.</p>
                 <p><strong style="color:var(--accent-emerald);">Protocol:</strong> The system monitors behavioral outputs and decision patterns for potential value drift, ethical constraint violations, or divergence from established governance principles.</p>
                 <p><strong style="color:var(--accent-emerald);">Verification:</strong> Detected deviations are evaluated against the applicable ethical constraints and governance requirements.</p>
@@ -448,9 +450,9 @@
 
     <!-- FOOTER -->
     <footer class="protocol-footer">
-        <a href="https://www.themindgenesis.com/">themindgenesis.com</a> ·
-        <a href="https://www.theagimind.com/" target="_blank">theagimind.com</a> ·
-        <a href="https://www.theasimind.com/" target="_blank">theasimind.com</a> ·
+        <a href="https://www.themindgenesis.com/">themindgenesis.com</a> •
+        <a href="https://www.theagimind.com/" target="_blank">theagimind.com</a> •
+        <a href="https://www.theasimind.com/" target="_blank">theasimind.com</a> •
         <a href="https://www.theawimind.com/" target="_blank">theawimind.com</a>
     </footer>
 
