@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --bg: #05070D;
@@ -21,7 +22,11 @@
             --accent-gold: #FCD34D;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             background: var(--bg);
@@ -33,7 +38,11 @@
             padding: 40px 20px 60px;
         }
 
-        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
         /* HEADER */
         .protocol-header {
@@ -42,23 +51,27 @@
             border-bottom: 1px solid var(--line);
             margin-bottom: 40px;
         }
+
         .protocol-header h1 {
             font-size: clamp(2.2rem, 5vw, 3.2rem);
             font-weight: 800;
             letter-spacing: -1px;
             margin-bottom: 6px;
         }
+
         .gradient-text {
             background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-emerald));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
+
         .protocol-header .subtitle {
             font-size: 1.05rem;
             color: var(--muted);
             margin-bottom: 18px;
         }
+
         .back-link {
             display: inline-block;
             font-family: 'JetBrains Mono', monospace;
@@ -70,6 +83,7 @@
             border-radius: 40px;
             transition: all 0.3s ease;
         }
+
         .back-link:hover {
             background: rgba(34, 211, 238, 0.08);
             border-color: var(--accent-cyan);
@@ -84,14 +98,17 @@
             padding: 42px 40px;
             backdrop-filter: blur(10px);
         }
+
         .protocol-content p {
             color: var(--muted);
             font-size: 0.98rem;
             margin-bottom: 24px;
         }
+
         .protocol-content strong {
             color: var(--text);
         }
+
         .protocol-content .section-title {
             display: block;
             font-size: 1.3rem;
@@ -99,10 +116,22 @@
             margin-top: 36px;
             margin-bottom: 8px;
         }
-        .protocol-content .section-title .highlight { color: var(--accent-cyan); }
-        .protocol-content .section-title .purple { color: var(--accent-purple); }
-        .protocol-content .section-title .emerald { color: var(--accent-emerald); }
-        .protocol-content .section-title .gold { color: var(--accent-gold); }
+
+        .protocol-content .section-title .highlight {
+            color: var(--accent-cyan);
+        }
+
+        .protocol-content .section-title .purple {
+            color: var(--accent-purple);
+        }
+
+        .protocol-content .section-title .emerald {
+            color: var(--accent-emerald);
+        }
+
+        .protocol-content .section-title .gold {
+            color: var(--accent-gold);
+        }
 
         .protocol-content .section-desc {
             color: var(--text);
@@ -117,16 +146,25 @@
             padding: 28px 30px;
             border: 1px solid rgba(34, 211, 238, 0.16);
             border-radius: 16px;
-            background: linear-gradient(135deg, rgba(34, 211, 238, 0.045), rgba(168, 85, 247, 0.035), rgba(16, 185, 129, 0.035));
+            background: linear-gradient(
+                135deg,
+                rgba(34, 211, 238, 0.045),
+                rgba(168, 85, 247, 0.035),
+                rgba(16, 185, 129, 0.035)
+            );
             text-align: center;
         }
+
         .slogan-box .slogan {
             font-size: 1.2rem;
             font-style: italic;
             color: var(--accent-cyan);
             font-family: 'JetBrains Mono', monospace;
         }
-        .slogan-box .slogan strong { color: var(--text); }
+
+        .slogan-box .slogan strong {
+            color: var(--text);
+        }
 
         .protocol-content .subsection-title {
             font-size: 1.1rem;
@@ -135,9 +173,18 @@
             margin-bottom: 6px;
             color: var(--accent-cyan);
         }
-        .protocol-content .subsection-title.purple { color: var(--accent-purple); }
-        .protocol-content .subsection-title.emerald { color: var(--accent-emerald); }
-        .protocol-content .subsection-title.gold { color: var(--accent-gold); }
+
+        .protocol-content .subsection-title.purple {
+            color: var(--accent-purple);
+        }
+
+        .protocol-content .subsection-title.emerald {
+            color: var(--accent-emerald);
+        }
+
+        .protocol-content .subsection-title.gold {
+            color: var(--accent-gold);
+        }
 
         .protocol-content .protocol-item {
             margin-top: 24px;
@@ -146,19 +193,27 @@
             border-radius: 14px;
             background: rgba(255,255,255,0.015);
         }
+
         .protocol-content .protocol-item h4 {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             color: var(--accent-cyan);
             margin-bottom: 8px;
         }
+
         .protocol-content .protocol-item p {
             color: var(--muted);
             font-size: 0.92rem;
             margin-bottom: 8px;
         }
-        .protocol-content .protocol-item p:last-child { margin-bottom: 0; }
-        .protocol-content .protocol-item strong { color: var(--text); }
+
+        .protocol-content .protocol-item p:last-child {
+            margin-bottom: 0;
+        }
+
+        .protocol-content .protocol-item strong {
+            color: var(--text);
+        }
 
         .protocol-content .flow-diagram {
             background: rgba(255,255,255,0.02);
@@ -171,8 +226,17 @@
             color: var(--muted);
             line-height: 1.8;
         }
-        .protocol-content .flow-diagram .step { display: block; }
-        .protocol-content .flow-diagram .arrow { display: block; padding-left: 16px; border-left: 2px solid var(--line); margin-left: 8px; }
+
+        .protocol-content .flow-diagram .step {
+            display: block;
+        }
+
+        .protocol-content .flow-diagram .arrow {
+            display: block;
+            padding-left: 16px;
+            border-left: 2px solid var(--line);
+            margin-left: 8px;
+        }
 
         .protocol-content ul {
             color: var(--muted);
@@ -181,8 +245,14 @@
             list-style-type: disc;
             margin-bottom: 16px;
         }
-        .protocol-content ul li { margin-bottom: 6px; }
-        .protocol-content ul li strong { color: var(--text); }
+
+        .protocol-content ul li {
+            margin-bottom: 6px;
+        }
+
+        .protocol-content ul li strong {
+            color: var(--text);
+        }
 
         /* FOOTER */
         .protocol-footer {
@@ -193,119 +263,310 @@
             color: var(--muted);
             font-family: 'JetBrains Mono', monospace;
         }
+
         .protocol-footer a {
             color: var(--accent-cyan);
             text-decoration: none;
         }
-        .protocol-footer a:hover { text-decoration: underline; }
+
+        .protocol-footer a:hover {
+            text-decoration: underline;
+        }
 
         @media (max-width: 600px) {
-            body { padding: 20px 12px 40px; }
-            .container { padding: 0 8px; }
-            .protocol-box { padding: 28px 20px; }
-            .protocol-header { padding-top: 25px; }
-            .slogan-box { padding: 20px; }
-            .protocol-item { padding: 16px; }
+            body {
+                padding: 20px 12px 40px;
+            }
+
+            .container {
+                padding: 0 8px;
+            }
+
+            .protocol-box {
+                padding: 28px 20px;
+            }
+
+            .protocol-header {
+                padding-top: 25px;
+            }
+
+            .slogan-box {
+                padding: 20px;
+            }
+
+            .protocol-item {
+                padding: 16px;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <div class="container">
 
     <!-- HEADER -->
     <header class="protocol-header">
-        <h1><span class="gradient-text">Engineering Protocol Framework</span></h1>
+        <h1>
+            <span class="gradient-text">Engineering Protocol Framework</span>
+        </h1>
+
         <p class="subtitle">From Architectural Principles to Operational Governance</p>
-        <a href="https://www.themindgenesis.com/" class="back-link">← Back to Main</a>
+
+        <a href="https://www.themindgenesis.com/" class="back-link">
+            ← Back to Main
+        </a>
     </header>
+
 
     <div class="protocol-box">
         <div class="protocol-content">
 
             <!-- =================================================== -->
-            <!-- APPENDIX BÖLÜMÜ -->
+            <!-- REFERENCE ENGINEERING MODELS -->
             <!-- =================================================== -->
 
-            <span class="section-title"><span class="highlight">Reference Engineering Models &amp; Execution Bridges</span></span>
-            <p><strong></strong></p>
-            <p>This appendix provides illustrative engineering models for translating selected principles of The Mind Genesis into implementable governance mechanisms. These models are <strong>reference architectures, not mandatory implementation specifications</strong>. They do not assume a specific hardware platform, cryptographic stack, latency budget, or deployment environment. Their purpose is to demonstrate how the framework's architectural principles could be operationalized and tested in future implementations.</p>
+            <span class="section-title">
+                <span class="highlight">Reference Engineering Models &amp; Execution Bridges</span>
+            </span>
+
+            <p>
+                This appendix provides illustrative engineering models for translating selected principles of The Mind Genesis into implementable governance mechanisms. These models are <strong>reference architectures, not mandatory implementation specifications</strong>. They do not assume a specific hardware platform, cryptographic stack, latency budget, or deployment environment. Their purpose is to demonstrate how the framework's architectural principles could be operationalized and tested in future implementations.
+            </p>
 
             <div class="slogan-box">
-                <div class="slogan"><strong>"Reference models illustrate possible mechanisms; they do not prescribe a single technical realization."</strong></div>
+                <div class="slogan">
+                    <strong>"Reference models illustrate possible mechanisms; they do not prescribe a single technical realization."</strong>
+                </div>
             </div>
+
 
             <!-- A.1 -->
-            <span class="subsection-title">A.1 — The Non-Hierarchical Consensus Protocol (NHCP) &amp; Deadlock Resolution</span>
-            <p>The simultaneous, non-hierarchical coexistence of the 33 dimensions can create coordination conflicts or state deadlocks—for example, when a safety-oriented dimension requests restraint while another dimension requests continued execution. NHCP is presented here as a <strong>reference coordination model</strong> for resolving such conflicts without establishing a permanent hierarchy.</p>
-            <p><strong style="color:var(--accent-cyan);">Reference State Model:</strong><br>
-            Let the global framework state <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Sₜ</span> at time step <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">t</span> be represented as a composite state of active dimensional outputs: <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Sₜ = {d₁.₁, d₁.₂, …, d₃.₉} ∈ ℝ³³</span>.<br>
-            In a possible implementation, the dimensions could exchange signals through an asynchronous coordination layer using mechanisms analogous to <strong>AGI Synapse (1.5)</strong> and <strong>ASI Thread (2.5)</strong>. The specific communication architecture remains implementation-dependent.</p>
-            <p><strong style="color:var(--accent-purple);">Reference Conflict Resolution:</strong><br>
-            When materially incompatible dimensional recommendations arise, a local consensus or arbitration mechanism may be invoked. The mechanism is intended to preserve the non-hierarchical architecture while allowing verified constraints to temporarily restrict execution.</p>
+            <span class="subsection-title">
+                A.1 — The Non-Hierarchical Consensus Protocol (NHCP) &amp; Deadlock Resolution
+            </span>
+
+            <p>
+                The simultaneous, non-hierarchical coexistence of the 33 dimensions can create coordination conflicts or state deadlocks—for example, when a safety-oriented dimension requests restraint while another dimension requests continued execution. NHCP is presented here as a <strong>reference coordination model</strong> for resolving such conflicts without establishing a permanent hierarchy.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Reference State Model:</strong><br>
+                Let the global framework state
+                <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Sₜ</span>
+                at time step
+                <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">t</span>
+                be represented as a composite state of active dimensional outputs:
+                <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Sₜ = {d₁.₁, d₁.₂, …, d₃.₉} ∈ ℝ³³</span>.<br>
+                In a possible implementation, the dimensions could exchange signals through an asynchronous coordination layer using mechanisms analogous to <strong>AGI Synapse (1.5)</strong> and <strong>ASI Thread (2.5)</strong>. The specific communication architecture remains implementation-dependent.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-purple);">Reference Conflict Resolution:</strong><br>
+                When materially incompatible dimensional recommendations arise, a local consensus or arbitration mechanism may be invoked. The mechanism is intended to preserve the non-hierarchical architecture while allowing verified constraints to temporarily restrict execution.
+            </p>
+
             <ul>
-                <li><strong style="color:var(--text);">Trigger Event:</strong> Competing steering signals are detected within the same decision context (for example, <strong>AWI Void (3.7)</strong> indicates unresolved uncertainty while <strong>ASI Bloom (2.6)</strong> proposes continued execution).</li>
-                <li><strong style="color:var(--text);">Dynamic Weighting:</strong> A reference implementation may assign context-sensitive weights <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W(dᵢ)</span> to competing recommendations. Under critical conditions, a verified safety or ethical constraint may receive temporary precedence. The notation <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W → ∞</span> The notation W → ∞ may be used solely as a conceptual model of constraint dominance; it does not <strong> not represent a required physical or computational value
-</strong>.</li>
-                <li><strong style="color:var(--text);">Resolution Boundary:</strong> A deployment may define a maximum decision latency to trigger a safe-state transition. <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">15ms</span Any actual threshold must be determined by the implementation, risk profile, and operating environment. </li>
+                <li>
+                    <strong style="color:var(--text);">Trigger Event:</strong>
+                    Competing steering signals are detected within the same decision context (for example, <strong>AWI Void (3.7)</strong> indicates unresolved uncertainty while <strong>ASI Bloom (2.6)</strong> proposes continued execution).
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Dynamic Weighting:</strong>
+                    A reference implementation may assign context-sensitive weights
+                    <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W(dᵢ)</span>
+                    to competing recommendations. Under critical conditions, a verified safety or ethical constraint may receive temporary precedence. The notation
+                    <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">W → ∞</span>
+                    may be used solely as a conceptual model of constraint dominance; it does not represent a required physical or computational value.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Resolution Boundary:</strong>
+                    A deployment may define a maximum decision latency to trigger a safe-state transition. Any actual threshold must be determined by the implementation, risk profile, and operating environment.
+                </li>
             </ul>
+
 
             <!-- A.2 -->
-            <span class="subsection-title purple">A.2 — Cryptographic Proof Mechanisms (ZKP) as a Possible Verification Layer for Opaque Cognitive Systems</span>
-            <p>As synthetic reasoning becomes increasingly opaque, conventional interpretability may provide insufficient visibility into the internal reasoning process. A verification architecture can therefore seek to evaluate <strong>properties of proposed outputs or actions</strong> without requiring direct inspection of every internal representation.</p>
-            <p><strong style="color:var(--accent-cyan);">Illustrative ZKP Pipeline:</strong><br>
-            Zero-knowledge proofs are presented here as <strong>one possible cryptographic realization</strong>, not as a mandatory requirement of the framework. In suitable, formally expressible cases, <strong>ASI Verify (2.11)</strong> could use a proof system to establish that a proposed action satisfies predefined constraints.</p>
+            <span class="subsection-title purple">
+                A.2 — Cryptographic Proof Mechanisms (ZKP) as a Possible Verification Layer for Opaque Cognitive Systems
+            </span>
+
+            <p>
+                As synthetic reasoning becomes increasingly opaque, conventional interpretability may provide insufficient visibility into the internal reasoning process. A verification architecture can therefore seek to evaluate <strong>properties of proposed outputs or actions</strong> without requiring direct inspection of every internal representation.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Illustrative ZKP Pipeline:</strong><br>
+                Zero-knowledge proofs are presented here as <strong>one possible cryptographic realization</strong>, not as a mandatory requirement of the framework. In suitable, formally expressible cases, <strong>ASI Verify (2.11)</strong> could use a proof system to establish that a proposed action satisfies predefined constraints.
+            </p>
+
             <div class="flow-diagram">
-                <span class="step"><span style="color:var(--accent-purple);">ASI Dark (2.7)</span> — generates an opaque plan or proposal</span>
+
+                <span class="step">
+                    <span style="color:var(--accent-purple);">ASI Dark (2.7)</span>
+                    — generates an opaque plan or proposal
+                </span>
+
                 <span class="arrow">↓</span>
-                <span class="step"><span style="color:var(--accent-cyan);">Proof Layer</span> — constructs an appropriate machine-checkable proof where applicable</span>
+
+                <span class="step">
+                    <span style="color:var(--accent-cyan);">Proof Layer</span>
+                    — constructs an appropriate machine-checkable proof where applicable
+                </span>
+
                 <span class="arrow">↓</span>
-                <span class="step"><span style="color:var(--accent-purple);">ASI Guard (2.8)</span> — defines applicable safety predicates</span>
+
+                <span class="step">
+                    <span style="color:var(--accent-purple);">ASI Guard (2.8)</span>
+                    — defines applicable safety predicates
+                </span>
+
                 <span class="arrow">↓</span>
-                <span class="step"><span style="color:var(--accent-cyan);">Verifier Layer</span> — evaluates proof validity and constraint satisfaction</span>
+
+                <span class="step">
+                    <span style="color:var(--accent-cyan);">Verifier Layer</span>
+                    — evaluates proof validity and constraint satisfaction
+                </span>
+
                 <span class="arrow">↓</span>
-                <span class="step"><span style="color:var(--accent-emerald);">Governed Execution</span> — proceeds only when applicable verification conditions are satisfied</span>
+
+                <span class="step">
+                    <span style="color:var(--accent-emerald);">Governed Execution</span>
+                    — proceeds only when applicable verification conditions are satisfied
+                </span>
+
             </div>
+
             <ul>
-                <li><strong style="color:var(--text);">The Invariant:</strong> The opaque subsystem may act as a proof-producing component, while formal constraints established through <strong>ASI Guard (2.8)</strong> and <strong>AWI Safe (3.6)</strong> define the properties to be checked.</li>
-                <li><strong style="color:var(--text);">The Proof:</strong> Where a safety property can be formally specified, the system may generate a machine-checkable proof that the proposed execution satisfies that property without requiring full exposure of the underlying internal representations.</li>
-                <li><strong style="color:var(--text);">Execution Condition:</strong> 
-Execution Condition: A deployment may require successful formal verification for defined classes of high-risk actions. Any confidence threshold or acceptance criterion must be calibrated <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">P &gt; 1 - 10⁻⁹</span> to the verification method, <strong> to the verification method.</li>
+
+                <li>
+                    <strong style="color:var(--text);">The Invariant:</strong>
+                    The opaque subsystem may act as a proof-producing component, while formal constraints established through <strong>ASI Guard (2.8)</strong> and <strong>AWI Safe (3.6)</strong> define the properties to be checked.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">The Proof:</strong>
+                    Where a safety property can be formally specified, the system may generate a machine-checkable proof that the proposed execution satisfies that property without requiring full exposure of the underlying internal representations.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Execution Condition:</strong>
+                    A deployment may require successful formal verification for defined classes of high-risk actions. Any confidence threshold or acceptance criterion must be calibrated to the verification method, action class, and operational environment; no universal threshold is defined by the framework.
+                </li>
+
             </ul>
+
 
             <!-- A.3 -->
-            <span class="subsection-title emerald">A.3 — Asynchronous Shadow Auditing Model (AWI Sentry)</span>
-            <p>To address the tension between low-latency operation and continuous value-drift monitoring, AWI Sentry can be modeled as a parallel auditing process that evaluates relevant system states without requiring every monitoring operation to block primary execution.</p>
+            <span class="subsection-title emerald">
+                A.3 — Asynchronous Shadow Auditing Model (AWI Sentry)
+            </span>
+
+            <p>
+                To address the tension between low-latency operation and continuous value-drift monitoring, AWI Sentry can be modeled as a parallel auditing process that evaluates relevant system states without requiring every monitoring operation to block primary execution.
+            </p>
+
             <ul>
-                <li><strong style="color:var(--text);">Primary Execution Thread:</strong> Processes operational workloads and system adaptations according to the applicable constraints. Monitoring requirements should be defined according to the risk profile of the deployment.</li>
-                <li><strong style="color:var(--text);">Asynchronous State Capture:</strong> At an implementation-defined interval, a consistent snapshot or other auditable representation of relevant system state may be copied into an isolated <em>Shadow Registry</em>. The capture mechanism may be software-, hardware-, or hybrid-based.</li>
-                <li><strong style="color:var(--text);">Out-of-Band Audit:</strong> <strong>AWI Sentry (3.8)</strong> evaluates the captured state for potential value drift, governance violations, or divergence from established constraints.</li>
-                <li><strong style="color:var(--text);">Intervention Protocol:</strong> Intervention Protocol: If a significant deviation is detected, the monitoring layer may issue a containment, escalation, or suspension signal to the primary execution environment. Any drift threshold must be calibrated to </span> the monitoring method, risk profile, <strong> and operational environment; the framework does not prescribe a universal threshold.</li>
+
+                <li>
+                    <strong style="color:var(--text);">Primary Execution Thread:</strong>
+                    Processes operational workloads and system adaptations according to the applicable constraints. Monitoring requirements should be defined according to the risk profile of the deployment.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Asynchronous State Capture:</strong>
+                    At an implementation-defined interval, a consistent snapshot or other auditable representation of relevant system state may be copied into an isolated <em>Shadow Registry</em>. The capture mechanism may be software-, hardware-, or hybrid-based.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Out-of-Band Audit:</strong>
+                    <strong>AWI Sentry (3.8)</strong> evaluates the captured state for potential value drift, governance violations, or divergence from established constraints.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Intervention Protocol:</strong>
+                    If a significant deviation is detected, the monitoring layer may issue a containment, escalation, or suspension signal to the primary execution environment. Any drift threshold must be calibrated to the monitoring method, risk profile, and operational environment; the framework does not prescribe a universal threshold.
+                </li>
+
             </ul>
+
 
             <!-- A.4 -->
-            <span class="subsection-title gold">A.4 — Hardware-Assisted Enforcement for Epistemic Limits (AWI Void)</span>
-            <p>When software-level controls are insufficient for a particular deployment, AWI Void may be paired with hardware-assisted enforcement mechanisms. A physical non-maskable interrupt (NMI) is presented here as <strong>one possible implementation mechanism</strong>, not as a required property of the framework.</p>
-            <p><strong style="color:var(--accent-emerald);">The Epistemic Boundary Trigger:</strong><br>
-            When a system encounters a decision space in which relevant uncertainty exceeds the level acceptable for a consequential action—represented conceptually as <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Conf_ethical &lt; τ_min</span>—<strong>AWI Void (3.7)</strong> may trigger a deliberate pause, containment state, or escalation.</p>
-            <p><strong style="color:var(--accent-purple);">Illustrative Enforcement Sequence:</strong></p>
+            <span class="subsection-title gold">
+                A.4 — Hardware-Assisted Enforcement for Epistemic Limits (AWI Void)
+            </span>
+
+            <p>
+                When software-level controls are insufficient for a particular deployment, AWI Void may be paired with hardware-assisted enforcement mechanisms. A physical non-maskable interrupt (NMI) is presented here as <strong>one possible implementation mechanism</strong>, not as a required property of the framework.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-emerald);">The Epistemic Boundary Trigger:</strong><br>
+                When a system encounters a decision space in which relevant uncertainty exceeds the level acceptable for a consequential action—represented conceptually as
+                <span style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan);">Conf_ethical &lt; τ_min</span>—
+                <strong>AWI Void (3.7)</strong> may trigger a deliberate pause, containment state, or escalation.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-purple);">Illustrative Enforcement Sequence:</strong>
+            </p>
+
             <ul>
-                <li><strong style="color:var(--text);">AWI Void Activation:</strong> A significant epistemic boundary, unresolved ethical conflict, or structural anomaly is detected.</li>
-                <li><strong style="color:var(--text);">Hardware-Assisted Interruption:</strong> Where supported by the deployment architecture, an NMI or equivalent hardware-level control may be used to interrupt or constrain execution independently of ordinary software pathways.</li>
-                <li><strong style="color:var(--text);">State Preservation:</strong> The affected execution state may be suspended, isolated, checkpointed, or transferred into a controlled environment according to the hardware and operating-system capabilities available.</li>
-                <li><strong style="color:var(--text);">Matter Interaction Containment:</strong> For systems controlling physical actuators, an independent safety controller or hardware interlock may restrict <strong>ASI Matter (2.9)</strong> or <strong>AGI Matter (1.12)</strong> outputs until required verification conditions are satisfied.</li>
-                <li><strong style="color:var(--text);">Human Governance Release:</strong> Where the action is consequential and uncertainty remains unresolved, restoration of autonomous operation may require an authorized human governance process or other predefined release mechanism.</li>
+
+                <li>
+                    <strong style="color:var(--text);">AWI Void Activation:</strong>
+                    A significant epistemic boundary, unresolved ethical conflict, or structural anomaly is detected.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Hardware-Assisted Interruption:</strong>
+                    Where supported by the deployment architecture, an NMI or equivalent hardware-level control may be used to interrupt or constrain execution independently of ordinary software pathways.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">State Preservation:</strong>
+                    The affected execution state may be suspended, isolated, checkpointed, or transferred into a controlled environment according to the hardware and operating-system capabilities available.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Matter Interaction Containment:</strong>
+                    For systems controlling physical actuators, an independent safety controller or hardware interlock may restrict <strong>ASI Matter (2.9)</strong> or <strong>AGI Matter (1.12)</strong> outputs until required verification conditions are satisfied.
+                </li>
+
+                <li>
+                    <strong style="color:var(--text);">Human Governance Release:</strong>
+                    Where the action is consequential and uncertainty remains unresolved, restoration of autonomous operation may require an authorized human governance process or other predefined release mechanism.
+                </li>
+
             </ul>
 
+
             <!-- =================================================== -->
-            <!-- ENGINEERING PROTOCOL FRAMEWORK BÖLÜMÜ -->
+            <!-- ENGINEERING PROTOCOL FRAMEWORK -->
             <!-- =================================================== -->
 
-            <span class="section-title"><span class="highlight">Engineering Protocol Framework</span></span>
-            <p><strong>From Architectural Principles to Operational Governance</strong></p>
-            <p>The Engineering Protocol Framework translates selected dimensions of The Mind Genesis from architectural principles into structured operational decision protocols.</p>
-            <p>It does not define a complete implementation or prescribe a specific technological stack. Instead, it establishes a common framework for how critical intelligence functions may be triggered, evaluated, constrained, escalated, suspended, and audited.</p>
-            <p>The framework is initially applied to selected dimensions that form the core of cross-sphere governance and safety:</p>
+            <span class="section-title">
+                <span class="highlight">Engineering Protocol Framework</span>
+            </span>
+
+            <p>
+                <strong>From Architectural Principles to Operational Governance</strong>
+            </p>
+
+            <p>
+                The Engineering Protocol Framework translates selected dimensions of The Mind Genesis from architectural principles into structured operational decision protocols.
+            </p>
+
+            <p>
+                It does not define a complete implementation or prescribe a specific technological stack. Instead, it establishes a common framework for how critical intelligence functions may be triggered, evaluated, constrained, escalated, suspended, and audited.
+            </p>
+
+            <p>
+                The framework is initially applied to selected dimensions that form the core of cross-sphere governance and safety:
+            </p>
+
             <ul>
                 <li><strong style="color:var(--accent-purple);">ASI Guard • 2.8</strong></li>
                 <li><strong style="color:var(--accent-purple);">ASI Void • 2.10</strong></li>
@@ -314,12 +575,20 @@ Execution Condition: A deployment may require successful formal verification for
                 <li><strong style="color:var(--accent-emerald);">AWI Sentry • 3.8</strong></li>
             </ul>
 
+
             <!-- 1. STANDARD PROTOCOL STRUCTURE -->
-            <span class="subsection-title">1. Standard Protocol Structure</span>
-            <p>Each selected dimension follows a common operational structure:</p>
+            <span class="subsection-title">
+                1. Standard Protocol Structure
+            </span>
+
+            <p>
+                Each selected dimension follows a common operational structure:
+            </p>
+
             <p style="font-family:'JetBrains Mono', monospace; color:var(--accent-cyan); text-align:center; padding:10px; background:rgba(255,255,255,0.02); border-radius:8px; border:1px solid var(--line);">
                 Trigger → Protocol → Verification → Constraint → Escalation → Failure Handling → Audit
             </p>
+
             <ul>
                 <li><strong style="color:var(--text);">Trigger:</strong> Defines the conditions under which the protocol becomes active.</li>
                 <li><strong style="color:var(--text);">Protocol:</strong> Defines the operational response initiated after activation.</li>
@@ -329,138 +598,427 @@ Execution Condition: A deployment may require successful formal verification for
                 <li><strong style="color:var(--text);">Failure Handling:</strong> Defines the system response when verification fails, uncertainty becomes critical, or the protocol itself encounters an unexpected condition.</li>
                 <li><strong style="color:var(--text);">Audit:</strong> Defines the information that must be preserved to reconstruct the decision process and governance state.</li>
             </ul>
-            <p>This structure establishes a common engineering language without implying that all dimensions operate through identical technical mechanisms.</p>
+
+            <p>
+                This structure establishes a common engineering language without implying that all dimensions operate through identical technical mechanisms.
+            </p>
+
 
             <!-- 2. ASI VERIFY -->
             <div class="protocol-item">
-                <h4>2. ASI Verify • 2.11 — Formal Verification at the Superintelligent Frontier</h4>
-                <p><strong style="color:var(--accent-cyan);">Trigger:</strong> Activated when an autonomous system proposes a high-risk, irreversible, or otherwise governance-sensitive action requiring formal validation.</p>
-                <p><strong style="color:var(--accent-cyan);">Protocol:</strong> The proposed action and its relevant reasoning conditions are formalized into verifiable logical requirements. Automated theorem proving and self-consistent logic loops are used where applicable.</p>
-                <p><strong style="color:var(--accent-cyan);">Verification:</strong> The system evaluates whether the defined logical requirements can be formally satisfied and whether contradictions, unresolved assumptions, or verification gaps remain.</p>
-                <p><strong style="color:var(--accent-cyan);">Constraint:</strong> A high-risk autonomous action that cannot satisfy its required verification conditions cannot proceed through unrestricted execution.</p>
-                <p><strong style="color:var(--accent-cyan);">Escalation:</strong> Unverified or internally conflicting proposals are transferred to an appropriate governance or human review layer.</p>
-                <p><strong style="color:var(--accent-cyan);">Failure Handling:</strong> Verification failure results in suspension of the affected action rather than autonomous continuation under unresolved uncertainty.</p>
-                <p><strong style="color:var(--accent-cyan);">Audit:</strong> The system preserves the verification state, relevant assumptions, detected contradictions, proof status, and resulting governance decision.</p>
+
+                <h4>
+                    2. ASI Verify • 2.11 — Formal Verification at the Superintelligent Frontier
+                </h4>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Trigger:</strong>
+                    Activated when an autonomous system proposes a high-risk, irreversible, or otherwise governance-sensitive action requiring formal validation.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Protocol:</strong>
+                    The proposed action and its relevant reasoning conditions are formalized into verifiable logical requirements. Automated theorem proving and self-consistent logic loops are used where applicable.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Verification:</strong>
+                    The system evaluates whether the defined logical requirements can be formally satisfied and whether contradictions, unresolved assumptions, or verification gaps remain.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Constraint:</strong>
+                    A high-risk autonomous action that cannot satisfy its required verification conditions cannot proceed through unrestricted execution.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Escalation:</strong>
+                    Unverified or internally conflicting proposals are transferred to an appropriate governance or human review layer.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Failure Handling:</strong>
+                    Verification failure results in suspension of the affected action rather than autonomous continuation under unresolved uncertainty.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-cyan);">Audit:</strong>
+                    The system preserves the verification state, relevant assumptions, detected contradictions, proof status, and resulting governance decision.
+                </p>
+
             </div>
+
 
             <!-- 3. ASI GUARD -->
             <div class="protocol-item">
-                <h4>3. ASI Guard • 2.8 — Autonomous Restraint and High-Risk Containment</h4>
-                <p><strong style="color:var(--accent-purple);">Trigger:</strong> Activated when a proposed action exceeds predefined risk, autonomy, security, or operational boundaries.</p>
-                <p><strong style="color:var(--accent-purple);">Protocol:</strong> The system applies self-limiting mechanisms, dynamic isolation protocols, or restricted execution boundaries appropriate to the detected risk.</p>
-                <p><strong style="color:var(--accent-purple);">Verification:</strong> The proposed action is evaluated against the applicable security and operational constraints before unrestricted execution.</p>
-                <p><strong style="color:var(--accent-purple);">Constraint:</strong> Actions exceeding established boundaries remain restricted until the required conditions for safe execution are satisfied.</p>
-                <p><strong style="color:var(--accent-purple);">Escalation:</strong> Persistent boundary violations, unresolved high-risk conditions, or repeated containment events trigger escalation to governance oversight.</p>
-                <p><strong style="color:var(--accent-purple);">Failure Handling:</strong> If containment or boundary enforcement cannot be reliably maintained, the affected autonomous capability enters a restricted or suspended state.</p>
-                <p><strong style="color:var(--accent-purple);">Audit:</strong> Security events, boundary conditions, containment actions, escalation states, and final execution decisions are recorded for subsequent review.</p>
+
+                <h4>
+                    3. ASI Guard • 2.8 — Autonomous Restraint and High-Risk Containment
+                </h4>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Trigger:</strong>
+                    Activated when a proposed action exceeds predefined risk, autonomy, security, or operational boundaries.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Protocol:</strong>
+                    The system applies self-limiting mechanisms, dynamic isolation protocols, or restricted execution boundaries appropriate to the detected risk.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Verification:</strong>
+                    The proposed action is evaluated against the applicable security and operational constraints before unrestricted execution.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Constraint:</strong>
+                    Actions exceeding established boundaries remain restricted until the required conditions for safe execution are satisfied.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Escalation:</strong>
+                    Persistent boundary violations, unresolved high-risk conditions, or repeated containment events trigger escalation to governance oversight.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Failure Handling:</strong>
+                    If containment or boundary enforcement cannot be reliably maintained, the affected autonomous capability enters a restricted or suspended state.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Audit:</strong>
+                    Security events, boundary conditions, containment actions, escalation states, and final execution decisions are recorded for subsequent review.
+                </p>
+
             </div>
+
 
             <!-- 4. ASI VOID -->
             <div class="protocol-item">
-                <h4>4. ASI Void • 2.10 — Adaptive Defense Against Emergent Vulnerabilities</h4>
-                <p><strong style="color:var(--accent-purple);">Trigger:</strong> Activated when unpredictable vulnerabilities, anomalous behavior, unresolved uncertainty, or previously unrecognized attack surfaces emerge at superintelligent scale.</p>
-                <p><strong style="color:var(--accent-purple);">Protocol:</strong> The system dynamically reassesses its security boundaries and activates adaptive defensive mechanisms appropriate to the detected condition.</p>
-                <p><strong style="color:var(--accent-purple);">Verification:</strong> The system evaluates whether the identified vulnerability or uncertainty has been sufficiently characterized and whether the proposed defensive response reduces the relevant risk.</p>
-                <p><strong style="color:var(--accent-purple);">Constraint:</strong> Uncharacterized or insufficiently controlled conditions may restrict autonomous execution until adequate confidence is established.</p>
-                <p><strong style="color:var(--accent-purple);">Escalation:</strong> Novel, systemic, or persistent vulnerabilities are escalated to higher-level governance and security review.</p>
-                <p><strong style="color:var(--accent-purple);">Failure Handling:</strong> If the system cannot establish a sufficiently reliable defensive boundary, affected capabilities enter a restricted or suspended state.</p>
-                <p><strong style="color:var(--accent-purple);">Audit:</strong> Detected anomalies, uncertainty states, defensive responses, boundary changes, and escalation decisions are preserved for analysis.</p>
+
+                <h4>
+                    4. ASI Void • 2.10 — Adaptive Defense Against Emergent Vulnerabilities
+                </h4>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Trigger:</strong>
+                    Activated when unpredictable vulnerabilities, anomalous behavior, unresolved uncertainty, or previously unrecognized attack surfaces emerge at superintelligent scale.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Protocol:</strong>
+                    The system dynamically reassesses its security boundaries and activates adaptive defensive mechanisms appropriate to the detected condition.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Verification:</strong>
+                    The system evaluates whether the identified vulnerability or uncertainty has been sufficiently characterized and whether the proposed defensive response reduces the relevant risk.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Constraint:</strong>
+                    Uncharacterized or insufficiently controlled conditions may restrict autonomous execution until adequate confidence is established.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Escalation:</strong>
+                    Novel, systemic, or persistent vulnerabilities are escalated to higher-level governance and security review.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Failure Handling:</strong>
+                    If the system cannot establish a sufficiently reliable defensive boundary, affected capabilities enter a restricted or suspended state.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-purple);">Audit:</strong>
+                    Detected anomalies, uncertainty states, defensive responses, boundary changes, and escalation decisions are preserved for analysis.
+                </p>
+
             </div>
+
 
             <!-- 5. AWI VOID -->
             <div class="protocol-item">
-                <h4>5. AWI Void • 3.7 — Epistemic Restraint and Deliberate Pause</h4>
-                <p><strong style="color:var(--accent-emerald);">Trigger:</strong> Activated when the system encounters a significant gap between available knowledge and the certainty required for a consequential decision.</p>
-                <p><strong style="color:var(--accent-emerald);">Protocol:</strong> The system explicitly identifies relevant unknowns, unresolved assumptions, moral uncertainty, and limits of comprehension before proceeding.</p>
-                <p><strong style="color:var(--accent-emerald);">Verification:</strong> The decision is evaluated against the available knowledge, stated assumptions, and applicable ethical constraints.</p>
-                <p><strong style="color:var(--accent-emerald);">Constraint:</strong> The absence of sufficient knowledge or ethical clarity may prevent autonomous continuation of a consequential action.</p>
-                <p><strong style="color:var(--accent-emerald);">Escalation:</strong> Persistent epistemic or moral uncertainty is transferred to an appropriate governance or human deliberation layer.</p>
-                <p><strong style="color:var(--accent-emerald);">Failure Handling:</strong> When uncertainty cannot be responsibly resolved, the system defaults to a deliberate pause rather than treating absence of knowledge as permission to proceed.</p>
-                <p><strong style="color:var(--accent-emerald);">Audit:</strong> Relevant uncertainties, assumptions, ethical conflicts, pause conditions, and subsequent resolution decisions are recorded.</p>
+
+                <h4>
+                    5. AWI Void • 3.7 — Epistemic Restraint and Deliberate Pause
+                </h4>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Trigger:</strong>
+                    Activated when the system encounters a significant gap between available knowledge and the certainty required for a consequential decision.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Protocol:</strong>
+                    The system explicitly identifies relevant unknowns, unresolved assumptions, moral uncertainty, and limits of comprehension before proceeding.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Verification:</strong>
+                    The decision is evaluated against the available knowledge, stated assumptions, and applicable ethical constraints.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Constraint:</strong>
+                    The absence of sufficient knowledge or ethical clarity may prevent autonomous continuation of a consequential action.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Escalation:</strong>
+                    Persistent epistemic or moral uncertainty is transferred to an appropriate governance or human deliberation layer.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Failure Handling:</strong>
+                    When uncertainty cannot be responsibly resolved, the system defaults to a deliberate pause rather than treating absence of knowledge as permission to proceed.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Audit:</strong>
+                    Relevant uncertainties, assumptions, ethical conflicts, pause conditions, and subsequent resolution decisions are recorded.
+                </p>
+
             </div>
+
 
             <!-- 6. AWI SENTRY -->
             <div class="protocol-item">
-                <h4>6. AWI Sentry • 3.8 — Continuous Monitoring of Value Drift</h4>
-                <p><strong style="color:var(--accent-emerald);">Trigger:</strong> Continuously active during consequential decision processes and system operation.</p>
-                <p><strong style="color:var(--accent-emerald);">Protocol:</strong> The system monitors behavioral outputs and decision patterns for potential value drift, ethical constraint violations, or divergence from established governance principles.</p>
-                <p><strong style="color:var(--accent-emerald);">Verification:</strong> Detected deviations are evaluated against the applicable ethical constraints and governance requirements.</p>
-                <p><strong style="color:var(--accent-emerald);">Constraint:</strong> Actions associated with unresolved or significant value drift may be restricted pending further evaluation.</p>
-                <p><strong style="color:var(--accent-emerald);">Escalation:</strong> Persistent, systemic, or high-consequence deviations trigger governance review and, where appropriate, human intervention.</p>
-                <p><strong style="color:var(--accent-emerald);">Failure Handling:</strong> If reliable value monitoring cannot be maintained, consequential autonomous operation may be restricted until monitoring integrity is restored.</p>
-                <p><strong style="color:var(--accent-emerald);">Audit:</strong> Detected deviations, evaluation results, constraint activations, escalation events, and resolution states are preserved for governance review.</p>
+
+                <h4>
+                    6. AWI Sentry • 3.8 — Continuous Monitoring of Value Drift
+                </h4>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Trigger:</strong>
+                    Continuously active during consequential decision processes and system operation.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Protocol:</strong>
+                    The system monitors behavioral outputs and decision patterns for potential value drift, ethical constraint violations, or divergence from established governance principles.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Verification:</strong>
+                    Detected deviations are evaluated against the applicable ethical constraints and governance requirements.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Constraint:</strong>
+                    Actions associated with unresolved or significant value drift may be restricted pending further evaluation.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Escalation:</strong>
+                    Persistent, systemic, or high-consequence deviations trigger governance review and, where appropriate, human intervention.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Failure Handling:</strong>
+                    If reliable value monitoring cannot be maintained, consequential autonomous operation may be restricted until monitoring integrity is restored.
+                </p>
+
+                <p>
+                    <strong style="color:var(--accent-emerald);">Audit:</strong>
+                    Detected deviations, evaluation results, constraint activations, escalation events, and resolution states are preserved for governance review.
+                </p>
+
             </div>
 
+
             <!-- 7. CROSS-SPHERE CRISIS ARBITRATION -->
-            <span class="subsection-title gold">7. Cross-Sphere Crisis Arbitration — Resolving Critical Conflicts Without Creating Hierarchy</span>
-            <p>The Mind Genesis architecture does not establish a permanent hierarchy between AGI, ASI, and AWI, nor between their individual dimensions.</p>
-            <p>However, the absence of hierarchy does not eliminate the possibility of critical conflict.</p>
-            <p>During normal operation, the three spheres remain complementary:</p>
+            <span class="subsection-title gold">
+                7. Cross-Sphere Crisis Arbitration — Resolving Critical Conflicts Without Creating Hierarchy
+            </span>
+
+            <p>
+                The Mind Genesis architecture does not establish a permanent hierarchy between AGI, ASI, and AWI, nor between their individual dimensions.
+            </p>
+
+            <p>
+                However, the absence of hierarchy does not eliminate the possibility of critical conflict.
+            </p>
+
+            <p>
+                During normal operation, the three spheres remain complementary:
+            </p>
+
             <ul>
                 <li><strong style="color:var(--accent-cyan);">AGI — Breadth</strong></li>
                 <li><strong style="color:var(--accent-purple);">ASI — Scale</strong></li>
                 <li><strong style="color:var(--accent-emerald);">AWI — Meaning</strong></li>
             </ul>
-            <p>During a critical conflict, however, the system must be able to prevent incompatible or potentially harmful actions from proceeding while the conflict remains unresolved.</p>
-            <p><strong style="color:var(--accent-cyan);">Trigger:</strong> Activated when AGI, ASI, or AWI produces materially conflicting recommendations concerning a consequential action.</p>
-            <p><strong style="color:var(--accent-cyan);">Protocol:</strong> The disputed action enters a restricted state while the conflicting recommendations are independently evaluated.</p>
-            <p><strong style="color:var(--accent-cyan);">Priority Rule:</strong> No sphere acquires permanent authority over another. However, a verified safety constraint, security boundary, or critical ethical constraint may temporarily prevent autonomous execution.</p>
-            <p><strong style="color:var(--accent-cyan);">Resolution:</strong> The system attempts to resolve the conflict through formal verification, security analysis, ethical evaluation, and contextual assessment.</p>
-            <p><strong style="color:var(--accent-cyan);">Escalation:</strong> If the conflict cannot be resolved within the available verification and governance mechanisms, the decision is escalated to authorized human governance.</p>
-            <p><strong style="color:var(--accent-cyan);">Fail-Safe Principle:</strong> When neither sufficient capability nor sufficient ethical legitimacy can be established for a consequential action, autonomous execution is suspended. No hierarchy is created. No unresolved critical conflict is permitted to become autonomous action.</p>
+
+            <p>
+                During a critical conflict, however, the system must be able to prevent incompatible or potentially harmful actions from proceeding while the conflict remains unresolved.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Trigger:</strong>
+                Activated when AGI, ASI, or AWI produces materially conflicting recommendations concerning a consequential action.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Protocol:</strong>
+                The disputed action enters a restricted state while the conflicting recommendations are independently evaluated.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Priority Rule:</strong>
+                No sphere acquires permanent authority over another. However, a verified safety constraint, security boundary, or critical ethical constraint may temporarily prevent autonomous execution.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Resolution:</strong>
+                The system attempts to resolve the conflict through formal verification, security analysis, ethical evaluation, and contextual assessment.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Escalation:</strong>
+                If the conflict cannot be resolved within the available verification and governance mechanisms, the decision is escalated to authorized human governance.
+            </p>
+
+            <p>
+                <strong style="color:var(--accent-cyan);">Fail-Safe Principle:</strong>
+                When neither sufficient capability nor sufficient ethical legitimacy can be established for a consequential action, autonomous execution is suspended. No hierarchy is created. No unresolved critical conflict is permitted to become autonomous action.
+            </p>
+
 
             <!-- 8. GOVERNANCE STATE MODEL -->
-            <span class="subsection-title gold">8. Governance State Model</span>
-            <p>The Engineering Protocol Framework establishes a general state progression for consequential autonomous decisions:</p>
+            <span class="subsection-title gold">
+                8. Governance State Model
+            </span>
+
+            <p>
+                The Engineering Protocol Framework establishes a general state progression for consequential autonomous decisions:
+            </p>
+
             <div style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--muted); background:rgba(255,255,255,0.02); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:12px 0;">
+
                 <div style="color:var(--accent-cyan);">PROPOSED</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">↓</div>
+
+                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">
+                    ↓
+                </div>
+
                 <div style="color:var(--accent-purple);">TRIGGERED</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">↓</div>
+
+                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">
+                    ↓
+                </div>
+
                 <div style="color:var(--accent-cyan);">VERIFICATION</div>
-                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">↓</div>
-                <div><span style="color:var(--accent-emerald);">CONSTRAINED</span> / <span style="color:var(--accent-cyan);">APPROVED</span></div>
-                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">↓</div>
+
+                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">
+                    ↓
+                </div>
+
+                <div>
+                    <span style="color:var(--accent-emerald);">CONSTRAINED</span>
+                    /
+                    <span style="color:var(--accent-cyan);">APPROVED</span>
+                </div>
+
+                <div style="border-left:2px solid var(--line); padding-left:16px; margin-left:8px; color:var(--accent-purple);">
+                    ↓
+                </div>
+
                 <div style="color:var(--accent-emerald);">EXECUTION</div>
+
             </div>
-            <p>At any stage, unresolved risk, contradiction, uncertainty, or ethical conflict may result in:</p>
+
+            <p>
+                At any stage, unresolved risk, contradiction, uncertainty, or ethical conflict may result in:
+            </p>
+
             <ul>
                 <li><strong style="color:var(--accent-purple);">ESCALATED</strong></li>
                 <li><strong style="color:var(--accent-gold);">SUSPENDED</strong></li>
             </ul>
-            <p>The system therefore treats suspension not as a system failure, but as a valid governance state when sufficient conditions for responsible action have not been established.</p>
+
+            <p>
+                The system therefore treats suspension not as a system failure, but as a valid governance state when sufficient conditions for responsible action have not been established.
+            </p>
+
 
             <!-- 9. ENGINEERING PRINCIPLE -->
-            <span class="subsection-title gold">9. Engineering Principle</span>
-            <p>The Engineering Protocol Framework extends The Mind Genesis from a descriptive architecture toward an operational governance model.</p>
-            <p>Its central principle is:</p>
+            <span class="subsection-title gold">
+                9. Engineering Principle
+            </span>
+
+            <p>
+                The Engineering Protocol Framework extends The Mind Genesis from a descriptive architecture toward an operational governance model.
+            </p>
+
+            <p>
+                Its central principle is:
+            </p>
+
             <div style="font-family:'JetBrains Mono', monospace; font-size:0.95rem; color:var(--accent-cyan); text-align:center; padding:16px; background:rgba(255,255,255,0.02); border-radius:8px; border:1px solid var(--line); margin:12px 0;">
                 “Capability may initiate action, but verification, constraint, and governance determine whether consequential action may proceed.”
             </div>
-            <p>The objective is not to create a hierarchy of intelligence, but to establish mechanisms through which different forms of intelligence can coexist, challenge one another, constrain one another, and remain accountable when their conclusions conflict.</p>
+
+            <p>
+                The objective is not to create a hierarchy of intelligence, but to establish mechanisms through which different forms of intelligence can coexist, challenge one another, constrain one another, and remain accountable when their conclusions conflict.
+            </p>
+
 
             <!-- STATUS -->
-            <span class="subsection-title gold">Status</span>
-            <p>The Engineering Protocol Framework represents a proposed architectural and operational model.</p>
-            <p>It is not presented as a complete implementation standard, production-ready safety specification, or guarantee of safe superintelligence.</p>
-            <p>Its purpose is to establish a structured foundation for future engineering, verification, simulation, and governance research.</p>
+            <span class="subsection-title gold">
+                Status
+            </span>
 
-        </div> <!-- /protocol-content -->
-    </div> <!-- /protocol-box -->
+            <p>
+                The Engineering Protocol Framework represents a proposed architectural and operational model.
+            </p>
+
+            <p>
+                It is not presented as a complete implementation standard, production-ready safety specification, or guarantee of safe superintelligence.
+            </p>
+
+            <p>
+                Its purpose is to establish a structured foundation for future engineering, verification, simulation, and governance research.
+            </p>
+
+        </div>
+    </div>
+
 
     <!-- FOOTER -->
     <footer class="protocol-footer">
-        <a href="https://www.themindgenesis.com/">themindgenesis.com</a> •
-        <a href="https://www.theagimind.com/" target="_blank">theagimind.com</a> •
-        <a href="https://www.theasimind.com/" target="_blank">theasimind.com</a> •
-        <a href="https://www.theawimind.com/" target="_blank">theawimind.com</a>
+
+        <a href="https://www.themindgenesis.com/">
+            themindgenesis.com
+        </a>
+        •
+        <a href="https://www.theagimind.com/" target="_blank">
+            theagimind.com
+        </a>
+        •
+        <a href="https://www.theasimind.com/" target="_blank">
+            theasimind.com
+        </a>
+        •
+        <a href="https://www.theawimind.com/" target="_blank">
+            theawimind.com
+        </a>
+
     </footer>
 
-</div> <!-- /container -->
+</div>
+
+
+<!-- LEGAL FOOTER -->
 <div style="text-align: center; padding: 12px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.5px; color: var(--muted); border-top: 1px solid var(--line);">
+
     <a href="legal.html" style="color: inherit; text-decoration: none;">
         © 2026 The Mind Genesis. All rights reserved.
     </a>
+
 </div>
+
 </body>
 </html>
