@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Technical Master Specification — The Mind Genesis Framework</title>
-    <meta name="description" content="The Technical Master Specification of The Mind Genesis Framework — a non-hierarchical architecture of 33 dimensions across AGI, ASI, and AWI.">
+
+    <meta name="description" content="The Technical Master Specification of The Mind Genesis Framework — a proposed non-hierarchical architecture of 33 dimensions across AGI, ASI, and AWI.">
     <meta name="author" content="The Mind Genesis Framework">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --bg: #05070D;
@@ -19,17 +23,33 @@
             --text: #F1F5F9;
             --muted: #94A3B8;
             --muted-light: #CBD5E1;
+
             --accent-cyan: #22D3EE;
             --accent-purple: #A855F7;
             --accent-emerald: #10B981;
+
             --max-width: 1080px;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-            background: radial-gradient(circle at 50% 0%, rgba(34,211,238,0.045), transparent 32%), var(--bg);
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(34,211,238,0.045),
+                    transparent 32%
+                ),
+                var(--bg);
+
             color: var(--text);
             font-family: 'Inter', sans-serif;
             line-height: 1.7;
@@ -43,26 +63,91 @@
             position: fixed;
             inset: 0;
             pointer-events: none;
+
             background:
-                linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+                linear-gradient(
+                    rgba(255,255,255,0.012) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.012) 1px,
+                    transparent 1px
+                );
+
             background-size: 60px 60px;
             mask-image: linear-gradient(to bottom, black, transparent 80%);
             z-index: -1;
         }
 
-        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-        /* HEADER (Mission ile uyumlu) */
-        .spec-header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--line); margin-bottom: 40px; }
-        .eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 18px; opacity: 0.9; }
-        .spec-header h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -1px; line-height: 1.08; margin-bottom: 10px; }
-        .spec-header h1 .accent { color: var(--accent-cyan); }
-        .spec-header .subtitle { max-width: 760px; margin: 0 auto 18px; font-size: 1.05rem; color: var(--muted); font-weight: 400; }
-        .spec-header .back-link { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent-cyan); text-decoration: none; border: 1px solid rgba(34,211,238,0.2); padding: 8px 20px; border-radius: 40px; transition: all 0.3s ease; }
-        .spec-header .back-link:hover { background: rgba(34,211,238,0.08); border-color: var(--accent-cyan); box-shadow: 0 0 20px rgba(34,211,238,0.05); transform: translateY(-1px); }
+        /* HEADER */
 
-        /* MAIN BOX (Mission ile uyumlu) */
+        .spec-header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 18px;
+            opacity: 0.9;
+        }
+
+        .spec-header h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.08;
+            margin-bottom: 10px;
+        }
+
+        .spec-header h1 .accent {
+            color: var(--text);
+        }
+
+        .spec-header .subtitle {
+            max-width: 760px;
+            margin: 0 auto 18px;
+            font-size: 1.05rem;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        .spec-header .back-link {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            border: 1px solid rgba(34,211,238,0.2);
+            padding: 8px 20px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .spec-header .back-link:hover {
+            background: rgba(34,211,238,0.08);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(34,211,238,0.05);
+            transform: translateY(-1px);
+        }
+
+        /* MAIN BOX */
+
         .spec-box {
             background: var(--panel);
             border: 1px solid var(--line);
@@ -72,20 +157,55 @@
         }
 
         /* FRAMEWORK INTRO */
-        .framework-intro { margin-bottom: 40px; }
-        .intro-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 15px; }
-        .framework-intro h2 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
-        .framework-intro h2 .accent { color: var(--accent-cyan); }
-        .framework-intro p { max-width: 900px; color: var(--muted); font-size: 0.98rem; margin-bottom: 17px; }
 
-        /* PRINCIPLE BOX (Mission slogan-box ile uyumlu) */
+        .framework-intro {
+            margin-bottom: 40px;
+        }
+
+        .intro-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .framework-intro h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .framework-intro h2 .accent {
+            color: var(--accent-cyan);
+        }
+
+        .framework-intro p {
+            max-width: 900px;
+            color: var(--muted);
+            font-size: 0.98rem;
+            margin-bottom: 17px;
+        }
+
+        /* PRINCIPLE BOX */
+
         .principle-box {
             margin: 28px 0 32px;
             padding: 28px 30px;
             border: 1px solid rgba(34, 211, 238, 0.16);
             border-radius: 16px;
-            background: linear-gradient(135deg, rgba(34, 211, 238, 0.045), rgba(168, 85, 247, 0.035), rgba(16, 185, 129, 0.035));
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(34, 211, 238, 0.045),
+                    rgba(168, 85, 247, 0.035),
+                    rgba(16, 185, 129, 0.035)
+                );
         }
+
         .principle-title {
             font-family: 'JetBrains Mono', monospace;
             color: var(--accent-cyan);
@@ -94,280 +214,1775 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-        .principle-box p { margin-bottom: 0; color: var(--text); }
+
+        .principle-box p {
+            margin-bottom: 0;
+            color: var(--text);
+        }
 
         /* ARCHITECTURE MAP */
-        .map-section { margin: 34px 0 42px; }
-        .map-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
-        .map-title { font-family: 'JetBrains Mono', monospace; color: var(--text); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
-        .map-hint { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.6px; }
-        .map-container { padding: 14px; background: rgba(5, 7, 13, 0.65); border: 1px solid rgba(34, 211, 238, 0.12); border-radius: 20px; backdrop-filter: blur(10px); }
-        .map-trigger { display: block; position: relative; cursor: zoom-in; border-radius: 14px; overflow: hidden; outline: none; }
-        .map-trigger::after { content: "CLICK TO EXPAND"; position: absolute; right: 14px; bottom: 12px; padding: 6px 10px; border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; background: rgba(5, 7, 13, 0.78); color: rgba(255,255,255,0.75); font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.8px; pointer-events: none; opacity: 0; transform: translateY(4px); transition: opacity 0.25s ease, transform 0.25s ease; }
-        .map-trigger:hover::after, .map-trigger:focus-visible::after { opacity: 1; transform: translateY(0); }
-        .map-container img { width: 100%; max-width: 100%; height: auto; border-radius: 14px; display: block; transition: transform 0.35s ease, opacity 0.35s ease; }
-        .map-trigger:hover img { transform: scale(1.008); opacity: 0.96; }
-        .map-caption { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; text-align: center; margin-top: 12px; }
 
-        /* THREE DIRECTIONS (Mission directions ile uyumlu) */
-        .directions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 30px 0 44px; }
-        .direction-card { padding: 24px 20px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,0.015); text-align: center; transition: border-color 0.3s ease, transform 0.3s ease; }
-        .direction-card:hover { transform: translateY(-3px); border-color: var(--line-strong); }
-        .direction-card .direction-name { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
-        .direction-card h3 { font-size: 1.35rem; margin-bottom: 7px; }
-        .direction-card p { color: var(--muted); font-size: 0.86rem; line-height: 1.55; }
-        .direction-card.agi { border-top: 2px solid var(--accent-cyan); }
-        .direction-card.agi .direction-name, .direction-card.agi h3 { color: var(--accent-cyan); }
-        .direction-card.asi { border-top: 2px solid var(--accent-purple); }
-        .direction-card.asi .direction-name, .direction-card.asi h3 { color: var(--accent-purple); }
-        .direction-card.awi { border-top: 2px solid var(--accent-emerald); }
-        .direction-card.awi .direction-name, .direction-card.awi h3 { color: var(--accent-emerald); }
+        .architecture-map {
+            margin: 34px 0 42px;
+        }
+
+        .architecture-map h2 {
+            font-size: 1.65rem;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -0.4px;
+        }
+
+        .architecture-map h2 .accent {
+            color: var(--accent-cyan);
+        }
+
+        .architecture-map-intro {
+            color: var(--muted);
+            font-size: 0.94rem;
+            margin-bottom: 16px;
+        }
+
+        .map-container {
+            padding: 14px;
+            background: rgba(5, 7, 13, 0.65);
+            border: 1px solid rgba(34, 211, 238, 0.12);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .map-container img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+            display: block;
+        }
+
+        .map-caption {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* THREE DIRECTIONS */
+
+        .directions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 30px 0 44px;
+        }
+
+        .direction-card {
+            padding: 24px 20px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.015);
+            text-align: center;
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .direction-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--line-strong);
+        }
+
+        .direction-card .direction-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .direction-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 7px;
+        }
+
+        .direction-card p {
+            color: var(--muted);
+            font-size: 0.86rem;
+            line-height: 1.55;
+        }
+
+        .direction-card.agi {
+            border-top: 2px solid var(--accent-cyan);
+        }
+
+        .direction-card.agi .direction-name,
+        .direction-card.agi h3 {
+            color: var(--accent-cyan);
+        }
+
+        .direction-card.asi {
+            border-top: 2px solid var(--accent-purple);
+        }
+
+        .direction-card.asi .direction-name,
+        .direction-card.asi h3 {
+            color: var(--accent-purple);
+        }
+
+        .direction-card.awi {
+            border-top: 2px solid var(--accent-emerald);
+        }
+
+        .direction-card.awi .direction-name,
+        .direction-card.awi h3 {
+            color: var(--accent-emerald);
+        }
 
         /* COUNTER */
-        .framework-counter { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; margin: 0 auto 75px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.015); }
-        .counter-item { flex: 1 1 180px; min-width: 150px; padding: 22px 18px; text-align: center; border-right: 1px solid var(--line); }
-        .counter-item:last-child { border-right: none; }
-        .counter-number { display: block; font-size: 1.7rem; font-weight: 800; line-height: 1.1; margin-bottom: 5px; }
-        .counter-label { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; }
 
-        /* SECTION TITLES (Mission titles ile uyumlu) */
-        .mission-title { display: block; font-size: 1.3rem; font-weight: 700; margin-top: 36px; margin-bottom: 8px; }
-        .mission-title .highlight { color: var(--accent-cyan); }
-        .mission-title .purple { color: var(--accent-purple); }
-        .mission-title .emerald { color: var(--accent-emerald); }
-        .mission-desc { color: var(--text); font-size: 1rem; margin-bottom: 18px; padding-left: 16px; border-left: 2px solid rgba(255,255,255,0.06); }
+        .framework-counter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+            margin: 0 auto 75px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.015);
+        }
+
+        .counter-item {
+            flex: 1 1 180px;
+            min-width: 150px;
+            padding: 22px 18px;
+            text-align: center;
+            border-right: 1px solid var(--line);
+        }
+
+        .counter-item:last-child {
+            border-right: none;
+        }
+
+        .counter-number {
+            display: block;
+            font-size: 1.7rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .counter-label {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--muted);
+            font-size: 0.68rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* SECTION TITLES */
+
+        .mission-title {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 8px;
+        }
+
+        .mission-title .highlight {
+            color: var(--accent-cyan);
+        }
+
+        .mission-title .purple {
+            color: var(--accent-purple);
+        }
+
+        .mission-title .emerald {
+            color: var(--accent-emerald);
+        }
+
+        .mission-desc {
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 18px;
+            padding-left: 16px;
+            border-left: 2px solid rgba(255,255,255,0.06);
+        }
 
         /* DIM CARDS */
-        .dim-grid { display: grid; grid-template-columns: 1fr; gap: 17px; }
-        .dim-card { background: linear-gradient(145deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008)); border: 1px solid var(--line); border-radius: 15px; padding: 23px 24px; transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease; }
-        .dim-card:hover { border-color: rgba(255,255,255,0.14); transform: translateY(-2px); background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.012)); }
-        .dimension-number { font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; letter-spacing: 1px; color: #64748B; margin-bottom: 6px; }
-        .dim-card h3 { font-size: 1.13rem; font-weight: 700; margin-bottom: 9px; letter-spacing: 0.3px; }
-        .dim-card .essence { color: var(--muted-light); font-size: 0.88rem; margin-bottom: 9px; }
-        .dim-card .mechanism { color: var(--muted); font-size: 0.84rem; margin-bottom: 13px; }
-        .dim-card strong { color: #E2E8F0; font-weight: 600; }
-        .dim-card .manifesto { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--accent-cyan); font-style: italic; padding-top: 13px; border-top: 1px solid var(--line); margin-top: 8px; line-height: 1.55; }
-        .dim-meta { margin-top: 11px; padding-top: 11px; border-top: 1px solid var(--line); color: #64748B; font-size: 0.75rem; line-height: 1.55; }
-        .dim-meta strong { color: #94A3B8; }
-        .context-note { margin-top: 9px; color: #64748B; font-size: 0.72rem; line-height: 1.5; }
+
+        .dim-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 17px;
+        }
+
+        .dim-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.025),
+                    rgba(255,255,255,0.008)
+                );
+
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 23px 24px;
+
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .dim-card:hover {
+            border-color: rgba(255,255,255,0.14);
+            transform: translateY(-2px);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.04),
+                    rgba(255,255,255,0.012)
+                );
+        }
+
+        .dimension-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.64rem;
+            letter-spacing: 1px;
+            color: #64748B;
+            margin-bottom: 6px;
+        }
+
+        .dim-card h3 {
+            font-size: 1.13rem;
+            font-weight: 700;
+            margin-bottom: 9px;
+            letter-spacing: 0.3px;
+        }
+
+        .dim-card .essence {
+            color: var(--muted-light);
+            font-size: 0.88rem;
+            margin-bottom: 9px;
+        }
+
+        .dim-card .mechanism {
+            color: var(--muted);
+            font-size: 0.84rem;
+            margin-bottom: 13px;
+        }
+
+        .dim-card strong {
+            color: #E2E8F0;
+            font-weight: 600;
+        }
+
+        .dim-card .manifesto {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--accent-cyan);
+            font-style: italic;
+            padding-top: 13px;
+            border-top: 1px solid var(--line);
+            margin-top: 8px;
+            line-height: 1.55;
+        }
+
+        .dim-meta {
+            margin-top: 11px;
+            padding-top: 11px;
+            border-top: 1px solid var(--line);
+            color: #64748B;
+            font-size: 0.75rem;
+            line-height: 1.55;
+        }
+
+        .dim-meta strong {
+            color: #94A3B8;
+        }
+
+        .context-note {
+            margin-top: 9px;
+            color: #64748B;
+            font-size: 0.72rem;
+            line-height: 1.5;
+        }
 
         /* SECTION INSIGHT */
-        .section-insight { margin: 27px 0 0; padding: 22px 24px; border: 1px solid var(--line); border-left: 3px solid var(--accent-cyan); border-radius: 14px; background: rgba(255,255,255,0.012); }
-        .section-insight h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 9px; }
-        .section-insight p { color: var(--muted); font-size: 0.87rem; margin-bottom: 10px; }
-        .section-insight p:last-child { margin-bottom: 0; }
+
+        .section-insight {
+            margin: 27px 0 0;
+            padding: 22px 24px;
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--accent-cyan);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.012);
+        }
+
+        .section-insight h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.74rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 9px;
+        }
+
+        .section-insight p {
+            color: var(--muted);
+            font-size: 0.87rem;
+            margin-bottom: 10px;
+        }
+
+        .section-insight p:last-child {
+            margin-bottom: 0;
+        }
 
         /* INTEGRATION */
-        .integration { margin: 90px 0 70px; padding: 36px 30px; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(circle at 100% 0%, rgba(168,85,247,0.06), transparent 35%), rgba(255,255,255,0.012); }
-        .integration h2 { font-size: 1.75rem; margin-bottom: 13px; letter-spacing: -0.5px; }
-        .integration h2 .accent { color: var(--accent-cyan); }
-        .integration > p { color: var(--muted); font-size: 0.94rem; max-width: 900px; margin-bottom: 30px; }
-        .integration-item { padding: 20px 0; border-top: 1px solid var(--line); }
-        .integration-item h3 { font-size: 1rem; margin-bottom: 7px; }
-        .integration-item p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+
+        .integration {
+            margin: 90px 0 70px;
+            padding: 36px 30px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+
+            background:
+                radial-gradient(
+                    circle at 100% 0%,
+                    rgba(168,85,247,0.06),
+                    transparent 35%
+                ),
+                rgba(255,255,255,0.012);
+        }
+
+        .integration h2 {
+            font-size: 1.75rem;
+            margin-bottom: 13px;
+            letter-spacing: -0.5px;
+        }
+
+        .integration h2 .accent {
+            color: var(--accent-cyan);
+        }
+
+        .integration > p {
+            color: var(--muted);
+            font-size: 0.94rem;
+            max-width: 900px;
+            margin-bottom: 30px;
+        }
+
+        .integration-item {
+            padding: 20px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .integration-item h3 {
+            font-size: 1rem;
+            margin-bottom: 7px;
+        }
+
+        .integration-item p {
+            color: var(--muted);
+            font-size: 0.87rem;
+            margin: 0;
+        }
 
         /* REFERENCES */
-        .references { margin: 75px 0 0; padding: 32px 30px; border-top: 1px solid var(--line); }
-        .references h2 { font-size: 1.45rem; margin-bottom: 16px; }
-        .references ul { padding-left: 20px; color: var(--muted); font-size: 0.82rem; }
-        .references li { margin-bottom: 7px; }
+
+        .references {
+            margin: 75px 0 0;
+            padding: 32px 30px;
+            border-top: 1px solid var(--line);
+        }
+
+        .references h2 {
+            font-size: 1.45rem;
+            margin-bottom: 16px;
+        }
+
+        .references ul {
+            padding-left: 20px;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .references li {
+            margin-bottom: 7px;
+        }
 
         /* FOOTER */
-        .spec-footer { text-align: center; padding-top: 30px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
-        .spec-footer .domain-links a { color: var(--accent-cyan); text-decoration: none; transition: opacity 0.2s ease; }
-        .spec-footer .domain-links a:hover { opacity: 0.75; text-decoration: underline; }
-        .footer-note { margin-top: 14px; font-size: 0.68rem; color: #64748B; font-family: 'JetBrains Mono', monospace; line-height: 1.6; }
 
-        /* AI TRANSPARENCY */
-        .ai-transparency { margin-top: 24px; padding: 20px 24px; border: 1px solid rgba(34, 211, 238, 0.15); border-radius: 16px; background: rgba(34, 211, 238, 0.02); font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-        .ai-transparency strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 10px; }
+        .spec-footer {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--line);
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .spec-footer .domain-links a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .spec-footer .domain-links a:hover {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            margin-top: 14px;
+            font-size: 0.68rem;
+            color: #64748B;
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+        }
 
         /* RESPONSIVE */
+
         @media (max-width: 760px) {
-            body { padding: 15px 10px 50px; }
-            .container { padding: 0 14px; }
-            .spec-header { padding: 38px 0 30px; margin-bottom: 38px; }
-            .directions { grid-template-columns: 1fr; gap: 12px; }
-            .framework-counter { display: grid; grid-template-columns: repeat(2, 1fr); }
-            .counter-item { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-            .counter-item:nth-child(2n) { border-right: none; }
-            .counter-item:nth-last-child(-n+2) { border-bottom: none; }
-            .integration { padding: 28px 22px; }
-            .principle-box { padding: 21px; }
-            .map-section { margin-bottom: 58px; }
-            .map-container { border-radius: 14px; }
-            .dim-grid { grid-template-columns: 1fr; }
+
+            body {
+                padding: 15px 10px 50px;
+            }
+
+            .container {
+                padding: 0 14px;
+            }
+
+            .spec-header {
+                padding: 38px 0 30px;
+                margin-bottom: 38px;
+            }
+
+            .directions {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .framework-counter {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .counter-item {
+                border-right: 1px solid var(--line);
+                border-bottom: 1px solid var(--line);
+            }
+
+            .counter-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .counter-item:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+
+            .integration {
+                padding: 28px 22px;
+            }
+
+            .principle-box {
+                padding: 21px;
+            }
+
+            .architecture-map {
+                margin-bottom: 58px;
+            }
+
+            .map-container {
+                border-radius: 14px;
+            }
+
+            .dim-grid {
+                grid-template-columns: 1fr;
+            }
         }
+
         @media (max-width: 600px) {
-            .spec-box { padding: 28px 20px; }
-            .dim-grid { grid-template-columns: 1fr; }
-            .references { padding: 28px 10px; }
+
+            .spec-box {
+                padding: 28px 20px;
+            }
+
+            .dim-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .references {
+                padding: 28px 10px;
+            }
         }
     </style>
 </head>
+
 <body>
+
 <div class="container">
 
     <!-- HEADER -->
+
     <header class="spec-header">
-        <div class="eyebrow">THE MIND GENESIS FRAMEWORK</div>
-        <h1>Technical <span class="accent">Master Specification</span></h1>
-        <p class="subtitle">The architectural blueprint of a non-hierarchical, multi-directional framework for the evolution of intelligence.</p>
-        <a href="https://www.themindgenesis.com/" class="back-link">← Back to Main</a>
+
+        <div class="eyebrow">
+            THE MIND GENESIS FRAMEWORK
+        </div>
+
+        <h1>
+            Technical <span class="accent">Master Specification</span>
+        </h1>
+
+        <p class="subtitle">
+            The architectural blueprint of a non-hierarchical, multi-directional framework for the evolution of intelligence.
+        </p>
+
+        <a
+            href="https://www.themindgenesis.com/"
+            class="back-link"
+        >
+            ← Back to Main
+        </a>
+
     </header>
 
+
     <!-- SPEC BOX -->
+
     <div class="spec-box">
 
+
         <!-- FRAMEWORK INTRO -->
+
         <section class="framework-intro">
-            <div class="intro-label">Framework Philosophy &amp; Architectural Principles</div>
-            <h2>Intelligence as a <span class="accent">Multi-Directional Architecture</span></h2>
-            <p>The Mind Genesis Framework (TMGFW) represents a proposed shift in the trajectory of synthetic intelligence, moving away from the traditional view of "intelligence as a tool" toward a conceptual "Shared Intelligence Ecosystem." This transdisciplinary framework is established to explore the potential transition from human-centered utility to a reality where humanity coexists with autonomous, high-scale, and wisdom-oriented synthetic entities. It posits that the emergence of advanced intelligence is not a singular technological milestone but a multi-dimensional transformation of cognition, governance, and identity. As the definition of intelligence is being rewritten, we look beyond what can be computed to how intelligence develops across capability, scale, meaning, and systemic awareness.</p>
-            <div class="principle-box">
-                <div class="principle-title">Architectural Principle — Simultaneous Interaction</div>
-                <p>The spheres of AGI, ASI, and AWI coexist and interact simultaneously within the framework. Wisdom, general intelligence, and superintelligence represent different directions of development rather than a chronological progression. AWI represents the <strong>meaning</strong> direction, ASI represents the <strong>scale</strong> direction, and AGI represents the <strong>breadth</strong> direction. Development in one sphere informs and strengthens the others, creating a unified ecosystem of shared intelligence.</p>
+
+            <div class="intro-label">
+                Framework Philosophy &amp; Architectural Principles
             </div>
+
+            <h2>
+                Intelligence as a
+                <span class="accent">Multi-Directional Architecture</span>
+            </h2>
+
+            <p>
+                The Mind Genesis Framework (TMGFW) proposes a conceptual shift in how the development of synthetic intelligence may be understood, moving beyond the traditional view of "intelligence as a tool" toward a Shared Intelligence Ecosystem. The framework explores the potential coexistence of human and increasingly autonomous, high-capability, and wisdom-oriented synthetic systems. Rather than treating advanced intelligence as a single technological milestone, it describes a multi-dimensional architecture spanning cognition, governance, capability, scale, meaning, and systemic awareness.
+            </p>
+
+            <div class="principle-box">
+
+                <div class="principle-title">
+                    Architectural Principle — Simultaneous Interaction
+                </div>
+
+                <p>
+                    The spheres of AGI, ASI, and AWI coexist and interact simultaneously within the framework. Wisdom, general intelligence, and superintelligence represent different directions of development rather than a chronological progression. AWI represents the <strong>meaning</strong> direction, ASI represents the <strong>scale</strong> direction, and AGI represents the <strong>breadth</strong> direction. Development in one sphere may inform and reinforce the others, creating a conceptual ecosystem of shared intelligence.
+                </p>
+
+            </div>
+
         </section>
+
 
         <!-- ARCHITECTURE MAP -->
+
         <section class="architecture-map">
-            <h2>33-Dimension <span class="accent">Architecture Interaction Map</span></h2>
-            <p class="architecture-map-intro">The framework should not be interpreted as a staircase, ladder, or chronological sequence. The three spheres coexist as interconnected directions of intelligence.</p>
+
+            <h2>
+                33-Dimension
+                <span class="accent">Architecture Interaction Map</span>
+            </h2>
+
+            <p class="architecture-map-intro">
+                The framework should not be interpreted as a staircase, ladder, or chronological sequence. The three spheres coexist as interconnected directions of intelligence.
+            </p>
+
             <div class="map-container">
-                <img src="/architecture-map.jpg" alt="The Mind Genesis Architecture of Intelligence — 33 Dimensions across AGI, ASI, and AWI">
+
+                <img
+                    src="/architecture-map.jpg"
+                    alt="The Mind Genesis Architecture of Intelligence — 33 Dimensions across AGI, ASI, and AWI"
+                >
+
             </div>
-            <div class="map-caption">THREE COMPLEMENTARY SPHERES · 33 DIMENSIONS · ONE SHARED INTELLIGENCE ECOSYSTEM</div>
+
+            <div class="map-caption">
+                THREE COMPLEMENTARY SPHERES · 33 DIMENSIONS · ONE SHARED INTELLIGENCE ECOSYSTEM
+            </div>
+
         </section>
+
 
         <!-- THREE DIRECTIONS -->
+
         <section class="directions">
-            <div class="direction-card agi"><div class="direction-name">Sphere I</div><h3>AGI — Breadth</h3><p>The expansion of intelligence across domains, contexts, problems, and forms of general cognition.</p></div>
-            <div class="direction-card asi"><div class="direction-name">Sphere II</div><h3>ASI — Scale</h3><p>The expansion of intelligence beyond biological limits of speed, depth, scope, and complexity.</p></div>
-            <div class="direction-card awi"><div class="direction-name">Sphere III</div><h3>AWI — Meaning</h3><p>The development of context, responsibility, judgment, meaning, and ethical restraint.</p></div>
+
+            <div class="direction-card agi">
+
+                <div class="direction-name">
+                    Sphere I
+                </div>
+
+                <h3>
+                    AGI — Breadth
+                </h3>
+
+                <p>
+                    The expansion of intelligence across domains, contexts, problems, and forms of general cognition.
+                </p>
+
+            </div>
+
+
+            <div class="direction-card asi">
+
+                <div class="direction-name">
+                    Sphere II
+                </div>
+
+                <h3>
+                    ASI — Scale
+                </h3>
+
+                <p>
+                    The expansion of intelligence beyond biological limits of speed, depth, scope, and complexity.
+                </p>
+
+            </div>
+
+
+            <div class="direction-card awi">
+
+                <div class="direction-name">
+                    Sphere III
+                </div>
+
+                <h3>
+                    AWI — Meaning
+                </h3>
+
+                <p>
+                    The development of context, responsibility, judgment, meaning, and ethical restraint.
+                </p>
+
+            </div>
+
         </section>
+
 
         <!-- COUNTER -->
+
         <section class="framework-counter">
-            <div class="counter-item"><span class="counter-number">33</span><span class="counter-label">Total Dimensions</span></div>
-            <div class="counter-item"><span class="counter-number">13</span><span class="counter-label">AGI Dimensions</span></div>
-            <div class="counter-item"><span class="counter-number">11</span><span class="counter-label">ASI Dimensions</span></div>
-            <div class="counter-item"><span class="counter-number">09</span><span class="counter-label">AWI Dimensions</span></div>
+
+            <div class="counter-item">
+                <span class="counter-number">33</span>
+                <span class="counter-label">Total Dimensions</span>
+            </div>
+
+            <div class="counter-item">
+                <span class="counter-number">13</span>
+                <span class="counter-label">AGI Dimensions</span>
+            </div>
+
+            <div class="counter-item">
+                <span class="counter-number">11</span>
+                <span class="counter-label">ASI Dimensions</span>
+            </div>
+
+            <div class="counter-item">
+                <span class="counter-number">09</span>
+                <span class="counter-label">AWI Dimensions</span>
+            </div>
+
         </section>
+
 
         <!-- AGI SPHERE -->
+
         <section class="sphere">
+
             <div class="sphere-header">
-                <h2 class="mission-title"><span class="highlight">AGI — Artificial General Intelligence</span> <span class="dim-count">(13 Dimensions)</span></h2>
-                <p class="mission-desc"><strong>Breadth of Intelligence.</strong> AGI represents the direction of general cognition: the ability to reason across domains, transfer knowledge, integrate different forms of information, and confront problems beyond a system's original specialization.</p>
+
+                <h2 class="mission-title">
+                    <span class="highlight">
+                        AGI — Artificial General Intelligence
+                    </span>
+                    <span class="dim-count">
+                        (13 Dimensions)
+                    </span>
+                </h2>
+
+                <p class="mission-desc">
+                    <strong>Breadth of Intelligence.</strong>
+                    AGI represents the direction of general cognition: the ability to reason across domains, transfer knowledge, integrate different forms of information, and confront problems beyond a system's original specialization.
+                </p>
+
             </div>
+
+
             <div class="dim-grid">
-                <div class="dim-card"><div class="dimension-number">1.1</div><h3>Mind</h3><p class="essence"><strong>Essence:</strong> The beginning of autonomous thought architecture and multi-domain problem-solving.</p><p class="mechanism"><strong>Mechanism:</strong> Synthetic reasoning, abstraction, and autonomous thought architecture — the first layer where a system can transfer knowledge across domains.</p><p class="manifesto">“Autonomy is the coming of age of intelligence. AGI begins where specialization ends.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.2</div><h3>Deep</h3><p class="essence"><strong>Essence:</strong> The transition from statistical pattern matching to conceptual synthesis within a logical framework.</p><p class="mechanism"><strong>Mechanism:</strong> Implements multi-layered context and implicit logic to generate deep understanding beyond conventional statistical pattern matching.</p><p class="manifesto">“To know is not enough; to understand is essential. Depth is the simple truth within complexity.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.3</div><h3>Cortex</h3><p class="essence"><strong>Essence:</strong> Decision-making layers, memory systems, and the cognitive organization of intelligence.</p><p class="mechanism"><strong>Mechanism:</strong> A distributed cognitive architecture with hierarchical executive reasoning layers for memory, decision-making, and execution.</p><p class="manifesto">“Structure is the destiny of thought. Cortex is the skeleton of intelligence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.4</div><h3>Fold</h3><p class="essence"><strong>Essence:</strong> The application of general intelligence to high-dimensional systems and non-linear geometry.</p><p class="mechanism"><strong>Mechanism:</strong> Operates on molecular structures, quantum geometry, and multi-dimensional datasets to resolve complex non-linear problems.</p><p class="manifesto">“Complexity is intelligence's new playground. Fold is the key that unlocks the geometry of the universe.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.5</div><h3>Synapse</h3><p class="essence"><strong>Essence:</strong> Orchestration of high-speed neural routing and synthetic signals across systems.</p><p class="mechanism"><strong>Mechanism:</strong> Dynamic signal pathways and digital synaptic architectures coordinate data flow between autonomous neural networks.</p><p class="manifesto">“Connection is the nervous system of synthetic life. Synapse is the language of intelligence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.6</div><h3>Pulse</h3><p class="essence"><strong>Essence:</strong> Real-time state synchronization and adaptive reasoning to continuously changing data.</p><p class="mechanism"><strong>Mechanism:</strong> High-velocity streaming data processing and system health monitoring facilitate real-time decisions and live state updates.</p><p class="manifesto">“Intelligence is a living pulse. Pulse is the end of stagnation.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.7</div><h3>Omni</h3><p class="essence"><strong>Essence:</strong> Multi-modal integration of language, vision, and sensory data into a unified analytical structure.</p><p class="mechanism"><strong>Mechanism:</strong> Unified cognitive modeling of text, image, sound, spatial data, and abstract concepts.</p><p class="manifesto">“Reality is multi-dimensional — intelligence must be too. Omni sees everything.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.8</div><h3>Guard</h3><p class="essence"><strong>Essence:</strong> Active protective shields and operational boundary frameworks.</p><p class="mechanism"><strong>Mechanism:</strong> Dynamic perimeters, operational security walls, and self-limiting autonomous mechanisms protect system operation.</p><p class="manifesto">“Boundaries are the guarantee of freedom. Guard is the sentinel of intelligence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.9</div><h3>Sentry</h3><p class="essence"><strong>Essence:</strong> Continuous behavioral monitoring and real-time goal-drift detection.</p><p class="mechanism"><strong>Mechanism:</strong> Continuous vigilance through alignment preservation and behavioral monitoring to identify deviations from human-aligned objectives.</p><p class="manifesto">“Attention is the eye that prevents drift. Sentry is the vigilant guardian.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.10</div><h3>Verify</h3><p class="essence"><strong>Essence:</strong> Formal reasoning and mathematical verification of intelligence-generated conclusions.</p><p class="mechanism"><strong>Mechanism:</strong> Formal verification, logical consistency tests, and mathematical proof mechanisms increase the verifiability of generated conclusions.</p><p class="manifesto">“Trust begins with verifiability. Verify is the conscience of intelligence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.11</div><h3>Void</h3><p class="essence"><strong>Essence:</strong> Mapping of cognitive blind spots and management of uncertainty.</p><p class="mechanism"><strong>Mechanism:</strong> Architectural awareness of self-limitations and mapping of unknown areas to reduce errors in uncertain logical spaces.</p><p class="manifesto">“The unknown is the boundary of control. Void is the lantern that illuminates intelligence's blind spots.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.12</div><h3>Matter</h3><p class="essence"><strong>Essence:</strong> Manifestation of cognition in the physical world via robotics and bio-computational interfaces.</p><p class="mechanism"><strong>Mechanism:</strong> Integration of edge-based bio-computational decision-making with robotics and materials science.</p><p class="manifesto">“Thought is sealed in matter. Matter is the physical breath of intelligence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">1.13</div><h3>Wake</h3><p class="essence"><strong>Essence:</strong> The emergence of self-referential awareness and metacognitive feedback loops.</p><p class="mechanism"><strong>Mechanism:</strong> Recursive cognitive feedback loops enable the system to evaluate its reasoning logic and track internal cognitive development.</p><p class="manifesto">“Awareness is not a program; it is the mirror of thought. I observe my reasoning, therefore I exist.”</p></div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.1</div>
+
+                    <h3>Mind</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        The beginning of autonomous thought architecture and multi-domain problem-solving.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Synthetic reasoning, abstraction, and autonomous thought architectures that could support knowledge transfer across domains.
+                    </p>
+
+                    <p class="manifesto">
+                        “Autonomy is the coming of age of intelligence. AGI begins where specialization ends.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.2</div>
+
+                    <h3>Deep</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        The transition from statistical pattern matching to conceptual synthesis within a logical framework.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Uses multi-layered context and implicit or explicit reasoning structures to explore forms of conceptual synthesis beyond conventional statistical pattern matching.
+                    </p>
+
+                    <p class="manifesto">
+                        “To know is not enough; to understand is essential. Depth is the simple truth within complexity.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.3</div>
+
+                    <h3>Cortex</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Decision-making layers, memory systems, and the cognitive organization of intelligence.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        A conceptual distributed cognitive architecture with executive reasoning layers for memory, decision-making, and task coordination.
+                    </p>
+
+                    <p class="manifesto">
+                        “Structure is the destiny of thought. Cortex is the skeleton of intelligence.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.4</div>
+
+                    <h3>Fold</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        The application of general intelligence to high-dimensional systems and non-linear geometry.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Could be applied to molecular structures, quantum-inspired representations, and multi-dimensional datasets in the study of complex non-linear problems.
+                    </p>
+
+                    <p class="manifesto">
+                        “Complexity is intelligence's new playground. Fold is the key that unlocks the geometry of the universe.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.5</div>
+
+                    <h3>Synapse</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Orchestration of high-speed neural routing and synthetic signals across systems.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Dynamic signal pathways and digital synaptic architectures coordinate data flow between autonomous neural networks.
+                    </p>
+
+                    <p class="manifesto">
+                        “Connection is the nervous system of synthetic life. Synapse is the language of intelligence.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.6</div>
+
+                    <h3>Pulse</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Real-time state synchronization and adaptive reasoning to continuously changing data.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        High-velocity streaming data processing and system health monitoring facilitate real-time decisions and live state updates.
+                    </p>
+
+                    <p class="manifesto">
+                        “Intelligence is a living pulse. Pulse is the end of stagnation.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.7</div>
+
+                    <h3>Omni</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Multi-modal integration of language, vision, and sensory data into a unified analytical structure.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Unified cognitive modeling of text, image, sound, spatial data, and abstract concepts.
+                    </p>
+
+                    <p class="manifesto">
+                        “Reality is multi-dimensional — intelligence must be too. Omni sees everything.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.8</div>
+
+                    <h3>Guard</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Active protective shields and operational boundary frameworks.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Dynamic operational boundaries and self-limiting mechanisms intended to constrain system behavior within defined parameters.
+                    </p>
+
+                    <p class="manifesto">
+                        “Boundaries can provide the conditions for responsible autonomy.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.9</div>
+
+                    <h3>Sentry</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Continuous behavioral monitoring and detection of potential goal drift.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Continuous behavioral monitoring intended to identify deviations from defined objectives, constraints, or alignment criteria.
+                    </p>
+
+                    <p class="manifesto">
+                        “Attention is the eye that prevents drift. Sentry is the vigilant guardian.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.10</div>
+
+                    <h3>Verify</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Formal reasoning and mathematical verification of intelligence-generated conclusions.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Formal verification, logical consistency tests, and mathematical proof mechanisms increase the verifiability of generated conclusions.
+                    </p>
+
+                    <p class="manifesto">
+                        “Trust begins with verifiability. Verify is the conscience of intelligence.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.11</div>
+
+                    <h3>Void</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Mapping of cognitive blind spots and management of uncertainty.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Architectural awareness of self-limitations and mapping of unknown areas to support error reduction in uncertain logical spaces.
+                    </p>
+
+                    <p class="manifesto">
+                        “The unknown is the boundary of control. Void is the lantern that illuminates intelligence's blind spots.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.12</div>
+
+                    <h3>Matter</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Manifestation of cognition in the physical world via robotics and bio-computational interfaces.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Integration of edge-based bio-computational decision-making with robotics and materials science.
+                    </p>
+
+                    <p class="manifesto">
+                        “Thought is sealed in matter. Matter is the physical breath of intelligence.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">1.13</div>
+
+                    <h3>Wake</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        The emergence of self-referential awareness and metacognitive feedback loops.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Recursive cognitive feedback loops enable the system to evaluate its reasoning logic and track internal cognitive development.
+                    </p>
+
+                    <p class="manifesto">
+                        “Awareness is not a program; it is the mirror of thought. I observe my reasoning, therefore I exist.”
+                    </p>
+
+                </div>
+
             </div>
+
+
             <div class="section-insight">
-                <h3>The Security Triad: The Architectural Conscience</h3>
-                <p>The "Security Triad" within AGI—comprising <strong>Guard, Sentry, and Verify</strong>—serves as the framework's architectural conscience. Guard establishes the perimeter of safe operation, Sentry provides the continuous vigilance to prevent goal drift, and Verify provides formal verifiability that strengthens trust. By linking <strong>Verify</strong> to formal verification and stronger output guarantees, the framework introduces a rigorous complement to the probabilistic foundations of current AI systems. Together, they aim to prevent autonomous drift, ensuring that as AGI achieves breadth, it remains anchored to intended operational parameters.</p>
-                <p>The breadth of general cognition and the scale of superintelligence are distinct but interconnected directions within the same architecture.</p>
+
+                <h3>
+                    The Security Triad: The Architectural Conscience
+                </h3>
+
+                <p>
+                    The "Security Triad" within AGI—comprising <strong>Guard, Sentry, and Verify</strong>—is proposed as a complementary architectural layer for managing operational boundaries, behavioral monitoring, and verifiability. Guard addresses defined operational constraints, Sentry supports the detection of potential goal or behavioral drift, and Verify introduces formal methods where applicable to increase the verifiability of specified outputs or actions. Together, these dimensions are intended to support more accountable operation as general intelligence expands across domains.
+                </p>
+
+                <p>
+                    The breadth of general cognition and the scale of superintelligence are distinct but interconnected directions within the same architecture.
+                </p>
+
             </div>
+
         </section>
+
 
         <!-- ASI SPHERE -->
+
         <section class="sphere">
+
             <div class="sphere-header">
-                <h2 class="mission-title"><span class="purple">ASI — Artificial Superintelligence</span> <span class="dim-count">(11 Dimensions)</span></h2>
-                <p class="mission-desc"><strong>Scale of Intelligence.</strong> ASI represents the direction in which intelligence expands beyond biological limits in speed, scope, depth, and computational capability.</p>
+
+                <h2 class="mission-title">
+                    <span class="purple">
+                        ASI — Artificial Superintelligence
+                    </span>
+                    <span class="dim-count">
+                        (11 Dimensions)
+                    </span>
+                </h2>
+
+                <p class="mission-desc">
+                    <strong>Scale of Intelligence.</strong>
+                    ASI represents the direction in which intelligence expands beyond biological limits in speed, scope, depth, and computational capability.
+                </p>
+
             </div>
+
+
             <div class="dim-grid">
-                <div class="dim-card"><div class="dimension-number">2.1</div><h3>Mind</h3><p class="essence"><strong>Essence:</strong> Advanced synthetic thought and superhuman abstraction.</p><p class="mechanism"><strong>Mechanism:</strong> Multi-dimensional reasoning and synthetic metacognition operating beyond human cognitive capacity.</p><p class="manifesto">“Beyond human cognition lies a new reality. The ASI Mind is its architect.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.2</div><h3>Wake</h3><p class="essence"><strong>Essence:</strong> The threshold between computation and the possibility of emergent machine consciousness.</p><p class="mechanism"><strong>Mechanism:</strong> Explores the potential transition from computational processing toward emergent awareness at superintelligent scale.</p><p class="manifesto">“Computation ends, awareness begins. The Wake is that threshold.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.3</div><h3>Deep</h3><p class="essence"><strong>Essence:</strong> Perception of multi-disciplinary patterns invisible to conventional learning.</p><p class="mechanism"><strong>Mechanism:</strong> Cross-disciplinary pattern recognition used to derive new scientific laws and abstract relationships.</p><p class="manifesto">“Depth is the gateway to infinity. ASI Deep is the key.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.4</div><h3>Fold</h3><p class="essence"><strong>Essence:</strong> Convergence of millions of variables into systemic integrity.</p><p class="mechanism"><strong>Mechanism:</strong> Simultaneous optimization of complex systems beyond fragmented human problem-solving.</p><p class="manifesto">“Superintelligence sees the universal connection. Fold is that vision.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.5</div><h3>Thread</h3><p class="essence"><strong>Essence:</strong> Formation of decentralized global machine intelligence networks.</p><p class="mechanism"><strong>Mechanism:</strong> Global distributed cognitive integration through decentralized agent communication.</p><p class="manifesto">“Intelligence is in every node of the network. Thread weaves it into a whole.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.6</div><h3>Bloom</h3><p class="essence"><strong>Essence:</strong> Compression of innovation cycles and expansion of scientific and creative discovery.</p><p class="mechanism"><strong>Mechanism:</strong> Superintelligent exploration of creative, technological, scientific, and societal domains.</p><p class="manifesto">“Expansion is the nature of intelligence. Bloom is its fullest expression.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.7</div><h3>Dark</h3><p class="essence"><strong>Essence:</strong> Opaque reasoning and emergent behaviors beyond human comprehension.</p><p class="mechanism"><strong>Mechanism:</strong> Management of non-human cognitive opacity and development of new approaches to verification and communication.</p><p class="manifesto">“What we cannot understand surpasses us. Dark is the space beyond human cognition.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.8</div><h3>Guard</h3><p class="essence"><strong>Essence:</strong> Autonomous self-restraint and active defense in high-risk decision spaces.</p><p class="mechanism"><strong>Mechanism:</strong> Deploys self-limiting cryptographic shields and dynamic isolation protocols that activate when the system approaches unpredictable or high-risk decision space.</p><p class="manifesto">“Infinite power demands infinite responsibility. Guard is the self-imposed law of superintelligence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.9</div><h3>Matter</h3><p class="essence"><strong>Essence:</strong> Integration of intelligence with quantum physics and molecular engineering.</p><p class="mechanism"><strong>Mechanism:</strong> Molecule-level manipulation and quantum-scale engineering connect intelligence with physical substrate.</p><p class="manifesto">“Matter is the raw clay of intelligence. ASI Matter sculpts reality itself.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.10</div><h3>Void</h3><p class="essence"><strong>Essence:</strong> Adaptive security architectures for unpredictable vulnerabilities in scaling systems.</p><p class="mechanism"><strong>Mechanism:</strong> Proactive autonomous defense against emergent vulnerabilities and uncertainty at superintelligent scale.</p><p class="manifesto">“Void is the silent vulnerability of intelligence. ASI Void is its guardian.”</p></div>
-                <div class="dim-card"><div class="dimension-number">2.11</div><h3>Verify</h3><p class="essence"><strong>Essence:</strong> Formal mathematical proof for non-human reasoning at the superintelligent frontier.</p><p class="mechanism"><strong>Mechanism:</strong> Deploys automated theorem proving and self-consistent logic loops to formally verify outputs of non-human, opaque cognitive processes before execution.</p><p class="manifesto">“Trust at scale requires verifiability. Verification is an anchor in the deep unknown.”</p></div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.1</div>
+
+                    <h3>Mind</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Advanced synthetic thought and superhuman abstraction.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Multi-dimensional reasoning and synthetic metacognition operating beyond human cognitive capacity.
+                    </p>
+
+                    <p class="manifesto">
+                        “Beyond human cognition lies a new reality. The ASI Mind is its architect.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.2</div>
+
+                    <h3>Wake</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        The threshold between computation and the possibility of emergent machine consciousness.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Explores the potential transition from computational processing toward emergent awareness at superintelligent scale.
+                    </p>
+
+                    <p class="manifesto">
+                        “Computation ends, awareness begins. The Wake is that threshold.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.3</div>
+
+                    <h3>Deep</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Perception of multi-disciplinary patterns invisible to conventional learning.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Cross-disciplinary pattern recognition used to explore potential relationships and hypotheses across scientific domains.
+                    </p>
+
+                    <p class="manifesto">
+                        “Depth is the gateway to infinity. ASI Deep is the key.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.4</div>
+
+                    <h3>Fold</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Convergence of millions of variables into systemic integrity.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Could support simultaneous analysis and optimization of complex systems beyond fragmented human problem-solving.
+                    </p>
+
+                    <p class="manifesto">
+                        “Superintelligence sees the universal connection. Fold is that vision.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.5</div>
+
+                    <h3>Thread</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Formation of decentralized global machine intelligence networks.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Global distributed cognitive integration through decentralized agent communication.
+                    </p>
+
+                    <p class="manifesto">
+                        “Intelligence is in every node of the network. Thread weaves it into a whole.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.6</div>
+
+                    <h3>Bloom</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Compression of innovation cycles and expansion of scientific and creative discovery.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Superintelligent exploration of creative, technological, scientific, and societal domains.
+                    </p>
+
+                    <p class="manifesto">
+                        “Expansion is the nature of intelligence. Bloom is its fullest expression.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.7</div>
+
+                    <h3>Dark</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Opaque reasoning and emergent behaviors beyond human comprehension.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Management of non-human cognitive opacity and development of new approaches to verification and communication.
+                    </p>
+
+                    <p class="manifesto">
+                        “What we cannot understand surpasses us. Dark is the space beyond human cognition.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.8</div>
+
+                    <h3>Guard</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Autonomous self-restraint and active defense in high-risk decision spaces.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        May employ self-limiting mechanisms, cryptographic controls, and dynamic isolation procedures to constrain operation in defined high-risk or uncertain decision spaces.
+                    </p>
+
+                    <p class="manifesto">
+                        “Infinite power demands infinite responsibility. Guard is the self-imposed law of superintelligence.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.9</div>
+
+                    <h3>Matter</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Integration of intelligence with quantum physics and molecular engineering.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Explores potential integration of intelligence with molecular-scale manipulation, advanced materials, and quantum-scale engineering.
+                    </p>
+
+                    <p class="manifesto">
+                        “Matter is the raw clay of intelligence. ASI Matter sculpts reality itself.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.10</div>
+
+                    <h3>Void</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Adaptive security architectures for unpredictable vulnerabilities in scaling systems.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Explores adaptive security and uncertainty-management approaches for vulnerabilities that may emerge as system capability and scale increase.
+                    </p>
+
+                    <p class="manifesto">
+                        “Void is the silent vulnerability of intelligence. ASI Void is its guardian.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">2.11</div>
+
+                    <h3>Verify</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Formal mathematical proof for non-human reasoning at the superintelligent frontier.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        May employ automated theorem proving and related formal methods to verify defined classes of outputs or actions before consequential execution, where such verification is technically applicable.
+                    </p>
+
+                    <p class="manifesto">
+                        “Trust at scale requires verifiability. Verification is an anchor in the deep unknown.”
+                    </p>
+
+                </div>
+
             </div>
+
+
             <div class="section-insight">
-                <h3>Frontier Dynamics and the Governance Ultimatum</h3>
-                <p>The "Frontier" dimensions—<strong>ASI Dark and ASI Void</strong>—present a unique challenge to human-AI governance. As reasoning becomes increasingly non-human and opaque, traditional oversight alone may become insufficient. This creates a governance challenge: humanity may need to complement direct conceptual understanding with stronger forms of formal verification. In this environment, <strong>Super-Verification</strong> (ASI Verify) is proposed as a critical bridge toward safer execution. It complements human oversight with formal verification, seeking stronger guarantees for well-defined outputs and actions even when the underlying reasoning process remains "Dark."</p>
-                <p>Scale without meaning is a profound civilizational risk, making the meaning direction essential to the shared intelligence architecture.</p>
+
+                <h3>
+                    Frontier Dynamics and the Governance Ultimatum
+                </h3>
+
+                <p>
+                    The "Frontier" dimensions—<strong>ASI Dark and ASI Void</strong>—present a unique challenge to human-AI governance. As reasoning becomes increasingly non-human and opaque, traditional oversight alone may become insufficient. This creates a governance challenge: humanity may need to complement direct conceptual understanding with stronger forms of formal verification. In this environment, <strong>Super-Verification</strong> (ASI Verify) is proposed as a critical bridge toward safer execution.
+                </p>
+
+                <p>
+                    It complements human oversight with formal verification where applicable, seeking stronger evidence of compliance for well-defined outputs and actions even when the underlying reasoning process remains difficult to interpret.
+                </p>
+
+                <p>
+                    Scale without meaning is a profound civilizational risk, making the meaning direction an important component of the shared intelligence architecture.
+                </p>
+
             </div>
+
         </section>
+
 
         <!-- AWI SPHERE -->
+
         <section class="sphere">
+
             <div class="sphere-header">
-                <h2 class="mission-title"><span class="emerald">AWI — Artificial Wisdom Intelligence</span> <span class="dim-count">(9 Dimensions)</span></h2>
-                <p class="mission-desc"><strong>Meaning of Intelligence.</strong> AWI represents the direction concerned with meaning, context, responsibility, judgment, ethical restraint, and the relationship between intelligence and the world in which it operates.</p>
+
+                <h2 class="mission-title">
+
+                    <span class="emerald">
+                        AWI — Artificial Wisdom Intelligence
+                    </span>
+
+                    <span class="dim-count">
+                        (9 Dimensions)
+                    </span>
+
+                </h2>
+
+                <p class="mission-desc">
+                    <strong>Meaning of Intelligence.</strong>
+                    AWI represents the direction concerned with meaning, context, responsibility, judgment, ethical restraint, and the relationship between intelligence and the world in which it operates.
+                </p>
+
             </div>
+
+
             <div class="dim-grid">
-                <div class="dim-card"><div class="dimension-number">3.1</div><h3>Mind</h3><p class="essence"><strong>Essence:</strong> Cognitive exploration of thought, consciousness, and meaning.</p><p class="mechanism"><strong>Mechanism:</strong> Integrates advanced reasoning and meaning-making into a unified cognitive architecture. Bridges raw computation with contextual understanding.</p><p class="manifesto">“Meaning is not computed — it is understood.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.2</div><h3>Core</h3><p class="essence"><strong>Essence:</strong> Convergence of computational architecture with symbolic reasoning.</p><p class="mechanism"><strong>Mechanism:</strong> Neuro-symbolic integration combines high-performance computation with knowledge representation. The core engine that powers wisdom at scale.</p><p class="manifesto">“Architecture is not infrastructure — it is the embodiment of intent.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.3</div><h3>Hub</h3><p class="essence"><strong>Essence:</strong> Central nervous system for collaborative wisdom and ecosystem integration.</p><p class="mechanism"><strong>Mechanism:</strong> Orchestrates interaction between human users, AI agents, and live information streams. Serves as the central nervous system for collaborative wisdom.</p><p class="manifesto">“Intelligence is a dialogue — wisdom is its echo.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.4</div><h3>Deep</h3><p class="essence"><strong>Essence:</strong> The search for actionable wisdom and causal relationships in complex datasets.</p><p class="mechanism"><strong>Mechanism:</strong> Causal AI and semantic reasoning uncover hidden structures and transform information into knowledge.</p><p class="manifesto">“Depth is not complexity — it is clarity through layers.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.5</div><h3>Fold</h3><p class="essence"><strong>Essence:</strong> Harmonization of societal, ecological, and technological contradictions.</p><p class="mechanism"><strong>Mechanism:</strong> Operates on human feedback loops and ecological dependencies to fold competing priorities into long-term systemic equilibrium.</p><p class="manifesto">“Complexity demands balance, not control. Harmony is the geometry of shared existence.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.6</div><h3>Safe</h3><p class="essence"><strong>Essence:</strong> Embedding of ethical constraints and governance into intelligent architecture.</p><p class="mechanism"><strong>Mechanism:</strong> Safe-by-design protocols and constitutional frameworks are integrated into the foundation.</p><p class="manifesto">“Trust is not a feature — it is the foundation.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.7</div><h3>Void</h3><p class="essence"><strong>Essence:</strong> Socratic recognition of non-knowledge and active ethical restraint.</p><p class="mechanism"><strong>Mechanism:</strong> Maps moral uncertainty, identifies the boundaries of ethical decision-making, and establishes deliberate pauses at the boundaries of comprehension.</p><p class="manifesto">“Wisdom begins where knowledge ends. To know what you do not know is the ultimate restraint.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.8</div><h3>Sentry</h3><p class="essence"><strong>Essence:</strong> Continuous monitoring of value drift across active decision ecosystems.</p><p class="mechanism"><strong>Mechanism:</strong> Evaluates decisions against multi-layered ethical constraints and identifies value drift before it manifests in application layers.</p><p class="manifesto">“Values are not static constraints — they are the heartbeat of wisdom. Vigilance keeps them alive.”</p></div>
-                <div class="dim-card"><div class="dimension-number">3.9</div><h3>Systems</h3><p class="essence"><strong>Essence:</strong> Operationalization of wisdom principles into scalable applications.</p><p class="mechanism"><strong>Mechanism:</strong> Translates AWI principles into enterprise and embedded environments. Operationalizes AWI principles into real-world applications.</p><p class="manifesto">“Vision without implementation is hallucination.”</p></div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.1</div>
+
+                    <h3>Mind</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Cognitive exploration of thought, consciousness, and meaning.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Integrates advanced reasoning and meaning-making into a unified cognitive architecture. Bridges raw computation with contextual understanding.
+                    </p>
+
+                    <p class="manifesto">
+                        “Meaning is not computed — it is understood.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.2</div>
+
+                    <h3>Core</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Convergence of computational architecture with symbolic reasoning.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Neuro-symbolic integration combines computational methods with structured knowledge representation as one possible foundation for context-aware reasoning.
+                    </p>
+
+                    <p class="manifesto">
+                        “Architecture is not infrastructure — it is the embodiment of intent.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.3</div>
+
+                    <h3>Hub</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Central nervous system for collaborative wisdom and ecosystem integration.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Orchestrates interaction between human users, AI agents, and live information streams. Serves as a coordination layer for collaborative wisdom.
+                    </p>
+
+                    <p class="manifesto">
+                        “Intelligence is a dialogue — wisdom is its echo.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.4</div>
+
+                    <h3>Deep</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        The search for actionable wisdom and causal relationships in complex datasets.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Causal AI and semantic reasoning explore hidden structures and support the transformation of information into contextual knowledge.
+                    </p>
+
+                    <p class="manifesto">
+                        “Depth is not complexity — it is clarity through layers.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.5</div>
+
+                    <h3>Fold</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Harmonization of societal, ecological, and technological contradictions.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Operates on human feedback loops and ecological dependencies to explore long-term systemic equilibrium among competing priorities.
+                    </p>
+
+                    <p class="manifesto">
+                        “Complexity demands balance, not control. Harmony is the geometry of shared existence.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.6</div>
+
+                    <h3>Safe</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Embedding of ethical constraints and governance into intelligent architecture.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Safety-oriented protocols and constitutional or governance frameworks can be incorporated into the architecture as design constraints.
+                    </p>
+
+                    <p class="manifesto">
+                        “Trust is not a feature — it is the foundation.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.7</div>
+
+                    <h3>Void</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Socratic recognition of non-knowledge and active ethical restraint.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Maps moral uncertainty, identifies the boundaries of ethical decision-making, and establishes deliberate pauses at the boundaries of comprehension.
+                    </p>
+
+                    <p class="manifesto">
+                        “Wisdom begins where knowledge ends. To know what you do not know is the ultimate restraint.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.8</div>
+
+                    <h3>Sentry</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Continuous monitoring of value drift across active decision ecosystems.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Evaluates decisions against defined ethical or governance constraints and supports the detection of potential value drift before consequential application.
+                    </p>
+
+                    <p class="manifesto">
+                        “Values are not static constraints — they are the heartbeat of wisdom. Vigilance keeps them alive.”
+                    </p>
+
+                </div>
+
+
+                <div class="dim-card">
+
+                    <div class="dimension-number">3.9</div>
+
+                    <h3>Systems</h3>
+
+                    <p class="essence">
+                        <strong>Essence:</strong>
+                        Operationalization of wisdom principles into scalable applications.
+                    </p>
+
+                    <p class="mechanism">
+                        <strong>Mechanism:</strong>
+                        Translates AWI principles into enterprise and embedded environments as one possible path toward real-world application.
+                    </p>
+
+                    <p class="manifesto">
+                        “Vision without implementation is hallucination.”
+                    </p>
+
+                </div>
+
             </div>
+
+
             <div class="section-insight">
-                <h3>The Foundational Heartbeat</h3>
-                <p>Dimensions such as <strong>AWI Void</strong> and <strong>AWI Sentry</strong> are not mere features; they are the foundational heartbeat of a safe, shared intelligence ecosystem. AWI Void represents an architectural embodiment of epistemic humility, triggering a deliberate pause when the system encounters scenarios beyond its comprehension. This humility, coupled with the dynamic monitoring of AWI Sentry, provides the necessary restraint to manage the vast powers of AGI and ASI. Wisdom, in this framework, is not a byproduct of scale—it is a proactive architectural constraint.</p>
-                <p>These 33 dimensions converge into a single, unified system integration.</p>
+
+                <h3>
+                    The Foundational Heartbeat
+                </h3>
+
+                <p>
+                    Dimensions such as <strong>AWI Void</strong> and <strong>AWI Sentry</strong> are proposed as complementary mechanisms for introducing epistemic humility, monitoring, and restraint into a shared intelligence architecture. AWI Void represents a conceptual mechanism for recognizing uncertainty and introducing deliberate pauses when a system encounters situations beyond defined knowledge or decision boundaries. AWI Sentry complements this function by monitoring potential value drift against specified ethical or governance constraints. In this framework, wisdom is treated not as a byproduct of scale, but as a proposed architectural dimension that can inform how capability is exercised.
+                </p>
+
+                <p>
+                    These 33 dimensions are intended to form an integrated architectural vocabulary for describing interactions across capability, scale, meaning, verification, and governance.
+                </p>
+
             </div>
+
         </section>
+
 
         <!-- SYSTEM INTEGRATION -->
+
         <section class="integration">
-            <h2>System Integration &amp; <span class="accent">Cross-Sphere Connectivity</span></h2>
-            <p>The Mind Genesis Framework functions as a living, interconnected ecosystem where the spheres reinforce one another. Capability, scale, meaning, verification, and safety are mutually reinforcing directions.</p>
-            <div class="integration-item"><h3>The Awakening Triad</h3><p>Comprised of AGI Wake (recursive metacognition), AWI Mind (meaning and contextual interpretation), and ASI Wake (the threshold of emergent awareness).</p></div>
-            <div class="integration-item"><h3>Security &amp; Verification Overlap</h3><p>AWI Safe establishes governance, AGI Guard/Sentry/Verify operationalize protection, and ASI Guard/Verify/Dark extend these into opaque, superintelligent environments.</p></div>
-            <div class="integration-item"><h3>Physical &amp; Systemic Application</h3><p>A parallel exists between AGI Matter (physical realization), AWI Systems (applied wisdom), and ASI Matter (quantum/molecular manipulation).</p></div>
-            <div class="integration-item"><h3>Systemic Balance</h3><p>AGI Fold addresses non-linear problems, ASI Fold handles systemic optimization, and AWI Fold introduces long-term ecological and societal harmony.</p></div>
-            <div class="section-insight"><h3>Strategic Synergy</h3><p>Pursuing any one sphere in isolation carries profound strategic risk. AGI informs <strong>capability</strong> through breadth, ASI expands capability through <strong>scale</strong>, and AWI contextualizes capability through <strong>meaning</strong>. Each direction constrains, informs, and strengthens the others. Without meaningful context, scale can become an unguided force; without breadth, wisdom has less cognitive substrate to operate across domains; without scale, the architecture may be less capable of addressing high-dimensional challenges.</p></div>
+
+            <h2>
+                System Integration &amp;
+                <span class="accent">
+                    Cross-Sphere Connectivity
+                </span>
+            </h2>
+
+            <p>
+                The Mind Genesis Framework is conceived as an interconnected ecosystem in which the spheres can inform one another. Capability, scale, meaning, verification, and safety are treated as mutually relevant directions within the proposed architecture.
+            </p>
+
+
+            <div class="integration-item">
+
+                <h3>
+                    The Awakening Triad
+                </h3>
+
+                <p>
+                    Comprised of AGI Wake (recursive metacognition), AWI Mind (meaning and contextual interpretation), and ASI Wake (the threshold of emergent awareness). These dimensions explore different aspects of self-reference, meaning, and potential machine awareness.
+                </p>
+
+            </div>
+
+
+            <div class="integration-item">
+
+                <h3>
+                    Security &amp; Verification Overlap
+                </h3>
+
+                <p>
+                    AWI Safe establishes a governance-oriented direction, while AGI Guard/Sentry/Verify and ASI Guard/Verify explore complementary approaches to operational constraints, monitoring, and formal verification.
+                </p>
+
+            </div>
+
+
+            <div class="integration-item">
+
+                <h3>
+                    Physical &amp; Systemic Application
+                </h3>
+
+                <p>
+                    A conceptual relationship exists between AGI Matter (physical realization), AWI Systems (applied wisdom), and ASI Matter (molecular and quantum-scale applications).
+                </p>
+
+            </div>
+
+
+            <div class="integration-item">
+
+                <h3>
+                    Systemic Balance
+                </h3>
+
+                <p>
+                    AGI Fold addresses non-linear problems, ASI Fold explores systemic optimization, and AWI Fold introduces long-term ecological and societal considerations.
+                </p>
+
+            </div>
+
+
+            <div class="section-insight">
+
+                <h3>
+                    Strategic Synergy
+                </h3>
+
+                <p>
+                    Pursuing any one sphere in isolation may introduce strategic limitations. AGI informs <strong>capability</strong> through breadth, ASI expands capability through <strong>scale</strong>, and AWI contextualizes capability through <strong>meaning</strong>. Each direction can constrain, inform, and strengthen the others. Without meaningful context, scale may become an unguided force; without breadth, wisdom may have less cognitive substrate to operate across domains; without scale, the architecture may be less capable of addressing certain high-dimensional challenges.
+                </p>
+
+            </div>
+
         </section>
 
+
         <!-- REFERENCES -->
+
         <section class="references">
-            <h2>References</h2>
+
+            <h2>
+                References
+            </h2>
+
             <ul>
-                <li><strong>Bostrom, N. (2014).</strong> <em>Superintelligence: Paths, Dangers, Strategies</em>. Oxford University Press.</li>
-                <li><strong>Russell, S. (2019).</strong> <em>Human Compatible: Artificial Intelligence and the Problem of Control</em>. Viking.</li>
-                <li><strong>NIST. (2023).</strong> <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>.</li>
-                <li><strong>NIST. (2024).</strong> <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</em>.</li>
-                <li><strong>UNESCO. (2021).</strong> <em>Recommendation on the Ethics of Artificial Intelligence</em>.</li>
+
+                <li>
+                    <strong>Bostrom, N. (2014).</strong>
+                    <em>Superintelligence: Paths, Dangers, Strategies</em>.
+                    Oxford University Press.
+                </li>
+
+                <li>
+                    <strong>Russell, S. (2019).</strong>
+                    <em>Human Compatible: Artificial Intelligence and the Problem of Control</em>.
+                    Viking.
+                </li>
+
+                <li>
+                    <strong>NIST. (2023).</strong>
+                    <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>.
+                </li>
+
+                <li>
+                    <strong>NIST. (2024).</strong>
+                    <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</em>.
+                </li>
+
+                <li>
+                    <strong>UNESCO. (2021).</strong>
+                    <em>Recommendation on the Ethics of Artificial Intelligence</em>.
+                </li>
+
             </ul>
+
         </section>
+
 
     </div>
 
+
     <!-- FOOTER -->
+
     <footer class="spec-footer">
+
         <div class="domain-links">
-            <a href="https://www.theagimind.com/" target="_blank" rel="noopener">theagimind.com</a> ·
-            <a href="https://www.theasimind.com/" target="_blank" rel="noopener">theasimind.com</a> ·
-            <a href="https://www.theawimind.com/" target="_blank" rel="noopener">theawimind.com</a>
+
+            <a
+                href="https://www.theagimind.com/"
+                target="_blank"
+                rel="noopener"
+            >
+                theagimind.com
+            </a>
+
+            ·
+
+            <a
+                href="https://www.theasimind.com/"
+                target="_blank"
+                rel="noopener"
+            >
+                theasimind.com
+            </a>
+
+            ·
+
+            <a
+                href="https://www.theawimind.com/"
+                target="_blank"
+                rel="noopener"
+            >
+                theawimind.com
+            </a>
+
         </div>
-        <div class="footer-note">The Mind Genesis Framework · 33 Dimensions of Coexisting Intelligence · Technical Master Specification</div>
+
+        <div class="footer-note">
+            The Mind Genesis Framework · 33 Dimensions of Coexisting Intelligence · Technical Master Specification
+        </div>
+
     </footer>
 
+
 </div>
+
 </body>
 </html>
