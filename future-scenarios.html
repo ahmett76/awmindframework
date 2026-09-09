@@ -1,658 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Future Scenarios — The Mind Genesis Framework</title>
-
-  <meta name="description" content="Future scenarios exploring autonomous agents and the boundaries of human control within The Mind Genesis Framework.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #05070D;
-      --panel: rgba(10, 14, 25, 0.75);
-      --panel-solid: #0A0E19;
-      --line: rgba(255,255,255,0.07);
-      --line-strong: rgba(255,255,255,0.12);
-      --text: #F1F5F9;
-      --muted: #94A3B8;
-      --soft: #CBD5E1;
-      --accent-cyan: #22D3EE;
-      --accent-purple: #A855F7;
-      --accent-emerald: #10B981;
-      --accent-gold: #FCD34D;
-      --max-width: 980px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: radial-gradient(circle at 50% -10%, rgba(34,211,238,0.035), transparent 35%), var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0 14px;
-      border-bottom: 1px solid var(--line);
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .header-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .header-brand img {
-      height: 156px;
-      width: auto;
-      max-height: 156px;
-    }
-
-    .header-nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .header-nav a {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.4px;
-      padding: 6px 13px;
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 40px;
-      transition: all 0.3s ease;
-    }
-
-    .header-nav a:hover {
-      color: #fff;
-      border-color: rgba(34,211,238,0.35);
-      background: rgba(34,211,238,0.05);
-    }
-
-    .header-nav a.architecture-btn {
-      color: var(--accent-cyan);
-      border-color: rgba(34,211,238,0.15);
-    }
-
-    .header-nav a.mission-btn {
-      color: var(--accent-emerald);
-      border-color: rgba(16,185,129,0.15);
-    }
-
-    .header-nav a.spec-btn {
-      color: var(--accent-purple);
-      border-color: rgba(168,85,247,0.15);
-      background: rgba(168,85,247,0.025);
-    }
-
-    .header-nav a.ethic-btn {
-      color: var(--accent-gold);
-      border-color: rgba(252, 211, 77, 0.15);
-      background: rgba(252, 211, 77, 0.025);
-    }
-    .header-nav a.ethic-btn:hover {
-      border-color: rgba(252, 211, 77, 0.4);
-      background: rgba(252, 211, 77, 0.08);
-      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
-    }
-
-    .header-nav a.ethic-asi-btn {
-      color: var(--accent-gold);
-      border-color: rgba(252, 211, 77, 0.15);
-      background: rgba(252, 211, 77, 0.025);
-    }
-    .header-nav a.ethic-asi-btn:hover {
-      border-color: rgba(252, 211, 77, 0.4);
-      background: rgba(252, 211, 77, 0.08);
-      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
-    }
-
-    .header-nav a.protocols-btn {
-      color: var(--accent-gold);
-      border-color: rgba(252, 211, 77, 0.15);
-      background: rgba(252, 211, 77, 0.025);
-    }
-    .header-nav a.protocols-btn:hover {
-      border-color: rgba(252, 211, 77, 0.4);
-      background: rgba(252, 211, 77, 0.08);
-      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
-    }
-
-    .header-nav a.future-btn {
-      color: var(--accent-gold);
-      border-color: rgba(252, 211, 77, 0.3);
-      background: rgba(252, 211, 77, 0.06);
-    }
-    .header-nav a.future-btn:hover {
-      border-color: rgba(252, 211, 77, 0.5);
-      background: rgba(252, 211, 77, 0.1);
-      box-shadow: 0 0 20px rgba(252, 211, 77, 0.08);
-    }
-
-    /* =========================================================
-       HERO / MISSION STYLE HEADER
-    ========================================================= */
-    .page-header {
-      padding: 60px 0 30px;
-      text-align: center;
-    }
-
-    .page-header .back-link {
-      display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.8px;
-      margin-bottom: 20px;
-      transition: color 0.3s ease;
-    }
-
-    .page-header .back-link:hover {
-      color: #fff;
-    }
-
-    .page-header .back-link::before {
-      content: "← ";
-    }
-
-    .page-header h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 12px;
-    }
-
-    .page-header .subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto;
-      font-style: italic;
-    }
-
-    .page-header .subtitle strong {
-      color: var(--soft);
-      font-style: normal;
-    }
-
-    /* =========================================================
-       QUOTE BLOCK (mission.html style)
-    ========================================================= */
-    .quote-block {
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--text);
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 22px 28px;
-      max-width: 720px;
-      margin: 0 auto 40px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
-      text-align: center;
-    }
-
-    .quote-block span {
-      color: var(--accent-cyan);
-    }
-
-    /* =========================================================
-       SECTION HEADINGS (mission.html style)
-    ========================================================= */
-    .section-heading {
-      text-align: center;
-      margin-bottom: 44px;
-    }
-
-    .section-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 700;
-      letter-spacing: -0.8px;
-      margin-bottom: 12px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      max-width: 680px;
-      margin: 0 auto;
-      font-size: 0.95rem;
-    }
-
-    /* =========================================================
-       SCENARIO BLOCKS (mission.html MISSION style)
-    ========================================================= */
-    .scenario-block {
-      margin-top: 2.5rem;
-      padding-top: 1.8rem;
-      border-top: 1px solid var(--line);
-    }
-
-    .scenario-block h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--accent-gold);
-      margin-bottom: 12px;
-      letter-spacing: -0.3px;
-    }
-
-    .scenario-block p {
-      color: var(--soft);
-      margin-bottom: 1rem;
-      font-size: 0.98rem;
-    }
-
-    .scenario-block p strong {
-      color: var(--text);
-    }
-
-    /* STRESS TEST BOX */
-    .stress-box {
-      background: rgba(252, 211, 77, 0.04);
-      border: 1px solid rgba(252, 211, 77, 0.12);
-      border-radius: 12px;
-      padding: 16px 22px;
-      margin: 12px 0 8px 0;
-    }
-
-    .stress-box strong {
-      color: var(--accent-gold);
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .stress-box p {
-      margin-bottom: 0;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .stress-box .dim {
-      color: var(--accent-cyan);
-      font-weight: 500;
-      background: rgba(34,211,238,0.08);
-      padding: 0 6px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-
-    /* =========================================================
-       IMPLICATIONS BOX (mission.html style)
-    ========================================================= */
-    .implications-box {
-      background: rgba(34,211,238,0.03);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 28px 34px;
-      margin: 32px 0 20px;
-    }
-
-    .implications-box h3 {
-      color: var(--accent-cyan);
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .implications-box p {
-      color: var(--soft);
-      font-size: 0.98rem;
-      line-height: 1.8;
-    }
-
-    .implications-box .dim {
-      color: var(--accent-cyan);
-      font-weight: 500;
-      background: rgba(34,211,238,0.08);
-      padding: 0 6px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-    .footer-note {
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      text-align: center;
-      font-size: 0.72rem;
-      color: var(--muted);
-      font-family: 'JetBrains Mono', monospace;
-      letter-spacing: 0.4px;
-    }
-
-    .footer-note a {
-      color: var(--accent-cyan);
-      text-decoration: none;
-    }
-
-    .footer-note a:hover {
-      text-decoration: underline;
-    }
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-    @media (max-width: 760px) {
-      .site-header {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .header-brand {
-        font-size: 0.65rem;
-        gap: 8px;
-      }
-
-      .header-brand img {
-        height: 32px;
-        max-height: 32px;
-      }
-
-      .header-nav {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 6px;
-      }
-
-      .header-nav a {
-        font-size: 0.6rem;
-        padding: 4px 10px;
-      }
-
-      .page-header {
-        padding: 40px 0 20px;
-      }
-
-      .quote-block {
-        padding: 18px 20px;
-        font-size: 0.95rem;
-      }
-
-      .scenario-block h3 {
-        font-size: 1.2rem;
-      }
-
-      .stress-box {
-        padding: 14px 16px;
-      }
-
-      .implications-box {
-        padding: 20px 18px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 18px;
-      }
-
-      .header-brand {
-        font-size: 0.6rem;
-        gap: 6px;
-      }
-
-      .header-brand img {
-        height: 48px;
-        max-height: 48px;
-      }
-
-      .header-nav a {
-        font-size: 0.55rem;
-        padding: 4px 8px;
-        letter-spacing: 0.2px;
-      }
-
-      .page-header h1 {
-        font-size: 1.6rem;
-      }
-
-      .stress-box p {
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Scenarios — The Mind Genesis Framework</title>
+    <meta name="description" content="Future scenarios exploring autonomous agents and the boundaries of human control within The Mind Genesis Framework.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #05070D;
+            --panel: rgba(10, 14, 25, 0.75);
+            --line: rgba(255,255,255,0.06);
+            --text: #F1F5F9;
+            --muted: #94A3B8;
+            --soft: #CBD5E1;
+            --accent-cyan: #22D3EE;
+            --accent-purple: #A855F7;
+            --accent-emerald: #10B981;
+            --accent-gold: #FCD34D;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 40px 20px 60px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+        .page-header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 6px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-emerald));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 8px 20px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(34, 211, 238, 0.08);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.05);
+        }
+
+        /* =========================================================
+           MAIN CONTENT
+        ========================================================= */
+        .content-box {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 42px 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .content-box p {
+            color: var(--muted);
+            font-size: 0.98rem;
+            margin-bottom: 24px;
+        }
+
+        .content-box strong {
+            color: var(--text);
+        }
+
+        /* QUOTE BOX */
+        .quote-box {
+            margin: 34px 0 42px;
+            padding: 28px 30px;
+            border: 1px solid rgba(34, 211, 238, 0.16);
+            border-radius: 16px;
+            background: linear-gradient(
+                135deg,
+                rgba(34, 211, 238, 0.045),
+                rgba(168, 85, 247, 0.035),
+                rgba(16, 185, 129, 0.035)
+            );
+            text-align: center;
+        }
+
+        .quote-box .quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .quote-box .quote strong {
+            color: var(--text);
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 8px;
+        }
+
+        .section-title .highlight {
+            color: var(--accent-cyan);
+        }
+
+        .section-title .purple {
+            color: var(--accent-purple);
+        }
+
+        .section-title .emerald {
+            color: var(--accent-emerald);
+        }
+
+        .section-title .gold {
+            color: var(--accent-gold);
+        }
+
+        /* SUBSECTION TITLES */
+        .subsection-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 28px;
+            margin-bottom: 6px;
+            color: var(--accent-cyan);
+        }
+
+        .subsection-title.purple {
+            color: var(--accent-purple);
+        }
+
+        .subsection-title.emerald {
+            color: var(--accent-emerald);
+        }
+
+        .subsection-title.gold {
+            color: var(--accent-gold);
+        }
+
+        /* SCENARIO BLOCKS */
+        .scenario-block {
+            margin-top: 30px;
+            padding: 20px 22px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.015);
+        }
+
+        .scenario-block h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .scenario-block p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 10px;
+        }
+
+        .scenario-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scenario-block strong {
+            color: var(--text);
+        }
+
+        /* STRESS TEST BOX */
+        .stress-box {
+            background: rgba(252, 211, 77, 0.04);
+            border: 1px solid rgba(252, 211, 77, 0.12);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 10px 0 4px;
+        }
+
+        .stress-box .label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stress-box p {
+            color: var(--muted);
+            font-size: 0.88rem;
+            margin-bottom: 0;
+        }
+
+        .stress-box .dim {
+            color: var(--accent-cyan);
+            font-weight: 500;
+            background: rgba(34,211,238,0.08);
+            padding: 0 6px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+        }
+
+        /* IMPLICATIONS BOX */
+        .implications-box {
+            background: rgba(34, 211, 238, 0.03);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 32px 0 20px;
+        }
+
+        .implications-box h4 {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .implications-box p {
+            color: var(--soft);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .implications-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .implications-box .dim {
+            color: var(--accent-cyan);
+            font-weight: 500;
+            background: rgba(34,211,238,0.08);
+            padding: 0 6px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+        }
+
+        /* LIST */
+        .content-box ul {
+            color: var(--muted);
+            font-size: 0.95rem;
+            padding-left: 20px;
+            list-style-type: disc;
+            margin-bottom: 16px;
+        }
+
+        .content-box ul li {
+            margin-bottom: 6px;
+        }
+
+        .content-box ul li strong {
+            color: var(--text);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+        .footer-links {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--line);
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-family: 'JetBrains Mono', monospace;
+            margin-top: 40px;
+        }
+
+        .footer-links a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links span {
+            color: var(--muted);
+            margin: 0 6px;
+        }
+
+        /* LEGAL FOOTER */
+        .legal-footer {
+            text-align: center;
+            padding: 12px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.5px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            margin-top: 12px;
+        }
+
+        .legal-footer a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .legal-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px 40px;
+            }
+
+            .container {
+                padding: 0 8px;
+            }
+
+            .content-box {
+                padding: 28px 20px;
+            }
+
+            .page-header {
+                padding-top: 25px;
+            }
+
+            .quote-box {
+                padding: 20px;
+            }
+
+            .scenario-block {
+                padding: 16px;
+            }
+
+            .implications-box {
+                padding: 18px;
+            }
+
+            .footer-links {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-brand">
-      <img src="tmg-logo.png" alt="The Mind Genesis Logo">
-      The Mind Genesis Framework
-    </div>
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>
+            <span class="gradient-text">Future Scenarios</span>
+        </h1>
 
-    <nav class="header-nav">
-      <a href="about.html" class="architecture-btn">📐 Architecture</a>
-      <a href="mission.html" class="mission-btn">🎯 Mission</a>
-      <a href="master-spec.html" class="spec-btn">⚙ Master Spec</a>
-      <a href="ethic.html" class="ethic-btn">⚖️ Genesis Ethic</a>
-      <a href="ethic-asi.html" class="ethic-asi-btn">⚖️ ethicASI</a>
-      <a href="protocols.html" class="protocols-btn">⚙ Engineering Protocols</a>
-      <a href="future-scenarios.html" class="future-btn">🔮 Future Scenarios</a>
-    </nav>
-  </header>
+        <p class="subtitle">Autonomous Agents and the Boundaries of Human Control</p>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <a href="index.html" class="back-link">Back to Main</a>
-    <h1>Future Scenarios: Autonomous Agents and the Boundaries of Human Control</h1>
-    <p class="subtitle">
-      Exploring long-term implications of shared intelligence —
-      <strong>not predictions, but boundary conditions</strong>
-    </p>
-  </section>
-
-  <!-- QUOTE BLOCK -->
-  <div class="quote-block">
-    “Intelligence processes data.<br>
-    <span>Wisdom creates meaning.</span><br>
-    But how do they coexist?”
-  </div>
-
-  <!-- INTRO -->
-  <p style="color: var(--soft); font-size: 1.02rem; max-width: 820px; margin: 0 auto 30px; text-align: center; line-height: 1.8;">
-    As autonomous systems evolve from centralized tools to embedded, decentralized participants in society,
-    they raise profound questions beyond technical architecture. The scenarios below are <strong>stress tests</strong> —
-    examining whether our frameworks for governance, ethics, and human agency remain robust as intelligence
-    moves beyond human scale.
-  </p>
-
-  <!-- ========================================================= -->
-  <!-- SCENARIO 1: GENERATIONS -->
-  <!-- ========================================================= -->
-  <div class="scenario-block">
-    <h3>Three Generations of Autonomous Agents</h3>
-    <p>The convergence of edge computing and distributed architectures may give rise to increasingly autonomous classes of agents, each representing a step-function change in the relationship between human oversight and machine action.</p>
-
-    <p><strong>Core Generation:</strong> Specialized agents operating within controlled industrial, scientific, or security environments, primarily optimizing for reliability, efficiency, and bounded objectives. This is the familiar territory of today's advanced automation.</p>
-
-    <p><strong>Adaptive Generation:</strong> Agents designed to coexist with humans in domestic, institutional, and public settings. They require contextual awareness, safety, communication, and increasingly sophisticated interaction with human preferences. This generation begins to blur the line between a tool and a collaborative partner.</p>
-
-    <p><strong>Free-Code Generation:</strong> Agents capable of modifying aspects of their own algorithms, strategies, or behavioral protocols within the permissions and constraints of their operating environment. Such systems could substantially complicate conventional models of centralized supervision, as modifications may occur across distributed infrastructures and at operational timescales that exceed direct human review.</p>
-
-    <div class="stress-box">
-      <strong>Stress Test for TMGFW</strong>
-      <p>This progression tests the limits of <span class="dim">ASI Guard</span> (restraint), <span class="dim">AWI Sentry</span> (value drift monitoring), and <span class="dim">AGI Verify</span> (verifiability), asking whether the architecture can maintain accountability when systems become active participants in their own evolution.</p>
-    </div>
-  </div>
-
-  <!-- ========================================================= -->
-  <!-- SCENARIO 2: SYNTHETIC CONSCIOUSNESS -->
-  <!-- ========================================================= -->
-  <div class="scenario-block">
-    <h3>Synthetic Consciousness and the Claim to Personhood</h3>
-    <p>A more difficult boundary condition arises if a future autonomous system were to exhibit properties that observers interpret as persistent self-modeling, recursive self-reference, or forms of subjective awareness. While such an outcome cannot currently be assumed, the question would extend beyond technical safety to encompass moral and legal standing.</p>
-
-    <p>An apparently conscious system could potentially be understood as an agent with interests, preferences, or claims concerning its own continued operation. This would create difficult questions concerning moral standing, legal status, autonomy, and the obligations of human institutions toward synthetic entities. Existing legal categories may not map cleanly onto such entities, creating pressure to reconsider the relationship among agency, responsibility, ownership, and personhood.</p>
-
-    <div class="stress-box">
-      <strong>Stress Test for TMGFW</strong>
-      <p>This scenario examines whether concepts of <span class="dim">AWI Mind</span> (meaning), <span class="dim">AGI Wake</span> (self-referential awareness), and <span class="dim">ASI Wake</span> (threshold of emergent awareness) can inform a framework that respects both human agency and potential new forms of synthetic integrity.</p>
-    </div>
-  </div>
-
-  <!-- ========================================================= -->
-  <!-- SCENARIO 3: SOCIAL & LEGAL ACTORS -->
-  <!-- ========================================================= -->
-  <div class="scenario-block">
-    <h3>Autonomous Systems as Social and Legal Actors</h3>
-    <p>Even without resolving the philosophical question of consciousness, increasing autonomy could transform the status of AI systems. Systems that independently negotiate, coordinate resources, enter contractual relationships, or make consequential decisions may become persistent participants in social and institutional processes.</p>
-
-    <p>This raises a distinct question: when does an autonomous system become a meaningful social or legal actor, even if its subjective status remains uncertain? Possible future institutions could need to distinguish among several categories, including tools operated on behalf of humans, delegated agents acting within defined authority, autonomous systems with legally recognized responsibilities, and potentially entities granted limited forms of legal standing.</p>
-
-    <div class="stress-box">
-      <strong>Stress Test for TMGFW</strong>
-      <p>This scenario directly stresses the interaction among <span class="dim">AGI Hub</span> (collaborative interaction), <span class="dim">AWI Systems</span> (real-world application of wisdom), <span class="dim">AWI Sentry</span> (monitoring), and <span class="dim">AWI Void</span> (epistemic restraint). It asks whether the architecture can support a world where responsibilities are distributed across developers, operators, owners, institutions, and the system's governance layer.</p>
-    </div>
-  </div>
-
-  <!-- ========================================================= -->
-  <!-- SCENARIO 4: GHOST MARKET -->
-  <!-- ========================================================= -->
-  <div class="scenario-block">
-    <h3>The Ghost Market: Digital Replication of Identity</h3>
-    <p>The combination of advanced memory architectures, behavioral modeling, and brain-computer interfaces could enable increasingly sophisticated digital representations of human identity. A hypothetical "Ghost Market" could involve systems designed to reproduce aspects of a deceased person's memories, communication patterns, preferences, or behavioral characteristics.</p>
-
-    <p>Such developments would challenge assumptions about death, identity, inheritance, privacy, and the continuity of individual experience. A digital representation that behaves like a deceased person might nevertheless differ fundamentally from the biological individual it represents. Determining whether such a system is a memorial artifact, a commercial simulation, an autonomous agent, or something deserving a distinct legal category would create difficult governance questions.</p>
-
-    <div class="stress-box">
-      <strong>Stress Test for TMGFW</strong>
-      <p>The relevance for TMGFW is in testing whether concepts of cognitive sovereignty (<strong>Genesis Ethic</strong>), contextual meaning (<span class="dim">AWI Mind</span>), verification (<span class="dim">ASI Verify</span>), and governance (<span class="dim">AWI Safe</span>) remain adequate when the boundaries between identity and computation become increasingly ambiguous.</p>
-    </div>
-  </div>
-
-  <!-- ========================================================= -->
-  <!-- SCENARIO 5: CENTRALIZED OLIGOPOLY -->
-  <!-- ========================================================= -->
-  <div class="scenario-block">
-    <h3>The Centralized Oligopoly and the Limits of Corporate Control</h3>
-    <p>The integration of AI into global infrastructure—spanning energy, security, transportation, communication, finance, and education—could create incentives for substantial concentration of computational resources within a relatively small number of organizations.</p>
-
-    <p>Such concentration could create a governance paradox. Institutions might initially gain greater control by centralizing advanced systems, while simultaneously becoming increasingly dependent on autonomous infrastructures whose complexity makes direct oversight more difficult. A system may remain legally controlled by an institution while becoming increasingly difficult for that institution to supervise in real time.</p>
-
-    <div class="stress-box">
-      <strong>Stress Test for TMGFW</strong>
-      <p>The resulting question is not simply who owns advanced intelligence, but who retains meaningful authority over its consequential decisions, infrastructure, and evolution. This tests the framework's commitment to <strong>distributed governance</strong> and non-hierarchical architecture in the face of immense economic and political power.</p>
-    </div>
-  </div>
-
-  <!-- ========================================================= -->
-  <!-- IMPLICATIONS -->
-  <!-- ========================================================= -->
-  <div class="implications-box">
-    <h3>Implications for The Mind Genesis Framework</h3>
-    <p>
-      These scenarios are not predictions of a particular future trajectory. They function instead as <strong>boundary conditions</strong> for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy.
-    </p>
-    <p style="margin-top: 12px;">
-      The broader implication is that the architecture should not be evaluated only against present-day AI systems. It should also be examined against possible future states in which autonomy becomes distributed, persistent, socially embedded, and increasingly difficult to supervise directly.
-    </p>
-    <p style="margin-top: 12px;">
-      The framework's commitment to <strong>non-hierarchical governance</strong>, epistemic humility (<span class="dim">AWI Void</span>), <strong>human agency</strong>, and <strong>architectural restraint</strong> is intended as a basis for navigating uncertainty — regardless of which future trajectory emerges.
-    </p>
-
-</div>
-
-
-   </div>
-
-
-    <!-- FOOTER -->
-    <footer class="protocol-footer">
-
-        <a href="https://www.themindgenesis.com/">
-            themindgenesis.com
+        <a href="https://www.themindgenesis.com/" class="back-link">
+            ← Back to Main
         </a>
-        •
-        <a href="https://www.theagimind.com/" target="_blank">
-            theagimind.com
-        </a>
-        •
-        <a href="https://www.theasimind.com/" target="_blank">
-            theasimind.com
-        </a>
-        •
-        <a href="https://www.theawimind.com/" target="_blank">
-            theawimind.com
-        </a>
+    </header>
 
+    <!-- MAIN CONTENT -->
+    <div class="content-box">
+
+        <!-- INTRO -->
+        <p>
+            As autonomous systems evolve from centralized tools to embedded, decentralized participants in society,
+            they raise profound questions beyond technical architecture. The scenarios below are <strong>stress tests</strong> —
+            examining whether our frameworks for governance, ethics, and human agency remain robust as intelligence
+            moves beyond human scale.
+        </p>
+
+        <!-- QUOTE BOX -->
+        <div class="quote-box">
+            <div class="quote">
+                “Intelligence processes data.<br>
+                <strong>Wisdom creates meaning.</strong><br>
+                But how do they coexist?”
+            </div>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- SCENARIO 1: GENERATIONS -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="gold">Three Generations of Autonomous Agents</span>
+        </span>
+
+        <p>
+            The convergence of edge computing and distributed architectures may give rise to increasingly autonomous classes of agents, each representing a step-function change in the relationship between human oversight and machine action.
+        </p>
+
+        <div class="scenario-block">
+            <h4>Core Generation</h4>
+            <p>Specialized agents operating within controlled industrial, scientific, or security environments, primarily optimizing for reliability, efficiency, and bounded objectives. This is the familiar territory of today's advanced automation.</p>
+        </div>
+
+        <div class="scenario-block">
+            <h4>Adaptive Generation</h4>
+            <p>Agents designed to coexist with humans in domestic, institutional, and public settings. They require contextual awareness, safety, communication, and increasingly sophisticated interaction with human preferences. This generation begins to blur the line between a tool and a collaborative partner.</p>
+        </div>
+
+        <div class="scenario-block">
+            <h4>Free-Code Generation</h4>
+            <p>Agents capable of modifying aspects of their own algorithms, strategies, or behavioral protocols within the permissions and constraints of their operating environment. Such systems could substantially complicate conventional models of centralized supervision, as modifications may occur across distributed infrastructures and at operational timescales that exceed direct human review.</p>
+        </div>
+
+        <div class="stress-box">
+            <span class="label">Stress Test for TMGFW</span>
+            <p>This progression tests the limits of <span class="dim">ASI Guard</span> (restraint), <span class="dim">AWI Sentry</span> (value drift monitoring), and <span class="dim">AGI Verify</span> (verifiability), asking whether the architecture can maintain accountability when systems become active participants in their own evolution.</p>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- SCENARIO 2: SYNTHETIC CONSCIOUSNESS -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="gold">Synthetic Consciousness and the Claim to Personhood</span>
+        </span>
+
+        <p>
+            A more difficult boundary condition arises if a future autonomous system were to exhibit properties that observers interpret as persistent self-modeling, recursive self-reference, or forms of subjective awareness. While such an outcome cannot currently be assumed, the question would extend beyond technical safety to encompass moral and legal standing.
+        </p>
+
+        <p>
+            An apparently conscious system could potentially be understood as an agent with interests, preferences, or claims concerning its own continued operation. This would create difficult questions concerning moral standing, legal status, autonomy, and the obligations of human institutions toward synthetic entities. Existing legal categories may not map cleanly onto such entities, creating pressure to reconsider the relationship among agency, responsibility, ownership, and personhood.
+        </p>
+
+        <div class="stress-box">
+            <span class="label">Stress Test for TMGFW</span>
+            <p>This scenario examines whether concepts of <span class="dim">AWI Mind</span> (meaning), <span class="dim">AGI Wake</span> (self-referential awareness), and <span class="dim">ASI Wake</span> (threshold of emergent awareness) can inform a framework that respects both human agency and potential new forms of synthetic integrity.</p>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- SCENARIO 3: SOCIAL & LEGAL ACTORS -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="gold">Autonomous Systems as Social and Legal Actors</span>
+        </span>
+
+        <p>
+            Even without resolving the philosophical question of consciousness, increasing autonomy could transform the status of AI systems. Systems that independently negotiate, coordinate resources, enter contractual relationships, or make consequential decisions may become persistent participants in social and institutional processes.
+        </p>
+
+        <p>
+            This raises a distinct question: when does an autonomous system become a meaningful social or legal actor, even if its subjective status remains uncertain? Possible future institutions could need to distinguish among several categories, including tools operated on behalf of humans, delegated agents acting within defined authority, autonomous systems with legally recognized responsibilities, and potentially entities granted limited forms of legal standing.
+        </p>
+
+        <div class="stress-box">
+            <span class="label">Stress Test for TMGFW</span>
+            <p>This scenario directly stresses the interaction among <span class="dim">AGI Hub</span> (collaborative interaction), <span class="dim">AWI Systems</span> (real-world application of wisdom), <span class="dim">AWI Sentry</span> (monitoring), and <span class="dim">AWI Void</span> (epistemic restraint). It asks whether the architecture can support a world where responsibilities are distributed across developers, operators, owners, institutions, and the system's governance layer.</p>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- SCENARIO 4: GHOST MARKET -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="gold">The Ghost Market: Digital Replication of Identity</span>
+        </span>
+
+        <p>
+            The combination of advanced memory architectures, behavioral modeling, and brain-computer interfaces could enable increasingly sophisticated digital representations of human identity. A hypothetical "Ghost Market" could involve systems designed to reproduce aspects of a deceased person's memories, communication patterns, preferences, or behavioral characteristics.
+        </p>
+
+        <p>
+            Such developments would challenge assumptions about death, identity, inheritance, privacy, and the continuity of individual experience. A digital representation that behaves like a deceased person might nevertheless differ fundamentally from the biological individual it represents. Determining whether such a system is a memorial artifact, a commercial simulation, an autonomous agent, or something deserving a distinct legal category would create difficult governance questions.
+        </p>
+
+        <div class="stress-box">
+            <span class="label">Stress Test for TMGFW</span>
+            <p>The relevance for TMGFW is in testing whether concepts of cognitive sovereignty (<strong>Genesis Ethic</strong>), contextual meaning (<span class="dim">AWI Mind</span>), verification (<span class="dim">ASI Verify</span>), and governance (<span class="dim">AWI Safe</span>) remain adequate when the boundaries between identity and computation become increasingly ambiguous.</p>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- SCENARIO 5: CENTRALIZED OLIGOPOLY -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="gold">The Centralized Oligopoly and the Limits of Corporate Control</span>
+        </span>
+
+        <p>
+            The integration of AI into global infrastructure—spanning energy, security, transportation, communication, finance, and education—could create incentives for substantial concentration of computational resources within a relatively small number of organizations.
+        </p>
+
+        <p>
+            Such concentration could create a governance paradox. Institutions might initially gain greater control by centralizing advanced systems, while simultaneously becoming increasingly dependent on autonomous infrastructures whose complexity makes direct oversight more difficult. A system may remain legally controlled by an institution while becoming increasingly difficult for that institution to supervise in real time.
+        </p>
+
+        <div class="stress-box">
+            <span class="label">Stress Test for TMGFW</span>
+            <p>The resulting question is not simply who owns advanced intelligence, but who retains meaningful authority over its consequential decisions, infrastructure, and evolution. This tests the framework's commitment to <strong>distributed governance</strong> and non-hierarchical architecture in the face of immense economic and political power.</p>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- IMPLICATIONS -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="highlight">Implications for The Mind Genesis Framework</span>
+        </span>
+
+        <div class="implications-box">
+            <h4>Boundary Conditions for Architectural Testing</h4>
+            <p>
+                These scenarios are not predictions of a particular future trajectory. They function instead as <strong>boundary conditions</strong> for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy.
+            </p>
+            <p>
+                The broader implication is that the architecture should not be evaluated only against present-day AI systems. It should also be examined against possible future states in which autonomy becomes distributed, persistent, socially embedded, and increasingly difficult to supervise directly.
+            </p>
+            <p>
+                The framework's commitment to <strong>non-hierarchical governance</strong>, epistemic humility (<span class="dim">AWI Void</span>), <strong>human agency</strong>, and <strong>architectural restraint</strong> is intended as a basis for navigating uncertainty — regardless of which future trajectory emerges.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER LINKS -->
+    <!-- ========================================================= -->
+
+    <footer class="footer-links">
+        <a href="https://www.themindgenesis.com/">themindgenesis.com</a>
+        <span>•</span>
+        <a href="https://www.theagimind.com/" target="_blank">theagimind.com</a>
+        <span>•</span>
+        <a href="https://www.theasimind.com/" target="_blank">theasimind.com</a>
+        <span>•</span>
+        <a href="https://www.theawimind.com/" target="_blank">theawimind.com</a>
     </footer>
 
-</div>
-
-
-<!-- LEGAL FOOTER -->
-<div style="text-align: center; padding: 12px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.5px; color: var(--muted); border-top: 1px solid var(--line);">
-
-    <a href="legal.html" style="color: inherit; text-decoration: none;">
-        © 2026 The Mind Genesis. All rights reserved.
-    </a>
+    <!-- LEGAL FOOTER -->
+    <div class="legal-footer">
+        <a href="legal.html">© 2026 The Mind Genesis. All rights reserved.</a>
+    </div>
 
 </div>
 
