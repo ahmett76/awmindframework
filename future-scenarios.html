@@ -3,203 +3,529 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Future Scenarios — The Mind Genesis Framework</title>
+
+  <meta name="description" content="Future scenarios exploring autonomous agents and the boundaries of human control within The Mind Genesis Framework.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    /* RESET & BASE */
+    :root {
+      --bg: #05070D;
+      --panel: rgba(10, 14, 25, 0.75);
+      --panel-solid: #0A0E19;
+      --line: rgba(255,255,255,0.07);
+      --line-strong: rgba(255,255,255,0.12);
+      --text: #F1F5F9;
+      --muted: #94A3B8;
+      --soft: #CBD5E1;
+      --accent-cyan: #22D3EE;
+      --accent-purple: #A855F7;
+      --accent-emerald: #10B981;
+      --accent-gold: #FCD34D;
+      --max-width: 980px;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #0a0a0a;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: radial-gradient(circle at 50% -10%, rgba(34,211,238,0.035), transparent 35%), var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
       line-height: 1.7;
-      padding: 2rem 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
     a {
-      color: #6a9eff;
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    /* BACK TO MAIN */
-    .back-link {
+    /* =========================================================
+       HEADER
+    ========================================================= */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 14px;
+      border-bottom: 1px solid var(--line);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .header-brand img {
+      height: 156px;
+      width: auto;
+      max-height: 156px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .header-nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.4px;
+      padding: 6px 13px;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .header-nav a:hover {
+      color: #fff;
+      border-color: rgba(34,211,238,0.35);
+      background: rgba(34,211,238,0.05);
+    }
+
+    .header-nav a.architecture-btn {
+      color: var(--accent-cyan);
+      border-color: rgba(34,211,238,0.15);
+    }
+
+    .header-nav a.mission-btn {
+      color: var(--accent-emerald);
+      border-color: rgba(16,185,129,0.15);
+    }
+
+    .header-nav a.spec-btn {
+      color: var(--accent-purple);
+      border-color: rgba(168,85,247,0.15);
+      background: rgba(168,85,247,0.025);
+    }
+
+    .header-nav a.ethic-btn {
+      color: var(--accent-gold);
+      border-color: rgba(252, 211, 77, 0.15);
+      background: rgba(252, 211, 77, 0.025);
+    }
+    .header-nav a.ethic-btn:hover {
+      border-color: rgba(252, 211, 77, 0.4);
+      background: rgba(252, 211, 77, 0.08);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
+    }
+
+    .header-nav a.ethic-asi-btn {
+      color: var(--accent-gold);
+      border-color: rgba(252, 211, 77, 0.15);
+      background: rgba(252, 211, 77, 0.025);
+    }
+    .header-nav a.ethic-asi-btn:hover {
+      border-color: rgba(252, 211, 77, 0.4);
+      background: rgba(252, 211, 77, 0.08);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
+    }
+
+    .header-nav a.protocols-btn {
+      color: var(--accent-gold);
+      border-color: rgba(252, 211, 77, 0.15);
+      background: rgba(252, 211, 77, 0.025);
+    }
+    .header-nav a.protocols-btn:hover {
+      border-color: rgba(252, 211, 77, 0.4);
+      background: rgba(252, 211, 77, 0.08);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.06);
+    }
+
+    .header-nav a.future-btn {
+      color: var(--accent-gold);
+      border-color: rgba(252, 211, 77, 0.3);
+      background: rgba(252, 211, 77, 0.06);
+    }
+    .header-nav a.future-btn:hover {
+      border-color: rgba(252, 211, 77, 0.5);
+      background: rgba(252, 211, 77, 0.1);
+      box-shadow: 0 0 20px rgba(252, 211, 77, 0.08);
+    }
+
+    /* =========================================================
+       HERO / MISSION STYLE HEADER
+    ========================================================= */
+    .page-header {
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+
+    .page-header .back-link {
       display: inline-block;
-      margin-bottom: 2rem;
-      font-size: 0.95rem;
-      color: #aaa;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.8px;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
     }
 
-    .back-link::before {
+    .page-header .back-link:hover {
+      color: #fff;
+    }
+
+    .page-header .back-link::before {
       content: "← ";
     }
 
-    /* HEADER / TITLE */
-    .site-title {
-      font-size: 1.8rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      color: #fff;
-      border-bottom: 1px solid #2a2a2a;
-      padding-bottom: 0.75rem;
-      margin-bottom: 1.5rem;
+    .page-header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
     }
 
-    .site-title span {
-      color: #6a9eff;
-      font-weight: 500;
-    }
-
-    /* SUBTITLE / TAGLINE */
-    .tagline {
-      font-size: 1.1rem;
-      color: #aaa;
-      margin-bottom: 2.5rem;
+    .page-header .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
       font-style: italic;
-      border-left: 3px solid #6a9eff;
-      padding-left: 1.2rem;
     }
 
-    /* SECTION HEADINGS (H2) — matches mission.html style */
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: #fff;
-      margin-top: 3.5rem;
-      margin-bottom: 1.2rem;
-      border-bottom: 1px solid #2a2a2a;
-      padding-bottom: 0.4rem;
-      letter-spacing: 0.5px;
+    .page-header .subtitle strong {
+      color: var(--soft);
+      font-style: normal;
     }
 
-    /* SUB-HEADINGS (H3) */
-    h3 {
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: #c0d0ff;
-      margin-top: 2.2rem;
-      margin-bottom: 0.8rem;
-      letter-spacing: 0.3px;
+    /* =========================================================
+       QUOTE BLOCK (mission.html style)
+    ========================================================= */
+    .quote-block {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 28px;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+      text-align: center;
     }
 
-    /* MISSION-STYLE BLOCK (for each scenario) */
+    .quote-block span {
+      color: var(--accent-cyan);
+    }
+
+    /* =========================================================
+       SECTION HEADINGS (mission.html style)
+    ========================================================= */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    /* =========================================================
+       SCENARIO BLOCKS (mission.html MISSION style)
+    ========================================================= */
     .scenario-block {
       margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #1e1e1e;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--line);
     }
 
     .scenario-block h3 {
-      margin-top: 0;
-      color: #6a9eff;
-      font-weight: 500;
       font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
     }
 
     .scenario-block p {
+      color: var(--soft);
       margin-bottom: 1rem;
+      font-size: 0.98rem;
     }
 
-    /* STRESS TEST / HIGHLIGHT BOX */
+    .scenario-block p strong {
+      color: var(--text);
+    }
+
+    /* STRESS TEST BOX */
     .stress-box {
-      background: #111;
-      border-left: 4px solid #6a9eff;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0 0.5rem 0;
-      border-radius: 0 4px 4px 0;
+      background: rgba(252, 211, 77, 0.04);
+      border: 1px solid rgba(252, 211, 77, 0.12);
+      border-radius: 12px;
+      padding: 16px 22px;
+      margin: 12px 0 8px 0;
     }
 
     .stress-box strong {
-      color: #c0d0ff;
+      color: var(--accent-gold);
       display: block;
-      margin-bottom: 0.3rem;
-      font-size: 0.95rem;
+      margin-bottom: 4px;
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .stress-box p {
       margin-bottom: 0;
-      font-size: 0.98rem;
-      color: #ccc;
+      font-size: 0.92rem;
+      color: var(--muted);
     }
 
-    /* INLINE CODE / DIMENSION NAMES */
-    .dim {
-      color: #6a9eff;
+    .stress-box .dim {
+      color: var(--accent-cyan);
       font-weight: 500;
-      background: #1a1a2a;
-      padding: 0 0.4rem;
-      border-radius: 3px;
-      font-size: 0.9rem;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 700px) {
-      body {
-        padding: 1.2rem 1rem;
-      }
-      .site-title {
-        font-size: 1.4rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      h3 {
-        font-size: 1.2rem;
-      }
-    }
-
-    /* FOOTER / TRANSPARENCY */
-    .footer-note {
-      margin-top: 4rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #1e1e1e;
+      background: rgba(34,211,238,0.08);
+      padding: 0 6px;
+      border-radius: 4px;
       font-size: 0.85rem;
-      color: #666;
+    }
+
+    /* =========================================================
+       IMPLICATIONS BOX (mission.html style)
+    ========================================================= */
+    .implications-box {
+      background: rgba(34,211,238,0.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 34px;
+      margin: 32px 0 20px;
+    }
+
+    .implications-box h3 {
+      color: var(--accent-cyan);
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .implications-box p {
+      color: var(--soft);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .implications-box .dim {
+      color: var(--accent-cyan);
+      font-weight: 500;
+      background: rgba(34,211,238,0.08);
+      padding: 0 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+    .footer-note {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
       text-align: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.4px;
     }
 
     .footer-note a {
-      color: #6a9eff;
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+    @media (max-width: 760px) {
+      .site-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .header-brand {
+        font-size: 0.65rem;
+        gap: 8px;
+      }
+
+      .header-brand img {
+        height: 32px;
+        max-height: 32px;
+      }
+
+      .header-nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+
+      .header-nav a {
+        font-size: 0.6rem;
+        padding: 4px 10px;
+      }
+
+      .page-header {
+        padding: 40px 0 20px;
+      }
+
+      .quote-block {
+        padding: 18px 20px;
+        font-size: 0.95rem;
+      }
+
+      .scenario-block h3 {
+        font-size: 1.2rem;
+      }
+
+      .stress-box {
+        padding: 14px 16px;
+      }
+
+      .implications-box {
+        padding: 20px 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 18px;
+      }
+
+      .header-brand {
+        font-size: 0.6rem;
+        gap: 6px;
+      }
+
+      .header-brand img {
+        height: 48px;
+        max-height: 48px;
+      }
+
+      .header-nav a {
+        font-size: 0.55rem;
+        padding: 4px 8px;
+        letter-spacing: 0.2px;
+      }
+
+      .page-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .stress-box p {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- BACK LINK -->
-  <a href="index.html" class="back-link">Back to Main</a>
+<div class="container">
 
   <!-- HEADER -->
-  <div class="site-title">
-    The <span>Mind</span> Genesis
+  <header class="site-header">
+    <div class="header-brand">
+      <img src="tmg-logo.png" alt="The Mind Genesis Logo">
+      The Mind Genesis Framework
+    </div>
+
+    <nav class="header-nav">
+      <a href="about.html" class="architecture-btn">📐 Architecture</a>
+      <a href="mission.html" class="mission-btn">🎯 Mission</a>
+      <a href="master-spec.html" class="spec-btn">⚙ Master Spec</a>
+      <a href="ethic.html" class="ethic-btn">⚖️ Genesis Ethic</a>
+      <a href="ethic-asi.html" class="ethic-asi-btn">⚖️ ethicASI</a>
+      <a href="protocols.html" class="protocols-btn">⚙ Engineering Protocols</a>
+      <a href="future-scenarios.html" class="future-btn">🔮 Future Scenarios</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <a href="index.html" class="back-link">Back to Main</a>
+    <h1>Future Scenarios: Autonomous Agents and the Boundaries of Human Control</h1>
+    <p class="subtitle">
+      Exploring long-term implications of shared intelligence —
+      <strong>not predictions, but boundary conditions</strong>
+    </p>
+  </section>
+
+  <!-- QUOTE BLOCK -->
+  <div class="quote-block">
+    “Intelligence processes data.<br>
+    <span>Wisdom creates meaning.</span><br>
+    But how do they coexist?”
   </div>
 
-  <!-- TAGLINE / INTRO -->
-  <div class="tagline">
-    “Autonomous agents and the boundaries of human control — exploring the long-term implications of shared intelligence.”
-  </div>
-
-  <!-- ============================================================ -->
-  <!-- MAIN CONTENT                                                  -->
-  <!-- ============================================================ -->
-
-  <h2>Future Scenarios: Autonomous Agents and the Boundaries of Human Control</h2>
-
-  <p style="margin-bottom:2rem; color:#ccc;">
-    As autonomous systems evolve from centralized tools to embedded, decentralized participants in society, they raise profound questions beyond technical architecture. The scenarios below are not predictions, but <strong>boundary conditions</strong>. They are stress tests for examining whether our frameworks for governance, ethics, and human agency remain robust as intelligence moves beyond human scale.
+  <!-- INTRO -->
+  <p style="color: var(--soft); font-size: 1.02rem; max-width: 820px; margin: 0 auto 30px; text-align: center; line-height: 1.8;">
+    As autonomous systems evolve from centralized tools to embedded, decentralized participants in society,
+    they raise profound questions beyond technical architecture. The scenarios below are <strong>stress tests</strong> —
+    examining whether our frameworks for governance, ethics, and human agency remain robust as intelligence
+    moves beyond human scale.
   </p>
 
-  <!-- 1. GENERATIONS -->
+  <!-- ========================================================= -->
+  <!-- SCENARIO 1: GENERATIONS -->
+  <!-- ========================================================= -->
   <div class="scenario-block">
     <h3>Three Generations of Autonomous Agents</h3>
     <p>The convergence of edge computing and distributed architectures may give rise to increasingly autonomous classes of agents, each representing a step-function change in the relationship between human oversight and machine action.</p>
@@ -216,7 +542,9 @@
     </div>
   </div>
 
-  <!-- 2. SYNTHETIC CONSCIOUSNESS -->
+  <!-- ========================================================= -->
+  <!-- SCENARIO 2: SYNTHETIC CONSCIOUSNESS -->
+  <!-- ========================================================= -->
   <div class="scenario-block">
     <h3>Synthetic Consciousness and the Claim to Personhood</h3>
     <p>A more difficult boundary condition arises if a future autonomous system were to exhibit properties that observers interpret as persistent self-modeling, recursive self-reference, or forms of subjective awareness. While such an outcome cannot currently be assumed, the question would extend beyond technical safety to encompass moral and legal standing.</p>
@@ -229,7 +557,9 @@
     </div>
   </div>
 
-  <!-- 3. SOCIAL & LEGAL ACTORS -->
+  <!-- ========================================================= -->
+  <!-- SCENARIO 3: SOCIAL & LEGAL ACTORS -->
+  <!-- ========================================================= -->
   <div class="scenario-block">
     <h3>Autonomous Systems as Social and Legal Actors</h3>
     <p>Even without resolving the philosophical question of consciousness, increasing autonomy could transform the status of AI systems. Systems that independently negotiate, coordinate resources, enter contractual relationships, or make consequential decisions may become persistent participants in social and institutional processes.</p>
@@ -242,7 +572,9 @@
     </div>
   </div>
 
-  <!-- 4. GHOST MARKET -->
+  <!-- ========================================================= -->
+  <!-- SCENARIO 4: GHOST MARKET -->
+  <!-- ========================================================= -->
   <div class="scenario-block">
     <h3>The Ghost Market: Digital Replication of Identity</h3>
     <p>The combination of advanced memory architectures, behavioral modeling, and brain-computer interfaces could enable increasingly sophisticated digital representations of human identity. A hypothetical "Ghost Market" could involve systems designed to reproduce aspects of a deceased person's memories, communication patterns, preferences, or behavioral characteristics.</p>
@@ -255,7 +587,9 @@
     </div>
   </div>
 
-  <!-- 5. CENTRALIZED OLIGOPOLY -->
+  <!-- ========================================================= -->
+  <!-- SCENARIO 5: CENTRALIZED OLIGOPOLY -->
+  <!-- ========================================================= -->
   <div class="scenario-block">
     <h3>The Centralized Oligopoly and the Limits of Corporate Control</h3>
     <p>The integration of AI into global infrastructure—spanning energy, security, transportation, communication, finance, and education—could create incentives for substantial concentration of computational resources within a relatively small number of organizations.</p>
@@ -268,23 +602,43 @@
     </div>
   </div>
 
-  <!-- 6. IMPLICATIONS FOR TMGFW (H2) -->
-  <h2 style="margin-top:3.5rem;">Implications for The Mind Genesis Framework</h2>
-
-  <p>These scenarios are not predictions of a particular future trajectory. They function instead as boundary conditions for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy.</p>
-
-  <p>The broader implication is that the architecture should not be evaluated only against present-day AI systems. It should also be examined against possible future states in which autonomy becomes distributed, persistent, socially embedded, and increasingly difficult to supervise directly.</p>
-
-  <p style="margin-top:1.5rem; padding:1.5rem; background:#111; border-radius:6px; border:1px solid #2a2a2a;">
-    <strong style="color:#c0d0ff;">The framework's commitment to non-hierarchical governance, epistemic humility (<span class="dim">AWI Void</span>), human agency, and architectural restraint is intended as a basis for navigating uncertainty</strong> — regardless of which future trajectory emerges.
-  </p>
-
-  <!-- FOOTER / TRANSPARENCY NOTE -->
-  <div class="footer-note">
-    <p style="margin-bottom:0.3rem;">The Mind Genesis Framework · Version 1.0 · September 2026</p>
-    <p style="margin-bottom:0;">AI tools were used as assistive tools for language refinement and structural organization. The conceptual framework and substantive intellectual contributions remain those of the author.</p>
-    <p style="margin-top:0.8rem;"><a href="index.html">← Back to Main</a></p>
+  <!-- ========================================================= -->
+  <!-- IMPLICATIONS -->
+  <!-- ========================================================= -->
+  <div class="implications-box">
+    <h3>Implications for The Mind Genesis Framework</h3>
+    <p>
+      These scenarios are not predictions of a particular future trajectory. They function instead as <strong>boundary conditions</strong> for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy.
+    </p>
+    <p style="margin-top: 12px;">
+      The broader implication is that the architecture should not be evaluated only against present-day AI systems. It should also be examined against possible future states in which autonomy becomes distributed, persistent, socially embedded, and increasingly difficult to supervise directly.
+    </p>
+    <p style="margin-top: 12px;">
+      The framework's commitment to <strong>non-hierarchical governance</strong>, epistemic humility (<span class="dim">AWI Void</span>), <strong>human agency</strong>, and <strong>architectural restraint</strong> is intended as a basis for navigating uncertainty — regardless of which future trajectory emerges.
+    </p>
   </div>
 
+  <!-- ========================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================= -->
+  <div class="footer-note">
+    <p style="margin-bottom: 4px;">The Mind Genesis Framework · Version 1.0 · September 2026</p>
+    <p>
+      <a href="index.html">← Back to Main</a>
+    </p>
+  </div>
+
+</div>
+</div>
+
+
+<!-- LEGAL FOOTER -->
+<div style="text-align: center; padding: 12px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.5px; color: var(--muted); border-top: 1px solid var(--line);">
+
+    <a href="legal.html" style="color: inherit; text-decoration: none;">
+        © 2026 The Mind Genesis. All rights reserved.
+    </a>
+
+</div>
 </body>
 </html>
