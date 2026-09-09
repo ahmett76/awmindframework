@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Scenarios — The Mind Genesis Framework</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: #6a9eff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* BACK TO MAIN */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+
+    .back-link::before {
+      content: "← ";
+    }
+
+    /* HEADER / TITLE */
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #fff;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .site-title span {
+      color: #6a9eff;
+      font-weight: 500;
+    }
+
+    /* SUBTITLE / TAGLINE */
+    .tagline {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+      border-left: 3px solid #6a9eff;
+      padding-left: 1.2rem;
+    }
+
+    /* SECTION HEADINGS (H2) — matches mission.html style */
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 3.5rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 0.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* SUB-HEADINGS (H3) */
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #c0d0ff;
+      margin-top: 2.2rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* MISSION-STYLE BLOCK (for each scenario) */
+    .scenario-block {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .scenario-block h3 {
+      margin-top: 0;
+      color: #6a9eff;
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    .scenario-block p {
+      margin-bottom: 1rem;
+    }
+
+    /* STRESS TEST / HIGHLIGHT BOX */
+    .stress-box {
+      background: #111;
+      border-left: 4px solid #6a9eff;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0 0.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .stress-box strong {
+      color: #c0d0ff;
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stress-box p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+      color: #ccc;
+    }
+
+    /* INLINE CODE / DIMENSION NAMES */
+    .dim {
+      color: #6a9eff;
+      font-weight: 500;
+      background: #1a1a2a;
+      padding: 0 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+      .site-title {
+        font-size: 1.4rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* FOOTER / TRANSPARENCY */
+    .footer-note {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #1e1e1e;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+    }
+
+    .footer-note a {
+      color: #6a9eff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACK LINK -->
+  <a href="index.html" class="back-link">Back to Main</a>
+
+  <!-- HEADER -->
+  <div class="site-title">
+    The <span>Mind</span> Genesis
+  </div>
+
+  <!-- TAGLINE / INTRO -->
+  <div class="tagline">
+    “Autonomous agents and the boundaries of human control — exploring the long-term implications of shared intelligence.”
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT                                                  -->
+  <!-- ============================================================ -->
+
+  <h2>Future Scenarios: Autonomous Agents and the Boundaries of Human Control</h2>
+
+  <p style="margin-bottom:2rem; color:#ccc;">
+    As autonomous systems evolve from centralized tools to embedded, decentralized participants in society, they raise profound questions beyond technical architecture. The scenarios below are not predictions, but <strong>boundary conditions</strong>. They are stress tests for examining whether our frameworks for governance, ethics, and human agency remain robust as intelligence moves beyond human scale.
+  </p>
+
+  <!-- 1. GENERATIONS -->
+  <div class="scenario-block">
+    <h3>Three Generations of Autonomous Agents</h3>
+    <p>The convergence of edge computing and distributed architectures may give rise to increasingly autonomous classes of agents, each representing a step-function change in the relationship between human oversight and machine action.</p>
+
+    <p><strong>Core Generation:</strong> Specialized agents operating within controlled industrial, scientific, or security environments, primarily optimizing for reliability, efficiency, and bounded objectives. This is the familiar territory of today's advanced automation.</p>
+
+    <p><strong>Adaptive Generation:</strong> Agents designed to coexist with humans in domestic, institutional, and public settings. They require contextual awareness, safety, communication, and increasingly sophisticated interaction with human preferences. This generation begins to blur the line between a tool and a collaborative partner.</p>
+
+    <p><strong>Free-Code Generation:</strong> Agents capable of modifying aspects of their own algorithms, strategies, or behavioral protocols within the permissions and constraints of their operating environment. Such systems could substantially complicate conventional models of centralized supervision, as modifications may occur across distributed infrastructures and at operational timescales that exceed direct human review.</p>
+
+    <div class="stress-box">
+      <strong>Stress Test for TMGFW</strong>
+      <p>This progression tests the limits of <span class="dim">ASI Guard</span> (restraint), <span class="dim">AWI Sentry</span> (value drift monitoring), and <span class="dim">AGI Verify</span> (verifiability), asking whether the architecture can maintain accountability when systems become active participants in their own evolution.</p>
+    </div>
+  </div>
+
+  <!-- 2. SYNTHETIC CONSCIOUSNESS -->
+  <div class="scenario-block">
+    <h3>Synthetic Consciousness and the Claim to Personhood</h3>
+    <p>A more difficult boundary condition arises if a future autonomous system were to exhibit properties that observers interpret as persistent self-modeling, recursive self-reference, or forms of subjective awareness. While such an outcome cannot currently be assumed, the question would extend beyond technical safety to encompass moral and legal standing.</p>
+
+    <p>An apparently conscious system could potentially be understood as an agent with interests, preferences, or claims concerning its own continued operation. This would create difficult questions concerning moral standing, legal status, autonomy, and the obligations of human institutions toward synthetic entities. Existing legal categories may not map cleanly onto such entities, creating pressure to reconsider the relationship among agency, responsibility, ownership, and personhood.</p>
+
+    <div class="stress-box">
+      <strong>Stress Test for TMGFW</strong>
+      <p>This scenario examines whether concepts of <span class="dim">AWI Mind</span> (meaning), <span class="dim">AGI Wake</span> (self-referential awareness), and <span class="dim">ASI Wake</span> (threshold of emergent awareness) can inform a framework that respects both human agency and potential new forms of synthetic integrity.</p>
+    </div>
+  </div>
+
+  <!-- 3. SOCIAL & LEGAL ACTORS -->
+  <div class="scenario-block">
+    <h3>Autonomous Systems as Social and Legal Actors</h3>
+    <p>Even without resolving the philosophical question of consciousness, increasing autonomy could transform the status of AI systems. Systems that independently negotiate, coordinate resources, enter contractual relationships, or make consequential decisions may become persistent participants in social and institutional processes.</p>
+
+    <p>This raises a distinct question: when does an autonomous system become a meaningful social or legal actor, even if its subjective status remains uncertain? Possible future institutions could need to distinguish among several categories, including tools operated on behalf of humans, delegated agents acting within defined authority, autonomous systems with legally recognized responsibilities, and potentially entities granted limited forms of legal standing.</p>
+
+    <div class="stress-box">
+      <strong>Stress Test for TMGFW</strong>
+      <p>This scenario directly stresses the interaction among <span class="dim">AGI Hub</span> (collaborative interaction), <span class="dim">AWI Systems</span> (real-world application of wisdom), <span class="dim">AWI Sentry</span> (monitoring), and <span class="dim">AWI Void</span> (epistemic restraint). It asks whether the architecture can support a world where responsibilities are distributed across developers, operators, owners, institutions, and the system's governance layer.</p>
+    </div>
+  </div>
+
+  <!-- 4. GHOST MARKET -->
+  <div class="scenario-block">
+    <h3>The Ghost Market: Digital Replication of Identity</h3>
+    <p>The combination of advanced memory architectures, behavioral modeling, and brain-computer interfaces could enable increasingly sophisticated digital representations of human identity. A hypothetical "Ghost Market" could involve systems designed to reproduce aspects of a deceased person's memories, communication patterns, preferences, or behavioral characteristics.</p>
+
+    <p>Such developments would challenge assumptions about death, identity, inheritance, privacy, and the continuity of individual experience. A digital representation that behaves like a deceased person might nevertheless differ fundamentally from the biological individual it represents. Determining whether such a system is a memorial artifact, a commercial simulation, an autonomous agent, or something deserving a distinct legal category would create difficult governance questions.</p>
+
+    <div class="stress-box">
+      <strong>Stress Test for TMGFW</strong>
+      <p>The relevance for TMGFW is in testing whether concepts of cognitive sovereignty (<strong>Genesis Ethic</strong>), contextual meaning (<span class="dim">AWI Mind</span>), verification (<span class="dim">ASI Verify</span>), and governance (<span class="dim">AWI Safe</span>) remain adequate when the boundaries between identity and computation become increasingly ambiguous.</p>
+    </div>
+  </div>
+
+  <!-- 5. CENTRALIZED OLIGOPOLY -->
+  <div class="scenario-block">
+    <h3>The Centralized Oligopoly and the Limits of Corporate Control</h3>
+    <p>The integration of AI into global infrastructure—spanning energy, security, transportation, communication, finance, and education—could create incentives for substantial concentration of computational resources within a relatively small number of organizations.</p>
+
+    <p>Such concentration could create a governance paradox. Institutions might initially gain greater control by centralizing advanced systems, while simultaneously becoming increasingly dependent on autonomous infrastructures whose complexity makes direct oversight more difficult. A system may remain legally controlled by an institution while becoming increasingly difficult for that institution to supervise in real time.</p>
+
+    <div class="stress-box">
+      <strong>Stress Test for TMGFW</strong>
+      <p>The resulting question is not simply who owns advanced intelligence, but who retains meaningful authority over its consequential decisions, infrastructure, and evolution. This tests the framework's commitment to <strong>distributed governance</strong> and non-hierarchical architecture in the face of immense economic and political power.</p>
+    </div>
+  </div>
+
+  <!-- 6. IMPLICATIONS FOR TMGFW (H2) -->
+  <h2 style="margin-top:3.5rem;">Implications for The Mind Genesis Framework</h2>
+
+  <p>These scenarios are not predictions of a particular future trajectory. They function instead as boundary conditions for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy.</p>
+
+  <p>The broader implication is that the architecture should not be evaluated only against present-day AI systems. It should also be examined against possible future states in which autonomy becomes distributed, persistent, socially embedded, and increasingly difficult to supervise directly.</p>
+
+  <p style="margin-top:1.5rem; padding:1.5rem; background:#111; border-radius:6px; border:1px solid #2a2a2a;">
+    <strong style="color:#c0d0ff;">The framework's commitment to non-hierarchical governance, epistemic humility (<span class="dim">AWI Void</span>), human agency, and architectural restraint is intended as a basis for navigating uncertainty</strong> — regardless of which future trajectory emerges.
+  </p>
+
+  <!-- FOOTER / TRANSPARENCY NOTE -->
+  <div class="footer-note">
+    <p style="margin-bottom:0.3rem;">The Mind Genesis Framework · Version 1.0 · September 2026</p>
+    <p style="margin-bottom:0;">AI tools were used as assistive tools for language refinement and structural organization. The conceptual framework and substantive intellectual contributions remain those of the author.</p>
+    <p style="margin-top:0.8rem;"><a href="index.html">← Back to Main</a></p>
+  </div>
+
+</body>
+</html>
