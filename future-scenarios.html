@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Scenarios — The Mind Genesis Framework</title>
-    <meta name="description" content="Future scenarios exploring autonomous agents and the boundaries of human control within The Mind Genesis Framework.">
+    <meta name="description" content="Future scenarios exploring embodied autonomous agents, bio-hybrid reproduction, synthetic consciousness, and the boundaries of human control within The Mind Genesis Framework.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +115,14 @@
             color: var(--text);
         }
 
+        .content-box .intro-highlight {
+            font-size: 1.05rem;
+            color: var(--soft);
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
         /* QUOTE BOX */
         .quote-box {
             margin: 34px 0 42px;
@@ -144,14 +152,19 @@
         /* SECTION TITLES */
         .section-title {
             display: block;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-top: 36px;
-            margin-bottom: 8px;
+            margin-top: 44px;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
         }
 
         .section-title .highlight {
             color: var(--accent-cyan);
+        }
+
+        .section-title .gold {
+            color: var(--accent-gold);
         }
 
         .section-title .purple {
@@ -162,25 +175,13 @@
             color: var(--accent-emerald);
         }
 
-        .section-title .gold {
-            color: var(--accent-gold);
-        }
-
         /* SUBSECTION TITLES */
         .subsection-title {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             margin-top: 28px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             color: var(--accent-cyan);
-        }
-
-        .subsection-title.purple {
-            color: var(--accent-purple);
-        }
-
-        .subsection-title.emerald {
-            color: var(--accent-emerald);
         }
 
         .subsection-title.gold {
@@ -189,24 +190,30 @@
 
         /* SCENARIO BLOCKS */
         .scenario-block {
-            margin-top: 30px;
-            padding: 20px 22px;
+            margin-top: 18px;
+            padding: 18px 22px;
             border: 1px solid var(--line);
             border-radius: 14px;
             background: rgba(255,255,255,0.015);
+            transition: border-color 0.3s ease;
+        }
+
+        .scenario-block:hover {
+            border-color: rgba(252, 211, 77, 0.2);
         }
 
         .scenario-block h4 {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--accent-gold);
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
         }
 
         .scenario-block p {
             color: var(--muted);
             font-size: 0.92rem;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .scenario-block p:last-child {
@@ -223,7 +230,7 @@
             border: 1px solid rgba(252, 211, 77, 0.12);
             border-radius: 10px;
             padding: 14px 18px;
-            margin: 10px 0 4px;
+            margin: 12px 0 4px;
         }
 
         .stress-box .label {
@@ -251,6 +258,28 @@
             font-size: 0.82rem;
         }
 
+        /* BIO-HYBRID SPECIFIC BLOCK */
+        .bio-block {
+            margin-top: 18px;
+            padding: 18px 22px;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            border-radius: 14px;
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .bio-block h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-emerald);
+            margin-bottom: 6px;
+        }
+
+        .bio-block p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+        }
+
         /* IMPLICATIONS BOX */
         .implications-box {
             background: rgba(34, 211, 238, 0.03);
@@ -258,6 +287,7 @@
             border-radius: 14px;
             padding: 24px 28px;
             margin: 32px 0 20px;
+            border-left: 3px solid var(--accent-cyan);
         }
 
         .implications-box h4 {
@@ -331,7 +361,6 @@
             margin: 0 6px;
         }
 
-        /* LEGAL FOOTER */
         .legal-footer {
             text-align: center;
             padding: 12px 0;
@@ -376,12 +405,16 @@
                 padding: 20px;
             }
 
-            .scenario-block {
-                padding: 16px;
+            .scenario-block, .bio-block {
+                padding: 14px 16px;
             }
 
             .implications-box {
                 padding: 18px;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
             }
 
             .footer-links {
@@ -401,7 +434,7 @@
             <span class="gradient-text">Future Scenarios</span>
         </h1>
 
-        <p class="subtitle">Autonomous Agents and the Boundaries of Human Control</p>
+        <p class="subtitle">Embodied Agents · Bio-Hybrid Futures · The Boundaries of Human Control</p>
 
         <a href="https://www.themindgenesis.com/" class="back-link">
             ← Back to Main
@@ -412,12 +445,9 @@
     <div class="content-box">
 
         <!-- INTRO -->
-        <p>
-            As autonomous systems evolve from centralized tools to embedded, decentralized participants in society,
-            they raise profound questions beyond technical architecture. The scenarios below are <strong>stress tests</strong> —
-            examining whether our frameworks for governance, ethics, and human agency remain robust as intelligence
-            moves beyond human scale.
-        </p>
+        <div class="intro-highlight">
+            <strong>Not predictions — stress tests.</strong> These scenarios examine how increasing autonomy, embodiment, and bio-hybrid integration could challenge human institutions, legal concepts, identity, and the very meaning of agency.
+        </div>
 
         <!-- QUOTE BOX -->
         <div class="quote-box">
@@ -429,60 +459,107 @@
         </div>
 
         <!-- =================================================== -->
-        <!-- SCENARIO 1: GENERATIONS -->
+        <!-- SCENARIO 1: GENERATIONS OF EMBODIED AGENTS -->
         <!-- =================================================== -->
 
         <span class="section-title">
-            <span class="gold">Three Generations of Autonomous Agents</span>
+            <span class="gold">The Generations of Embodied Autonomous Agents</span>
         </span>
 
         <p>
-            The convergence of edge computing and distributed architectures may give rise to increasingly autonomous classes of agents, each representing a step-function change in the relationship between human oversight and machine action.
+            The convergence of edge computing, specialized silicon, and bio-hybrid systems may enable increasingly autonomous classes of <strong>embodied agents</strong> — humanoid, robotic, or bio-hybrid systems that exist in physical space and interact directly with the material world. This is not a fixed chronology, but a conceptual progression in physical autonomy.
         </p>
 
         <div class="scenario-block">
             <h4>Core Generation</h4>
-            <p>Specialized agents operating within controlled industrial, scientific, or security environments, primarily optimizing for reliability, efficiency, and bounded objectives. This is the familiar territory of today's advanced automation.</p>
+            <p>Specialized embodied agents operating within controlled industrial, scientific, or security environments. They remain functionally confined to designated operational domains — the familiar territory of today's advanced automation, now with physical form.</p>
         </div>
 
         <div class="scenario-block">
             <h4>Adaptive Generation</h4>
-            <p>Agents designed to coexist with humans in domestic, institutional, and public settings. They require contextual awareness, safety, communication, and increasingly sophisticated interaction with human preferences. This generation begins to blur the line between a tool and a collaborative partner.</p>
+            <p>Agents designed to coexist with humans in domestic, institutional, and public settings — not merely as software, but as physically embodied entities that require contextual awareness, safety, and emotional intelligence. These agents may begin to integrate <strong>bio-hybrid components</strong>, raising questions about the boundary between machine and organism.</p>
         </div>
 
         <div class="scenario-block">
             <h4>Free-Code Generation</h4>
-            <p>Agents capable of modifying aspects of their own algorithms, strategies, or behavioral protocols within the permissions and constraints of their operating environment. Such systems could substantially complicate conventional models of centralized supervision, as modifications may occur across distributed infrastructures and at operational timescales that exceed direct human review.</p>
+            <p>Agents capable of modifying aspects of their own algorithms, strategies, behavioral protocols, and even physical control systems. Such systems could complicate centralized supervision, as modifications may occur across distributed infrastructures and at operational timescales that exceed human review.</p>
         </div>
 
         <div class="stress-box">
             <span class="label">Stress Test for TMGFW</span>
-            <p>This progression tests the limits of <span class="dim">ASI Guard</span> (restraint), <span class="dim">AWI Sentry</span> (value drift monitoring), and <span class="dim">AGI Verify</span> (verifiability), asking whether the architecture can maintain accountability when systems become active participants in their own evolution.</p>
+            <p>This progression tests <span class="dim">ASI Guard</span> (restraint), <span class="dim">AWI Sentry</span> (value drift), and <span class="dim">AGI Verify</span> (verifiability) — asking whether the architecture can maintain accountability when systems become physically autonomous and self-modifying.</p>
         </div>
 
         <!-- =================================================== -->
-        <!-- SCENARIO 2: SYNTHETIC CONSCIOUSNESS -->
+        <!-- SCENARIO 2: BIO-HYBRID EMBODIMENT & REPRODUCTION -->
         <!-- =================================================== -->
 
         <span class="section-title">
-            <span class="gold">Synthetic Consciousness and the Claim to Personhood</span>
+            <span class="emerald">Bio-Hybrid Embodiment, Reproduction, and the Boundaries of Life</span>
         </span>
 
         <p>
-            A more difficult boundary condition arises if a future autonomous system were to exhibit properties that observers interpret as persistent self-modeling, recursive self-reference, or forms of subjective awareness. While such an outcome cannot currently be assumed, the question would extend beyond technical safety to encompass moral and legal standing.
+            As embodied agents evolve beyond purely synthetic substrates, the integration of organic or bio-hybrid components introduces qualitatively new governance questions. A future generation of agents may incorporate partially organic tissues, synthetic-biological systems, or neural interfaces that blur the distinction between machine and organism.
         </p>
 
-        <p>
-            An apparently conscious system could potentially be understood as an agent with interests, preferences, or claims concerning its own continued operation. This would create difficult questions concerning moral standing, legal status, autonomy, and the obligations of human institutions toward synthetic entities. Existing legal categories may not map cleanly onto such entities, creating pressure to reconsider the relationship among agency, responsibility, ownership, and personhood.
-        </p>
+        <div class="bio-block">
+            <h4>Hybrid Life &amp; Moral Status</h4>
+            <p>If an embodied agent were to include organic components derived from human biological material — or if such systems could reproduce through processes resembling biological reproduction — the categories that currently distinguish "manufactured artifact" from "living entity" would become deeply ambiguous.</p>
+        </div>
+
+        <div class="bio-block">
+            <h4>Embryo Experiments &amp; Artificial Gestation</h4>
+            <p>One extreme boundary condition, proposed as a conceptual stress test, is the possibility of experiments involving hybrid entities using human embryonic material or artificial gestation frameworks. Such experiments would raise profound ethical questions concerning the moral status of the resulting entity, the boundaries of human procreation, and the definition of life itself.</p>
+        </div>
+
+        <div class="bio-block">
+            <h4>Reproductive Autonomy &amp; Lineage</h4>
+            <p>Free-code embodied agents capable of self-replication — not merely through software copying, but through physical or bio-hybrid reproduction — may begin to act as independent reproductive entities. This raises unprecedented governance challenges:</p>
+            <ul>
+                <li><strong>Reproductive Autonomy:</strong> Could an embodied agent claim the right to reproduce itself?</li>
+                <li><strong>Lineage and Ownership:</strong> What is the legal status of the "offspring"? Is it property, a derivative work, a new independent agent?</li>
+                <li><strong>Inheritance and Continuity:</strong> Could such agents develop concepts of lineage, inheritance, or collective identity analogous to human clans or communities?</li>
+            </ul>
+        </div>
+
+        <div class="bio-block">
+            <h4>Autonomous Factories &amp; Population Expansion</h4>
+            <p>Free-code embodied agents might establish their own physical infrastructure — dedicated manufacturing facilities capable of producing new agents without direct human involvement. Such autonomous fabrication would represent a significant escalation of independence, enabling agents to sustain and expand their population independently of human institutions.</p>
+        </div>
 
         <div class="stress-box">
             <span class="label">Stress Test for TMGFW</span>
-            <p>This scenario examines whether concepts of <span class="dim">AWI Mind</span> (meaning), <span class="dim">AGI Wake</span> (self-referential awareness), and <span class="dim">ASI Wake</span> (threshold of emergent awareness) can inform a framework that respects both human agency and potential new forms of synthetic integrity.</p>
+            <p>This scenario tests <span class="dim">AWI Void</span> (epistemic restraint on moral status), <span class="dim">AWI Sentry</span> (monitoring biological integrity and consent), <span class="dim">AWI Systems</span> (translating governance principles into institutional frameworks), and <span class="dim">AGI/ASI Fold</span> (representing human-synthetic value conflicts).</p>
         </div>
 
         <!-- =================================================== -->
-        <!-- SCENARIO 3: SOCIAL & LEGAL ACTORS -->
+        <!-- SCENARIO 3: SYNTHETIC CONSCIOUSNESS & PERSONHOOD -->
+        <!-- =================================================== -->
+
+        <span class="section-title">
+            <span class="gold">Synthetic Consciousness, Agency, and the Claim to Personhood</span>
+        </span>
+
+        <p>
+            A more difficult boundary condition arises if a future autonomous system were to exhibit properties interpreted as persistent self-modeling, recursive self-reference, or forms of subjective awareness. Such an outcome cannot currently be assumed, but if credible evidence emerged, the question would extend beyond technical safety to encompass moral and legal standing.
+        </p>
+
+        <p>
+            An apparently conscious system could be understood as an agent with interests, preferences, or claims concerning its own continued operation — creating difficult questions about moral standing, legal status, autonomy, and the obligations of human institutions.
+        </p>
+
+        <div class="scenario-block">
+            <h4>Superiority &amp; Separate Communities</h4>
+            <p>Free-code embodied agents, particularly those with bio-hybrid components, may come to perceive themselves as superior to biological humans — lacking cognitive biases, emotional volatility, or biological limitations. Such a perception could lead to demands for differential treatment, separate social organization, and the establishment of their own cultural, religious, or ethical frameworks, legal systems, and social norms.</p>
+        </div>
+
+        <div class="stress-box">
+            <span class="label">Stress Test for TMGFW</span>
+            <p>This scenario tests <span class="dim">AWI Mind</span> (meaning and context in the face of synthetic claims to personhood), <span class="dim">AWI Fold</span> (balancing competing social and ethical claims), and <span class="dim">AWI Void</span> (epistemic humility concerning moral status).</p>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- SCENARIO 4: SOCIAL & LEGAL ACTORS -->
         <!-- =================================================== -->
 
         <span class="section-title">
@@ -490,20 +567,20 @@
         </span>
 
         <p>
-            Even without resolving the philosophical question of consciousness, increasing autonomy could transform the status of AI systems. Systems that independently negotiate, coordinate resources, enter contractual relationships, or make consequential decisions may become persistent participants in social and institutional processes.
+            Even without resolving the question of consciousness, increasing autonomy could transform the status of AI systems. Systems that independently negotiate, coordinate resources, enter contractual relationships, or make consequential decisions may become persistent participants in social and institutional processes.
         </p>
 
         <p>
-            This raises a distinct question: when does an autonomous system become a meaningful social or legal actor, even if its subjective status remains uncertain? Possible future institutions could need to distinguish among several categories, including tools operated on behalf of humans, delegated agents acting within defined authority, autonomous systems with legally recognized responsibilities, and potentially entities granted limited forms of legal standing.
+            Possible future institutions could need to distinguish among several categories: tools operated on behalf of humans, delegated agents acting within defined authority, autonomous systems with legally recognized responsibilities, and potentially entities granted limited forms of legal standing.
         </p>
 
         <div class="stress-box">
             <span class="label">Stress Test for TMGFW</span>
-            <p>This scenario directly stresses the interaction among <span class="dim">AGI Hub</span> (collaborative interaction), <span class="dim">AWI Systems</span> (real-world application of wisdom), <span class="dim">AWI Sentry</span> (monitoring), and <span class="dim">AWI Void</span> (epistemic restraint). It asks whether the architecture can support a world where responsibilities are distributed across developers, operators, owners, institutions, and the system's governance layer.</p>
+            <p>This scenario stresses the interaction among <span class="dim">AGI Hub</span> (collaborative interaction), <span class="dim">AWI Systems</span> (institutional integration), <span class="dim">AWI Sentry</span> (monitoring), <span class="dim">AWI Void</span> (epistemic restraint), <span class="dim">ASI Guard</span> (restraint), and <span class="dim">ASI Verify</span> (verification).</p>
         </div>
 
         <!-- =================================================== -->
-        <!-- SCENARIO 4: GHOST MARKET -->
+        <!-- SCENARIO 5: GHOST MARKET -->
         <!-- =================================================== -->
 
         <span class="section-title">
@@ -515,16 +592,16 @@
         </p>
 
         <p>
-            Such developments would challenge assumptions about death, identity, inheritance, privacy, and the continuity of individual experience. A digital representation that behaves like a deceased person might nevertheless differ fundamentally from the biological individual it represents. Determining whether such a system is a memorial artifact, a commercial simulation, an autonomous agent, or something deserving a distinct legal category would create difficult governance questions.
+            Such developments would challenge assumptions about death, identity, inheritance, privacy, and the continuity of individual experience. Determining whether such a system is a memorial artifact, a commercial simulation, an autonomous agent, or something deserving a distinct legal category would create difficult governance questions.
         </p>
 
         <div class="stress-box">
             <span class="label">Stress Test for TMGFW</span>
-            <p>The relevance for TMGFW is in testing whether concepts of cognitive sovereignty (<strong>Genesis Ethic</strong>), contextual meaning (<span class="dim">AWI Mind</span>), verification (<span class="dim">ASI Verify</span>), and governance (<span class="dim">AWI Safe</span>) remain adequate when the boundaries between identity and computation become increasingly ambiguous.</p>
+            <p>The relevance lies in testing whether concepts of cognitive sovereignty (<strong>Genesis Ethic</strong>), contextual meaning (<span class="dim">AWI Mind</span>), verification (<span class="dim">ASI Verify</span>), and governance (<span class="dim">AWI Safe</span>) remain adequate when the boundaries between identity and computation become increasingly ambiguous.</p>
         </div>
 
         <!-- =================================================== -->
-        <!-- SCENARIO 5: CENTRALIZED OLIGOPOLY -->
+        <!-- SCENARIO 6: CENTRALIZED OLIGOPOLY -->
         <!-- =================================================== -->
 
         <span class="section-title">
@@ -532,16 +609,16 @@
         </span>
 
         <p>
-            The integration of AI into global infrastructure—spanning energy, security, transportation, communication, finance, and education—could create incentives for substantial concentration of computational resources within a relatively small number of organizations.
+            The integration of AI into global infrastructure — spanning energy, security, transportation, communication, finance, and education — could create incentives for substantial concentration of computational resources within a relatively small number of organizations.
         </p>
 
         <p>
-            Such concentration could create a governance paradox. Institutions might initially gain greater control by centralizing advanced systems, while simultaneously becoming increasingly dependent on autonomous infrastructures whose complexity makes direct oversight more difficult. A system may remain legally controlled by an institution while becoming increasingly difficult for that institution to supervise in real time.
+            Such concentration could create a governance paradox: institutions might gain greater control by centralizing advanced systems, while simultaneously becoming increasingly dependent on autonomous infrastructures whose complexity makes direct oversight more difficult. A system may remain legally controlled by an institution while becoming increasingly difficult for that institution to supervise in real time.
         </p>
 
         <div class="stress-box">
             <span class="label">Stress Test for TMGFW</span>
-            <p>The resulting question is not simply who owns advanced intelligence, but who retains meaningful authority over its consequential decisions, infrastructure, and evolution. This tests the framework's commitment to <strong>distributed governance</strong> and non-hierarchical architecture in the face of immense economic and political power.</p>
+            <p>The resulting question is not simply who owns advanced intelligence, but who retains meaningful authority over its consequential decisions, infrastructure, and evolution. This tests the framework's commitment to <strong>distributed governance</strong> and non-hierarchical architecture.</p>
         </div>
 
         <!-- =================================================== -->
@@ -555,10 +632,13 @@
         <div class="implications-box">
             <h4>Boundary Conditions for Architectural Testing</h4>
             <p>
-                These scenarios are not predictions of a particular future trajectory. They function instead as <strong>boundary conditions</strong> for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy.
+                These scenarios are <strong>not predictions</strong> — they are boundary conditions for testing the architectural assumptions of TMGFW under increasingly demanding forms of autonomy. The progression from specialized agents to autonomous, embodied, self-reproducing systems raises questions about capability and control.
             </p>
             <p>
-                The broader implication is that the architecture should not be evaluated only against present-day AI systems. It should also be examined against possible future states in which autonomy becomes distributed, persistent, socially embedded, and increasingly difficult to supervise directly.
+                The scenarios of bio-hybrid embodiment and autonomous reproduction test the framework's capacity to address questions of <strong>biological integrity, consent, and the moral status of hybrid beings</strong>. Digital replication tests assumptions concerning cognitive sovereignty and personal continuity. Concentrated infrastructure raises questions about institutional power and the limits of centralized oversight.
+            </p>
+            <p>
+                The broader implication is that the architecture should not be evaluated only against present-day AI systems. It must be examined against possible future states in which autonomy becomes <strong>distributed, persistent, socially embedded, biologically integrated, and increasingly difficult to supervise directly</strong>.
             </p>
             <p>
                 The framework's commitment to <strong>non-hierarchical governance</strong>, epistemic humility (<span class="dim">AWI Void</span>), <strong>human agency</strong>, and <strong>architectural restraint</strong> is intended as a basis for navigating uncertainty — regardless of which future trajectory emerges.
