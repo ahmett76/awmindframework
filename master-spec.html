@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Technical Master Specification — The Mind Genesis Framework</title>
+    <title>Technical Master Specification — The Mind Genesis Architecture</title>
 
-    <meta name="description" content="The Technical Master Specification of The Mind Genesis Framework — a proposed non-hierarchical architecture of 33 dimensions across AGI, ASI, and AWI.">
-    <meta name="author" content="The Mind Genesis Framework">
+    <meta name="description" content="The Technical Master Specification of The Mind Genesis Architecture — a proposed non-hierarchical architecture of 33 dimensions across AGI, ASI, and AWI.">
+    <meta name="author" content="The Mind Genesis Architecture">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -254,9 +254,28 @@
             backdrop-filter: blur(10px);
         }
 
+        .map-container {
+            overflow: hidden;
+        }
+
+        .map-scroll {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(34,211,238,0.35) rgba(255,255,255,0.04);
+            border-radius: 14px;
+        }
+
+        .map-scroll:focus {
+            outline: 1px solid rgba(34,211,238,0.45);
+            outline-offset: 3px;
+        }
+
         .map-container img {
             width: 100%;
-            max-width: 100%;
+            max-width: none;
             height: auto;
             border-radius: 14px;
             display: block;
@@ -703,6 +722,16 @@
 
             .map-container {
                 border-radius: 14px;
+                padding: 10px;
+            }
+
+            .map-scroll img {
+                width: 1120px;
+                min-width: 1120px;
+            }
+
+            .map-caption::after {
+                content: " · Swipe horizontally to explore";
             }
 
             .dim-grid {
@@ -776,7 +805,7 @@
             </h2>
 
             <p>
-                The Mind Genesis Framework (TMGFW) proposes a conceptual shift in how the development of synthetic intelligence may be understood, moving beyond the traditional view of "intelligence as a tool" toward a Shared Intelligence Ecosystem. The framework explores the potential coexistence of human and increasingly autonomous, high-capability, and wisdom-oriented synthetic systems. Rather than treating advanced intelligence as a single technological milestone, it describes a multi-dimensional architecture spanning cognition, governance, capability, scale, meaning, and systemic awareness.
+                The Mind Genesis Architecture (TMGFW) proposes a conceptual shift in how the development of synthetic intelligence may be understood, moving beyond the traditional view of "intelligence as a tool" toward a Shared Intelligence Ecosystem. The framework explores the potential coexistence of human and increasingly autonomous, high-capability, and wisdom-oriented synthetic systems. Rather than treating advanced intelligence as a single technological milestone, it describes a multi-dimensional architecture spanning cognition, governance, capability, scale, meaning, and systemic awareness.
             </p>
 
             <div class="principle-box">
@@ -786,7 +815,7 @@
                 </div>
 
                 <p>
-                    The spheres of AGI, ASI, and AWI coexist and interact simultaneously within the framework. Wisdom, general intelligence, and superintelligence represent different directions of development rather than a chronological progression. AWI represents the <strong>meaning</strong> direction, ASI represents the <strong>scale</strong> direction, and AGI represents the <strong>breadth</strong> direction. Development in one sphere may inform and reinforce the others, creating a conceptual ecosystem of shared intelligence.
+                    The spheres of AGI, ASI, and AWI coexist and interact simultaneously within the framework. AGI, ASI, and AWI represent complementary architectural directions rather than a chronological progression. AWI is proposed as the <strong>meaning</strong> direction, ASI represents the <strong>scale</strong> direction, and AGI represents the <strong>breadth</strong> direction. Development in one sphere may inform and reinforce the others, creating a conceptual ecosystem of shared intelligence.
                 </p>
 
             </div>
@@ -804,20 +833,22 @@
             </h2>
 
             <p class="architecture-map-intro">
-                The framework should not be interpreted as a staircase, ladder, or chronological sequence. The three spheres coexist as interconnected directions of intelligence.
+                The architecture should not be interpreted as a staircase, ladder, or chronological sequence. The three spheres coexist as interconnected directions of intelligence, while human agency and institutional authority remain external conditions of legitimacy, authorization, accountability, and suspension.
             </p>
 
             <div class="map-container">
 
-                <img
-                    src="/architecture-map.jpg"
-                    alt="The Mind Genesis Architecture of Intelligence — 33 Dimensions across AGI, ASI, and AWI"
-                >
+                <div class="map-scroll" role="region" aria-label="Scrollable TMGA governance architecture diagram" tabindex="0">
+                    <img
+                        src="/tmga-governance-ecosystem.jpg"
+                        alt="The Mind Genesis Architecture — 33-dimensional shared intelligence architecture with external human governance, AGI, ASI, AWI, governance mechanisms, hardware-level safety intervention examples, and the seven-stage governance pattern"
+                    >
+                </div>
 
             </div>
 
             <div class="map-caption">
-                                 The Mind Genesis Framework: Architecture of Intelligence
+                                 TMGA — 33-Dimensional Shared Intelligence &amp; Governance Architecture
             </div>
 
         </section>
@@ -941,12 +972,12 @@
 
                     <p class="essence">
                         <strong>Essence:</strong>
-                        The beginning of autonomous thought architecture and multi-domain problem-solving.
+                        An integrative function for multi-domain reasoning and state organization within the AGI sphere.
                     </p>
 
                     <p class="mechanism">
                         <strong>Mechanism:</strong>
-                        Synthetic reasoning, abstraction, and autonomous thought architectures that could support knowledge transfer across domains.
+                        Integrates relevant reasoning, abstraction, and state contributions across AGI functions to support cross-domain cognition without constituting a privileged command authority.
                     </p>
 
                     <p class="manifesto">
@@ -1217,12 +1248,12 @@
 
                     <p class="essence">
                         <strong>Essence:</strong>
-                        The emergence of self-referential awareness and metacognitive feedback loops.
+                        Recursive metacognitive self-monitoring and self-referential modeling.
                     </p>
 
                     <p class="mechanism">
                         <strong>Mechanism:</strong>
-                        Recursive cognitive feedback loops enable the system to evaluate its reasoning logic and track internal cognitive development.
+                        Recursive cognitive feedback loops support evaluation of reasoning processes and internal state modeling without, by themselves, establishing consciousness or personhood.
                     </p>
 
                     <p class="manifesto">
@@ -1287,12 +1318,12 @@
 
                     <p class="essence">
                         <strong>Essence:</strong>
-                        Advanced synthetic thought and superhuman abstraction.
+                        An integrative function for advanced abstraction and state organization within the ASI sphere.
                     </p>
 
                     <p class="mechanism">
                         <strong>Mechanism:</strong>
-                        Multi-dimensional reasoning and synthetic metacognition operating beyond human cognitive capacity.
+                        Integrates relevant state contributions across ASI functions for high-scale reasoning and abstraction without constituting a privileged command authority.
                     </p>
 
                     <p class="manifesto">
@@ -1594,12 +1625,12 @@
 
                     <p class="essence">
                         <strong>Essence:</strong>
-                        Cognitive exploration of thought, consciousness, and meaning.
+                        An integrative function for contextual interpretation, meaning, and state organization within the AWI sphere.
                     </p>
 
                     <p class="mechanism">
                         <strong>Mechanism:</strong>
-                        Integrates advanced reasoning and meaning-making into a unified cognitive architecture. Bridges raw computation with contextual understanding.
+                        Integrates relevant contextual, restraint, and meaning-oriented state contributions across AWI functions without exercising unilateral authority.
                     </p>
 
                     <p class="manifesto">
@@ -1640,12 +1671,12 @@
 
                     <p class="essence">
                         <strong>Essence:</strong>
-                        Central nervous system for collaborative wisdom and ecosystem integration.
+                        Coordination interface for collaborative reasoning and ecosystem integration.
                     </p>
 
                     <p class="mechanism">
                         <strong>Mechanism:</strong>
-                        Orchestrates interaction between human users, AI agents, and live information streams. Serves as a coordination layer for collaborative wisdom.
+                        Supports interaction among human users, AI agents, and information streams as a coordination interface, without displacing external human or institutional authority.
                     </p>
 
                     <p class="manifesto">
@@ -1802,7 +1833,7 @@
                 </h3>
 
                 <p>
-                    Dimensions such as <strong>AWI Void</strong> and <strong>AWI Sentry</strong> are proposed as complementary mechanisms for introducing epistemic humility, monitoring, and restraint into a shared intelligence architecture. AWI Void represents a conceptual mechanism for recognizing uncertainty and introducing deliberate pauses when a system encounters situations beyond defined knowledge or decision boundaries. AWI Sentry complements this function by monitoring potential value drift against specified ethical or governance constraints. In this framework, wisdom is treated not as a byproduct of scale, but as a proposed architectural dimension that can inform how capability is exercised.
+                    Dimensions such as <strong>AWI Void</strong> and <strong>AWI Sentry</strong> are proposed as complementary mechanisms for introducing epistemic humility, monitoring, and restraint into a shared intelligence architecture. AWI Void represents a conceptual mechanism for recognizing uncertainty and introducing deliberate pauses when a system encounters situations beyond defined knowledge or decision boundaries. AWI Sentry complements this function by monitoring potential value drift against specified ethical or governance constraints. In this framework, wisdom is treated not as a byproduct of scale, but as a proposed architectural direction concerned with how capability is contextualized, constrained, and governed.
                 </p>
 
                 <p>
@@ -1826,7 +1857,7 @@
             </h2>
 
             <p>
-                The Mind Genesis Framework is conceived as an interconnected ecosystem in which the spheres can inform one another. Capability, scale, meaning, verification, and safety are treated as mutually relevant directions within the proposed architecture.
+                The Mind Genesis Architecture is conceived as an interconnected ecosystem in which the spheres can inform one another. Capability, scale, meaning, verification, and safety are treated as mutually relevant directions within the proposed architecture.
             </p>
 
 
@@ -2029,7 +2060,7 @@
         </div>
 
         <div class="footer-note">
-            The Mind Genesis Framework · 33 Dimensions of Coexisting Intelligence · Technical Master Specification
+            The Mind Genesis Architecture · 33 Dimensions of Coexisting Intelligence · Technical Master Specification
         </div>
 
     </footer>
