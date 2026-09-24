@@ -186,6 +186,46 @@
             color: var(--accent-gold);
         }
 
+        .engineering-figure {
+            margin: 34px 0 42px;
+            padding: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .engineering-figure-scroll {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(34,211,238,0.35) rgba(255,255,255,0.04);
+            border-radius: 12px;
+        }
+
+        .engineering-figure-scroll:focus {
+            outline: 1px solid rgba(34,211,238,0.45);
+            outline-offset: 3px;
+        }
+
+        .engineering-figure-scroll img {
+            display: block;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .engineering-figure-caption {
+            margin: 12px 8px 2px !important;
+            text-align: center;
+            font-size: 0.82rem !important;
+            line-height: 1.55;
+            color: var(--muted) !important;
+        }
+
         .protocol-content .protocol-item {
             margin-top: 24px;
             padding: 20px 22px;
@@ -297,6 +337,20 @@
             .protocol-item {
                 padding: 16px;
             }
+
+            .engineering-figure {
+                margin: 26px 0 34px;
+                padding: 8px;
+            }
+
+            .engineering-figure-scroll img {
+                width: 600px;
+                min-width: 600px;
+            }
+
+            .engineering-figure-caption::after {
+                content: " Swipe horizontally to explore.";
+            }
         }
     </style>
 </head>
@@ -338,6 +392,19 @@
                 <div class="slogan">
                     <strong>"Reference models illustrate possible mechanisms; they do not prescribe a single technical realization."</strong>
                 </div>
+            </div>
+
+            <!-- DYNAMIC SECURITY LOOP FIGURE -->
+            <div class="engineering-figure">
+                <div class="engineering-figure-scroll" role="region" aria-label="Scrollable Dynamic Security Loop engineering diagram" tabindex="0">
+                    <img
+                        src="/dynamic-security-loop.jpg"
+                        alt="The Dynamic Security Loop — illustrative engineering governance model connecting ASI Dark, ASI Verify, ASI Guard, AWI Sentry, AWI Void, human governance, NHCP, and the seven-stage governance pattern."
+                    >
+                </div>
+                <p class="engineering-figure-caption">
+                    The Dynamic Security Loop — illustrative engineering governance model. The diagram visualizes one possible interaction pattern among selected TMGA governance components; it is not a mandatory implementation specification.
+                </p>
             </div>
 
 
@@ -383,7 +450,7 @@
 
                 <li>
                     <strong style="color:var(--text);">Resolution Boundary:</strong>
-                    A deployment may define a maximum decision latency to trigger a safe-state transition. Any actual threshold must be determined by the implementation, risk profile, and operating environment.
+                    A deployment may define a maximum decision latency after which unresolved conflict triggers a predefined constraint, containment, escalation, or suspension procedure. Any actual threshold must be determined by the implementation, risk profile, and operating environment.
                 </li>
             </ul>
 
@@ -962,7 +1029,7 @@
             </div>
 
             <p>
-                The objective is not to create a hierarchy of intelligence, but to establish mechanisms through which different forms of intelligence can coexist, challenge one another, constrain one another, and remain accountable when their conclusions conflict.
+                The objective is not to create a hierarchy of intelligence, but to establish mechanisms through which different architectural functions can coexist, challenge one another, and constrain one another when their recommendations conflict, while accountability and legitimate authorization remain grounded in external human and institutional governance.
             </p>
 
 
